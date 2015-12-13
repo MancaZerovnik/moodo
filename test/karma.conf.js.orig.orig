@@ -38,7 +38,16 @@ module.exports = function(config) {
       'bower_components/underscore/underscore.js',
 <<<<<<< HEAD
       'bower_components/seiyria-bootstrap-slider/js/bootstrap-slider.js',
+=======
+	  'bower_components/seiyria-bootstrap-slider/js/bootstrap-slider.js',
+>>>>>>> 140052c89bbef4cf005ec0b9cc2948bbafad44de
+=======
+<<<<<<< HEAD
+      'bower_components/underscore/underscore.js',
+=======
+      'bower_components/seiyria-bootstrap-slider/js/bootstrap-slider.js',
 >>>>>>> 6009f88c0b79fcfbee9bf5dc435862839dbf718a
+>>>>>>> 7f657dec483fb8baf36fb92d289f885f8183c156
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       "app/scripts/**/*.js",

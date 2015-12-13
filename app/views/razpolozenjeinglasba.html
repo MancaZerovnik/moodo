@@ -1,1 +1,32 @@
-<p>Razpolozenje in glasba</p>
+<div class="row">
+    <div class="col-md-3">
+        <p> Spol </p>
+        <input type="checkbox" ng-model="filter.male" ng-change="update()" /> Moški<br/>
+        <input type="checkbox" ng-model="filter.female"  ng-change="update()" /> Ženski<br/><br/>
+
+        <p> Starost </p>
+        <div on-handle-up='update()' range-slider id="age" min="0" max="100" model-min="filter.agemin" model-max="filter.agemax"></div>
+
+        <p> Kraj bivanja </p>
+        <input type="checkbox" name="linigPlace" ng-model="filter.city" ng-change="update()"> Mesto<br/>
+        <input type="checkbox" name="linigPlace" ng-model="filter.domestic" ng-change="update()"> Podezelje<br/><br/>
+
+        <p> Glasbena šola </p>
+        <div id="music_school" on-handle-up='update()' range-slider min="5" max="20" model-min="filter.schoolmin" model-max="filter.schoolmax" attach-handle-values="true"></div>
+
+
+        <p> Ukvarjanje z glasbo </p>
+        <div id="involvement_in_music" on-handle-up='update()' range-slider min="5" max="20" model-min="filter.activeinmusicmin" model-max="filter.activeinmusicmax"></div>
+
+
+        <p> Poslušanje glasbe </p>
+        <input type="checkbox" name="listening" value="1" ng-model="filter.onehour" ng-change="update()" /> do 1h<br/>
+        <input type="checkbox" name="listening" value="2" ng-model="filter.twohour" ng-change="update()"/> do 2h<br/>
+        <input type="checkbox" name="listening" value="3" ng-model="filter.threehour" ng-change="update()"/> do 3h<br/>
+        <input type="checkbox" name="listening" value="4" ng-model="filter.fourhour" ng-change="update()"/> več kot 3h
+
+    </div>
+    <div class="col-md-9">
+<div ng-repeat="i in trying"> <p>{{i.starost}}</p> </div>
+</div>
+</div>
