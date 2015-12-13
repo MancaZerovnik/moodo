@@ -34,9 +34,11 @@ module.exports = function(config) {
       'bower_components/d3/d3.js',
       'bower_components/nvd3/build/nv.d3.js',
       'bower_components/angular-nvd3/dist/angular-nvd3.js',
+<<<<<<< HEAD
       'bower_components/underscore/underscore.js',
+=======
       'bower_components/seiyria-bootstrap-slider/js/bootstrap-slider.js',
-      'bower_components/angular-rangeslider/angular.rangeSlider.js',
+>>>>>>> 6009f88c0b79fcfbee9bf5dc435862839dbf718a
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       "app/scripts/**/*.js",

@@ -15,8 +15,12 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ui-rangeSlider'
   ])
+  .constant('_',
+    window._
+  )
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
