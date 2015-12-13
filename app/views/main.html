@@ -1,10 +1,31 @@
 <div class="jumbotron">
-  <p> Tukaj se menjavajo vsebine. </p>
+
+   <button ng-click="image = '1';">Pitch</button>
+   <button ng-click="image = '2';">Why</button>
+   <button ng-click="image = '3';">MVVM</button>
+
+    <div ng-switch on="image" ng-animate="'animate'">
+        <div ng-switch-when="1">
+           <img src = "../assets/images/gorenjka.png" class = "img-rounded imagefit">
+        </div>
+        <div ng-switch-when="2">
+            <img src = "../assets/images/lindt.jpg" class = "img-rounded imagefit">
+        </div>
+        <div ng-switch-when="3">
+            <img src = "../assets/images/milka.jpg" class = "img-rounded imagefit">
+        </div>
+    </div>
 </div>
-<div>
+
 <div class="row">
-            <a ng-href="#/splosno"><button type="button" class="btn btn-default btn-block">Splošni podatki</button></a>
-            <a ng-href="#/razpolozenjeinbarve"><button type="button" class="btn btn-default btn-block">Razploženje in barve</button></a>
-            <a ng-href="#/razplozenjeinglasba"><button type="button" class="btn btn-default btn-block">Vizualizacija glasbe in razpoloženja</button></a>
+    <div class="col-md-4">
+        <a ng-href="#/splosno"><button type="button" class="btn btn-default btn-block">Splošni podatki</button></a>
+    </div>
+    <div class="col-md-4">
+        <a ng-href="#/razpolozenjeinbarve"><button type="button" class="btn btn-default btn-block">Razploženje in barve</button></a>
+    </div>
+    <div class="col-md-4">
+        <a ng-href="#/razplozenjeinglasba"><button type="button" class="btn btn-default btn-block">Vizualizacija glasbe in razpoloženja</button></a>
+    </div>
 </div>
-</div>
+
