@@ -14,4 +14,7 @@ angular.module('modooApp')
       'AngularJS',
       'Karma'
     ];
+    var slider = new Slider('#age', {});
+    var slider = new Slider('#music_school', {});
+    var slider = new Slider('#involvement_in_music', {});
   });
