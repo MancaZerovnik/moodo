@@ -1,22 +1,24 @@
 <div class="row">
-    <div class="col-xs-12 text-center">
-
-       <button ng-click="image = '1';" class="round btn">1</button>
-       <button ng-click="image = '2';" class="round btn">2</button>
-       <button ng-click="image = '3';" class="round btn">3</button>
-
+     <div class="col-xs-12 text-center padding-0">
         <div ng-switch on="image" ng-animate="'animate'">
-            <div ng-switch-when="1">
-               <img src = "../assets/images/gorenjka.png" class = "img-rounded imagefit">
+            <div ng-switch-when="1" >
+               <img src = "../assets/images/gorenjka.png" class = "imagefit">
             </div>
-            <div ng-switch-when="2">
-                <img src = "../assets/images/lindt.jpg" class = "img-rounded imagefit">
+            <div ng-switch-when="2" >
+                <img src = "../assets/images/lindt.jpg" class = "imagefit">
             </div>
-            <div ng-switch-when="3">
-                <img src = "../assets/images/milka.jpg" class = "img-rounded imagefit">
+            <div ng-switch-when="3" >
+                <img src = "../assets/images/milka.jpg" class = "imagefit">
             </div>
         </div>
-    </div>
+        
+        <div class="portfolio_description"> 
+            <button ng-click="image = '1';" class="round btn btn-on-img btn-default">1</button>
+            <button ng-click="image = '2';" class="round btn btn-on-img btn-default">2</button>
+            <button ng-click="image = '3';" class="round btn btn-on-img btn-default">3</button>
+        </div> 
+
+    </div>  
 </div>
 
 <div class="row margin-top-40 padding-bottom-40">
@@ -29,5 +31,5 @@
     <div class="col-md-4">
         <a ng-href="#/razplozenjeinglasba"><button type="button" class="btn btn-default btn-block padding-top-40 padding-bottom-40 background-color-gray">Vizualizacija glasbe in razpoloženja</button></a>
     </div>
-</div>
+</div> 
 
