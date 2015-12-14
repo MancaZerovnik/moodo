@@ -159,16 +159,15 @@ var app = angular.module('modooApp')
         var data = [];
         if(inputData) {          
             for (var i = 0; i < inputData.length; i++)
-            {
-                
+            {                
                 for (var j = 0; j < inputData[i].custva.length; j++)
                 {
-                    if (angular.isUndefined(data[parseInt(inputData[i]['custva'][j]['id'] - 1)]) && 'x' in inputData[i]['custva'][j])
-                        data[parseInt(inputData[i]['custva'][j]['id']) -1] = {key: inputData[i]['custva'][j]['ime'], values:[]};
+                    if (getDictonaryIdxByKey(data, inputData[i]['custva'][j]['ime']) === null
+                        && 'x' in inputData[i]['custva'][j])
+                        data.push({key: inputData[i]['custva'][j]['ime'], values:[]});
                     
-
                         if ('x' in inputData[i]['custva'][j])
-                            data[parseInt(inputData[i]['custva'][j]['id']) - 1]['values'].push({
+                            data[getDictonaryIdxByKey(data, inputData[i]['custva'][j]['ime'])]['values'].push({
                                 x: inputData[i]['custva'][j]['x'],
                                 y: inputData[i]['custva'][j]['y']
                             });
@@ -177,6 +176,15 @@ var app = angular.module('modooApp')
         }
         return data;
 
+    }
+
+    function getDictonaryIdxByKey(l, kvalue)
+    {
+        for(var i = 0; i < l.length; i++)
+            if(l[i].key === kvalue)
+                return i;
+
+        return null;
     }
 
   });
