@@ -109,3 +109,28 @@ body {
     height: 400px;
   }
 }
+
+.margin-top-40 {
+  margin-top: 40px;
+}
+
+.padding-top-40
+{
+  padding-top: 40px;
+}
+
+
+.padding-bottom-40
+{
+  padding-bottom: 40px;
+}
+
+.round
+{
+  border-radius: 50%;  
+}
+
+.background-color-gray
+{
+  background-color: #cccccc;
+}
