@@ -52,11 +52,16 @@ var app = angular.module('modooApp')
             );
             
         });
+        console.log($scope.filter.agemin);
+        $scope.usersMoodData = getUsersMood($scope.filteredData);
+        $scope.moodVAEstimationData = getMoodVAEstimationData($scope.filteredData);
     };
 
     $scope.$watch('filteredData', function() {
-        $scope.usersMoodData = getUsersMood($scope.filteredData);
-        $scope.moodVAEstimationData = getMoodVAEstimationData($scope.filteredData);
+        //console.log("change" + $scope.filter.agemin);
+        //console.log($scope.filter.agemin);
+        //$scope.usersMoodData = getUsersMood($scope.filteredData);
+        //$scope.moodVAEstimationData = getMoodVAEstimationData($scope.filteredData);
    });
     
     $scope.usersMoodGraph = setVAgraph();
