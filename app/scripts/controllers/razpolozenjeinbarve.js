@@ -33,8 +33,9 @@ var app = angular.module('modooApp')
     });
 
     $scope.update = function () {
+
         $scope.filteredData = _.filter($scope.mainInfo, function(num){ 
-            //console.log($scope.filter);
+            
             return (($scope.filter.male && num.spol == "M" ||
             $scope.filter.female && num.spol == "Z")
             && (($scope.filter.schoolmin <= parseInt(num.glasbena_sola) && 
@@ -52,21 +53,18 @@ var app = angular.module('modooApp')
             );
             
         });
-        console.log($scope.filter.agemin);
         $scope.usersMoodData = getUsersMood($scope.filteredData);
         $scope.moodVAEstimationData = getMoodVAEstimationData($scope.filteredData);
+        if(!$scope.$$phase) {
+          $scope.$apply();
+        }
+
+        
     };
 
-    $scope.$watch('filteredData', function() {
-        //console.log("change" + $scope.filter.agemin);
-        //console.log($scope.filter.agemin);
-        //$scope.usersMoodData = getUsersMood($scope.filteredData);
-        //$scope.moodVAEstimationData = getMoodVAEstimationData($scope.filteredData);
-   });
     
     $scope.usersMoodGraph = setVAgraph();
     $scope.moodVAEstimationGraph = setVAgraphLegend();
-
     function setVAgraph()
     {
         return {
@@ -153,7 +151,6 @@ var app = angular.module('modooApp')
             }
                 
         }        
-        
         return data;
     }
 

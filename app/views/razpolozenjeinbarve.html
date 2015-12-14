@@ -12,11 +12,11 @@
         <input type="checkbox" name="linigPlace" ng-model="filter.domestic" ng-change="update()"> Podezelje<br/><br/>
 
         <p> Glasbena šola [{{filter.schoolmin}} let - {{filter.schoolmax}} let]:  </p>
-        <div id="music_school" on-handle-up='update()' range-slider min="5" max="20" model-min="filter.schoolmin" model-max="filter.schoolmax" attach-handle-values="true"></div>
+        <div id="music_school" on-handle-up='update()' range-slider min="0" max="20" model-min="filter.schoolmin" model-max="filter.schoolmax"></div>
 
 
         <p> Ukvarjanje z glasbo [{{filter.activeinmusicmin}} let - {{filter.activeinmusicmax}} let]: </p>
-        <div id="involvement_in_music" on-handle-up='update()' range-slider min="5" max="20" model-min="filter.activeinmusicmin" model-max="filter.activeinmusicmax"></div>
+        <div id="involvement_in_music" on-handle-up='update()' range-slider min="0" max="20" model-min="filter.activeinmusicmin" model-max="filter.activeinmusicmax"></div>
 
 
         <p> Poslušanje glasbe </p>
@@ -27,6 +27,9 @@
 
     </div>
     <div class="col-md-9" >
+    <div ng-repeat="n in filteredData">
+        {{n.glasbena_sola}}
+    </div>
      <div class="row">
             <div class="col-md-6">
                 <nvd3 options="usersMoodGraph" data="usersMoodData"></nvd3>
