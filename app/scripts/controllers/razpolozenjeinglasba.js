@@ -32,7 +32,7 @@ angular.module('modooApp')
     });
     $scope.update = function () {
         console.log($scope.filter);
-        $scope.trying = _.filter($scope.mainInfo, function(num){ 
+        $scope.filteredData = _.filter($scope.mainInfo, function(num){ 
             return (($scope.filter.male && num.spol == "M" ||
             $scope.filter.female && num.spol == "Z")
             && (($scope.filter.schoolmin <= parseInt(num.glasbena_sola) && 

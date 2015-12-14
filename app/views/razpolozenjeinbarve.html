@@ -1,21 +1,21 @@
 <div class="row">
-     <div class="col-md-3">
+    <div class="col-md-3">
         <p> Spol </p>
         <input type="checkbox" ng-model="filter.male" ng-change="update()" /> Moški<br/>
         <input type="checkbox" ng-model="filter.female"  ng-change="update()" /> Ženski<br/><br/>
 
-        <p> Starost </p>
+        <p> Starost [{{filter.agemin}} let - {{filter.agemax}} let]: </p>
         <div on-handle-up='update()' range-slider id="age" min="0" max="100" model-min="filter.agemin" model-max="filter.agemax"></div>
 
         <p> Kraj bivanja </p>
         <input type="checkbox" name="linigPlace" ng-model="filter.city" ng-change="update()"> Mesto<br/>
         <input type="checkbox" name="linigPlace" ng-model="filter.domestic" ng-change="update()"> Podezelje<br/><br/>
 
-        <p> Glasbena šola </p>
+        <p> Glasbena šola [{{filter.schoolmin}} let - {{filter.schoolmax}} let]:  </p>
         <div id="music_school" on-handle-up='update()' range-slider min="5" max="20" model-min="filter.schoolmin" model-max="filter.schoolmax" attach-handle-values="true"></div>
 
 
-        <p> Ukvarjanje z glasbo </p>
+        <p> Ukvarjanje z glasbo [{{filter.activeinmusicmin}} let - {{filter.activeinmusicmax}} let]: </p>
         <div id="involvement_in_music" on-handle-up='update()' range-slider min="5" max="20" model-min="filter.activeinmusicmin" model-max="filter.activeinmusicmax"></div>
 
 
@@ -27,9 +27,7 @@
 
     </div>
     <div class="col-md-9" >
-
-    {{filteredData}}
-        <div class="row">
+     <div class="row">
             <div class="col-md-6">
                 <nvd3 options="usersMoodGraph" data="usersMoodData"></nvd3>
             </div>
@@ -42,6 +40,6 @@
             
         </div>
         
-
+    
     </div>
 </div>

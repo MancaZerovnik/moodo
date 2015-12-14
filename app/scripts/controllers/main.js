@@ -14,8 +14,8 @@ angular.module('modooApp')
     var sliderFunc = function() {
       timer = $timeout(function() {
         $scope.image = (($scope.image + 1) % 3) + 1
-            timer = $timeout(sliderFunc, 4000);
-      }, 4000);
+            timer = $timeout(sliderFunc, 2000);
+      }, 2000);
     };
 
     sliderFunc();

@@ -11,17 +11,17 @@ var app = angular.module('modooApp')
   .controller('RazpolozenjeInBarveCtrl', function ($scope, $http, $window) {
     $scope.mainInfo = null;
     $scope.filter = {
-        "male": false, 
+        "male": true, 
         "female": false,
         "agemin": 5,
         "agemax": 100,
-        "city": false,
+        "city": true,
         "domestic": false,
         "schoolmin": 0,
         "schoolmax": 20,
         "activeinmusicmin": 0,
         "activeinmusicmax": 20,
-        "onehour": false,
+        "onehour": true,
         "twohour": false,
         "threehour": false,
         "fourhour": false
@@ -29,15 +29,12 @@ var app = angular.module('modooApp')
 
     $http.get('../../assets/data/data.json').success(function(data) {
         $scope.mainInfo = data;
-        $scope.filteredData = $scope.mainInfo;
-
-        $scope.usersMoodData = getUsersMood($scope.filteredData);
-        $scope.moodVAEstimationData = getMoodVAEstimationData($scope.filteredData);
+        $scope.update();        
     });
 
     $scope.update = function () {
         $scope.filteredData = _.filter($scope.mainInfo, function(num){ 
-            console.log($scope.filter);
+            //console.log($scope.filter);
             return (($scope.filter.male && num.spol == "M" ||
             $scope.filter.female && num.spol == "Z")
             && (($scope.filter.schoolmin <= parseInt(num.glasbena_sola) && 
@@ -57,11 +54,11 @@ var app = angular.module('modooApp')
         });
     };
 
-
-    var slider = new Slider('#age', {});
-    var slider = new Slider('#music_school', {});
-    var slider = new Slider('#involvement_in_music', {});
-
+    $scope.$watch('filteredData', function() {
+        $scope.usersMoodData = getUsersMood($scope.filteredData);
+        $scope.moodVAEstimationData = getMoodVAEstimationData($scope.filteredData);
+   });
+    
     $scope.usersMoodGraph = setVAgraph();
     $scope.moodVAEstimationGraph = setVAgraphLegend();
 
@@ -140,16 +137,17 @@ var app = angular.module('modooApp')
             values: []
         });
 
-
-        for (var j = 0; j < inputData.length; j++) {
+        if(inputData) {
+            for (var j = 0; j < inputData.length; j++) {
             //data[0].values.push(inputData[j]['razpolozenje_trenutno']);
 
-            data[0].values.push({
-                x: parseFloat(inputData[j]['razpolozenje_trenutno']['x']),
-                y: parseFloat(inputData[j]['razpolozenje_trenutno']['y'])
-            });
+                data[0].values.push({
+                    x: parseFloat(inputData[j]['razpolozenje_trenutno']['x']),
+                    y: parseFloat(inputData[j]['razpolozenje_trenutno']['y'])
+                });
+            }
                 
-        }
+        }        
         
         return data;
     }
@@ -157,24 +155,24 @@ var app = angular.module('modooApp')
     function getMoodVAEstimationData(inputData)
     {
         var data = [];
-                   
-        for (var i = 0; i < inputData.length; i++)
-        {
-            
-            for (var j = 0; j < inputData[i].custva.length; j++)
+        if(inputData) {          
+            for (var i = 0; i < inputData.length; i++)
             {
-                if (angular.isUndefined(data[parseInt(inputData[i]['custva'][j]['id'] - 1)]) && 'x' in inputData[i]['custva'][j])
-                    data[parseInt(inputData[i]['custva'][j]['id']) -1] = {key: inputData[i]['custva'][j]['ime'], values:[]};
                 
+                for (var j = 0; j < inputData[i].custva.length; j++)
+                {
+                    if (angular.isUndefined(data[parseInt(inputData[i]['custva'][j]['id'] - 1)]) && 'x' in inputData[i]['custva'][j])
+                        data[parseInt(inputData[i]['custva'][j]['id']) -1] = {key: inputData[i]['custva'][j]['ime'], values:[]};
+                    
 
-                    if ('x' in inputData[i]['custva'][j])
-                        data[parseInt(inputData[i]['custva'][j]['id']) - 1]['values'].push({
-                            x: inputData[i]['custva'][j]['x'],
-                            y: inputData[i]['custva'][j]['y']
-                        });
-            }                
+                        if ('x' in inputData[i]['custva'][j])
+                            data[parseInt(inputData[i]['custva'][j]['id']) - 1]['values'].push({
+                                x: inputData[i]['custva'][j]['x'],
+                                y: inputData[i]['custva'][j]['y']
+                            });
+                }                
+            }
         }
-        
         return data;
 
     }
