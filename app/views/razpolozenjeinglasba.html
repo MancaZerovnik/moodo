@@ -1,5 +1,10 @@
 <div class="row margin-top-40">
     <div class="col-md-2">
+        <p> Skladba </p>
+        <select name="singleSelect" ng-model="filter.song" ng-change="update()">   
+            <option ng-repeat="song in songs" value="{{song}}" >{{song}}</option>       
+        </select><br><br>
+
         <p> Spol </p>
         <input type="checkbox" ng-model="filter.male" ng-change="update()" /> Moški<br/>
         <input type="checkbox" ng-model="filter.female"  ng-change="update()" /> Ženski<br/><br/>
@@ -27,21 +32,8 @@
 
     </div>
     <div class="col-md-10" >
-    <div ng-repeat="n in filteredData">
-    </div>
-     <div class="row">
-            <div class="col-md-6">
-                <nvd3 options="usersMoodGraph" data="usersMoodData"></nvd3>
-            </div>
-            <div class="col-md-6">
-                
-                <nvd3 options="moodVAEstimationGraph" data="moodVAEstimationData"></nvd3>
-
-
-            </div>
-            
-        </div>
-        
-    
+        <div ng-repeat="f in filteredData"> 
+        <p> {{f}}</p>
+        </div>    
     </div>
 </div>
