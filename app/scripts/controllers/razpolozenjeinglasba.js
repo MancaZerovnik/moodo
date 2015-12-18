@@ -8,7 +8,7 @@
  * Controller of the modooApp
  */
 angular.module('modooApp')
-  .controller('RazpolozenjeInGlasbaCtrl', function ($scope, $http, $window) {
+  .controller('RazpolozenjeInGlasbaCtrl', function ($scope, $http, $window, $sce) {
     $scope.mainInfo = null;
     $scope.filter = {
         "male": true, 
@@ -28,6 +28,10 @@ angular.module('modooApp')
         "song": 0
     };
 
+    function changePlayerSong(id){
+        $("audio").attr("src","../../assets/media/" + id + ".mp3");
+    }
+    
     $http.get('../../assets/data/data.json').success(function(data) {
         $scope.mainInfo = data;
         $scope.songs = _.uniq(_.sortBy(_.flatten(
@@ -40,12 +44,15 @@ angular.module('modooApp')
                             )
                        ), function(x) { return x; }), true);
         $scope.filter.song = $scope.songs[0];
+        changePlayerSong($scope.filter.song);
         $scope.update();          
     });
 
+       
+
     
     $scope.update = function () {
-
+        changePlayerSong($scope.filter.song);
         $scope.filteredData = _.filter(_.flatten(_.map(_.filter($scope.mainInfo, function(num){ 
             
             return (($scope.filter.male && num.spol == "M" ||
