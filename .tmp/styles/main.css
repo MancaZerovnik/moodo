@@ -116,10 +116,20 @@ body {
   margin-top: 40px;
 }
 
+.margin-top-80 {
+  margin-top: 80px;
+}
+
 .padding-top-40
 {
   padding-top: 40px;
 }
+
+.padding-top-80
+{
+  padding-top: 80px;
+}
+
 
 .margin-bottom-20
 {
@@ -207,4 +217,22 @@ body {
 .border-width-1
 {
   border-width: 1px;
+}
+
+.font-size-50{
+  font-size: 50px;
+}
+
+.font-size-100{
+  font-size: 100px;
+}
+
+.color-white
+{
+  color: white;
+}
+
+.max-width-300
+{
+  max-width: 300px;
 }
