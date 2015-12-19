@@ -103,7 +103,7 @@ var app = angular.module('modooApp')
                     axisLabelDistance: -5
                 },
                 color: colors,
-                showLegend: true
+                showLegend: false
             }
         };
     }
