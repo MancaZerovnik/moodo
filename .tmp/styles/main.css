@@ -109,7 +109,7 @@ body {
 
 .imagefit {
     width: 100%;
-    height: 400px;
+
   }
 
 .margin-top-40 {
@@ -229,7 +229,7 @@ body {
 
 .color-white
 {
-  color: white;
+  color: white !important;
 }
 
 .max-width-300
