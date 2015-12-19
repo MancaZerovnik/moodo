@@ -55,6 +55,7 @@ var app = angular.module('modooApp')
         });
         $scope.usersMoodData = getUsersMood($scope.filteredData);
         $scope.moodVAEstimationData = getMoodVAEstimationData($scope.filteredData);
+        $scope.currentEmotionsData = getCurrentEmotionsData($scope.filteredData);
         if(!$scope.$$phase) {
           $scope.$apply();
         }
@@ -65,6 +66,8 @@ var app = angular.module('modooApp')
     
     $scope.usersMoodGraph = setVAgraph();
     $scope.moodVAEstimationGraph = setVAgraphLegend();
+    $scope.currentEmotionsGraph = setVAgraphEmotions();
+
     function setVAgraph()
     {
         return {
@@ -132,6 +135,33 @@ var app = angular.module('modooApp')
             }
         };
     }
+
+    function setVAgraphEmotions()
+    {
+        return {
+            chart: {
+                type: 'scatterChart',
+                height: 450,
+                color: d3.scale.category10().range(),
+                scatter: {
+                    onlyCircles: false
+                },
+                tooltipContent: function(key) {
+                    return '<h3>' + key + '</h3>';
+                },
+                duration: 350,
+                xAxis: {
+                    axisLabel: 'Valence',
+                    tickFormat: function(d){
+                        return d3.format('.02f')(d);
+                    }
+                },
+                xDomain: [0, 1],
+                showYAxis: false,
+                showLegend: true
+            }
+        };
+    }
         
     function getUsersMood(inputData) {
         var data = [];
@@ -175,7 +205,28 @@ var app = angular.module('modooApp')
             }
         }
         return data;
+    }
 
+    function getCurrentEmotionsData(inputData)
+    {
+        var data = [];
+        if(inputData) {          
+            for (var i = 0; i < inputData.length; i++)
+            {                
+                for (var k in inputData[i].custva_trenutno)
+                {
+                    if (getDictonaryIdxByKey(data, k) === null)
+                        data.push({key: k, values:[]});
+                    
+                        
+                        data[getDictonaryIdxByKey(data, k)]['values'].push({
+                            x: inputData[i].custva_trenutno[k],
+                            y: getDictonaryIdxByKey(data, k)
+                            });
+                }                
+            }
+        }
+        return data;
     }
 
     function getDictonaryIdxByKey(l, kvalue)
