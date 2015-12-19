@@ -1,5 +1,7 @@
-<div class="row margin-top-40">
-    <div class="col-md-2">
+<div class="row margin-top-40 padding-left-10 padding-rigth-10">
+    <div class="col-md-2 border-solid border-radius-10 padding-bottom-20 border-width-1">
+        <h3 class="margin-bottom-40">Filtri</h3> 
+
         <p> Spol </p>
         <input type="checkbox" ng-model="filter.male" ng-change="update()" /> Moški<br/>
         <input type="checkbox" ng-model="filter.female"  ng-change="update()" /> Ženski<br/><br/>
@@ -27,26 +29,19 @@
 
     </div>
     <div class="col-md-10" >
-    <div ng-repeat="n in filteredData">
-    </div>
-     <div class="row">
-            <div class="col-md-6">
+        <div class="row">
+            <div class="col-md-6 text-center">
+                <h3 class="margin-bottom-40">Trenutno razpoloženje v VA prostoru in barvah</h3> 
                 <nvd3 options="usersMoodGraph" data="usersMoodData"></nvd3>
             </div>
-            <div class="col-md-6">
-                
+            <div class="col-md-6 text-center">
+                <h3 class="margin-bottom-40">Prisotnost posamezenga razpoloženja</h3> 
+                <nvd3 options="currentEmotionsGraph" data="currentEmotionsData"></nvd3>            
+            </div>
+            <div class="col-md-6 text-center">
+                <h3 class="margin-bottom-40">Postavitev razpoloženj v VA prostor</h3> 
                 <nvd3 options="moodVAEstimationGraph" data="moodVAEstimationData"></nvd3>
-
-
-            </div>
-            <div class="col-md-6">
-            <nvd3 options="currentEmotionsGraph" data="currentEmotionsData"></nvd3>
-
-            
-            </div>
-            
-        </div>
-        
-    
+            </div>            
+        </div>   
     </div>
 </div>

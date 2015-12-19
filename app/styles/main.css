@@ -119,10 +119,34 @@ body {
   padding-top: 40px;
 }
 
+.margin-bottom-20
+{
+  margin-bottom: 20px;
+}
+
+.margin-bottom-40
+{
+  margin-bottom: 40px;
+}
 
 .padding-bottom-40
 {
   padding-bottom: 40px;
+}
+
+.padding-bottom-20
+{
+  padding-bottom: 20px;
+}
+
+.padding-rigth-10
+{
+  padding-right: 10px
+}
+
+.padding-left-10
+{
+  padding-left: 10px
 }
 
 .round
@@ -160,4 +184,19 @@ body {
   body {
     padding-top: 0px;
   }
+}
+
+.border-solid
+{
+  border: solid;
+}
+
+.border-radius-10
+{
+  border-radius: 10px;
+}
+
+.border-width-1
+{
+  border-width: 1px;
 }
