@@ -56,6 +56,12 @@ var app = angular.module('modooApp')
         $scope.usersMoodData = getUsersMood($scope.filteredData);
         $scope.moodVAEstimationData = getMoodVAEstimationData($scope.filteredData);
         $scope.currentEmotionsData = getCurrentEmotionsData($scope.filteredData);
+
+        // it have to be here because it changes everytime filter changes
+        // this function sets graph properties fro users mood
+        $scope.usersMoodGraph = setVAgraphWithColors(getValuesAtKey($scope.usersMoodData));
+
+
         if(!$scope.$$phase) {
           $scope.$apply();
         }
@@ -63,12 +69,11 @@ var app = angular.module('modooApp')
         
     };
 
-    
-    $scope.usersMoodGraph = setVAgraph();
-    $scope.moodVAEstimationGraph = setVAgraphLegend();
     $scope.currentEmotionsGraph = setVAgraphEmotions();
+    $scope.moodVAEstimationGraph = setVAgraphLegend();
+    
 
-    function setVAgraph()
+    function setVAgraphWithColors(colors)
     {
         return {
             chart: {
@@ -97,7 +102,8 @@ var app = angular.module('modooApp')
                     },
                     axisLabelDistance: -5
                 },
-                showLegend: false
+                color: colors,
+                showLegend: true
             }
         };
     }
@@ -166,15 +172,18 @@ var app = angular.module('modooApp')
     function getUsersMood(inputData) {
         var data = [];
                    
-        data.push({            
-            values: []
-        });
-
         if(inputData) {
             for (var j = 0; j < inputData.length; j++) {
-            //data[0].values.push(inputData[j]['razpolozenje_trenutno']);
+                // users mood color
+                var r = parseInt(inputData[j].razpolozenje_barva[0] * 255);
+                var g = parseInt(inputData[j].razpolozenje_barva[1] * 255);
+                var b = parseInt(inputData[j].razpolozenje_barva[2] * 255);
+                var hex = rgbToHex(r, g, b);
 
-                data[0].values.push({
+                if (getDictonaryIdxByKey(data, hex) === null)
+                        data.push({key: hex, values:[]});
+
+                data[getDictonaryIdxByKey(data, hex)].values.push({
                     x: parseFloat(inputData[j]['razpolozenje_trenutno']['x']),
                     y: parseFloat(inputData[j]['razpolozenje_trenutno']['y'])
                 });
@@ -236,6 +245,19 @@ var app = angular.module('modooApp')
                 return i;
 
         return null;
+    }
+
+    function getValuesAtKey(l)
+    {
+        var data = [];
+        for(var i = 0; i < l.length; i++)
+            data.push(l[i].key)
+
+        return data;
+    }
+
+    function rgbToHex(r, g, b) {
+        return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
     }
 
   });
