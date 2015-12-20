@@ -48,7 +48,10 @@ angular.module('modooApp')
         $scope.update();          
     });
 
-       
+    $http.get('../../assets/data/songs.json').success(function(data) {
+        $scope.songAmplitudes = data;
+
+    });
 
     
     $scope.update = function () {
@@ -77,11 +80,18 @@ angular.module('modooApp')
 
         $scope.vzbujenaData = getMoodVAEstimationData($scope.filteredData, 'vzbujena_custva');
         $scope.izrazenaData = getMoodVAEstimationData($scope.filteredData, 'izrazena_custva');
-
-        
+        var ampdata = [];
+        ampdata .push({
+            key: 'gr1',
+            values: enumerateforchart($scope.songAmplitudes[$scope.filter.song + '.mp3'])
+        });
+        $scope.amplitudeData = ampdata
     };
 
+
+
     $scope.viCustvaGraph = setVAgraphLegend();
+    $scope.ampLineGraph = lineAmpChartGraph();
 
     function setVAgraphLegend()
     {
@@ -117,6 +127,19 @@ angular.module('modooApp')
         };
     }
 
+    function lineAmpChartGraph()
+    {
+          return {
+            chart: {
+                type: 'lineChart',
+                height: 150,
+                showYAxis: false,
+                showXAxis: false,
+                showLegend: false
+            }
+        };
+    }
+
     function getMoodVAEstimationData(inputData, data_key)
     {
         var data = [];
@@ -140,6 +163,16 @@ angular.module('modooApp')
         return data;
     }
 
+    function enumerateforchart(data)
+    {
+        var pair_list = [];
+        for(var i = 0; i < data.length; i++)
+        {
+            pair_list.push({x: i, y: data[i]});
+        }
+        return pair_list;
+    }
+
     function getDictonaryIdxByKey(l, kvalue)
     {
         for(var i = 0; i < l.length; i++)
@@ -148,6 +181,4 @@ angular.module('modooApp')
 
         return null;
     }
-
-
-  });
+ });
