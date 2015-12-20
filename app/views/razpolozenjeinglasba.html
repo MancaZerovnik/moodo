@@ -1,8 +1,14 @@
-<div class="row margin-top-40">
-    
-    <div class="col-md-2">
+<div class="row margin-top-40 padding-left-10 padding-rigth-10">    
+    <div class="col-md-2 border-solid border-radius-10 padding-bottom-20 border-width-1">
+        <h3 class="margin-bottom-40">Predvajaj</h3>
+        <audio controls>
+          <source src="" type="audio/mpeg">
+        </audio>
+
+        <h3 class="margin-bottom-40 margin-top-40">Filtri</h3>
+
         <p> Skladba </p>
-        <select name="singleSelect" ng-model="filter.song" ng-change="update()">   
+        <select name="singleSelect" ng-model="filter.song" ng-change="update()" class="form-control">   
             <option ng-repeat="song in songs" value="{{song}}" >{{song}}</option>       
         </select><br><br>
         
@@ -34,11 +40,14 @@
 
     </div>
     <div class="col-md-10" >
-        <audio controls>
-          <source src="" type="audio/mpeg">
-        </audio>
-        <div ng-repeat="f in filteredData"> 
-        <p> {{f}}</p>
-        </div>    
+        
+        <div class="col-md-6 text-center">
+            <h3 class="margin-bottom-40">Izražena razpoloženja v glasbi</h3> 
+            <nvd3 options="viCustvaGraph" data="izrazenaData"></nvd3>
+        </div>
+        <div class="col-md-6 text-center">
+            <h3 class="margin-bottom-40">Razpolozenja, ki jih glasba vzbudi</h3> 
+            <nvd3 options="viCustvaGraph" data="vzbujenaData"></nvd3>            
+        </div>
     </div>
 </div>
