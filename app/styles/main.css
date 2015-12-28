@@ -167,7 +167,7 @@ body {
 
 .round
 {
-  border-radius: 50%;  
+  border-radius: 25%;  
 }
 
 .background-color-gray
@@ -269,4 +269,14 @@ body {
 audio
 {
   width: 100%;
+}
+
+.square-box {
+float: left;
+width: 10px;
+height: 10px;
+margin: 4px;
+border-width: 1px;
+border-style: solid;
+border-color: rgba(0,0,0,.2);
 }

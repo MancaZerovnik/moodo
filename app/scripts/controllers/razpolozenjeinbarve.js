@@ -83,13 +83,19 @@ var app = angular.module('modooApp')
                 scatter: {
                     onlyCircles: false
                 },
-                tooltipContent: function(key) {
-                    return '<h3>' + key + '</h3>';
+                tooltip: {
+                    contentGenerator: function(d) { 
+                        console.log(JSON.stringify(d));
+                        return '<p>valence: ' + d.point.x + ' arousal: ' + d.point.y + '<br/>' +
+                                '<div class="square-box" style="background-color:'+d.point.color+';"></div>' +
+                                'barva: ' + d.point.color + '</p>';
+                    }
                 },
+                // tooltip.contentGenerator(function (obj) { return 'a'}),
                 duration: 350,
                 xAxis: {
                     axisLabel: 'Valence',
-                    tickFormat: function(d){
+                    tickFormat: function(d) {
                         return d3.format('.02f')(d);
                     }
                 },
@@ -103,7 +109,8 @@ var app = angular.module('modooApp')
                     axisLabelDistance: -5
                 },
                 color: colors,
-                showLegend: false
+                showLegend: false,
+                useInteractiveGuideline: false
             }
         };
     }
