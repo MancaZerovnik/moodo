@@ -85,10 +85,10 @@ var app = angular.module('modooApp')
                 },
                 tooltip: {
                     contentGenerator: function(d) { 
-                        console.log(JSON.stringify(d));
-                        return '<p>valence: ' + d.point.x + ' arousal: ' + d.point.y + '<br/>' +
+                        return '<p>valence: <strong>' + d.point.x + '</strong> arousal: <strong>' + 
+                                d.point.y + '</strong><br/>' +
                                 '<div class="square-box" style="background-color:'+d.point.color+';"></div>' +
-                                'barva: ' + d.point.color + '</p>';
+                                'barva: <strong>' + d.point.color + '</strong></p>';
                     }
                 },
                 // tooltip.contentGenerator(function (obj) { return 'a'}),
@@ -125,8 +125,12 @@ var app = angular.module('modooApp')
                 scatter: {
                     onlyCircles: false
                 },
-                tooltipContent: function(key) {
-                    return '<h3>' + key + '</h3>';
+                tooltip: {
+                    contentGenerator: function(d) { 
+                        return '<p>Valence: <strong>' + d.point.x + '</strong> Arousal: <strong>' + d.point.y + '</strong><br/>' +
+                                '<div class="square-box" style="background-color:'+d.point.color+';"></div>' +
+                                '<strong>' + d.series[0].key + '</strong></p>';
+                    }
                 },
                 duration: 350,
                 xAxis: {
@@ -153,25 +157,23 @@ var app = angular.module('modooApp')
     {
         return {
             chart: {
-                type: 'scatterChart',
+                type: 'boxPlotChart',
                 height: 450,
-                color: d3.scale.category10().range(),
-                scatter: {
-                    onlyCircles: false
+                margin : {
+                    top: 20,
+                    right: 20,
+                    bottom: 60,
+                    left: 40
                 },
-                tooltipContent: function(key) {
-                    return '<h3>' + key + '</h3>';
-                },
-                duration: 350,
-                xAxis: {
-                    axisLabel: 'Valence',
-                    tickFormat: function(d){
-                        return d3.format('.02f')(d);
-                    }
-                },
-                xDomain: [0, 1],
-                showYAxis: false,
-                showLegend: true
+                color:['darkblue', 'darkorange', 'green', 'darkred', 'darkviolet'],
+                x: function(d){return d.label;},
+                // y: function(d){return d.values.Q3;},
+                maxBoxWidth: 75,
+                yDomain: [0, 1],
+                xAxis :
+                {
+                  rotateLabels: 30
+                }
             }
         };
     }
@@ -235,12 +237,30 @@ var app = angular.module('modooApp')
                         data.push({key: k, values:[]});
                     
                         
-                        data[getDictonaryIdxByKey(data, k)]['values'].push({
-                            x: inputData[i].custva_trenutno[k],
-                            y: getDictonaryIdxByKey(data, k)
-                            });
+                        data[getDictonaryIdxByKey(data, k)]['values'].push(
+                            inputData[i].custva_trenutno[k]);
                 }                
             }
+            for(var i = 0; i < data.length; i++)
+            {
+                var numbers = data[i].values;
+                numbers.sort();
+                var q1 = isInt(parseFloat(numbers.length) / 4) ? numbers[numbers.length / 4] : (numbers[parseInt(numbers.length / 4)] + numbers[parseInt(numbers.length / 4) +1]) / 2;
+                var q2 = isInt(parseFloat(numbers.length) / 2) ? numbers[numbers.length / 2] : (numbers[parseInt(numbers.length / 2)] + numbers[parseInt(numbers.length / 4) +1]) / 2;
+                var q3 = isInt(parseFloat(numbers.length) / 4) ? numbers[parseInt(parseFloat(numbers.length) / 4 * 3)] : (numbers[parseInt(parseFloat(numbers.length) / 4 * 3)] + numbers[parseInt(parseFloat(numbers.length) / 4 * 3) +1]) / 2;
+
+                data[i].values = {
+                    Q1: q1,
+                    Q2: q2,
+                    Q3: q3,
+                    whisker_low: numbers[0],
+                    whisker_high: numbers[numbers.length - 1]
+                };
+
+                data[i].label = data[i].key;
+            }
+
+
         }
         return data;
     }
@@ -265,6 +285,10 @@ var app = angular.module('modooApp')
 
     function rgbToHex(r, g, b) {
         return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+    }
+
+    function isInt(n) {
+       return n % 1 === 0;
     }
 
   });
