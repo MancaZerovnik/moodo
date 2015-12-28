@@ -182,7 +182,7 @@ body {
 .portfolio_description {
     position:absolute;
     width:100%;
-    top:85%;
+    top:90%;
 }
 
 .btn-on-img {
@@ -191,6 +191,7 @@ body {
   background-color: rgba(200, 200, 200, 0.5);
   border: none;
   font-weight: bold;
+  width: 5px;
 }
 
 body {
@@ -245,14 +246,14 @@ body {
 {
     position:absolute;
     font-size: 65px;
-    background-color: rgba(200, 200, 200, 0.5);
+    /*background-color: rgba(200, 200, 200, 0.5);*/
     /*opacity: 0.4;
     filter: alpha(opacity=40);*/
 }
 
 .on-img-title a
 {
-  color: #ca1010 !important;
+  color: black !important;
 }
 
 .on-img-title a:hover{
@@ -261,7 +262,7 @@ body {
 
 .title-img-1
 {
-    top:55%;
+    top:20%;
     left:15%;
 }
 
