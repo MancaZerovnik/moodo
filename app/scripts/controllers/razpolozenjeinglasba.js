@@ -103,8 +103,12 @@ angular.module('modooApp')
                 scatter: {
                     onlyCircles: false
                 },
-                tooltipContent: function(key) {
-                    return '<h3>' + key + '</h3>';
+                tooltip: {
+                    contentGenerator: function(d) { 
+                        return '<p>Valence: <strong>' + d.point.x + '</strong> Arousal: <strong>' + d.point.y + '</strong><br/>' +
+                                '<div class="square-box" style="background-color:'+d.point.color+';"></div>' +
+                                '<strong>' + d.series[0].key + '</strong></p>';
+                    }
                 },
                 duration: 350,
                 xAxis: {
@@ -135,7 +139,8 @@ angular.module('modooApp')
                 height: 150,
                 showYAxis: false,
                 showXAxis: false,
-                showLegend: false
+                showLegend: false,
+                lines: {interactive: false }
             }
         };
     }
