@@ -1,49 +1,57 @@
 <div class="row margin-top-40 padding-left-10 padding-rigth-10">
-    <div class="col-md-2 border-solid border-radius-10 padding-bottom-20 border-width-1">
-        <h3 class="margin-bottom-40">Filtri</h3> 
+    <div class="col-md-2 border-solid border-radius-10 padding-bottom-10 border-width-1">
+        <!--<h3 class="margin-bottom-40">Filtri</h3> -->
 
-        <p> Spol </p>
-        <input type="checkbox" ng-model="filter.male" ng-change="update()" /> Moški<br/>
-        <input type="checkbox" ng-model="filter.female"  ng-change="update()" /> Ženski<br/><br/>
+        <p class="margin-bottom-5 margin-top-15 bold"> Spol: </p>
+        <input type="checkbox" ng-model="filter.male" ng-change="update()" /> Moški
+        <input type="checkbox" ng-model="filter.female"  ng-change="update()" /> Ženski<br/>
 
-        <p> Starost [{{filter.agemin}} let - {{filter.agemax}} let]: </p>
-        <div on-handle-up='update()' range-slider id="age" min="0" max="100" model-min="filter.agemin" model-max="filter.agemax"></div>
+        <p class="margin-bottom-5 margin-top-15 bold"> Starost [{{filter.agemin}} - {{filter.agemax}}] let: </p>
+        <div on-handle-up='update()' range-slider id="age" min="0" max="100" model-min="filter.agemin" model-max="filter.agemax" class="margin-top-bottom-5"></div>
 
-        <p> Kraj bivanja </p>
-        <input type="checkbox" name="linigPlace" ng-model="filter.city" ng-change="update()"> Mesto<br/>
-        <input type="checkbox" name="linigPlace" ng-model="filter.domestic" ng-change="update()"> Podezelje<br/><br/>
+        <p class="margin-bottom-5 margin-top-15 bold"> Kraj bivanja: </p>
+        <input type="checkbox" name="linigPlace" ng-model="filter.city" ng-change="update()"> Mesto
+        <input type="checkbox" name="linigPlace" ng-model="filter.domestic" ng-change="update()"> Podeželje<br/>
 
-        <p> Glasbena šola [{{filter.schoolmin}} let - {{filter.schoolmax}} let]:  </p>
-        <div id="music_school" on-handle-up='update()' range-slider min="0" max="20" model-min="filter.schoolmin" model-max="filter.schoolmax"></div>
-
-
-        <p> Ukvarjanje z glasbo [{{filter.activeinmusicmin}} let - {{filter.activeinmusicmax}} let]: </p>
-        <div id="involvement_in_music" on-handle-up='update()' range-slider min="0" max="20" model-min="filter.activeinmusicmin" model-max="filter.activeinmusicmax"></div>
+        <p class="margin-bottom-5 margin-top-15 bold">  Glasbena šola [{{filter.schoolmin}} - {{filter.schoolmax}}] let:  </p>
+        <div id="music_school" on-handle-up='update()' range-slider min="0" max="20" model-min="filter.schoolmin" model-max="filter.schoolmax" class="margin-top-bottom-5"></div>
 
 
-        <p> Poslušanje glasbe </p>
+        <p class="margin-bottom-5 margin-top-15 bold"> Ukvarjanje z glasbo <br> [{{filter.activeinmusicmin}} - {{filter.activeinmusicmax}}] let: </p>
+        <div id="involvement_in_music" on-handle-up='update()' range-slider min="0" max="20" model-min="filter.activeinmusicmin" model-max="filter.activeinmusicmax" class="margin-top-bottom-5"></div>
+
+
+        <p class="margin-bottom-5 margin-top-15 bold"> Poslušanje glasbe: </p>
         <input type="checkbox" name="listening" value="1" ng-model="filter.onehour" ng-change="update()" /> do 1h<br/>
         <input type="checkbox" name="listening" value="2" ng-model="filter.twohour" ng-change="update()"/> do 2h<br/>
         <input type="checkbox" name="listening" value="3" ng-model="filter.threehour" ng-change="update()"/> do 3h<br/>
         <input type="checkbox" name="listening" value="4" ng-model="filter.fourhour" ng-change="update()"/> več kot 3h
 
     </div>
-    <div class="col-md-10" >
+    <div class="col-md-10" ng-init="tab1=true; tab2=false; tab3=false; tab4=false">
+       
+        <ul class="nav nav-pills">
+          <li ng-class="{'active' : tab1}" ng-click="tab1 = !tab1"><a href="">Trenutno razpoloženje v VA prostoru in barvah</a></li>
+          <li ng-class="{'active' : tab2}" ng-click="tab2 = !tab2" ><a href="">Prisotnost posamezenga razpoloženja</a></li>
+          <li ng-class="{'active' : tab3}" ng-click="tab3 = !tab3"><a href="">Postavitev razpoloženj v VA prostor</a></li>
+          <li ng-class="{'active' : tab4}" ng-click="tab4 = !tab4"><a href="">Razpoloženje in barve</a></li>
+        </ul>
+
         <div class="row">
-            <div class="col-md-6 text-center graph-div">
-                <h3 class="margin-bottom-40">Trenutno razpoloženje v VA prostoru in barvah</h3> 
+            <div class="col-md-6 text-center graph-div" ng-if="tab1">
+                <!--<h3 class="margin-bottom-40">Trenutno razpoloženje v VA prostoru in barvah</h3> -->
                 <nvd3 options="usersMoodGraph" data="usersMoodData"></nvd3>
             </div>
-            <div class="col-md-6 text-center graph-div">
-                <h3 class="margin-bottom-40">Prisotnost posamezenga razpoloženja</h3> 
+            <div class="col-md-6 text-center graph-div"  ng-if="tab2">
+                <!--<h3 class="margin-bottom-40">Prisotnost posamezenga razpoloženja</h3> -->
                 <nvd3 options="currentEmotionsGraph" data="currentEmotionsData"></nvd3>            
             </div>
-            <div class="col-md-6 text-center graph-div">
-                <h3 class="margin-bottom-40">Postavitev razpoloženj v VA prostor</h3> 
+            <div class="col-md-6 text-center graph-div" ng-if="tab3">
+                <!--<h3 class="margin-bottom-40">Postavitev razpoloženj v VA prostor</h3> -->
                 <nvd3 options="moodVAEstimationGraph" data="moodVAEstimationData"></nvd3>
             </div> 
-            <div class="col-md-6 text-center graph-div">
-                <h3 class="margin-bottom-40">Postavitev razpoloženj v VA prostor</h3> 
+            <div class="col-md-6 text-center graph-div" ng-if="tab4">
+               <!-- <h3 class="margin-bottom-40">Razpoloženje in barve</h3> -->
                 <nvd3 options="colorChartGraph" data="colorChartData"></nvd3>
             </div>      
         </div>   

@@ -1,20 +1,23 @@
-
-<div class="row">
-    <div class="col-md-3 text-center">
-        <h3 class="margin-bottom-40"> Spol </h3>
+<div class="row vertical-align" ng-init="tab=1">
+    <div class="col-md-2 text-center margin-top-big">
+        <ul class="nav nav-pills nav-stacked">
+          <li ng-class="{'active' : tab === 1}" ng-click="tab = 1"><a href="">Spol</a></li>
+          <li ng-class="{'active' : tab === 2}" ng-click="tab = 2" ><a href="">Starost</a></li>
+          <li ng-class="{'active' : tab === 3}" ng-click="tab = 3"><a href="">Kraj bivanja</a></li>
+          <li ng-class="{'active' : tab === 4}" ng-click="tab = 4"><a href="">Glasbena zvrst</a></li>
+        </ul>
+    </div>
+    <div class="col-md-8 text-center" ng-if= "tab === 1">
         <nvd3 options="optionsGender" data="dataGender"></nvd3>
     </div>
-    <div class="col-md-3 text-center">
-        <h3 class="margin-bottom-40"> Starost </h3>
+    <div class="col-md-8 text-center" ng-if= "tab === 2">
         <nvd3 options="optionsAge" data="dataAge"></nvd3>
     </div>
-    <div class="col-md-3 text-center">
-        <h3 class="margin-bottom-40"> Kraj bivanja </h3>
+    <div class="col-md-8 text-center" ng-if= "tab === 3">
         <nvd3 options="optionsPlace" data="dataPlace"></nvd3>
     </div>
-     <div class="col-md-3 text-center">
-        <h3 class="margin-bottom-40"> Glasbena zvrst </h3>
+    <div class="col-md-10 text-center" ng-if= "tab === 4">
         <nvd3 options="optionsGenre" data="dataGenre"></nvd3>
     </div>
-</div>
+ </div>
 
