@@ -56,6 +56,7 @@ var app = angular.module('modooApp')
         $scope.usersMoodData = getUsersMood($scope.filteredData);
         $scope.moodVAEstimationData = getMoodVAEstimationData($scope.filteredData);
         $scope.currentEmotionsData = getCurrentEmotionsData($scope.filteredData);
+        $scope.colorChartData = getColorData($scope.filteredData);
 
         // it have to be here because it changes everytime filter changes
         // this function sets graph properties fro users mood
@@ -71,6 +72,7 @@ var app = angular.module('modooApp')
 
     $scope.currentEmotionsGraph = setVAgraphEmotions();
     $scope.moodVAEstimationGraph = setVAgraphLegend();
+    $scope.colorChartGraph = setColorGraph();
     
 
     function setVAgraphWithColors(colors)
@@ -177,6 +179,34 @@ var app = angular.module('modooApp')
             }
         };
     }
+
+    function setColorGraph()
+    {
+        return {
+            chart: {
+                type: 'multiBarHorizontalChart',
+                height: 450,
+                x: function(d){return d.label;},
+                y: function(d){return d.value;},
+                //yErr: function(d){ return [-Math.abs(d.value * Math.random() * 0.3), Math.abs(d.value * Math.random() * 0.3)] },
+                showControls: true,
+                showValues: true,
+                duration: 500,
+                xAxis: {
+                    showMaxMin: false
+                },
+                yAxis: {
+                    axisLabel: 'Values',
+                    tickFormat: function(d){
+                        return d3.format(',.2f')(d);
+                    }
+                },
+                stacked: true,
+                showLegend: false,
+                showControls: false
+            }
+        };
+    }
         
     function getUsersMood(inputData) {
         var data = [];
@@ -265,12 +295,71 @@ var app = angular.module('modooApp')
         return data;
     }
 
+    function getColorData(inputData)
+    {
+        var data = []
+        if(inputData) {
+            var allLabels = []
+            for (var i = 0; i < inputData.length; i++)
+            {                
+                for (var j = 0; j < inputData[i].custva.length; j++)
+                {
+                    var r = parseInt(inputData[i].custva[j].barva[0] * 255);
+                    var g = parseInt(inputData[i].custva[j].barva[1] * 255);
+                    var b = parseInt(inputData[i].custva[j].barva[2] * 255);
+                    var hex = rgbToHex(r, g, b);
+                    var custvo_name = inputData[i].custva[j].ime
+
+                    // add label to all labels list
+                    if (allLabels.indexOf(custvo_name)==-1) allLabels.push(custvo_name);
+
+                    if(getDictonaryIdxByField(data, hex, "key") === null)
+                        data.push({key: hex, values:[], color: hex});
+
+                    var color_group_idx = getDictonaryIdxByField(data, hex, "key");
+                    if(getDictonaryIdxByField(data[color_group_idx].values, custvo_name, "label") === null)
+                        data[color_group_idx].values.push({label: custvo_name, value: 1});
+                    else
+                    {
+                        var label_idx = getDictonaryIdxByField(data[color_group_idx].values, custvo_name, "label");
+                        data[color_group_idx].values[label_idx].value = data[color_group_idx].values[label_idx].value +1;
+                    }
+                }
+            }
+            // add missing labels to the data
+            for(var i = 0; i < data.length; i++)
+                for(var j = 0; j < allLabels.length; j++)
+                    if(getDictonaryIdxByField(data[i].values, allLabels[j], "label") === null)
+                        data[i].values.push({label: allLabels[j], value: 0});
+
+            function compare(a,b) {
+              if (a.label < b.label)
+                return -1;
+              if (a.label > b.label)
+                return 1;
+              return 0;
+            }
+
+            for(var i = 0; i < data.length; i++)
+                data[i].values.sort(compare);
+        }
+        return data;
+    }
+
     function getDictonaryIdxByKey(l, kvalue)
     {
         for(var i = 0; i < l.length; i++)
             if(l[i].key === kvalue)
                 return i;
 
+        return null;
+    }
+
+    function getDictonaryIdxByField(dict, value, field)
+    {
+        for(var i = 0; i < dict.length; i++)
+            if(dict[i][field] === value)
+                return i;
         return null;
     }
 
