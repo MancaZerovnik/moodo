@@ -20,11 +20,15 @@ angular.module('modooApp')
             var ageNUM = _.countBy($scope.mainInfo, function(x) {
                 return String(x.starost).charAt(0);
             });  
-            update(genderNUM, livingNUM, ageNUM);
+            var genreNUM = _.countBy(_.flatten(_.map($scope.mainInfo, function(x) {
+                return x.zvrst;
+            })), function(x) { return x; });
+            console.log(genreNUM);
+            update(genderNUM, livingNUM, ageNUM, genreNUM);
    
         });
         
-        function update(genderNUM, livingNUM, ageNUM){
+        function update(genderNUM, livingNUM, ageNUM, genreNUM){
             $scope.optionsGender = {
                 chart: {
                     type: 'pieChart',
@@ -100,6 +104,40 @@ angular.module('modooApp')
                 $scope.dataAge[0].values.push({
                     key: property + "0 do " + property + "9",
                     y: ageNUM[property]
+               });
+            }
+
+             $scope.optionsGenre = {
+                chart: {
+                    type: 'discreteBarChart',
+                    height: 450,
+
+                    x: function(d){return d.key;},
+                    y: function(d){return d.y;},
+                    showValues: true,
+                    valueFormat: function(d){
+                        return d3.format(',.0f')(d);
+                    },
+                    duration: 500,
+                    xAxis: {
+                        axisLabel: 'Zvrst glasbe'
+                    },
+                    yAxis: {
+                        axisLabel: 'Število ljudi, ki posluša to zvrst',
+                    }
+                }
+            };
+            $scope.dataGenre = [];
+            $scope.dataGenre[0] = 
+            {
+                key: "Cumulative Return",
+                values: []
+            }
+
+            for (var property in genreNUM) {
+                $scope.dataGenre[0].values.push({
+                    key: property,
+                    y: genreNUM[property]
                });
             }
             
