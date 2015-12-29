@@ -193,17 +193,21 @@ var app = angular.module('modooApp')
                 showValues: true,
                 duration: 500,
                 xAxis: {
-                    showMaxMin: false
+                    showMaxMin: false,
                 },
                 yAxis: {
-                    axisLabel: 'Values',
+                    axisLabel: 'Število odgovorov',
                     tickFormat: function(d){
                         return d3.format(',.2f')(d);
                     }
                 },
                 stacked: true,
                 showLegend: false,
-                showControls: false
+                showControls: false, 
+                margin:
+                {
+                    left: 90
+                }
             }
         };
     }
