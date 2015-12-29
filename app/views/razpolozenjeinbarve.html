@@ -31,10 +31,10 @@
     <div class="col-md-10" ng-init="tab1=true; tab2=false; tab3=false; tab4=false">
        
         <ul class="nav nav-pills">
-          <li ng-class="{'active' : tab1}" ng-click="tab1 = !tab1"><a href="">Trenutno razpoloženje v VA prostoru in barvah</a></li>
-          <li ng-class="{'active' : tab2}" ng-click="tab2 = !tab2" ><a href="">Prisotnost posamezenga razpoloženja</a></li>
-          <li ng-class="{'active' : tab3}" ng-click="tab3 = !tab3"><a href="">Postavitev razpoloženj v VA prostor</a></li>
-          <li ng-class="{'active' : tab4}" ng-click="tab4 = !tab4"><a href="">Razpoloženje in barve</a></li>
+          <li ng-class="{'active' : tab1, 'non-active': !tab1}" ng-click="tab1 = !tab1"><a href="">Trenutno razpoloženje v VA prostoru in barvah</a></li>
+          <li ng-class="{'active' : tab2, 'non-active': !tab2}" ng-click="tab2 = !tab2" ><a href="">Prisotnost posamezenga razpoloženja</a></li>
+          <li ng-class="{'active' : tab3, 'non-active': !tab3}" ng-click="tab3 = !tab3"><a href="">Postavitev razpoloženj v VA prostor</a></li>
+          <li ng-class="{'active' : tab4, 'non-active': !tab4}" ng-click="tab4 = !tab4"><a href="">Razpoloženje in barve</a></li>
         </ul>
 
         <div class="row">

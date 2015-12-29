@@ -308,15 +308,20 @@ border-color: rgba(0,0,0,.2);
     background-color:#222;
 }
 
-a 
-{
-    color: #222;
+.nav-pills > li.non-active > a, .nav-pills > li.non-active > a:focus {
+    color:#222;
+    background-color:transparent;
 }
 
-a:hover, a:focus 
+a, a:hover
 {
   color: #222;
 }
+.nav-pills > li.non-active > a:hover
+{
+  background-color: #eee;
+}
+
 
 .vertical-align 
 {
@@ -331,4 +336,10 @@ a:hover, a:focus
 .bold 
 {
   font-weight: bold;
+}
+
+.margin-padding-none
+{
+  margin: 0px;
+  padding: 0px;
 }
