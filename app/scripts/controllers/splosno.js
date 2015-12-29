@@ -120,7 +120,7 @@ angular.module('modooApp')
                     },
                     duration: 500,
                     xAxis: {
-                        axisLabel: 'Zvrst glasbe'
+                        rotateLabels: 30
                     },
                     yAxis: {
                         axisLabel: 'Število ljudi, ki posluša to zvrst',
