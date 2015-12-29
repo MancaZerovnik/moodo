@@ -48,13 +48,17 @@
             <!-- {{amplitudeData}} -->
         </div>
         <div class="row">
-            <div class="col-md-6 text-center">
+            <div class="col-md-6 text-center graph-div">
                 <h3 class="margin-bottom-40">Izražena razpoloženja v glasbi</h3> 
                 <nvd3 options="viCustvaGraph" data="izrazenaData"></nvd3>
             </div>
-            <div class="col-md-6 text-center">
+            <div class="col-md-6 text-center graph-div">
                 <h3 class="margin-bottom-40">Razpolozenja, ki jih glasba vzbudi</h3> 
                 <nvd3 options="viCustvaGraph" data="vzbujenaData"></nvd3>            
+            </div>
+            <div class="col-md-12 text-center graph-div">
+                <h3 class="margin-bottom-40">Barva ki najbolje predstavlja glasbo</h3> 
+                <nvd3 options="coloGraph" data="colorData"></nvd3>            
             </div>
         </div>
     </div>

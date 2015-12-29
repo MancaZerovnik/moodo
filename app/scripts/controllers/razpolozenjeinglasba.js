@@ -86,12 +86,14 @@ angular.module('modooApp')
             values: enumerateforchart($scope.songAmplitudes[$scope.filter.song + '.mp3'])
         });
         $scope.amplitudeData = ampdata
+        $scope.colorData = getColorData($scope.filteredData);
     };
 
 
 
     $scope.viCustvaGraph = setVAgraphLegend();
     $scope.ampLineGraph = lineAmpChartGraph();
+    $scope.coloGraph = setColorGraph();
 
     function setVAgraphLegend()
     {
@@ -145,6 +147,35 @@ angular.module('modooApp')
         };
     }
 
+    function setColorGraph()
+    {
+        return {
+            chart: {
+                type: 'multiBarHorizontalChart',
+                height: 200,
+                x: function(d){return d.label;},
+                y: function(d){return d.value;},
+                //yErr: function(d){ return [-Math.abs(d.value * Math.random() * 0.3), Math.abs(d.value * Math.random() * 0.3)] },
+                showControls: true,
+                showValues: true,
+                duration: 500,
+                xAxis: {
+                    showMaxMin: false
+                },
+                yAxis: {
+                    axisLabel: 'Values',
+                    tickFormat: function(d){
+                        return d3.format(',.2f')(d);
+                    }
+                },
+                stacked: true,
+                showLegend: false,
+                showControls: false,
+                showXAxis: false
+            }
+        };
+    }
+
     function getMoodVAEstimationData(inputData, data_key)
     {
         var data = [];
@@ -168,6 +199,35 @@ angular.module('modooApp')
         return data;
     }
 
+    function getColorData(inputData)
+    {
+        var data = []
+        if(inputData) {
+            for (var i = 0; i < inputData.length; i++)
+            {                
+                var r = parseInt(inputData[i].barva[0] * 255);
+                var g = parseInt(inputData[i].barva[1] * 255);
+                var b = parseInt(inputData[i].barva[2] * 255);
+                var hex = rgbToHex(r, g, b);
+
+                if(getDictonaryIdxByField(data, hex, "key") === null)
+                    data.push({key: hex, values:[{label: "gr1", value: 0}], color: hex});
+
+                var group_idx = getDictonaryIdxByField(data, hex, "key");
+                data[group_idx].values[0].value = data[group_idx].values[0].value +1;
+            }
+        }
+        return data;
+    }
+
+    function getDictonaryIdxByField(dict, value, field)
+    {
+        for(var i = 0; i < dict.length; i++)
+            if(dict[i][field] === value)
+                return i;
+        return null;
+    }
+
     function enumerateforchart(data)
     {
         var pair_list = [];
@@ -185,5 +245,9 @@ angular.module('modooApp')
                 return i;
 
         return null;
+    }
+
+    function rgbToHex(r, g, b) {
+        return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
     }
  });

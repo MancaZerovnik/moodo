@@ -30,23 +30,22 @@
     </div>
     <div class="col-md-10" >
         <div class="row">
-            <div class="col-md-6 text-center">
+            <div class="col-md-6 text-center graph-div">
                 <h3 class="margin-bottom-40">Trenutno razpoloženje v VA prostoru in barvah</h3> 
                 <nvd3 options="usersMoodGraph" data="usersMoodData"></nvd3>
             </div>
-            <div class="col-md-6 text-center">
+            <div class="col-md-6 text-center graph-div">
                 <h3 class="margin-bottom-40">Prisotnost posamezenga razpoloženja</h3> 
                 <nvd3 options="currentEmotionsGraph" data="currentEmotionsData"></nvd3>            
             </div>
-            <div class="col-md-6 text-center">
+            <div class="col-md-6 text-center graph-div">
                 <h3 class="margin-bottom-40">Postavitev razpoloženj v VA prostor</h3> 
                 <nvd3 options="moodVAEstimationGraph" data="moodVAEstimationData"></nvd3>
             </div> 
-            <div class="col-md-6 text-center">
+            <div class="col-md-6 text-center graph-div">
                 <h3 class="margin-bottom-40">Postavitev razpoloženj v VA prostor</h3> 
                 <nvd3 options="colorChartGraph" data="colorChartData"></nvd3>
-            </div>    
-            {{colorChartData}}       
+            </div>      
         </div>   
     </div>
 </div>
