@@ -184,7 +184,7 @@ angular.module('modooApp')
     function getMoodVAEstimationData(inputData, data_key)
     {
         var data = [];
-        if(inputData) {          
+        if(inputData) {         
             for (var i = 0; i < inputData.length; i++)
             {                
                 for (var j = 0; j < inputData[i][data_key].length; j++)
@@ -200,6 +200,10 @@ angular.module('modooApp')
                             });
                 }                
             }
+        }
+       // add number of answers to legend for each mood
+        for (var i = 0; i < data.length; i++) {
+            data[i].key = data[i].key + " [" + data[i].values.length + "]";
         }
         return data;
     }
