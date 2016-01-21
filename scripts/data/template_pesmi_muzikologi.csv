@@ -1,0 +1,202 @@
+ID Pesmi,žanr,ritem,tempo,melodičnost,dinamika,BPM,mode,harmonična kompleksnost,konzonantnost,metrum
+Idji si ne sledijo popolnoma po vrsti,glej žanre desno->,1-7 neizrazit/izrazit,1-7 pocasen/hiter,1-7 brez melodije/mocna melodija,1-7 mehko-tiho/glasno-trdo,http://www.all8.com/tools/bpm.htm,1 minor-7 major,"1-simple, 7 complex", 1-7 disonantno/konsonantno,"4/4, 3/4 itd"
+101.mp3,classical,4,2,3,6,55,2,5,4,2/2
+103.mp3,classical,3,6,2,6,157,1,2,6,4/4
+104.mp3,classical,2,5,2,5,138,3,6,6,3/4
+107.mp3,classical,6,4,3,6,128,1,2,6,4/4
+109.mp3,classical,7,5,5,6,120,2,6,3,4/4
+110.mp3,classical,1,1,1,2,udefined,3,6,2,undefined
+113.mp3,classical/electronic,7,4,3,4,115,2,6,2,4/4
+115.mp3,electronic,1,1,1,3,118,4,7,1,4/4
+121.mp3,jazz,7,4,7,3,"3=71, 2=105",7,2,6,10/8 (3+3+2+2)
+123.mp3,folk,7,6,7,6,126,7,1,7,4/4
+124.mp3,classical/jazz,7,6,6,6,119,7,2,6,4/4
+126.mp3,classical,5,3,7,2,122,6,6,2,3/4
+127.mp3,classical,7,5,7,3,119,1,2,7,4/4
+128.mp3,easy listening,4,2,6,2,59,7,1,7,4/4
+129.mp3,easy listening,3,3,7,2,85,7,1,7,4/4
+130.mp3,classical,1,1,2,2,undefined,7,3,5,undefined
+132.mp3,classical,2,2,6,3,60,2,5,5,undefined
+133.mp3,classical,4,3,4,2,88,1,1,7,4/4
+135.mp3,classical,4,2,7,5,60,1,3,6,4/4
+136.mp3,jazz,2,1,7,1,75,5,5,3,4/4
+139.mp3,easy listening,3,2,5,2,85,3,4,6,3/4
+140.mp3,easy listening,2,2,7,2,62,5,3,6,3/4 + 2/4
+141.mp3,easy listening,5,3,7,3,uneven app. 80,6,4,6,4/4
+142.mp3,classical,3,3,6,2,uneven app. 50,7,2,6,12/8
+143.mp3,easy listening,4,2,6,2,47,7,2,6,6/8
+145.mp3,easy listening,3,2,4,3,64,6,3,6,4/4
+147.mp3,easy listening,4,4,4,4,uneven app. 65,7,2,7,4/4
+148.mp3,easy listening,4,3,3,2,80,4,5,6,mostly 3/4
+149.mp3,easy listening,6,5,6,4,110,7,2,6,4/4
+152.mp3,classical,6,5,7,3,117,3,3,6,4/4
+153.mp3,new age,3,5,1,2,138,7,2,6,4/4
+154.mp3,classical,4,6,6,3,145,2,5,4,undefined
+155.mp3,classical,5,3,7,6,104,7,2,7,4/4
+156.mp3,classical/jazz,5,4,5,4,uneven app. 89,6,6,3,4/4
+157.mp3,classical,3,3,5,5,80,6,4,2,4/4
+158.mp3,classical,3,3,6,3,uneven app. 80,5,6,6,3/4
+161.mp3,jazz,5,4,5,5,106,2,6,5,4/4
+162.mp3,classical,2,3,2,3,73,3,7,2,4/4
+164.mp3,electronic,1,2,1,3,70,atonal,7,1,4/4
+165.mp3,alternative/contemporary,3,2,3,4,109,2,5,5,3/4
+166.mp3,classical/contemporary,3,4,4,5,107,4,6,6,4/4 + 2/4
+168.mp3,classical/contemporary,2,5,2,4,165,5,7,1,3/4
+169.mp3,classical/contemporary,3,3,5,6,66,2,6,4,4/4
+170.mp3,classical/contemporary,1,1,2,2,77,atonal,7,1,undefined
+171.mp3,classical,7,5,7,5,96,7,3,7,4/4
+172.mp3,classical/jazz,7,6,6,6,119,7,2,6,4/4
+173.mp3,classical,5,7,3,5,135,7,3,6,undefined/asymmetrical 
+177.mp3,jazz,6,2,6,2,95,6,4,3,4/4
+180.mp3,classical,7,3,7,3,106,2,5,3,4/4
+181.mp3,classical,3,3,7,2,93,1,5,4,4/4
+184.mp3,classical,2,1,6,1,64,1,2,5,5/4
+186.mp3,classical,2,2,6,3,60,2,5,5,undefined
+187.mp3,classical,2,2,6,2,81,1,2,6,3/4
+188.mp3,classical,3,2,7,1,uneven app. 66,2,6,5,3/4
+190.mp3,classical,3,1,5,1,76,3,6,3,4/4
+194.mp3,classical/contemporary,5,3,4,5,79,4,7,1,4/4
+195.mp3,classical,1,1,1,2,udefined,3,6,2,undefined
+196.mp3,classical,3,3,3,4,78,1,3,5,4/4
+197.mp3,vocal-instrumental/contemporary,5,4,2,4,98,7,2,7,4/4
+198.mp3,classical/contemporary,3,4,3,3,122,4,7,1,mostly3/4
+199.mp3,classical,5,1,7,3,45,1,2,5,2/2
+201.mp3,easy listening,6,5,6,4,110,7,2,6,4/4
+202.mp3,classical,2,5,2,2,92,6,2,6,4/4
+203.mp3,new age,2,4,5,3,84,2,6,2,4/4
+204.mp3,new age,2,2,7,2,60,1,2,4,4/4
+205.mp3,country/folk,7,6,7,6,118,7,1,7,4/4
+207.mp3,classical,4,2,7,3,uneven app. 60,7,2,7,4/4
+208.mp3,easy listening,2,4,2,2,2=107;3=71,1,1,7,9/8 (2+2+2+3)
+209.mp3,classical,2,1,2,1,uneven app. 45,1,4,4,3/4
+210.mp3,classical,4,3,5,2,uneven app. 81,7,2,6,4/4
+221.mp3,classical,7,6,6,7,125,2,7,7,4/4
+242.mp3,classical/contemporary,6,5,2,6,96,2,6,3,4/4
+256.mp3,vocal-instrumental/contemporary,5,4,2,4,98,7,2,7,4/4
+267.mp3,classical,7,5,6,5,160,2,3,6,3/4
+285.mp3,classical,2,2,6,3,uneven app. 54,6,6,5,3/4
+294.mp3,easy listening,3,3,6,3,50,7,2,6,4/4
+318.mp3,classical/contemporary,3,3,5,6,66,2,6,4,4/4
+347.mp3,jazz/electronic,7,5,7,6,138,1,4,3,4/4
+367.mp3,Electronic / orchestral,6,4,2,5,95,2,7,1,4/4
+398.mp3,classical,4,2,6,2,60,1,2,6,4/4
+401.mp3,march band/folk,6,5,5,7,108,7,1,7 with imprecise pitch,4/4
+402.mp3,folk,5,6,3,5,158,7,1,7,4/4
+403.mp3,vocal/folk,3,4,7,4,uneven app. 105,7,1,7 with imprecise pitch,5/4
+404.mp3,vocal/folk,3,4,7,3,59,7,1,7 with imprecise pitch,6/8
+405.mp3,vocal/folk,2,4,1,5,65,7,2,6 with imprecise pitch,undefined
+406.mp3,vocal/folk,3,3,5,4,uneven app.78,7,1,7 with imprecise pitch,undefined
+407.mp3,vocal/folk,3,5,7,4,97,7,1,7 with imprecise pitch,3/4
+408.mp3,vocal/folk,3,6,7,4,139,1,1,7 with imprecise pitch,3/4 + 2/4
+409.mp3,vocal/folk,3,3,7,4,72,7,1,7 with imprecise pitch,4/4
+410.mp3,folk/country,5,6,6,5,161,7,1,7 with imprecise pitch,5/4
+411.mp3,vocal/folk,1,4,4,5,102,6,2,7 with imprecise pitch,undefined
+412.mp3,vocal/folk,2,2,5,4,uneven app. 120,7,1,7 with imprecise pitch,mostly 3/4
+413.mp3,vocal/folk,2,4,5,4,uneven app. 140,7,1,7 with imprecise pitch,4/4
+414.mp3,folk,5,5,2,5,153,7,1,7,4/4
+415.mp3,vocal/folk,3,4,3,5,83,7,1,7 with imprecise pitch,4/4 + 3/4
+416.mp3,vocal/folk,4,4,7,3,uneven app. 104,7,1,7 with imprecise pitch,4/4
+417.mp3,folk,6,6,7,3,176,7,1,7,4/4
+418.mp3,vocal/folk,6,6,7,4,138,7,1,7,2/4
+419.mp3,folk,5,6,5,6,144,7,1,6,4/4
+420.mp3,vocal/folk,2,4,3,4,uneven app. 78,7,1,7 with imprecise pitch,4/4
+501.mp3,easy listening,6,5,7,3,112,7,2,6,4/4
+502.mp3,Hip Hop / Rap,7,2,1,6,79,1,1,6,2/4
+503.mp3,Electronic,6,5,2,5,110,2,5,6,4/4
+504.mp3,Metal,7,7,2,7,225,1,4,5,4/4
+505.mp3,Dance / disco,7,5,1,6,122,3,1,6,4/4
+506.mp3,electronic,4,6,1,5,136,4,7,1,2/4
+507.mp3,rock,7,2,7,3,68,7,2,7,4/4
+508.mp3,Dance/disco,7,7,1,7,150,3,1,7,4/4
+509.mp3,easy listening,6,5,3,3,108,7,1,7,4/4
+510.mp3,Dance/disco,7,6,6,6,120,7,1,6,4/4
+511.mp3,punk,7,5,2,6,116,1,2,7,4/4
+512.mp3,Hip Hop/Rap,6,6,1,6,145,4,7,1,4/4
+513.mp3,pop,6,4,6,3,90,7,2,5,4/4
+514.mp3,punk,5,7,5,7,241,6,5,4,4/4
+515.mp3,Reggae,7,3,6,4,73,7,2,7,4/4
+516.mp3,Reggae,7,5,2,5,146,7,2,7,4/4
+517.mp3,Funk,7,4,7,4,96,1,4,3,4/4
+518.mp3,Latin,6,6,2,5,130,1,1,7,4/4
+519.mp3,classical,1,1,1,3,undefined,7,2,7,undefined
+520.mp3,rock/pop,6,5,1,4,67,1,1,7,6/8
+521.mp3,easy listening,5,6,5,3,130,1,3,7,4/4
+522.mp3,Latin /electronic,7,6,2,5,150,3,2,2,4/4
+523.mp3,Pop,7,5,6,6,70,7,2,7,4/4
+524.mp3,easy listening,5,4,4,3,100,1,2,6,4/4
+525.mp3,Reggae,7,3,6,3,132,7,2,7,4/4
+526.mp3,Rock,6,3,3,6,69,7,3,6,4/4
+527.mp3,Latin,6,4,3,3,125,1,2,5,4/4
+528.mp3,Metal,5,7,1,7,237,1,2,7,4/4
+529.mp3,Classical,5,6,7,2,uneven app. 161,7,2,6,4/4
+530.mp3,Pop/Reggae,6,5,5,4,99,1,1,7,4/4
+531.mp3,Rock,7,6,6,5,156,7,1,7,4/4
+532.mp3,Rock/blues,7,5,6,6,130,6,2,5,4/4
+533.mp3,R&B /Soul,6,4,5,5,83,1,1,7,2/4
+534.mp3,Metal,3,3,7,4,62,1,5,3,4/4
+535.mp3,Pop,4,5,6,2,130,7,2,7,4/4
+536.mp3,Pop/rock,5,4,6,6,120,7,2,7,4/4
+537.mp3,Rock,5,5,5,5,145,6,3,5,4/4
+538.mp3,Country,3,3,5,3,78,7,2,7,4/4
+539.mp3,Country,6,5,6,5,105,7,2,7,4/4
+540.mp3,Metal,4,5,4,7,150,1,4,4,4/4
+541.mp3,Country/pop,5,4,5,3,135,7,1,7,4/4
+542.mp3,Pop,4,3,6,4,89,6,2,7,4/4
+543.mp3,Rock,6,5,6,5,124,7,2,7,4/4
+544.mp3,Pop,6,5,6,4,140,2,2,6,4/4
+545.mp3,R&B /Soul,7,4,6,6,115,1,2,6,4/4
+546.mp3,Hip Hop / Rap,6,3,2,6,99,1,4,3,4/4
+547.mp3,Classical,4,3,6,2,120,5,2,6,4/4
+548.mp3,Rock,3,3,5,3,90,1,2,5,4/4
+549.mp3,Islamic? (Latin beat),6,4,4,3,112,1,2,5,4/4
+550.mp3,Pop/Rock,5,3,7,5,72,1,3,5,4/4
+551.mp3,Vocal/classical,2,2,6,3,53,1,4,6,4/4
+552.mp3,Electronic/dance,6,5,2,5,126,2,2,3,4/4
+553.mp3,easy listening,4,5,6,3,113,4,1,7,4/4
+554.mp3,dance,6,6,4,5,155,2,4,7,4/4
+555.mp3,pop/rock,5,3,6,3,70,7,2,6,4/4
+556.mp3,disco/dance,7,5,6,6,128,7,2,7,4/4
+557.mp3,jazz (electro swing),5,5,5,5,94,7,5,3,4/4
+558.mp3,pop/country,4,6,6,3,90,7,2,7,4/4
+559.mp3,easy listening,4,6,7,4,105,7,2,6,4/4
+560.mp3,Rock,6,6,6,6,120,7,2,6,4/4
+561.mp3,Pop,6,4,6,6,139,7,2,6,4/4
+562.mp3,Rock,5,5,5,7,122,1,2,6,4/4
+563.mp3,Rock,7,4,6,4,88,3,3,6,4/4
+564.mp3,Rock/Punk,6,6,6,7,181,2,2,6,4/4
+565.mp3,Pop,5,5,6,3,102,1,2,7,4/4
+566.mp3,Rock,6,5,7,6,110,1,2,7,4/4
+567.mp3,Electronic / dance,3,3,3,6,111,1,2,3,4/4
+568.mp3,Dance,2,4,4,6,128,1,2,5,4/4
+569.mp3,R&B ,4,2,5,3,66,1,1,5,4/4
+570.mp3,Dance,4,5,6,4,125,1,2,6,4/4
+571.mp3,Electronic / orchestral,6,4,6,5,120,1,3,6,4/4
+572.mp3,Electronic / orchestral,3,3,6,5,76,6,5,4,4/4
+573.mp3,Classical,4,5,7,2,100,7,2,7,4/4
+574.mp3,R&B,6,3,7,4,119,1,2,6,4/4
+575.mp3,Pop,5,4,6,4,89,6,3,7,4/4
+576.mp3,Dance/ Disco,6,4,5,6,123,1,2,6,4/4
+577.mp3,Country,6,4,6,3,101,7,2,7,4/4
+578.mp3,classical,6,5,4,5,136,1,3,5,4/4
+579.mp3,dance,7,5,6,6,129,1,2,6,4/4
+580.mp3,R&B/Alternative,4,3,3,3,74,2,5,4,4/4
+601.mp3,Classical / contemporary,6,6,7,5,133,4,7,2,undefined
+602.mp3,Classical / contemporary,3,2,7,3,65,4,7,1,3/4
+603.mp3,abstract / electronic / contemporary,2,4,1,4,undefined,atonal,7,1,undefined
+604.mp3,abstract / electronic / contemporary,7,6,1,3,168,2,1,2,4/4
+605.mp3,abstract / electronic / contemporary,1,3,5,4,undefined,atonal,7,2,"undefined, mostly ternar"
+606.mp3,abstract / electronic / contemporary,1,4,1,1,85,atonal,no harmony,1,7/4
+607.mp3,abstract / electronic / contemporary,7,7,1,4,129,3,1,4,4/4
+608.mp3,abstract / electronic / contemporary,7,4,7,3,127,atonal,1,7,2 * 4/4 + 2/4 + 3 + 4/4 + 3/4 +2 * 4/4
+609.mp3,abstract / electronic / contemporary,1,4,1,3,uneven app. 90,atonal,no harmony,1,undefined
+610.mp3,abstract / electronic / contemporary,1,4,2,4,119,3,7,1,5/4
+611.mp3,Classical / contemporary,6,6,7,5,90,atonal,7,2,undefined
+612.mp3,Classical / contemporary,5,4,6,2,85,atonal,7,1,3/4
+613.mp3,abstract / electronic / contemporary,1,4,1,5,undefined,4,no harmony,1,undefined
+614.mp3,Classical / contemporary /vocal,3,4,7,3,120,atonal,7,1,undefined
+615.mp3,abstract / contemporary,1,4,1,4,undefined,atonal,no harmony,1,undefined
+616.mp3,Classical / contemporary,1,4,1,4,undefined,atonal,7,1,undefined
+617.mp3,Classical / contemporary,4,5,3,3,145,7,7,1,4/4
+618.mp3,abstract / electronic / contemporary,1,4,1,5,undefined,atonal,no harmony,1,undefined
+619.mp3,abstract / contemporary,1,4,1,5,undefined,atonal,no harmony,1,undefined
+620.mp3,abstract / contemporary,1,4,2,3,uneven app. 123,atonal,4,1,undefined
