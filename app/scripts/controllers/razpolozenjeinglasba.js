@@ -74,9 +74,7 @@ angular.module('modooApp')
                 ($scope.filter.fourhour && num.poslusanje_glasbe == "4"))
             );}), function(x) {return x.pesmi; })), function(x) { return x.pesem_id === $scope.filter.song; });
             
-        if(!$scope.$$phase) {
-          $scope.$apply();
-        }
+       
 
         $scope.vzbujenaData = getMoodVAEstimationData($scope.filteredData, 'vzbujena_custva');
         $scope.izrazenaData = getMoodVAEstimationData($scope.filteredData, 'izrazena_custva');
@@ -87,6 +85,10 @@ angular.module('modooApp')
         });
         $scope.amplitudeData = ampdata
         $scope.colorData = getColorData($scope.filteredData);
+
+         if(!$scope.$$phase) {
+          $scope.$apply();
+        }
     };
 
 
