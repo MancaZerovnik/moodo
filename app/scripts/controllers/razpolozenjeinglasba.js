@@ -49,7 +49,7 @@ angular.module('modooApp')
     });
 
     $http.get('../../assets/data/songs.json').success(function(data) {
-        $scope.songAmplitudes = data;
+        $scope.songsData = data;
 
     });
 
@@ -81,7 +81,7 @@ angular.module('modooApp')
         var ampdata = [];
         ampdata .push({
             key: 'gr1',
-            values: enumerateforchart($scope.songAmplitudes[$scope.filter.song + '.mp3'])
+            values: enumerateforchart($scope.songsData[$scope.filter.song + '.mp3'].sinusoide)
         });
         $scope.amplitudeData = ampdata
         $scope.colorData = getColorData($scope.filteredData);
