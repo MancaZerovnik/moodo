@@ -157,6 +157,17 @@ var app = angular.module('modooApp')
 
     function setVAgraphEmotions()
     {
+        var colors = [];
+        var n = 17;
+        for(var i = 0; i < 5; i++)
+            colors.push(rgbToHex(0, 255 - parseInt(i * 255 / n) , 0));
+
+        for(var i = 5; i < 12; i++)
+            colors.push(rgbToHex(128 + parseInt(i * 128 / n), 128 + parseInt(i * 128 / n) , 0));
+
+        for(var i = 12; i < 17; i++)
+            colors.push(rgbToHex(parseInt(i * 255 / n), 0 , 0));
+
         return {
             chart: {
                 type: 'boxPlotChart',
@@ -167,7 +178,7 @@ var app = angular.module('modooApp')
                     bottom: 60,
                     left: 40
                 },
-                color:['darkblue', 'darkorange', 'green', 'darkred', 'darkviolet'],
+                color: colors,
                 x: function(d){return d.label;},
                 // y: function(d){return d.values.Q3;},
                 maxBoxWidth: 75,
@@ -262,7 +273,12 @@ var app = angular.module('modooApp')
     function getCurrentEmotionsData(inputData)
     {
         var data = [];
-        if(inputData) {          
+        if(inputData) { 
+            // to define the order
+            var order = ['srecno', 'zadovoljno', 'veselo', 'vedro', 'aktivno', 'budno', 'sprosceno', 'mirno', 'dremavo', 
+                            'zaspano', 'utrujeno', 'neaktivno', 'nezadovoljno', 'razocarano', 'zalostno', 'nesrecno', 'jezno']
+            for (var i = 0; i<order.length; i++) data.push({key: order[i], values:[]});
+
             for (var i = 0; i < inputData.length; i++)
             {                
                 for (var k in inputData[i].custva_trenutno)
