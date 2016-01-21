@@ -1,14 +1,14 @@
 {
     "186.mp3": {
         "metrum": "undefined", 
+        "melodicnost": 6, 
         "BPM": "60", 
         "tempo": 2, 
-        "harmoni\u010dna kompleksnost": "5", 
-        "mode": "2", 
+        "harmonicna_kompleksnost": "5", 
         "dinamika": 3, 
         "konzonantnost": "5", 
         "ritem": 2, 
-        "melodi\u010dnost": 6, 
+        "mode": "2", 
         "sinusoide": [
             0, 
             0, 
@@ -1013,18 +1013,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "classical"
+        "zanr": "classical"
     }, 
     "617.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 3, 
         "BPM": "145", 
         "tempo": 5, 
-        "harmoni\u010dna kompleksnost": "7", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "7", 
         "dinamika": 3, 
         "konzonantnost": "1", 
         "ritem": 4, 
-        "melodi\u010dnost": 3, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -2029,18 +2029,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Classical / contemporary"
+        "zanr": "Classical / contemporary"
     }, 
     "203.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 5, 
         "BPM": "84", 
         "tempo": 4, 
-        "harmoni\u010dna kompleksnost": "6", 
-        "mode": "2", 
+        "harmonicna_kompleksnost": "6", 
         "dinamika": 3, 
         "konzonantnost": "2", 
         "ritem": 2, 
-        "melodi\u010dnost": 5, 
+        "mode": "2", 
         "sinusoide": [
             0, 
             0, 
@@ -3045,18 +3045,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "new age"
+        "zanr": "new age"
     }, 
     "502.mp3": {
         "metrum": "2/4", 
+        "melodicnost": 1, 
         "BPM": "79", 
         "tempo": 2, 
-        "harmoni\u010dna kompleksnost": "1", 
-        "mode": "1", 
+        "harmonicna_kompleksnost": "1", 
         "dinamika": 6, 
         "konzonantnost": "6", 
         "ritem": 7, 
-        "melodi\u010dnost": 1, 
+        "mode": "1", 
         "sinusoide": [
             0, 
             0, 
@@ -4060,18 +4060,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Hip Hop / Rap"
+        "zanr": "Hip Hop / Rap"
     }, 
     "142.mp3": {
         "metrum": "12/8", 
+        "melodicnost": 6, 
         "BPM": "uneven app. 50", 
         "tempo": 3, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 2, 
         "konzonantnost": "6", 
         "ritem": 3, 
-        "melodi\u010dnost": 6, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -5075,18 +5075,18 @@
             -1, 
             0
         ], 
-        "\u017eanr": "classical"
+        "zanr": "classical"
     }, 
     "171.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 7, 
         "BPM": "96", 
         "tempo": 5, 
-        "harmoni\u010dna kompleksnost": "3", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "3", 
         "dinamika": 5, 
         "konzonantnost": "7", 
         "ritem": 7, 
-        "melodi\u010dnost": 7, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -6090,18 +6090,18 @@
             -1, 
             0
         ], 
-        "\u017eanr": "classical"
+        "zanr": "classical"
     }, 
     "549.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 4, 
         "BPM": "112", 
         "tempo": 4, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "1", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 3, 
         "konzonantnost": "5", 
         "ritem": 6, 
-        "melodi\u010dnost": 4, 
+        "mode": "1", 
         "sinusoide": [
             0, 
             0, 
@@ -7106,18 +7106,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Islamic? (Latin beat)"
+        "zanr": "Islamic? (Latin beat)"
     }, 
     "110.mp3": {
         "metrum": "undefined", 
+        "melodicnost": 1, 
         "BPM": "udefined", 
         "tempo": 1, 
-        "harmoni\u010dna kompleksnost": "6", 
-        "mode": "3", 
+        "harmonicna_kompleksnost": "6", 
         "dinamika": 2, 
         "konzonantnost": "2", 
         "ritem": 1, 
-        "melodi\u010dnost": 1, 
+        "mode": "3", 
         "sinusoide": [
             0, 
             0, 
@@ -8121,18 +8121,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "classical"
+        "zanr": "classical"
     }, 
     "139.mp3": {
         "metrum": "3/4", 
+        "melodicnost": 5, 
         "BPM": "85", 
         "tempo": 2, 
-        "harmoni\u010dna kompleksnost": "4", 
-        "mode": "3", 
+        "harmonicna_kompleksnost": "4", 
         "dinamika": 2, 
         "konzonantnost": "6", 
         "ritem": 3, 
-        "melodi\u010dnost": 5, 
+        "mode": "3", 
         "sinusoide": [
             0, 
             0, 
@@ -9137,18 +9137,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "easy listening"
+        "zanr": "easy listening"
     }, 
     "559.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 7, 
         "BPM": "105", 
         "tempo": 6, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 4, 
         "konzonantnost": "6", 
         "ritem": 4, 
-        "melodi\u010dnost": 7, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -10152,18 +10152,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "easy listening"
+        "zanr": "easy listening"
     }, 
     "147.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 4, 
         "BPM": "uneven app. 65", 
         "tempo": 4, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 4, 
         "konzonantnost": "7", 
         "ritem": 4, 
-        "melodi\u010dnost": 4, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -11167,18 +11167,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "easy listening"
+        "zanr": "easy listening"
     }, 
     "605.mp3": {
         "metrum": "undefined, mostly ternar", 
+        "melodicnost": 5, 
         "BPM": "undefined", 
         "tempo": 3, 
-        "harmoni\u010dna kompleksnost": "7", 
-        "mode": "atonal", 
+        "harmonicna_kompleksnost": "7", 
         "dinamika": 4, 
         "konzonantnost": "2", 
         "ritem": 1, 
-        "melodi\u010dnost": 5, 
+        "mode": "atonal", 
         "sinusoide": [
             0, 
             0, 
@@ -12183,18 +12183,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "abstract / electronic / contemporary"
+        "zanr": "abstract / electronic / contemporary"
     }, 
     "172.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 6, 
         "BPM": "119", 
         "tempo": 6, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 6, 
         "konzonantnost": "6", 
         "ritem": 7, 
-        "melodi\u010dnost": 6, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -13198,18 +13198,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "classical/jazz"
+        "zanr": "classical/jazz"
     }, 
     "143.mp3": {
         "metrum": "6/8", 
+        "melodicnost": 6, 
         "BPM": "47", 
         "tempo": 2, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 2, 
         "konzonantnost": "6", 
         "ritem": 4, 
-        "melodi\u010dnost": 6, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -14213,18 +14213,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "easy listening"
+        "zanr": "easy listening"
     }, 
     "168.mp3": {
         "metrum": "3/4", 
+        "melodicnost": 2, 
         "BPM": "165", 
         "tempo": 5, 
-        "harmoni\u010dna kompleksnost": "7", 
-        "mode": "5", 
+        "harmonicna_kompleksnost": "7", 
         "dinamika": 4, 
         "konzonantnost": "1", 
         "ritem": 2, 
-        "melodi\u010dnost": 2, 
+        "mode": "5", 
         "sinusoide": [
             0, 
             0, 
@@ -15229,18 +15229,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "classical/contemporary"
+        "zanr": "classical/contemporary"
     }, 
     "121.mp3": {
         "metrum": "10/8 (3+3+2+2)", 
+        "melodicnost": 7, 
         "BPM": "3=71, 2=105", 
         "tempo": 4, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 3, 
         "konzonantnost": "6", 
         "ritem": 7, 
-        "melodi\u010dnost": 7, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -16244,18 +16244,18 @@
             1, 
             0
         ], 
-        "\u017eanr": "jazz"
+        "zanr": "jazz"
     }, 
     "544.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 6, 
         "BPM": "140", 
         "tempo": 5, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "2", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 4, 
         "konzonantnost": "6", 
         "ritem": 6, 
-        "melodi\u010dnost": 6, 
+        "mode": "2", 
         "sinusoide": [
             0, 
             0, 
@@ -17259,18 +17259,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Pop"
+        "zanr": "Pop"
     }, 
     "534.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 7, 
         "BPM": "62", 
         "tempo": 3, 
-        "harmoni\u010dna kompleksnost": "5", 
-        "mode": "1", 
+        "harmonicna_kompleksnost": "5", 
         "dinamika": 4, 
         "konzonantnost": "3", 
         "ritem": 3, 
-        "melodi\u010dnost": 7, 
+        "mode": "1", 
         "sinusoide": [
             0, 
             0, 
@@ -18275,18 +18275,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Metal"
+        "zanr": "Metal"
     }, 
     "133.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 4, 
         "BPM": "88", 
         "tempo": 3, 
-        "harmoni\u010dna kompleksnost": "1", 
-        "mode": "1", 
+        "harmonicna_kompleksnost": "1", 
         "dinamika": 2, 
         "konzonantnost": "7", 
         "ritem": 4, 
-        "melodi\u010dnost": 4, 
+        "mode": "1", 
         "sinusoide": [
             0, 
             0, 
@@ -19290,18 +19290,18 @@
             1, 
             0
         ], 
-        "\u017eanr": "classical"
+        "zanr": "classical"
     }, 
     "103.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 2, 
         "BPM": "157", 
         "tempo": 6, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "1", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 6, 
         "konzonantnost": "6", 
         "ritem": 3, 
-        "melodi\u010dnost": 2, 
+        "mode": "1", 
         "sinusoide": [
             0, 
             0, 
@@ -20306,18 +20306,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "classical"
+        "zanr": "classical"
     }, 
     "164.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 1, 
         "BPM": "70", 
         "tempo": 2, 
-        "harmoni\u010dna kompleksnost": "7", 
-        "mode": "atonal", 
+        "harmonicna_kompleksnost": "7", 
         "dinamika": 3, 
         "konzonantnost": "1", 
         "ritem": 1, 
-        "melodi\u010dnost": 1, 
+        "mode": "atonal", 
         "sinusoide": [
             0, 
             0, 
@@ -21321,18 +21321,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "electronic"
+        "zanr": "electronic"
     }, 
     "547.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 6, 
         "BPM": "120", 
         "tempo": 3, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "5", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 2, 
         "konzonantnost": "6", 
         "ritem": 4, 
-        "melodi\u010dnost": 6, 
+        "mode": "5", 
         "sinusoide": [
             0, 
             0, 
@@ -22336,18 +22336,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Classical"
+        "zanr": "Classical"
     }, 
     "210.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 5, 
         "BPM": "uneven app. 81", 
         "tempo": 3, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 2, 
         "konzonantnost": "6", 
         "ritem": 4, 
-        "melodi\u010dnost": 5, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -23351,18 +23351,18 @@
             -1, 
             0
         ], 
-        "\u017eanr": "classical"
+        "zanr": "classical"
     }, 
     "531.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 6, 
         "BPM": "156", 
         "tempo": 6, 
-        "harmoni\u010dna kompleksnost": "1", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "1", 
         "dinamika": 5, 
         "konzonantnost": "7", 
         "ritem": 7, 
-        "melodi\u010dnost": 6, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -24366,18 +24366,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Rock"
+        "zanr": "Rock"
     }, 
     "607.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 1, 
         "BPM": "129", 
         "tempo": 7, 
-        "harmoni\u010dna kompleksnost": "1", 
-        "mode": "3", 
+        "harmonicna_kompleksnost": "1", 
         "dinamika": 4, 
         "konzonantnost": "4", 
         "ritem": 7, 
-        "melodi\u010dnost": 1, 
+        "mode": "3", 
         "sinusoide": [
             0, 
             0, 
@@ -25382,18 +25382,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "abstract / electronic / contemporary"
+        "zanr": "abstract / electronic / contemporary"
     }, 
     "566.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 7, 
         "BPM": "110", 
         "tempo": 5, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "1", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 6, 
         "konzonantnost": "7", 
         "ritem": 6, 
-        "melodi\u010dnost": 7, 
+        "mode": "1", 
         "sinusoide": [
             0, 
             0, 
@@ -26398,18 +26398,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Rock"
+        "zanr": "Rock"
     }, 
     "504.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 2, 
         "BPM": "225", 
         "tempo": 7, 
-        "harmoni\u010dna kompleksnost": "4", 
-        "mode": "1", 
+        "harmonicna_kompleksnost": "4", 
         "dinamika": 7, 
         "konzonantnost": "5", 
         "ritem": 7, 
-        "melodi\u010dnost": 2, 
+        "mode": "1", 
         "sinusoide": [
             0, 
             0, 
@@ -27414,18 +27414,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Metal"
+        "zanr": "Metal"
     }, 
     "557.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 5, 
         "BPM": "94", 
         "tempo": 5, 
-        "harmoni\u010dna kompleksnost": "5", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "5", 
         "dinamika": 5, 
         "konzonantnost": "3", 
         "ritem": 5, 
-        "melodi\u010dnost": 5, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -28430,18 +28430,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "jazz (electro swing)"
+        "zanr": "jazz (electro swing)"
     }, 
     "603.mp3": {
         "metrum": "undefined", 
+        "melodicnost": 1, 
         "BPM": "undefined", 
         "tempo": 4, 
-        "harmoni\u010dna kompleksnost": "7", 
-        "mode": "atonal", 
+        "harmonicna_kompleksnost": "7", 
         "dinamika": 4, 
         "konzonantnost": "1", 
         "ritem": 2, 
-        "melodi\u010dnost": 1, 
+        "mode": "atonal", 
         "sinusoide": [
             0, 
             0, 
@@ -29445,18 +29445,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "abstract / electronic / contemporary"
+        "zanr": "abstract / electronic / contemporary"
     }, 
     "410.mp3": {
         "metrum": "5/4", 
+        "melodicnost": 6, 
         "BPM": "161", 
         "tempo": 6, 
-        "harmoni\u010dna kompleksnost": "1", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "1", 
         "dinamika": 5, 
         "konzonantnost": "7 with imprecise pitch", 
         "ritem": 5, 
-        "melodi\u010dnost": 6, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -30460,18 +30460,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "folk/country"
+        "zanr": "folk/country"
     }, 
     "140.mp3": {
         "metrum": "3/4 + 2/4", 
+        "melodicnost": 7, 
         "BPM": "62", 
         "tempo": 2, 
-        "harmoni\u010dna kompleksnost": "3", 
-        "mode": "5", 
+        "harmonicna_kompleksnost": "3", 
         "dinamika": 2, 
         "konzonantnost": "6", 
         "ritem": 2, 
-        "melodi\u010dnost": 7, 
+        "mode": "5", 
         "sinusoide": [
             0, 
             0, 
@@ -31476,18 +31476,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "easy listening"
+        "zanr": "easy listening"
     }, 
     "524.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 4, 
         "BPM": "100", 
         "tempo": 4, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "1", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 3, 
         "konzonantnost": "6", 
         "ritem": 5, 
-        "melodi\u010dnost": 4, 
+        "mode": "1", 
         "sinusoide": [
             0, 
             0, 
@@ -32491,18 +32491,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "easy listening"
+        "zanr": "easy listening"
     }, 
     "576.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 5, 
         "BPM": "123", 
         "tempo": 4, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "1", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 6, 
         "konzonantnost": "6", 
         "ritem": 6, 
-        "melodi\u010dnost": 5, 
+        "mode": "1", 
         "sinusoide": [
             0, 
             0, 
@@ -33506,18 +33506,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Dance/ Disco"
+        "zanr": "Dance/ Disco"
     }, 
     "180.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 7, 
         "BPM": "106", 
         "tempo": 3, 
-        "harmoni\u010dna kompleksnost": "5", 
-        "mode": "2", 
+        "harmonicna_kompleksnost": "5", 
         "dinamika": 3, 
         "konzonantnost": "3", 
         "ritem": 7, 
-        "melodi\u010dnost": 7, 
+        "mode": "2", 
         "sinusoide": [
             0, 
             0, 
@@ -34521,18 +34521,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "classical"
+        "zanr": "classical"
     }, 
     "552.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 2, 
         "BPM": "126", 
         "tempo": 5, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "2", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 5, 
         "konzonantnost": "3", 
         "ritem": 6, 
-        "melodi\u010dnost": 2, 
+        "mode": "2", 
         "sinusoide": [
             0, 
             0, 
@@ -35536,18 +35536,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Electronic/dance"
+        "zanr": "Electronic/dance"
     }, 
     "418.mp3": {
         "metrum": "2/4", 
+        "melodicnost": 7, 
         "BPM": "138", 
         "tempo": 6, 
-        "harmoni\u010dna kompleksnost": "1", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "1", 
         "dinamika": 4, 
         "konzonantnost": "7", 
         "ritem": 6, 
-        "melodi\u010dnost": 7, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -36551,18 +36551,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "vocal/folk"
+        "zanr": "vocal/folk"
     }, 
     "510.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 6, 
         "BPM": "120", 
         "tempo": 6, 
-        "harmoni\u010dna kompleksnost": "1", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "1", 
         "dinamika": 6, 
         "konzonantnost": "6", 
         "ritem": 7, 
-        "melodi\u010dnost": 6, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -37566,18 +37566,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Dance/disco"
+        "zanr": "Dance/disco"
     }, 
     "166.mp3": {
         "metrum": "4/4 + 2/4", 
+        "melodicnost": 4, 
         "BPM": "107", 
         "tempo": 4, 
-        "harmoni\u010dna kompleksnost": "6", 
-        "mode": "4", 
+        "harmonicna_kompleksnost": "6", 
         "dinamika": 5, 
         "konzonantnost": "6", 
         "ritem": 3, 
-        "melodi\u010dnost": 4, 
+        "mode": "4", 
         "sinusoide": [
             0, 
             0, 
@@ -38581,18 +38581,18 @@
             1, 
             0
         ], 
-        "\u017eanr": "classical/contemporary"
+        "zanr": "classical/contemporary"
     }, 
     "242.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 2, 
         "BPM": "96", 
         "tempo": 5, 
-        "harmoni\u010dna kompleksnost": "6", 
-        "mode": "2", 
+        "harmonicna_kompleksnost": "6", 
         "dinamika": 6, 
         "konzonantnost": "3", 
         "ritem": 6, 
-        "melodi\u010dnost": 2, 
+        "mode": "2", 
         "sinusoide": [
             0, 
             0, 
@@ -39596,18 +39596,18 @@
             1, 
             0
         ], 
-        "\u017eanr": "classical/contemporary"
+        "zanr": "classical/contemporary"
     }, 
     "205.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 7, 
         "BPM": "118", 
         "tempo": 6, 
-        "harmoni\u010dna kompleksnost": "1", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "1", 
         "dinamika": 6, 
         "konzonantnost": "7", 
         "ritem": 7, 
-        "melodi\u010dnost": 7, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -40611,18 +40611,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "country/folk"
+        "zanr": "country/folk"
     }, 
     "567.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 3, 
         "BPM": "111", 
         "tempo": 3, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "1", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 6, 
         "konzonantnost": "3", 
         "ritem": 3, 
-        "melodi\u010dnost": 3, 
+        "mode": "1", 
         "sinusoide": [
             0, 
             0, 
@@ -41626,18 +41626,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Electronic / dance"
+        "zanr": "Electronic / dance"
     }, 
     "201.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 6, 
         "BPM": "110", 
         "tempo": 5, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 4, 
         "konzonantnost": "6", 
         "ritem": 6, 
-        "melodi\u010dnost": 6, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -42641,18 +42641,18 @@
             0, 
             -1
         ], 
-        "\u017eanr": "easy listening"
+        "zanr": "easy listening"
     }, 
     "161.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 5, 
         "BPM": "106", 
         "tempo": 4, 
-        "harmoni\u010dna kompleksnost": "6", 
-        "mode": "2", 
+        "harmonicna_kompleksnost": "6", 
         "dinamika": 5, 
         "konzonantnost": "5", 
         "ritem": 5, 
-        "melodi\u010dnost": 5, 
+        "mode": "2", 
         "sinusoide": [
             0, 
             0, 
@@ -43656,18 +43656,18 @@
             1, 
             0
         ], 
-        "\u017eanr": "jazz"
+        "zanr": "jazz"
     }, 
     "579.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 6, 
         "BPM": "129", 
         "tempo": 5, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "1", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 6, 
         "konzonantnost": "6", 
         "ritem": 7, 
-        "melodi\u010dnost": 6, 
+        "mode": "1", 
         "sinusoide": [
             0, 
             0, 
@@ -44672,18 +44672,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "dance"
+        "zanr": "dance"
     }, 
     "196.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 3, 
         "BPM": "78", 
         "tempo": 3, 
-        "harmoni\u010dna kompleksnost": "3", 
-        "mode": "1", 
+        "harmonicna_kompleksnost": "3", 
         "dinamika": 4, 
         "konzonantnost": "5", 
         "ritem": 3, 
-        "melodi\u010dnost": 3, 
+        "mode": "1", 
         "sinusoide": [
             0, 
             0, 
@@ -45687,18 +45687,18 @@
             1, 
             0
         ], 
-        "\u017eanr": "classical"
+        "zanr": "classical"
     }, 
     "560.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 6, 
         "BPM": "120", 
         "tempo": 6, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 6, 
         "konzonantnost": "6", 
         "ritem": 6, 
-        "melodi\u010dnost": 6, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -46703,18 +46703,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Rock"
+        "zanr": "Rock"
     }, 
     "367.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 2, 
         "BPM": "95", 
         "tempo": 4, 
-        "harmoni\u010dna kompleksnost": "7", 
-        "mode": "2", 
+        "harmonicna_kompleksnost": "7", 
         "dinamika": 5, 
         "konzonantnost": "1", 
         "ritem": 6, 
-        "melodi\u010dnost": 2, 
+        "mode": "2", 
         "sinusoide": [
             0, 
             0, 
@@ -47718,18 +47718,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Electronic / orchestral"
+        "zanr": "Electronic / orchestral"
     }, 
     "398.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 6, 
         "BPM": "60", 
         "tempo": 2, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "1", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 2, 
         "konzonantnost": "6", 
         "ritem": 4, 
-        "melodi\u010dnost": 6, 
+        "mode": "1", 
         "sinusoide": [
             0, 
             0, 
@@ -48733,18 +48733,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "classical"
+        "zanr": "classical"
     }, 
     "411.mp3": {
         "metrum": "undefined", 
+        "melodicnost": 4, 
         "BPM": "102", 
         "tempo": 4, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "6", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 5, 
         "konzonantnost": "7 with imprecise pitch", 
         "ritem": 1, 
-        "melodi\u010dnost": 4, 
+        "mode": "6", 
         "sinusoide": [
             0, 
             0, 
@@ -49749,18 +49749,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "vocal/folk"
+        "zanr": "vocal/folk"
     }, 
     "152.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 7, 
         "BPM": "117", 
         "tempo": 5, 
-        "harmoni\u010dna kompleksnost": "3", 
-        "mode": "3", 
+        "harmonicna_kompleksnost": "3", 
         "dinamika": 3, 
         "konzonantnost": "6", 
         "ritem": 6, 
-        "melodi\u010dnost": 7, 
+        "mode": "3", 
         "sinusoide": [
             0, 
             0, 
@@ -50764,18 +50764,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "classical"
+        "zanr": "classical"
     }, 
     "514.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 5, 
         "BPM": "241", 
         "tempo": 7, 
-        "harmoni\u010dna kompleksnost": "5", 
-        "mode": "6", 
+        "harmonicna_kompleksnost": "5", 
         "dinamika": 7, 
         "konzonantnost": "4", 
         "ritem": 5, 
-        "melodi\u010dnost": 5, 
+        "mode": "6", 
         "sinusoide": [
             0, 
             0, 
@@ -51780,18 +51780,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "punk"
+        "zanr": "punk"
     }, 
     "501.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 7, 
         "BPM": "112", 
         "tempo": 5, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 3, 
         "konzonantnost": "6", 
         "ritem": 6, 
-        "melodi\u010dnost": 7, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -52796,18 +52796,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "easy listening"
+        "zanr": "easy listening"
     }, 
     "420.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 3, 
         "BPM": "uneven app. 78", 
         "tempo": 4, 
-        "harmoni\u010dna kompleksnost": "1", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "1", 
         "dinamika": 4, 
         "konzonantnost": "7 with imprecise pitch", 
         "ritem": 2, 
-        "melodi\u010dnost": 3, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -53811,18 +53811,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "vocal/folk"
+        "zanr": "vocal/folk"
     }, 
     "522.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 2, 
         "BPM": "150", 
         "tempo": 6, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "3", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 5, 
         "konzonantnost": "2", 
         "ritem": 7, 
-        "melodi\u010dnost": 2, 
+        "mode": "3", 
         "sinusoide": [
             0, 
             0, 
@@ -54826,18 +54826,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Latin /electronic"
+        "zanr": "Latin /electronic"
     }, 
     "406.mp3": {
         "metrum": "undefined", 
+        "melodicnost": 5, 
         "BPM": "uneven app.78", 
         "tempo": 3, 
-        "harmoni\u010dna kompleksnost": "1", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "1", 
         "dinamika": 4, 
         "konzonantnost": "7 with imprecise pitch", 
         "ritem": 3, 
-        "melodi\u010dnost": 5, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -55841,18 +55841,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "vocal/folk"
+        "zanr": "vocal/folk"
     }, 
     "546.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 2, 
         "BPM": "99", 
         "tempo": 3, 
-        "harmoni\u010dna kompleksnost": "4", 
-        "mode": "1", 
+        "harmonicna_kompleksnost": "4", 
         "dinamika": 6, 
         "konzonantnost": "3", 
         "ritem": 6, 
-        "melodi\u010dnost": 2, 
+        "mode": "1", 
         "sinusoide": [
             0, 
             0, 
@@ -56856,18 +56856,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Hip Hop / Rap"
+        "zanr": "Hip Hop / Rap"
     }, 
     "148.mp3": {
         "metrum": "mostly 3/4", 
+        "melodicnost": 3, 
         "BPM": "80", 
         "tempo": 3, 
-        "harmoni\u010dna kompleksnost": "5", 
-        "mode": "4", 
+        "harmonicna_kompleksnost": "5", 
         "dinamika": 2, 
         "konzonantnost": "6", 
         "ritem": 4, 
-        "melodi\u010dnost": 3, 
+        "mode": "4", 
         "sinusoide": [
             0, 
             0, 
@@ -57871,18 +57871,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "easy listening"
+        "zanr": "easy listening"
     }, 
     "149.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 6, 
         "BPM": "110", 
         "tempo": 5, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 4, 
         "konzonantnost": "6", 
         "ritem": 6, 
-        "melodi\u010dnost": 6, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -58886,18 +58886,18 @@
             0, 
             -1
         ], 
-        "\u017eanr": "easy listening"
+        "zanr": "easy listening"
     }, 
     "155.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 7, 
         "BPM": "104", 
         "tempo": 3, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 6, 
         "konzonantnost": "7", 
         "ritem": 5, 
-        "melodi\u010dnost": 7, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -59901,18 +59901,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "classical"
+        "zanr": "classical"
     }, 
     "558.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 6, 
         "BPM": "90", 
         "tempo": 6, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 3, 
         "konzonantnost": "7", 
         "ritem": 4, 
-        "melodi\u010dnost": 6, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -60916,18 +60916,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "pop/country"
+        "zanr": "pop/country"
     }, 
     "194.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 4, 
         "BPM": "79", 
         "tempo": 3, 
-        "harmoni\u010dna kompleksnost": "7", 
-        "mode": "4", 
+        "harmonicna_kompleksnost": "7", 
         "dinamika": 5, 
         "konzonantnost": "1", 
         "ritem": 5, 
-        "melodi\u010dnost": 4, 
+        "mode": "4", 
         "sinusoide": [
             0, 
             0, 
@@ -61931,18 +61931,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "classical/contemporary"
+        "zanr": "classical/contemporary"
     }, 
     "195.mp3": {
         "metrum": "undefined", 
+        "melodicnost": 1, 
         "BPM": "udefined", 
         "tempo": 1, 
-        "harmoni\u010dna kompleksnost": "6", 
-        "mode": "3", 
+        "harmonicna_kompleksnost": "6", 
         "dinamika": 2, 
         "konzonantnost": "2", 
         "ritem": 1, 
-        "melodi\u010dnost": 1, 
+        "mode": "3", 
         "sinusoide": [
             0, 
             0, 
@@ -62946,18 +62946,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "classical"
+        "zanr": "classical"
     }, 
     "415.mp3": {
         "metrum": "4/4 + 3/4", 
+        "melodicnost": 3, 
         "BPM": "83", 
         "tempo": 4, 
-        "harmoni\u010dna kompleksnost": "1", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "1", 
         "dinamika": 5, 
         "konzonantnost": "7 with imprecise pitch", 
         "ritem": 3, 
-        "melodi\u010dnost": 3, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -63961,18 +63961,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "vocal/folk"
+        "zanr": "vocal/folk"
     }, 
     "156.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 5, 
         "BPM": "uneven app. 89", 
         "tempo": 4, 
-        "harmoni\u010dna kompleksnost": "6", 
-        "mode": "6", 
+        "harmonicna_kompleksnost": "6", 
         "dinamika": 4, 
         "konzonantnost": "3", 
         "ritem": 5, 
-        "melodi\u010dnost": 5, 
+        "mode": "6", 
         "sinusoide": [
             0, 
             0, 
@@ -64976,18 +64976,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "classical/jazz"
+        "zanr": "classical/jazz"
     }, 
     "115.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 1, 
         "BPM": "118", 
         "tempo": 1, 
-        "harmoni\u010dna kompleksnost": "7", 
-        "mode": "4", 
+        "harmonicna_kompleksnost": "7", 
         "dinamika": 3, 
         "konzonantnost": "1", 
         "ritem": 1, 
-        "melodi\u010dnost": 1, 
+        "mode": "4", 
         "sinusoide": [
             0, 
             0, 
@@ -65991,18 +65991,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "electronic"
+        "zanr": "electronic"
     }, 
     "165.mp3": {
         "metrum": "3/4", 
+        "melodicnost": 3, 
         "BPM": "109", 
         "tempo": 2, 
-        "harmoni\u010dna kompleksnost": "5", 
-        "mode": "2", 
+        "harmonicna_kompleksnost": "5", 
         "dinamika": 4, 
         "konzonantnost": "5", 
         "ritem": 3, 
-        "melodi\u010dnost": 3, 
+        "mode": "2", 
         "sinusoide": [
             0, 
             0, 
@@ -67007,18 +67007,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "alternative/contemporary"
+        "zanr": "alternative/contemporary"
     }, 
     "409.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 7, 
         "BPM": "72", 
         "tempo": 3, 
-        "harmoni\u010dna kompleksnost": "1", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "1", 
         "dinamika": 4, 
         "konzonantnost": "7 with imprecise pitch", 
         "ritem": 3, 
-        "melodi\u010dnost": 7, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -68022,18 +68022,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "vocal/folk"
+        "zanr": "vocal/folk"
     }, 
     "521.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 5, 
         "BPM": "130", 
         "tempo": 6, 
-        "harmoni\u010dna kompleksnost": "3", 
-        "mode": "1", 
+        "harmonicna_kompleksnost": "3", 
         "dinamika": 3, 
         "konzonantnost": "7", 
         "ritem": 5, 
-        "melodi\u010dnost": 5, 
+        "mode": "1", 
         "sinusoide": [
             0, 
             0, 
@@ -69038,18 +69038,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "easy listening"
+        "zanr": "easy listening"
     }, 
     "548.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 5, 
         "BPM": "90", 
         "tempo": 3, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "1", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 3, 
         "konzonantnost": "5", 
         "ritem": 3, 
-        "melodi\u010dnost": 5, 
+        "mode": "1", 
         "sinusoide": [
             0, 
             0, 
@@ -70053,18 +70053,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Rock"
+        "zanr": "Rock"
     }, 
     "545.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 6, 
         "BPM": "115", 
         "tempo": 4, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "1", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 6, 
         "konzonantnost": "6", 
         "ritem": 7, 
-        "melodi\u010dnost": 6, 
+        "mode": "1", 
         "sinusoide": [
             0, 
             0, 
@@ -71068,18 +71068,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "R&B /Soul"
+        "zanr": "R&B /Soul"
     }, 
     "503.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 2, 
         "BPM": "110", 
         "tempo": 5, 
-        "harmoni\u010dna kompleksnost": "5", 
-        "mode": "2", 
+        "harmonicna_kompleksnost": "5", 
         "dinamika": 5, 
         "konzonantnost": "6", 
         "ritem": 6, 
-        "melodi\u010dnost": 2, 
+        "mode": "2", 
         "sinusoide": [
             0, 
             0, 
@@ -72083,18 +72083,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Electronic"
+        "zanr": "Electronic"
     }, 
     "538.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 5, 
         "BPM": "78", 
         "tempo": 3, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 3, 
         "konzonantnost": "7", 
         "ritem": 3, 
-        "melodi\u010dnost": 5, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -73098,18 +73098,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Country"
+        "zanr": "Country"
     }, 
     "614.mp3": {
         "metrum": "undefined", 
+        "melodicnost": 7, 
         "BPM": "120", 
         "tempo": 4, 
-        "harmoni\u010dna kompleksnost": "7", 
-        "mode": "atonal", 
+        "harmonicna_kompleksnost": "7", 
         "dinamika": 3, 
         "konzonantnost": "1", 
         "ritem": 3, 
-        "melodi\u010dnost": 7, 
+        "mode": "atonal", 
         "sinusoide": [
             0, 
             0, 
@@ -74113,18 +74113,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Classical / contemporary /vocal"
+        "zanr": "Classical / contemporary /vocal"
     }, 
     "198.mp3": {
         "metrum": "mostly3/4", 
+        "melodicnost": 3, 
         "BPM": "122", 
         "tempo": 4, 
-        "harmoni\u010dna kompleksnost": "7", 
-        "mode": "4", 
+        "harmonicna_kompleksnost": "7", 
         "dinamika": 3, 
         "konzonantnost": "1", 
         "ritem": 3, 
-        "melodi\u010dnost": 3, 
+        "mode": "4", 
         "sinusoide": [
             0, 
             0, 
@@ -75129,18 +75129,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "classical/contemporary"
+        "zanr": "classical/contemporary"
     }, 
     "602.mp3": {
         "metrum": "3/4", 
+        "melodicnost": 7, 
         "BPM": "65", 
         "tempo": 2, 
-        "harmoni\u010dna kompleksnost": "7", 
-        "mode": "4", 
+        "harmonicna_kompleksnost": "7", 
         "dinamika": 3, 
         "konzonantnost": "1", 
         "ritem": 3, 
-        "melodi\u010dnost": 7, 
+        "mode": "4", 
         "sinusoide": [
             0, 
             0, 
@@ -76144,18 +76144,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Classical / contemporary"
+        "zanr": "Classical / contemporary"
     }, 
     "536.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 6, 
         "BPM": "120", 
         "tempo": 4, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 6, 
         "konzonantnost": "7", 
         "ritem": 5, 
-        "melodi\u010dnost": 6, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -77159,18 +77159,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Pop/rock"
+        "zanr": "Pop/rock"
     }, 
     "130.mp3": {
         "metrum": "undefined", 
+        "melodicnost": 2, 
         "BPM": "undefined", 
         "tempo": 1, 
-        "harmoni\u010dna kompleksnost": "3", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "3", 
         "dinamika": 2, 
         "konzonantnost": "5", 
         "ritem": 1, 
-        "melodi\u010dnost": 2, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -78174,18 +78174,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "classical"
+        "zanr": "classical"
     }, 
     "542.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 6, 
         "BPM": "89", 
         "tempo": 3, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "6", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 4, 
         "konzonantnost": "7", 
         "ritem": 4, 
-        "melodi\u010dnost": 6, 
+        "mode": "6", 
         "sinusoide": [
             0, 
             0, 
@@ -79189,18 +79189,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Pop"
+        "zanr": "Pop"
     }, 
     "550.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 7, 
         "BPM": "72", 
         "tempo": 3, 
-        "harmoni\u010dna kompleksnost": "3", 
-        "mode": "1", 
+        "harmonicna_kompleksnost": "3", 
         "dinamika": 5, 
         "konzonantnost": "5", 
         "ritem": 5, 
-        "melodi\u010dnost": 7, 
+        "mode": "1", 
         "sinusoide": [
             0, 
             0, 
@@ -80204,18 +80204,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Pop/Rock"
+        "zanr": "Pop/Rock"
     }, 
     "608.mp3": {
         "metrum": "2 * 4/4 + 2/4 + 3 + 4/4 + 3/4 +2 * 4/4", 
+        "melodicnost": 7, 
         "BPM": "127", 
         "tempo": 4, 
-        "harmoni\u010dna kompleksnost": "1", 
-        "mode": "atonal", 
+        "harmonicna_kompleksnost": "1", 
         "dinamika": 3, 
         "konzonantnost": "7", 
         "ritem": 7, 
-        "melodi\u010dnost": 7, 
+        "mode": "atonal", 
         "sinusoide": [
             0, 
             0, 
@@ -81219,18 +81219,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "abstract / electronic / contemporary"
+        "zanr": "abstract / electronic / contemporary"
     }, 
     "515.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 6, 
         "BPM": "73", 
         "tempo": 3, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 4, 
         "konzonantnost": "7", 
         "ritem": 7, 
-        "melodi\u010dnost": 6, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -82235,18 +82235,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Reggae"
+        "zanr": "Reggae"
     }, 
     "104.mp3": {
         "metrum": "3/4", 
+        "melodicnost": 2, 
         "BPM": "138", 
         "tempo": 5, 
-        "harmoni\u010dna kompleksnost": "6", 
-        "mode": "3", 
+        "harmonicna_kompleksnost": "6", 
         "dinamika": 5, 
         "konzonantnost": "6", 
         "ritem": 2, 
-        "melodi\u010dnost": 2, 
+        "mode": "3", 
         "sinusoide": [
             0, 
             0, 
@@ -83251,18 +83251,18 @@
             1, 
             0
         ], 
-        "\u017eanr": "classical"
+        "zanr": "classical"
     }, 
     "512.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 1, 
         "BPM": "145", 
         "tempo": 6, 
-        "harmoni\u010dna kompleksnost": "7", 
-        "mode": "4", 
+        "harmonicna_kompleksnost": "7", 
         "dinamika": 6, 
         "konzonantnost": "1", 
         "ritem": 6, 
-        "melodi\u010dnost": 1, 
+        "mode": "4", 
         "sinusoide": [
             0, 
             0, 
@@ -84266,18 +84266,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Hip Hop/Rap"
+        "zanr": "Hip Hop/Rap"
     }, 
     "153.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 1, 
         "BPM": "138", 
         "tempo": 5, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 2, 
         "konzonantnost": "6", 
         "ritem": 3, 
-        "melodi\u010dnost": 1, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -85281,18 +85281,18 @@
             1, 
             0
         ], 
-        "\u017eanr": "new age"
+        "zanr": "new age"
     }, 
     "401.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 5, 
         "BPM": "108", 
         "tempo": 5, 
-        "harmoni\u010dna kompleksnost": "1", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "1", 
         "dinamika": 7, 
         "konzonantnost": "7 with imprecise pitch", 
         "ritem": 6, 
-        "melodi\u010dnost": 5, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -86297,18 +86297,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "march band/folk"
+        "zanr": "march band/folk"
     }, 
     "606.mp3": {
         "metrum": "7/4", 
+        "melodicnost": 1, 
         "BPM": "85", 
         "tempo": 4, 
-        "harmoni\u010dna kompleksnost": "no harmony", 
-        "mode": "atonal", 
+        "harmonicna_kompleksnost": "no harmony", 
         "dinamika": 1, 
         "konzonantnost": "1", 
         "ritem": 1, 
-        "melodi\u010dnost": 1, 
+        "mode": "atonal", 
         "sinusoide": [
             0, 
             0, 
@@ -87312,18 +87312,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "abstract / electronic / contemporary"
+        "zanr": "abstract / electronic / contemporary"
     }, 
     "209.mp3": {
         "metrum": "3/4", 
+        "melodicnost": 2, 
         "BPM": "uneven app. 45", 
         "tempo": 1, 
-        "harmoni\u010dna kompleksnost": "4", 
-        "mode": "1", 
+        "harmonicna_kompleksnost": "4", 
         "dinamika": 1, 
         "konzonantnost": "4", 
         "ritem": 2, 
-        "melodi\u010dnost": 2, 
+        "mode": "1", 
         "sinusoide": [
             0, 
             0, 
@@ -88328,18 +88328,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "classical"
+        "zanr": "classical"
     }, 
     "132.mp3": {
         "metrum": "undefined", 
+        "melodicnost": 6, 
         "BPM": "60", 
         "tempo": 2, 
-        "harmoni\u010dna kompleksnost": "5", 
-        "mode": "2", 
+        "harmonicna_kompleksnost": "5", 
         "dinamika": 3, 
         "konzonantnost": "5", 
         "ritem": 2, 
-        "melodi\u010dnost": 6, 
+        "mode": "2", 
         "sinusoide": [
             0, 
             0, 
@@ -89343,18 +89343,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "classical"
+        "zanr": "classical"
     }, 
     "404.mp3": {
         "metrum": "6/8", 
+        "melodicnost": 7, 
         "BPM": "59", 
         "tempo": 4, 
-        "harmoni\u010dna kompleksnost": "1", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "1", 
         "dinamika": 3, 
         "konzonantnost": "7 with imprecise pitch", 
         "ritem": 3, 
-        "melodi\u010dnost": 7, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -90359,18 +90359,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "vocal/folk"
+        "zanr": "vocal/folk"
     }, 
     "532.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 6, 
         "BPM": "130", 
         "tempo": 5, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "6", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 6, 
         "konzonantnost": "5", 
         "ritem": 7, 
-        "melodi\u010dnost": 6, 
+        "mode": "6", 
         "sinusoide": [
             0, 
             0, 
@@ -91375,18 +91375,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Rock/blues"
+        "zanr": "Rock/blues"
     }, 
     "173.mp3": {
         "metrum": "undefined/asymmetrical ", 
+        "melodicnost": 3, 
         "BPM": "135", 
         "tempo": 7, 
-        "harmoni\u010dna kompleksnost": "3", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "3", 
         "dinamika": 5, 
         "konzonantnost": "6", 
         "ritem": 5, 
-        "melodi\u010dnost": 3, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -92391,18 +92391,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "classical"
+        "zanr": "classical"
     }, 
     "124.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 6, 
         "BPM": "119", 
         "tempo": 6, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 6, 
         "konzonantnost": "6", 
         "ritem": 7, 
-        "melodi\u010dnost": 6, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -93407,18 +93407,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "classical/jazz"
+        "zanr": "classical/jazz"
     }, 
     "539.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 6, 
         "BPM": "105", 
         "tempo": 5, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 5, 
         "konzonantnost": "7", 
         "ritem": 6, 
-        "melodi\u010dnost": 6, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -94422,18 +94422,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Country"
+        "zanr": "Country"
     }, 
     "177.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 6, 
         "BPM": "95", 
         "tempo": 2, 
-        "harmoni\u010dna kompleksnost": "4", 
-        "mode": "6", 
+        "harmonicna_kompleksnost": "4", 
         "dinamika": 2, 
         "konzonantnost": "3", 
         "ritem": 6, 
-        "melodi\u010dnost": 6, 
+        "mode": "6", 
         "sinusoide": [
             0, 
             0, 
@@ -95438,18 +95438,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "jazz"
+        "zanr": "jazz"
     }, 
     "294.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 6, 
         "BPM": "50", 
         "tempo": 3, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 3, 
         "konzonantnost": "6", 
         "ritem": 3, 
-        "melodi\u010dnost": 6, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -96453,18 +96453,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "easy listening"
+        "zanr": "easy listening"
     }, 
     "413.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 5, 
         "BPM": "uneven app. 140", 
         "tempo": 4, 
-        "harmoni\u010dna kompleksnost": "1", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "1", 
         "dinamika": 4, 
         "konzonantnost": "7 with imprecise pitch", 
         "ritem": 2, 
-        "melodi\u010dnost": 5, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -97468,18 +97468,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "vocal/folk"
+        "zanr": "vocal/folk"
     }, 
     "533.mp3": {
         "metrum": "2/4", 
+        "melodicnost": 5, 
         "BPM": "83", 
         "tempo": 4, 
-        "harmoni\u010dna kompleksnost": "1", 
-        "mode": "1", 
+        "harmonicna_kompleksnost": "1", 
         "dinamika": 5, 
         "konzonantnost": "7", 
         "ritem": 6, 
-        "melodi\u010dnost": 5, 
+        "mode": "1", 
         "sinusoide": [
             0, 
             0, 
@@ -98483,18 +98483,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "R&B /Soul"
+        "zanr": "R&B /Soul"
     }, 
     "207.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 7, 
         "BPM": "uneven app. 60", 
         "tempo": 2, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 3, 
         "konzonantnost": "7", 
         "ritem": 4, 
-        "melodi\u010dnost": 7, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -99498,18 +99498,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "classical"
+        "zanr": "classical"
     }, 
     "184.mp3": {
         "metrum": "5/4", 
+        "melodicnost": 6, 
         "BPM": "64", 
         "tempo": 1, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "1", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 1, 
         "konzonantnost": "5", 
         "ritem": 2, 
-        "melodi\u010dnost": 6, 
+        "mode": "1", 
         "sinusoide": [
             0, 
             0, 
@@ -100514,18 +100514,18 @@
             -1, 
             0
         ], 
-        "\u017eanr": "classical"
+        "zanr": "classical"
     }, 
     "575.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 6, 
         "BPM": "89", 
         "tempo": 4, 
-        "harmoni\u010dna kompleksnost": "3", 
-        "mode": "6", 
+        "harmonicna_kompleksnost": "3", 
         "dinamika": 4, 
         "konzonantnost": "7", 
         "ritem": 5, 
-        "melodi\u010dnost": 6, 
+        "mode": "6", 
         "sinusoide": [
             0, 
             0, 
@@ -101530,18 +101530,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Pop"
+        "zanr": "Pop"
     }, 
     "417.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 7, 
         "BPM": "176", 
         "tempo": 6, 
-        "harmoni\u010dna kompleksnost": "1", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "1", 
         "dinamika": 3, 
         "konzonantnost": "7", 
         "ritem": 6, 
-        "melodi\u010dnost": 7, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -102546,18 +102546,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "folk"
+        "zanr": "folk"
     }, 
     "204.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 7, 
         "BPM": "60", 
         "tempo": 2, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "1", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 2, 
         "konzonantnost": "4", 
         "ritem": 2, 
-        "melodi\u010dnost": 7, 
+        "mode": "1", 
         "sinusoide": [
             0, 
             0, 
@@ -103561,18 +103561,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "new age"
+        "zanr": "new age"
     }, 
     "562.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 5, 
         "BPM": "122", 
         "tempo": 5, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "1", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 7, 
         "konzonantnost": "6", 
         "ritem": 5, 
-        "melodi\u010dnost": 5, 
+        "mode": "1", 
         "sinusoide": [
             0, 
             0, 
@@ -104576,18 +104576,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Rock"
+        "zanr": "Rock"
     }, 
     "141.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 7, 
         "BPM": "uneven app. 80", 
         "tempo": 3, 
-        "harmoni\u010dna kompleksnost": "4", 
-        "mode": "6", 
+        "harmonicna_kompleksnost": "4", 
         "dinamika": 3, 
         "konzonantnost": "6", 
         "ritem": 5, 
-        "melodi\u010dnost": 7, 
+        "mode": "6", 
         "sinusoide": [
             0, 
             0, 
@@ -105592,18 +105592,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "easy listening"
+        "zanr": "easy listening"
     }, 
     "403.mp3": {
         "metrum": "5/4", 
+        "melodicnost": 7, 
         "BPM": "uneven app. 105", 
         "tempo": 4, 
-        "harmoni\u010dna kompleksnost": "1", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "1", 
         "dinamika": 4, 
         "konzonantnost": "7 with imprecise pitch", 
         "ritem": 3, 
-        "melodi\u010dnost": 7, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -106607,18 +106607,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "vocal/folk"
+        "zanr": "vocal/folk"
     }, 
     "525.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 6, 
         "BPM": "132", 
         "tempo": 3, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 3, 
         "konzonantnost": "7", 
         "ritem": 7, 
-        "melodi\u010dnost": 6, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -107622,18 +107622,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Reggae"
+        "zanr": "Reggae"
     }, 
     "135.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 7, 
         "BPM": "60", 
         "tempo": 2, 
-        "harmoni\u010dna kompleksnost": "3", 
-        "mode": "1", 
+        "harmonicna_kompleksnost": "3", 
         "dinamika": 5, 
         "konzonantnost": "6", 
         "ritem": 4, 
-        "melodi\u010dnost": 7, 
+        "mode": "1", 
         "sinusoide": [
             0, 
             0, 
@@ -108638,18 +108638,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "classical"
+        "zanr": "classical"
     }, 
     "123.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 7, 
         "BPM": "126", 
         "tempo": 6, 
-        "harmoni\u010dna kompleksnost": "1", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "1", 
         "dinamika": 6, 
         "konzonantnost": "7", 
         "ritem": 7, 
-        "melodi\u010dnost": 7, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -109653,18 +109653,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "folk"
+        "zanr": "folk"
     }, 
     "537.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 5, 
         "BPM": "145", 
         "tempo": 5, 
-        "harmoni\u010dna kompleksnost": "3", 
-        "mode": "6", 
+        "harmonicna_kompleksnost": "3", 
         "dinamika": 5, 
         "konzonantnost": "5", 
         "ritem": 5, 
-        "melodi\u010dnost": 5, 
+        "mode": "6", 
         "sinusoide": [
             0, 
             0, 
@@ -110668,18 +110668,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Rock"
+        "zanr": "Rock"
     }, 
     "285.mp3": {
         "metrum": "3/4", 
+        "melodicnost": 6, 
         "BPM": "uneven app. 54", 
         "tempo": 2, 
-        "harmoni\u010dna kompleksnost": "6", 
-        "mode": "6", 
+        "harmonicna_kompleksnost": "6", 
         "dinamika": 3, 
         "konzonantnost": "5", 
         "ritem": 2, 
-        "melodi\u010dnost": 6, 
+        "mode": "6", 
         "sinusoide": [
             0, 
             0, 
@@ -111683,18 +111683,18 @@
             2, 
             0
         ], 
-        "\u017eanr": "classical"
+        "zanr": "classical"
     }, 
     "505.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 1, 
         "BPM": "122", 
         "tempo": 5, 
-        "harmoni\u010dna kompleksnost": "1", 
-        "mode": "3", 
+        "harmonicna_kompleksnost": "1", 
         "dinamika": 6, 
         "konzonantnost": "6", 
         "ritem": 7, 
-        "melodi\u010dnost": 1, 
+        "mode": "3", 
         "sinusoide": [
             0, 
             0, 
@@ -112699,18 +112699,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Dance / disco"
+        "zanr": "Dance / disco"
     }, 
     "506.mp3": {
         "metrum": "2/4", 
+        "melodicnost": 1, 
         "BPM": "136", 
         "tempo": 6, 
-        "harmoni\u010dna kompleksnost": "7", 
-        "mode": "4", 
+        "harmonicna_kompleksnost": "7", 
         "dinamika": 5, 
         "konzonantnost": "1", 
         "ritem": 4, 
-        "melodi\u010dnost": 1, 
+        "mode": "4", 
         "sinusoide": [
             0, 
             0, 
@@ -113715,18 +113715,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "electronic"
+        "zanr": "electronic"
     }, 
     "199.mp3": {
         "metrum": "2/2", 
+        "melodicnost": 7, 
         "BPM": "45", 
         "tempo": 1, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "1", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 3, 
         "konzonantnost": "5", 
         "ritem": 5, 
-        "melodi\u010dnost": 7, 
+        "mode": "1", 
         "sinusoide": [
             0, 
             0, 
@@ -114730,18 +114730,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "classical"
+        "zanr": "classical"
     }, 
     "618.mp3": {
         "metrum": "undefined", 
+        "melodicnost": 1, 
         "BPM": "undefined", 
         "tempo": 4, 
-        "harmoni\u010dna kompleksnost": "no harmony", 
-        "mode": "atonal", 
+        "harmonicna_kompleksnost": "no harmony", 
         "dinamika": 5, 
         "konzonantnost": "1", 
         "ritem": 1, 
-        "melodi\u010dnost": 1, 
+        "mode": "atonal", 
         "sinusoide": [
             0, 
             0, 
@@ -115745,18 +115745,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "abstract / electronic / contemporary"
+        "zanr": "abstract / electronic / contemporary"
     }, 
     "577.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 6, 
         "BPM": "101", 
         "tempo": 4, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 3, 
         "konzonantnost": "7", 
         "ritem": 6, 
-        "melodi\u010dnost": 6, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -116760,18 +116760,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Country"
+        "zanr": "Country"
     }, 
     "572.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 6, 
         "BPM": "76", 
         "tempo": 3, 
-        "harmoni\u010dna kompleksnost": "5", 
-        "mode": "6", 
+        "harmonicna_kompleksnost": "5", 
         "dinamika": 5, 
         "konzonantnost": "4", 
         "ritem": 3, 
-        "melodi\u010dnost": 6, 
+        "mode": "6", 
         "sinusoide": [
             0, 
             0, 
@@ -117775,18 +117775,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Electronic / orchestral"
+        "zanr": "Electronic / orchestral"
     }, 
     "563.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 6, 
         "BPM": "88", 
         "tempo": 4, 
-        "harmoni\u010dna kompleksnost": "3", 
-        "mode": "3", 
+        "harmonicna_kompleksnost": "3", 
         "dinamika": 4, 
         "konzonantnost": "6", 
         "ritem": 7, 
-        "melodi\u010dnost": 6, 
+        "mode": "3", 
         "sinusoide": [
             0, 
             0, 
@@ -118790,18 +118790,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Rock"
+        "zanr": "Rock"
     }, 
     "573.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 7, 
         "BPM": "100", 
         "tempo": 5, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 2, 
         "konzonantnost": "7", 
         "ritem": 4, 
-        "melodi\u010dnost": 7, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -119806,18 +119806,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Classical"
+        "zanr": "Classical"
     }, 
     "267.mp3": {
         "metrum": "3/4", 
+        "melodicnost": 6, 
         "BPM": "160", 
         "tempo": 5, 
-        "harmoni\u010dna kompleksnost": "3", 
-        "mode": "2", 
+        "harmonicna_kompleksnost": "3", 
         "dinamika": 5, 
         "konzonantnost": "6", 
         "ritem": 7, 
-        "melodi\u010dnost": 6, 
+        "mode": "2", 
         "sinusoide": [
             0, 
             0, 
@@ -120821,18 +120821,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "classical"
+        "zanr": "classical"
     }, 
     "508.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 1, 
         "BPM": "150", 
         "tempo": 7, 
-        "harmoni\u010dna kompleksnost": "1", 
-        "mode": "3", 
+        "harmonicna_kompleksnost": "1", 
         "dinamika": 7, 
         "konzonantnost": "7", 
         "ritem": 7, 
-        "melodi\u010dnost": 1, 
+        "mode": "3", 
         "sinusoide": [
             0, 
             0, 
@@ -121836,18 +121836,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Dance/disco"
+        "zanr": "Dance/disco"
     }, 
     "619.mp3": {
         "metrum": "undefined", 
+        "melodicnost": 1, 
         "BPM": "undefined", 
         "tempo": 4, 
-        "harmoni\u010dna kompleksnost": "no harmony", 
-        "mode": "atonal", 
+        "harmonicna_kompleksnost": "no harmony", 
         "dinamika": 5, 
         "konzonantnost": "1", 
         "ritem": 1, 
-        "melodi\u010dnost": 1, 
+        "mode": "atonal", 
         "sinusoide": [
             0, 
             0, 
@@ -122851,18 +122851,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "abstract / contemporary"
+        "zanr": "abstract / contemporary"
     }, 
     "128.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 6, 
         "BPM": "59", 
         "tempo": 2, 
-        "harmoni\u010dna kompleksnost": "1", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "1", 
         "dinamika": 2, 
         "konzonantnost": "7", 
         "ritem": 4, 
-        "melodi\u010dnost": 6, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -123866,18 +123866,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "easy listening"
+        "zanr": "easy listening"
     }, 
     "187.mp3": {
         "metrum": "3/4", 
+        "melodicnost": 6, 
         "BPM": "81", 
         "tempo": 2, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "1", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 2, 
         "konzonantnost": "6", 
         "ritem": 2, 
-        "melodi\u010dnost": 6, 
+        "mode": "1", 
         "sinusoide": [
             0, 
             0, 
@@ -124882,18 +124882,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "classical"
+        "zanr": "classical"
     }, 
     "523.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 6, 
         "BPM": "70", 
         "tempo": 5, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 6, 
         "konzonantnost": "7", 
         "ritem": 7, 
-        "melodi\u010dnost": 6, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -125898,18 +125898,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Pop"
+        "zanr": "Pop"
     }, 
     "202.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 2, 
         "BPM": "92", 
         "tempo": 5, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "6", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 2, 
         "konzonantnost": "6", 
         "ritem": 2, 
-        "melodi\u010dnost": 2, 
+        "mode": "6", 
         "sinusoide": [
             0, 
             0, 
@@ -126913,18 +126913,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "classical"
+        "zanr": "classical"
     }, 
     "516.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 2, 
         "BPM": "146", 
         "tempo": 5, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 5, 
         "konzonantnost": "7", 
         "ritem": 7, 
-        "melodi\u010dnost": 2, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -127928,18 +127928,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Reggae"
+        "zanr": "Reggae"
     }, 
     "197.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 2, 
         "BPM": "98", 
         "tempo": 4, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 4, 
         "konzonantnost": "7", 
         "ritem": 5, 
-        "melodi\u010dnost": 2, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -128944,18 +128944,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "vocal-instrumental/contemporary"
+        "zanr": "vocal-instrumental/contemporary"
     }, 
     "208.mp3": {
         "metrum": "9/8 (2+2+2+3)", 
+        "melodicnost": 2, 
         "BPM": "2=107;3=71", 
         "tempo": 4, 
-        "harmoni\u010dna kompleksnost": "1", 
-        "mode": "1", 
+        "harmonicna_kompleksnost": "1", 
         "dinamika": 2, 
         "konzonantnost": "7", 
         "ritem": 2, 
-        "melodi\u010dnost": 2, 
+        "mode": "1", 
         "sinusoide": [
             0, 
             0, 
@@ -129959,18 +129959,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "easy listening"
+        "zanr": "easy listening"
     }, 
     "518.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 2, 
         "BPM": "130", 
         "tempo": 6, 
-        "harmoni\u010dna kompleksnost": "1", 
-        "mode": "1", 
+        "harmonicna_kompleksnost": "1", 
         "dinamika": 5, 
         "konzonantnost": "7", 
         "ritem": 6, 
-        "melodi\u010dnost": 2, 
+        "mode": "1", 
         "sinusoide": [
             0, 
             0, 
@@ -130974,18 +130974,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Latin"
+        "zanr": "Latin"
     }, 
     "126.mp3": {
         "metrum": "3/4", 
+        "melodicnost": 7, 
         "BPM": "122", 
         "tempo": 3, 
-        "harmoni\u010dna kompleksnost": "6", 
-        "mode": "6", 
+        "harmonicna_kompleksnost": "6", 
         "dinamika": 2, 
         "konzonantnost": "2", 
         "ritem": 5, 
-        "melodi\u010dnost": 7, 
+        "mode": "6", 
         "sinusoide": [
             0, 
             0, 
@@ -131989,18 +131989,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "classical"
+        "zanr": "classical"
     }, 
     "540.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 4, 
         "BPM": "150", 
         "tempo": 5, 
-        "harmoni\u010dna kompleksnost": "4", 
-        "mode": "1", 
+        "harmonicna_kompleksnost": "4", 
         "dinamika": 7, 
         "konzonantnost": "4", 
         "ritem": 4, 
-        "melodi\u010dnost": 4, 
+        "mode": "1", 
         "sinusoide": [
             0, 
             0, 
@@ -133004,18 +133004,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Metal"
+        "zanr": "Metal"
     }, 
     "402.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 3, 
         "BPM": "158", 
         "tempo": 6, 
-        "harmoni\u010dna kompleksnost": "1", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "1", 
         "dinamika": 5, 
         "konzonantnost": "7", 
         "ritem": 5, 
-        "melodi\u010dnost": 3, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -134019,18 +134019,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "folk"
+        "zanr": "folk"
     }, 
     "162.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 2, 
         "BPM": "73", 
         "tempo": 3, 
-        "harmoni\u010dna kompleksnost": "7", 
-        "mode": "3", 
+        "harmonicna_kompleksnost": "7", 
         "dinamika": 3, 
         "konzonantnost": "2", 
         "ritem": 2, 
-        "melodi\u010dnost": 2, 
+        "mode": "3", 
         "sinusoide": [
             0, 
             0, 
@@ -135035,18 +135035,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "classical"
+        "zanr": "classical"
     }, 
     "570.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 6, 
         "BPM": "125", 
         "tempo": 5, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "1", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 4, 
         "konzonantnost": "6", 
         "ritem": 4, 
-        "melodi\u010dnost": 6, 
+        "mode": "1", 
         "sinusoide": [
             0, 
             0, 
@@ -136050,18 +136050,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Dance"
+        "zanr": "Dance"
     }, 
     "416.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 7, 
         "BPM": "uneven app. 104", 
         "tempo": 4, 
-        "harmoni\u010dna kompleksnost": "1", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "1", 
         "dinamika": 3, 
         "konzonantnost": "7 with imprecise pitch", 
         "ritem": 4, 
-        "melodi\u010dnost": 7, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -137065,18 +137065,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "vocal/folk"
+        "zanr": "vocal/folk"
     }, 
     "612.mp3": {
         "metrum": "3/4", 
+        "melodicnost": 6, 
         "BPM": "85", 
         "tempo": 4, 
-        "harmoni\u010dna kompleksnost": "7", 
-        "mode": "atonal", 
+        "harmonicna_kompleksnost": "7", 
         "dinamika": 2, 
         "konzonantnost": "1", 
         "ritem": 5, 
-        "melodi\u010dnost": 6, 
+        "mode": "atonal", 
         "sinusoide": [
             0, 
             0, 
@@ -138080,18 +138080,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Classical / contemporary"
+        "zanr": "Classical / contemporary"
     }, 
     "615.mp3": {
         "metrum": "undefined", 
+        "melodicnost": 1, 
         "BPM": "undefined", 
         "tempo": 4, 
-        "harmoni\u010dna kompleksnost": "no harmony", 
-        "mode": "atonal", 
+        "harmonicna_kompleksnost": "no harmony", 
         "dinamika": 4, 
         "konzonantnost": "1", 
         "ritem": 1, 
-        "melodi\u010dnost": 1, 
+        "mode": "atonal", 
         "sinusoide": [
             0, 
             0, 
@@ -139095,18 +139095,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "abstract / contemporary"
+        "zanr": "abstract / contemporary"
     }, 
     "256.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 2, 
         "BPM": "98", 
         "tempo": 4, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 4, 
         "konzonantnost": "7", 
         "ritem": 5, 
-        "melodi\u010dnost": 2, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -140111,18 +140111,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "vocal-instrumental/contemporary"
+        "zanr": "vocal-instrumental/contemporary"
     }, 
     "564.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 6, 
         "BPM": "181", 
         "tempo": 6, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "2", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 7, 
         "konzonantnost": "6", 
         "ritem": 6, 
-        "melodi\u010dnost": 6, 
+        "mode": "2", 
         "sinusoide": [
             0, 
             0, 
@@ -141126,18 +141126,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Rock/Punk"
+        "zanr": "Rock/Punk"
     }, 
     "561.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 6, 
         "BPM": "139", 
         "tempo": 4, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 6, 
         "konzonantnost": "6", 
         "ritem": 6, 
-        "melodi\u010dnost": 6, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -142141,18 +142141,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Pop"
+        "zanr": "Pop"
     }, 
     "556.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 6, 
         "BPM": "128", 
         "tempo": 5, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 6, 
         "konzonantnost": "7", 
         "ritem": 7, 
-        "melodi\u010dnost": 6, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -143156,18 +143156,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "disco/dance"
+        "zanr": "disco/dance"
     }, 
     "507.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 7, 
         "BPM": "68", 
         "tempo": 2, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 3, 
         "konzonantnost": "7", 
         "ritem": 7, 
-        "melodi\u010dnost": 7, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -144171,18 +144171,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "rock"
+        "zanr": "rock"
     }, 
     "412.mp3": {
         "metrum": "mostly 3/4", 
+        "melodicnost": 5, 
         "BPM": "uneven app. 120", 
         "tempo": 2, 
-        "harmoni\u010dna kompleksnost": "1", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "1", 
         "dinamika": 4, 
         "konzonantnost": "7 with imprecise pitch", 
         "ritem": 2, 
-        "melodi\u010dnost": 5, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -145187,18 +145187,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "vocal/folk"
+        "zanr": "vocal/folk"
     }, 
     "527.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 3, 
         "BPM": "125", 
         "tempo": 4, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "1", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 3, 
         "konzonantnost": "5", 
         "ritem": 6, 
-        "melodi\u010dnost": 3, 
+        "mode": "1", 
         "sinusoide": [
             0, 
             0, 
@@ -146203,18 +146203,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Latin"
+        "zanr": "Latin"
     }, 
     "529.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 7, 
         "BPM": "uneven app. 161", 
         "tempo": 6, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 2, 
         "konzonantnost": "6", 
         "ritem": 5, 
-        "melodi\u010dnost": 7, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -147219,18 +147219,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Classical"
+        "zanr": "Classical"
     }, 
     "517.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 7, 
         "BPM": "96", 
         "tempo": 4, 
-        "harmoni\u010dna kompleksnost": "4", 
-        "mode": "1", 
+        "harmonicna_kompleksnost": "4", 
         "dinamika": 4, 
         "konzonantnost": "3", 
         "ritem": 7, 
-        "melodi\u010dnost": 7, 
+        "mode": "1", 
         "sinusoide": [
             0, 
             0, 
@@ -148234,18 +148234,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Funk"
+        "zanr": "Funk"
     }, 
     "513.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 6, 
         "BPM": "90", 
         "tempo": 4, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 3, 
         "konzonantnost": "5", 
         "ritem": 6, 
-        "melodi\u010dnost": 6, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -149249,18 +149249,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "pop"
+        "zanr": "pop"
     }, 
     "318.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 5, 
         "BPM": "66", 
         "tempo": 3, 
-        "harmoni\u010dna kompleksnost": "6", 
-        "mode": "2", 
+        "harmonicna_kompleksnost": "6", 
         "dinamika": 6, 
         "konzonantnost": "4", 
         "ritem": 3, 
-        "melodi\u010dnost": 5, 
+        "mode": "2", 
         "sinusoide": [
             0, 
             0, 
@@ -150264,18 +150264,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "classical/contemporary"
+        "zanr": "classical/contemporary"
     }, 
     "408.mp3": {
         "metrum": "3/4 + 2/4", 
+        "melodicnost": 7, 
         "BPM": "139", 
         "tempo": 6, 
-        "harmoni\u010dna kompleksnost": "1", 
-        "mode": "1", 
+        "harmonicna_kompleksnost": "1", 
         "dinamika": 4, 
         "konzonantnost": "7 with imprecise pitch", 
         "ritem": 3, 
-        "melodi\u010dnost": 7, 
+        "mode": "1", 
         "sinusoide": [
             0, 
             0, 
@@ -151279,18 +151279,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "vocal/folk"
+        "zanr": "vocal/folk"
     }, 
     "553.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 6, 
         "BPM": "113", 
         "tempo": 5, 
-        "harmoni\u010dna kompleksnost": "1", 
-        "mode": "4", 
+        "harmonicna_kompleksnost": "1", 
         "dinamika": 3, 
         "konzonantnost": "7", 
         "ritem": 4, 
-        "melodi\u010dnost": 6, 
+        "mode": "4", 
         "sinusoide": [
             0, 
             0, 
@@ -152294,18 +152294,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "easy listening"
+        "zanr": "easy listening"
     }, 
     "541.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 5, 
         "BPM": "135", 
         "tempo": 4, 
-        "harmoni\u010dna kompleksnost": "1", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "1", 
         "dinamika": 3, 
         "konzonantnost": "7", 
         "ritem": 5, 
-        "melodi\u010dnost": 5, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -153309,18 +153309,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Country/pop"
+        "zanr": "Country/pop"
     }, 
     "610.mp3": {
         "metrum": "5/4", 
+        "melodicnost": 2, 
         "BPM": "119", 
         "tempo": 4, 
-        "harmoni\u010dna kompleksnost": "7", 
-        "mode": "3", 
+        "harmonicna_kompleksnost": "7", 
         "dinamika": 4, 
         "konzonantnost": "1", 
         "ritem": 1, 
-        "melodi\u010dnost": 2, 
+        "mode": "3", 
         "sinusoide": [
             0, 
             0, 
@@ -154324,18 +154324,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "abstract / electronic / contemporary"
+        "zanr": "abstract / electronic / contemporary"
     }, 
     "520.mp3": {
         "metrum": "6/8", 
+        "melodicnost": 1, 
         "BPM": "67", 
         "tempo": 5, 
-        "harmoni\u010dna kompleksnost": "1", 
-        "mode": "1", 
+        "harmonicna_kompleksnost": "1", 
         "dinamika": 4, 
         "konzonantnost": "7", 
         "ritem": 6, 
-        "melodi\u010dnost": 1, 
+        "mode": "1", 
         "sinusoide": [
             0, 
             0, 
@@ -155339,18 +155339,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "rock/pop"
+        "zanr": "rock/pop"
     }, 
     "113.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 3, 
         "BPM": "115", 
         "tempo": 4, 
-        "harmoni\u010dna kompleksnost": "6", 
-        "mode": "2", 
+        "harmonicna_kompleksnost": "6", 
         "dinamika": 4, 
         "konzonantnost": "2", 
         "ritem": 7, 
-        "melodi\u010dnost": 3, 
+        "mode": "2", 
         "sinusoide": [
             0, 
             0, 
@@ -156354,18 +156354,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "classical/electronic"
+        "zanr": "classical/electronic"
     }, 
     "109.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 5, 
         "BPM": "120", 
         "tempo": 5, 
-        "harmoni\u010dna kompleksnost": "6", 
-        "mode": "2", 
+        "harmonicna_kompleksnost": "6", 
         "dinamika": 6, 
         "konzonantnost": "3", 
         "ritem": 7, 
-        "melodi\u010dnost": 5, 
+        "mode": "2", 
         "sinusoide": [
             0, 
             0, 
@@ -157369,18 +157369,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "classical"
+        "zanr": "classical"
     }, 
     "519.mp3": {
         "metrum": "undefined", 
+        "melodicnost": 1, 
         "BPM": "undefined", 
         "tempo": 1, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 3, 
         "konzonantnost": "7", 
         "ritem": 1, 
-        "melodi\u010dnost": 1, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -158384,18 +158384,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "classical"
+        "zanr": "classical"
     }, 
     "565.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 6, 
         "BPM": "102", 
         "tempo": 5, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "1", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 3, 
         "konzonantnost": "7", 
         "ritem": 5, 
-        "melodi\u010dnost": 6, 
+        "mode": "1", 
         "sinusoide": [
             0, 
             0, 
@@ -159399,18 +159399,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Pop"
+        "zanr": "Pop"
     }, 
     "535.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 6, 
         "BPM": "130", 
         "tempo": 5, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 2, 
         "konzonantnost": "7", 
         "ritem": 4, 
-        "melodi\u010dnost": 6, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -160414,18 +160414,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Pop"
+        "zanr": "Pop"
     }, 
     "528.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 1, 
         "BPM": "237", 
         "tempo": 7, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "1", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 7, 
         "konzonantnost": "7", 
         "ritem": 5, 
-        "melodi\u010dnost": 1, 
+        "mode": "1", 
         "sinusoide": [
             0, 
             0, 
@@ -161429,18 +161429,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Metal"
+        "zanr": "Metal"
     }, 
     "136.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 7, 
         "BPM": "75", 
         "tempo": 1, 
-        "harmoni\u010dna kompleksnost": "5", 
-        "mode": "5", 
+        "harmonicna_kompleksnost": "5", 
         "dinamika": 1, 
         "konzonantnost": "3", 
         "ritem": 2, 
-        "melodi\u010dnost": 7, 
+        "mode": "5", 
         "sinusoide": [
             0, 
             0, 
@@ -162444,18 +162444,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "jazz"
+        "zanr": "jazz"
     }, 
     "569.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 5, 
         "BPM": "66", 
         "tempo": 2, 
-        "harmoni\u010dna kompleksnost": "1", 
-        "mode": "1", 
+        "harmonicna_kompleksnost": "1", 
         "dinamika": 3, 
         "konzonantnost": "5", 
         "ritem": 4, 
-        "melodi\u010dnost": 5, 
+        "mode": "1", 
         "sinusoide": [
             0, 
             0, 
@@ -163460,18 +163460,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "R&B "
+        "zanr": "R&B "
     }, 
     "609.mp3": {
         "metrum": "undefined", 
+        "melodicnost": 1, 
         "BPM": "uneven app. 90", 
         "tempo": 4, 
-        "harmoni\u010dna kompleksnost": "no harmony", 
-        "mode": "atonal", 
+        "harmonicna_kompleksnost": "no harmony", 
         "dinamika": 3, 
         "konzonantnost": "1", 
         "ritem": 1, 
-        "melodi\u010dnost": 1, 
+        "mode": "atonal", 
         "sinusoide": [
             0, 
             0, 
@@ -164475,18 +164475,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "abstract / electronic / contemporary"
+        "zanr": "abstract / electronic / contemporary"
     }, 
     "158.mp3": {
         "metrum": "3/4", 
+        "melodicnost": 6, 
         "BPM": "uneven app. 80", 
         "tempo": 3, 
-        "harmoni\u010dna kompleksnost": "6", 
-        "mode": "5", 
+        "harmonicna_kompleksnost": "6", 
         "dinamika": 3, 
         "konzonantnost": "6", 
         "ritem": 3, 
-        "melodi\u010dnost": 6, 
+        "mode": "5", 
         "sinusoide": [
             0, 
             0, 
@@ -165491,18 +165491,18 @@
             0, 
             -1
         ], 
-        "\u017eanr": "classical"
+        "zanr": "classical"
     }, 
     "611.mp3": {
         "metrum": "undefined", 
+        "melodicnost": 7, 
         "BPM": "90", 
         "tempo": 6, 
-        "harmoni\u010dna kompleksnost": "7", 
-        "mode": "atonal", 
+        "harmonicna_kompleksnost": "7", 
         "dinamika": 5, 
         "konzonantnost": "2", 
         "ritem": 6, 
-        "melodi\u010dnost": 7, 
+        "mode": "atonal", 
         "sinusoide": [
             0, 
             0, 
@@ -166506,18 +166506,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Classical / contemporary"
+        "zanr": "Classical / contemporary"
     }, 
     "555.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 6, 
         "BPM": "70", 
         "tempo": 3, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 3, 
         "konzonantnost": "6", 
         "ritem": 5, 
-        "melodi\u010dnost": 6, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -167521,18 +167521,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "pop/rock"
+        "zanr": "pop/rock"
     }, 
     "347.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 7, 
         "BPM": "138", 
         "tempo": 5, 
-        "harmoni\u010dna kompleksnost": "4", 
-        "mode": "1", 
+        "harmonicna_kompleksnost": "4", 
         "dinamika": 6, 
         "konzonantnost": "3", 
         "ritem": 7, 
-        "melodi\u010dnost": 7, 
+        "mode": "1", 
         "sinusoide": [
             0, 
             0, 
@@ -168536,18 +168536,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "jazz/electronic"
+        "zanr": "jazz/electronic"
     }, 
     "129.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 7, 
         "BPM": "85", 
         "tempo": 3, 
-        "harmoni\u010dna kompleksnost": "1", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "1", 
         "dinamika": 2, 
         "konzonantnost": "7", 
         "ritem": 3, 
-        "melodi\u010dnost": 7, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -169551,18 +169551,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "easy listening"
+        "zanr": "easy listening"
     }, 
     "101.mp3": {
         "metrum": "2/2", 
+        "melodicnost": 3, 
         "BPM": "55", 
         "tempo": 2, 
-        "harmoni\u010dna kompleksnost": "5", 
-        "mode": "2", 
+        "harmonicna_kompleksnost": "5", 
         "dinamika": 6, 
         "konzonantnost": "4", 
         "ritem": 4, 
-        "melodi\u010dnost": 3, 
+        "mode": "2", 
         "sinusoide": [
             0, 
             0, 
@@ -170566,18 +170566,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "classical"
+        "zanr": "classical"
     }, 
     "188.mp3": {
         "metrum": "3/4", 
+        "melodicnost": 7, 
         "BPM": "uneven app. 66", 
         "tempo": 2, 
-        "harmoni\u010dna kompleksnost": "6", 
-        "mode": "2", 
+        "harmonicna_kompleksnost": "6", 
         "dinamika": 1, 
         "konzonantnost": "5", 
         "ritem": 3, 
-        "melodi\u010dnost": 7, 
+        "mode": "2", 
         "sinusoide": [
             0, 
             0, 
@@ -171581,18 +171581,18 @@
             0, 
             -1
         ], 
-        "\u017eanr": "classical"
+        "zanr": "classical"
     }, 
     "509.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 3, 
         "BPM": "108", 
         "tempo": 5, 
-        "harmoni\u010dna kompleksnost": "1", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "1", 
         "dinamika": 3, 
         "konzonantnost": "7", 
         "ritem": 6, 
-        "melodi\u010dnost": 3, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -172596,18 +172596,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "easy listening"
+        "zanr": "easy listening"
     }, 
     "543.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 6, 
         "BPM": "124", 
         "tempo": 5, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 5, 
         "konzonantnost": "7", 
         "ritem": 6, 
-        "melodi\u010dnost": 6, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -173611,18 +173611,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Rock"
+        "zanr": "Rock"
     }, 
     "157.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 5, 
         "BPM": "80", 
         "tempo": 3, 
-        "harmoni\u010dna kompleksnost": "4", 
-        "mode": "6", 
+        "harmonicna_kompleksnost": "4", 
         "dinamika": 5, 
         "konzonantnost": "2", 
         "ritem": 3, 
-        "melodi\u010dnost": 5, 
+        "mode": "6", 
         "sinusoide": [
             0, 
             0, 
@@ -174626,18 +174626,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "classical"
+        "zanr": "classical"
     }, 
     "145.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 4, 
         "BPM": "64", 
         "tempo": 2, 
-        "harmoni\u010dna kompleksnost": "3", 
-        "mode": "6", 
+        "harmonicna_kompleksnost": "3", 
         "dinamika": 3, 
         "konzonantnost": "6", 
         "ritem": 3, 
-        "melodi\u010dnost": 4, 
+        "mode": "6", 
         "sinusoide": [
             0, 
             0, 
@@ -175641,18 +175641,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "easy listening"
+        "zanr": "easy listening"
     }, 
     "551.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 6, 
         "BPM": "53", 
         "tempo": 2, 
-        "harmoni\u010dna kompleksnost": "4", 
-        "mode": "1", 
+        "harmonicna_kompleksnost": "4", 
         "dinamika": 3, 
         "konzonantnost": "6", 
         "ritem": 2, 
-        "melodi\u010dnost": 6, 
+        "mode": "1", 
         "sinusoide": [
             0, 
             0, 
@@ -176656,18 +176656,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Vocal/classical"
+        "zanr": "Vocal/classical"
     }, 
     "154.mp3": {
         "metrum": "undefined", 
+        "melodicnost": 6, 
         "BPM": "145", 
         "tempo": 6, 
-        "harmoni\u010dna kompleksnost": "5", 
-        "mode": "2", 
+        "harmonicna_kompleksnost": "5", 
         "dinamika": 3, 
         "konzonantnost": "4", 
         "ritem": 4, 
-        "melodi\u010dnost": 6, 
+        "mode": "2", 
         "sinusoide": [
             0, 
             0, 
@@ -177671,18 +177671,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "classical"
+        "zanr": "classical"
     }, 
     "571.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 6, 
         "BPM": "120", 
         "tempo": 4, 
-        "harmoni\u010dna kompleksnost": "3", 
-        "mode": "1", 
+        "harmonicna_kompleksnost": "3", 
         "dinamika": 5, 
         "konzonantnost": "6", 
         "ritem": 6, 
-        "melodi\u010dnost": 6, 
+        "mode": "1", 
         "sinusoide": [
             0, 
             0, 
@@ -178686,18 +178686,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Electronic / orchestral"
+        "zanr": "Electronic / orchestral"
     }, 
     "554.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 4, 
         "BPM": "155", 
         "tempo": 6, 
-        "harmoni\u010dna kompleksnost": "4", 
-        "mode": "2", 
+        "harmonicna_kompleksnost": "4", 
         "dinamika": 5, 
         "konzonantnost": "7", 
         "ritem": 6, 
-        "melodi\u010dnost": 4, 
+        "mode": "2", 
         "sinusoide": [
             0, 
             0, 
@@ -179701,18 +179701,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "dance"
+        "zanr": "dance"
     }, 
     "530.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 5, 
         "BPM": "99", 
         "tempo": 5, 
-        "harmoni\u010dna kompleksnost": "1", 
-        "mode": "1", 
+        "harmonicna_kompleksnost": "1", 
         "dinamika": 4, 
         "konzonantnost": "7", 
         "ritem": 6, 
-        "melodi\u010dnost": 5, 
+        "mode": "1", 
         "sinusoide": [
             0, 
             0, 
@@ -180716,18 +180716,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Pop/Reggae"
+        "zanr": "Pop/Reggae"
     }, 
     "407.mp3": {
         "metrum": "3/4", 
+        "melodicnost": 7, 
         "BPM": "97", 
         "tempo": 5, 
-        "harmoni\u010dna kompleksnost": "1", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "1", 
         "dinamika": 4, 
         "konzonantnost": "7 with imprecise pitch", 
         "ritem": 3, 
-        "melodi\u010dnost": 7, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -181731,18 +181731,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "vocal/folk"
+        "zanr": "vocal/folk"
     }, 
     "190.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 5, 
         "BPM": "76", 
         "tempo": 1, 
-        "harmoni\u010dna kompleksnost": "6", 
-        "mode": "3", 
+        "harmonicna_kompleksnost": "6", 
         "dinamika": 1, 
         "konzonantnost": "3", 
         "ritem": 3, 
-        "melodi\u010dnost": 5, 
+        "mode": "3", 
         "sinusoide": [
             0, 
             0, 
@@ -182747,18 +182747,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "classical"
+        "zanr": "classical"
     }, 
     "526.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 3, 
         "BPM": "69", 
         "tempo": 3, 
-        "harmoni\u010dna kompleksnost": "3", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "3", 
         "dinamika": 6, 
         "konzonantnost": "6", 
         "ritem": 6, 
-        "melodi\u010dnost": 3, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -183763,18 +183763,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Rock"
+        "zanr": "Rock"
     }, 
     "574.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 7, 
         "BPM": "119", 
         "tempo": 3, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "1", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 4, 
         "konzonantnost": "6", 
         "ritem": 6, 
-        "melodi\u010dnost": 7, 
+        "mode": "1", 
         "sinusoide": [
             0, 
             0, 
@@ -184778,18 +184778,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "R&B"
+        "zanr": "R&B"
     }, 
     "511.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 2, 
         "BPM": "116", 
         "tempo": 5, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "1", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 6, 
         "konzonantnost": "7", 
         "ritem": 7, 
-        "melodi\u010dnost": 2, 
+        "mode": "1", 
         "sinusoide": [
             0, 
             0, 
@@ -185793,18 +185793,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "punk"
+        "zanr": "punk"
     }, 
     "169.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 5, 
         "BPM": "66", 
         "tempo": 3, 
-        "harmoni\u010dna kompleksnost": "6", 
-        "mode": "2", 
+        "harmonicna_kompleksnost": "6", 
         "dinamika": 6, 
         "konzonantnost": "4", 
         "ritem": 3, 
-        "melodi\u010dnost": 5, 
+        "mode": "2", 
         "sinusoide": [
             0, 
             0, 
@@ -186808,18 +186808,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "classical/contemporary"
+        "zanr": "classical/contemporary"
     }, 
     "414.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 2, 
         "BPM": "153", 
         "tempo": 5, 
-        "harmoni\u010dna kompleksnost": "1", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "1", 
         "dinamika": 5, 
         "konzonantnost": "7", 
         "ritem": 5, 
-        "melodi\u010dnost": 2, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -187824,18 +187824,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "folk"
+        "zanr": "folk"
     }, 
     "127.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 7, 
         "BPM": "119", 
         "tempo": 5, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "1", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 3, 
         "konzonantnost": "7", 
         "ritem": 7, 
-        "melodi\u010dnost": 7, 
+        "mode": "1", 
         "sinusoide": [
             0, 
             0, 
@@ -188839,18 +188839,18 @@
             0, 
             -1
         ], 
-        "\u017eanr": "classical"
+        "zanr": "classical"
     }, 
     "604.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 1, 
         "BPM": "168", 
         "tempo": 6, 
-        "harmoni\u010dna kompleksnost": "1", 
-        "mode": "2", 
+        "harmonicna_kompleksnost": "1", 
         "dinamika": 3, 
         "konzonantnost": "2", 
         "ritem": 7, 
-        "melodi\u010dnost": 1, 
+        "mode": "2", 
         "sinusoide": [
             0, 
             0, 
@@ -189854,18 +189854,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "abstract / electronic / contemporary"
+        "zanr": "abstract / electronic / contemporary"
     }, 
     "568.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 4, 
         "BPM": "128", 
         "tempo": 4, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "1", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 6, 
         "konzonantnost": "5", 
         "ritem": 2, 
-        "melodi\u010dnost": 4, 
+        "mode": "1", 
         "sinusoide": [
             0, 
             0, 
@@ -190870,18 +190870,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Dance"
+        "zanr": "Dance"
     }, 
     "107.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 3, 
         "BPM": "128", 
         "tempo": 4, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "1", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 6, 
         "konzonantnost": "6", 
         "ritem": 6, 
-        "melodi\u010dnost": 3, 
+        "mode": "1", 
         "sinusoide": [
             0, 
             0, 
@@ -191885,18 +191885,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "classical"
+        "zanr": "classical"
     }, 
     "170.mp3": {
         "metrum": "undefined", 
+        "melodicnost": 2, 
         "BPM": "77", 
         "tempo": 1, 
-        "harmoni\u010dna kompleksnost": "7", 
-        "mode": "atonal", 
+        "harmonicna_kompleksnost": "7", 
         "dinamika": 2, 
         "konzonantnost": "1", 
         "ritem": 1, 
-        "melodi\u010dnost": 2, 
+        "mode": "atonal", 
         "sinusoide": [
             0, 
             0, 
@@ -192900,18 +192900,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "classical/contemporary"
+        "zanr": "classical/contemporary"
     }, 
     "616.mp3": {
         "metrum": "undefined", 
+        "melodicnost": 1, 
         "BPM": "undefined", 
         "tempo": 4, 
-        "harmoni\u010dna kompleksnost": "7", 
-        "mode": "atonal", 
+        "harmonicna_kompleksnost": "7", 
         "dinamika": 4, 
         "konzonantnost": "1", 
         "ritem": 1, 
-        "melodi\u010dnost": 1, 
+        "mode": "atonal", 
         "sinusoide": [
             0, 
             0, 
@@ -193915,18 +193915,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Classical / contemporary"
+        "zanr": "Classical / contemporary"
     }, 
     "613.mp3": {
         "metrum": "undefined", 
+        "melodicnost": 1, 
         "BPM": "undefined", 
         "tempo": 4, 
-        "harmoni\u010dna kompleksnost": "no harmony", 
-        "mode": "4", 
+        "harmonicna_kompleksnost": "no harmony", 
         "dinamika": 5, 
         "konzonantnost": "1", 
         "ritem": 1, 
-        "melodi\u010dnost": 1, 
+        "mode": "4", 
         "sinusoide": [
             0, 
             0, 
@@ -194931,18 +194931,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "abstract / electronic / contemporary"
+        "zanr": "abstract / electronic / contemporary"
     }, 
     "620.mp3": {
         "metrum": "undefined", 
+        "melodicnost": 2, 
         "BPM": "uneven app. 123", 
         "tempo": 4, 
-        "harmoni\u010dna kompleksnost": "4", 
-        "mode": "atonal", 
+        "harmonicna_kompleksnost": "4", 
         "dinamika": 3, 
         "konzonantnost": "1", 
         "ritem": 1, 
-        "melodi\u010dnost": 2, 
+        "mode": "atonal", 
         "sinusoide": [
             0, 
             0, 
@@ -195946,18 +195946,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "abstract / contemporary"
+        "zanr": "abstract / contemporary"
     }, 
     "405.mp3": {
         "metrum": "undefined", 
+        "melodicnost": 1, 
         "BPM": "65", 
         "tempo": 4, 
-        "harmoni\u010dna kompleksnost": "2", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "2", 
         "dinamika": 5, 
         "konzonantnost": "6 with imprecise pitch", 
         "ritem": 2, 
-        "melodi\u010dnost": 1, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -196961,18 +196961,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "vocal/folk"
+        "zanr": "vocal/folk"
     }, 
     "601.mp3": {
         "metrum": "undefined", 
+        "melodicnost": 7, 
         "BPM": "133", 
         "tempo": 6, 
-        "harmoni\u010dna kompleksnost": "7", 
-        "mode": "4", 
+        "harmonicna_kompleksnost": "7", 
         "dinamika": 5, 
         "konzonantnost": "2", 
         "ritem": 6, 
-        "melodi\u010dnost": 7, 
+        "mode": "4", 
         "sinusoide": [
             0, 
             0, 
@@ -197976,18 +197976,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "Classical / contemporary"
+        "zanr": "Classical / contemporary"
     }, 
     "181.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 7, 
         "BPM": "93", 
         "tempo": 3, 
-        "harmoni\u010dna kompleksnost": "5", 
-        "mode": "1", 
+        "harmonicna_kompleksnost": "5", 
         "dinamika": 2, 
         "konzonantnost": "4", 
         "ritem": 3, 
-        "melodi\u010dnost": 7, 
+        "mode": "1", 
         "sinusoide": [
             0, 
             0, 
@@ -198991,18 +198991,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "classical"
+        "zanr": "classical"
     }, 
     "221.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 6, 
         "BPM": "125", 
         "tempo": 6, 
-        "harmoni\u010dna kompleksnost": "7", 
-        "mode": "2", 
+        "harmonicna_kompleksnost": "7", 
         "dinamika": 7, 
         "konzonantnost": "7", 
         "ritem": 7, 
-        "melodi\u010dnost": 6, 
+        "mode": "2", 
         "sinusoide": [
             0, 
             0, 
@@ -200006,18 +200006,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "classical"
+        "zanr": "classical"
     }, 
     "580.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 3, 
         "BPM": "74", 
         "tempo": 3, 
-        "harmoni\u010dna kompleksnost": "5", 
-        "mode": "2", 
+        "harmonicna_kompleksnost": "5", 
         "dinamika": 3, 
         "konzonantnost": "4", 
         "ritem": 4, 
-        "melodi\u010dnost": 3, 
+        "mode": "2", 
         "sinusoide": [
             0, 
             0, 
@@ -201021,18 +201021,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "R&B/Alternative"
+        "zanr": "R&B/Alternative"
     }, 
     "578.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 4, 
         "BPM": "136", 
         "tempo": 5, 
-        "harmoni\u010dna kompleksnost": "3", 
-        "mode": "1", 
+        "harmonicna_kompleksnost": "3", 
         "dinamika": 5, 
         "konzonantnost": "5", 
         "ritem": 6, 
-        "melodi\u010dnost": 4, 
+        "mode": "1", 
         "sinusoide": [
             0, 
             0, 
@@ -202036,18 +202036,18 @@
             0, 
             0
         ], 
-        "\u017eanr": "classical"
+        "zanr": "classical"
     }, 
     "419.mp3": {
         "metrum": "4/4", 
+        "melodicnost": 5, 
         "BPM": "144", 
         "tempo": 6, 
-        "harmoni\u010dna kompleksnost": "1", 
-        "mode": "7", 
+        "harmonicna_kompleksnost": "1", 
         "dinamika": 6, 
         "konzonantnost": "6", 
         "ritem": 5, 
-        "melodi\u010dnost": 5, 
+        "mode": "7", 
         "sinusoide": [
             0, 
             0, 
@@ -203052,6 +203052,6 @@
             0, 
             0
         ], 
-        "\u017eanr": "folk"
+        "zanr": "folk"
     }
 }

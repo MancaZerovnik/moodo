@@ -86,6 +86,9 @@ angular.module('modooApp')
         $scope.amplitudeData = ampdata
         $scope.colorData = getColorData($scope.filteredData);
 
+        // data to show musicological estimation data
+        $scope.currentSongData = $scope.songsData[$scope.filter.song + '.mp3'];
+
          if(!$scope.$$phase) {
           $scope.$apply();
         }
