@@ -8,7 +8,8 @@
  * Controller of the modooApp
  */
 angular.module('modooApp')
-  .controller('RazpolozenjeInGlasbaCtrl', function ($scope, $http, $window, $sce) {
+  .controller('RazpolozenjeInGlasbaCtrl', function ($scope, $http, $window, $sce, DataAll) {
+    
     $scope.mainInfo = null;
     $scope.filter = {
         "male": true, 
@@ -32,25 +33,24 @@ angular.module('modooApp')
         $("audio").attr("src","../../assets/media/" + id + ".mp3");
     }
     
-    $http.get('../../assets/data/data.json').success(function(data) {
-        $scope.mainInfo = data;
-        $scope.songs = _.uniq(_.sortBy(_.flatten(
-                            _.map($scope.mainInfo, function(num){ 
-                                return _.map(num.pesmi, function(x) {
-                                                            return x.pesem_id;
-                                                        }
-                                        );
-                                }
-                            )
-                       ), function(x) { return x; }), true);
-        $scope.filter.song = $scope.songs[0];
-        changePlayerSong($scope.filter.song);
-        $scope.update();          
-    });
+    $scope.mainInfo = DataAll.getData();
+    $scope.songs = _.uniq(_.sortBy(_.flatten(
+                        _.map($scope.mainInfo, function(num){ 
+                            return _.map(num.pesmi, function(x) {
+                                                        return x.pesem_id;
+                                                    }
+                                    );
+                            }
+                        )
+                   ), function(x) { return x; }), true);
+    $scope.filter.song = $scope.songs[0];
+
 
     $http.get('../../assets/data/songs.json').success(function(data) {
         $scope.songsData = data;
-
+        $scope.filter.song=(Object.keys(data)[0]).slice(0,3);
+        changePlayerSong($scope.filter.song);
+        $scope.update();
     });
 
     

@@ -8,7 +8,8 @@
  * Controller of the modooApp
  */
 var app = angular.module('modooApp')
-  .controller('RazpolozenjeInBarveCtrl', function ($scope, $http, $window) {
+  .controller('RazpolozenjeInBarveCtrl', function ($scope, $http, $window, DataAll) {
+    console.log(DataAll);
     $scope.mainInfo = null;
     $scope.filter = {
         "male": true, 
@@ -27,10 +28,10 @@ var app = angular.module('modooApp')
         "fourhour": false
     };
 
-    $http.get('../../assets/data/data.json').success(function(data) {
-        $scope.mainInfo = data;
-        $scope.update();        
-    });
+    //$http.get('../../assets/data/data.json').success(function(data) {
+        $scope.mainInfo = DataAll.getData(); 
+                
+    //});
 
     $scope.update = function () {
 
@@ -69,7 +70,7 @@ var app = angular.module('modooApp')
 
         
     };
-
+    $scope.update();
     $scope.currentEmotionsGraph = setVAgraphEmotions();
     $scope.moodVAEstimationGraph = setVAgraphLegend();
     $scope.colorChartGraph = setColorGraph();

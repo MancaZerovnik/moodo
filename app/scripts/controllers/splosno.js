@@ -8,9 +8,10 @@
  * Controller of the modooApp
  */
 angular.module('modooApp')
-  .controller('SplosnoCtrl', function ($scope, $http) {
-        $http.get('../../assets/data/data.json').success(function(data) {
-            $scope.mainInfo = data;  
+  .controller('SplosnoCtrl', function ($scope, $http, DataAll) {
+        //console.log('Promise is now resolved: '+DataAll.doStuff())
+        //$http.get('../../assets/data/data.json').success(function(data) {
+            $scope.mainInfo = DataAll.getData();  
             var genderNUM = _.countBy($scope.mainInfo, function(x) {
             return x.spol == 'M' ? 'm': 'z';
             });  
@@ -26,7 +27,7 @@ angular.module('modooApp')
             console.log(genreNUM);
             update(genderNUM, livingNUM, ageNUM, genreNUM);
    
-        });
+        //});
         
         function update(genderNUM, livingNUM, ageNUM, genreNUM){
             $scope.optionsGender = {
