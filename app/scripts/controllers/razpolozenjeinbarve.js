@@ -86,8 +86,8 @@ var app = angular.module('modooApp')
         /*
         * Function prepare data to be showed in the view
         */
-        $scope.usersMoodData = getUsersMood($scope.filteredData);
-        $scope.moodVAEstimationData = getMoodVAEstimationData($scope.filteredData);
+        $scope.usersMoodData = usersMoodData($scope.filteredData);
+        $scope.moodVAEstimationData = moodVAEstimationData($scope.filteredData);
         $scope.currentEmotionsData = getCurrentEmotionsData($scope.filteredData);
         $scope.colorChartData = getColorData($scope.filteredData);
     }
@@ -238,8 +238,16 @@ var app = angular.module('modooApp')
         return colors;    
     }
 
+    /*
+    * Function for peparing data to show in the graphs
+    */
+
         
-    function getUsersMood(inputData) {
+    function usersMoodData(inputData) {
+        /*
+        * Function that prepare data with user current mood in VA space
+        */
+
         var data = [];
                    
         if(inputData) {
@@ -263,8 +271,12 @@ var app = angular.module('modooApp')
         return data;
     }
 
-    function getMoodVAEstimationData(inputData)
+    function moodVAEstimationData(inputData)
     {
+        /*
+        * Function that prepare data with estimations of moods
+        */
+
         var data = [];
         if(inputData) {          
             for (var i = 0; i < inputData.length; i++)
@@ -288,6 +300,10 @@ var app = angular.module('modooApp')
 
     function getCurrentEmotionsData(inputData)
     {
+        /*
+        * Function that prepare data about current mood in mood labels
+        */
+
         var data = [];
         if(inputData) { 
             // to define the order
@@ -325,14 +341,16 @@ var app = angular.module('modooApp')
 
                 data[i].label = data[i].key;
             }
-
-
         }
         return data;
     }
 
     function getColorData(inputData)
     {
+        /*
+        * Function that prepare data about mood in colors
+        */
+
         var data = []
         if(inputData) {
             var allLabels = []
@@ -416,11 +434,5 @@ var app = angular.module('modooApp')
        return n % 1 === 0;
     }
 
-    /*
-    * Tooltips for the graphs
-    */
-
-
-
-  });
+});
 
