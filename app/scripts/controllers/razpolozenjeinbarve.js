@@ -400,6 +400,10 @@ var app = angular.module('modooApp')
         return data;
     }
 
+    /*
+    * Other support functions
+    */
+
     function getDictonaryIdxByKey(l, kvalue)
     {
         for(var i = 0; i < l.length; i++)
