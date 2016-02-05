@@ -45,6 +45,12 @@ angular.module('modooApp')
                    ), function(x) { return x; }), true);
     $scope.filter.song = $scope.songs[0];
 
+    // function is used in wiew
+    $scope.isnumber = function(s) {
+        var x = +s; // made cast obvious for demonstration
+        return x.toString() === s;
+    }
+
 
     $http.get('../../assets/data/songs.json').success(function(data) {
         $scope.songsData = data;
