@@ -111,8 +111,8 @@ angular.module('modooApp')
         * Function is called everytime data are refreshed 
         * and set new data for the graphs
         */
-        $scope.vzbujenaData = getMoodVAEstimationData($scope.filteredData, 'vzbujena_custva');
-        $scope.izrazenaData = getMoodVAEstimationData($scope.filteredData, 'izrazena_custva');
+        $scope.vzbujenaData = musicMoodVAData($scope.filteredData, 'vzbujena_custva');
+        $scope.izrazenaData = musicMoodVAData($scope.filteredData, 'izrazena_custva');
         $scope.amplitudeData = [{key: 'gr1', values: enumerateforchart($scope.songsData[$scope.filter.song + '.mp3'].sinusoide)}];
         $scope.colorData = getColorData($scope.filteredData);
 
@@ -201,8 +201,17 @@ angular.module('modooApp')
         };
     }
 
-    function getMoodVAEstimationData(inputData, data_key)
+    /*
+    * Functions that prepares data to show in the graphs
+    */
+
+    function musicMoodVAData(inputData, data_key)
     {
+        /*
+        * Function perpare data about perceived or inuced mood 
+        * data_key tells what type of data (induced, perceived)
+        */
+
         var data = [];
         if(inputData) {         
             for (var i = 0; i < inputData.length; i++)
@@ -228,9 +237,15 @@ angular.module('modooApp')
         return data;
     }
 
+
+
     function getColorData(inputData)
     {
-        var data = []
+        /*
+        * Function prepare song color data
+        */
+
+        var data = [];
         if(inputData) {
             for (var i = 0; i < inputData.length; i++)
             {                
@@ -248,6 +263,10 @@ angular.module('modooApp')
         }
         return data;
     }
+
+    /*
+    * Support functions
+    */ 
 
     function getDictonaryIdxByField(dict, value, field)
     {
