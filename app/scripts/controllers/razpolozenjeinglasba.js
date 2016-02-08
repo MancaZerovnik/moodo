@@ -98,6 +98,8 @@ angular.module('modooApp')
         * Function is called everytime data are refreshed 
         * and set new properties for the graphs
         */
+        $scope.inducedMoodVAwithColorsGraph = VAmoodGraphs(getValuesAtKey($scope.inducedMoodVAwithColorsData));
+        $scope.expresedMoodVAwithColorsGraph = VAmoodGraphs(getValuesAtKey($scope.expresedMoodVAwithColorsData));
     }
 
     function setGraphsProperties()
@@ -106,7 +108,7 @@ angular.module('modooApp')
         * Function is called on page load 
         * and set new properties for the graphs
         */
-        $scope.viCustvaGraph = VAmoodGraphs();
+        $scope.viCustvaGraph = VAmoodGraphs(null);
         $scope.ampLineGraph = amplitudeChartGraph();
         $scope.coloGraph = colorGraph();
     } 
@@ -121,6 +123,8 @@ angular.module('modooApp')
         $scope.izrazenaData = musicMoodVAData($scope.filteredData, 'izrazena_custva');
         $scope.amplitudeData = [{key: 'gr1', values: enumerateforchart($scope.songsData[$scope.filter.song + '.mp3'].sinusoide)}];
         $scope.colorData = getColorData($scope.filteredData);
+        $scope.inducedMoodVAwithColorsData = musicMoodVAandColorData($scope.filteredData, 'vzbujena_custva');
+        $scope.expresedMoodVAwithColorsData = musicMoodVAandColorData($scope.filteredData, 'izrazena_custva');
 
         // data to show musicological estimation data
         $scope.currentSongData = $scope.songsData[$scope.filter.song + '.mp3'];
@@ -130,7 +134,7 @@ angular.module('modooApp')
     * Functions used to set graphs properties
     */   
 
-    function VAmoodGraphs()
+    function VAmoodGraphs(color)
     {
         /*
         * Function set the properties of all VA standard graphs
@@ -140,7 +144,7 @@ angular.module('modooApp')
             chart: {
                 type: 'scatterChart',
                 height: 450,
-                color: d3.scale.category10().range(),
+                color: color === null ? d3.scale.category10().range() : color,
                 tooltip: {
                     contentGenerator: function(d) { 
                         return '<p>Valence: <strong>' + d.point.x + 
@@ -243,6 +247,35 @@ angular.module('modooApp')
         return data;
     }
 
+    function musicMoodVAandColorData(inputData, data_key)
+    {
+        /*
+        * Function perpare data about perceived or inuced mood grouped by selected color for this song
+        * no mood group included 
+        * data_key tells what type of data (induced, perceived)
+        */
+
+        var data = [];
+        if(inputData) {         
+            for (var i = 0; i < inputData.length; i++)
+            {                
+                var color = listToHashRGB(inputData[i]['barva']);
+                for (var j = 0; j < inputData[i][data_key].length; j++)
+                {
+                    if (getDictonaryIdxByKey(data, color) === null
+                        && 'x' in inputData[i][data_key][j])
+                        data.push({key: color, values:[]});
+                    
+                        if ('x' in inputData[i][data_key][j])
+                            data[getDictonaryIdxByKey(data, color)]['values'].push({
+                                x: inputData[i][data_key][j]['x'],
+                                y: inputData[i][data_key][j]['y']
+                            });
+                }                
+            }
+        }
+        return data;
+    }
 
 
     function getColorData(inputData)
@@ -303,5 +336,22 @@ angular.module('modooApp')
 
     function rgbToHex(r, g, b) {
         return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+    }
+
+    function getValuesAtKey(l)
+    {
+        var data = [];
+        for(var i = 0; i < l.length; i++)
+            data.push(l[i].key)
+
+        return data;
+    }
+
+    function listToHashRGB(l)
+    {
+        var r = parseInt(l[0] * 255);
+        var g = parseInt(l[1] * 255);
+        var b = parseInt(l[2] * 255);
+        return rgbToHex(r, g, b);
     }
  });
