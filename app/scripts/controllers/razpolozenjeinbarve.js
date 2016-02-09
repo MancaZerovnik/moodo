@@ -54,14 +54,11 @@ var app = angular.module('modooApp')
             );
             
         });
-        $scope.usersMoodData = getUsersMood($scope.filteredData);
-        $scope.moodVAEstimationData = getMoodVAEstimationData($scope.filteredData);
-        $scope.currentEmotionsData = getCurrentEmotionsData($scope.filteredData);
-        $scope.colorChartData = getColorData($scope.filteredData);
-
-        // it have to be here because it changes everytime filter changes
-        // this function sets graph properties fro users mood
-        $scope.usersMoodGraph = setVAgraphWithColors(getValuesAtKey($scope.usersMoodData));
+        
+        // prepare data for the graph and set graph properties
+        preparedata();
+        setGraphsProperties();
+           
 
 
         if(!$scope.$$phase) {
@@ -71,103 +68,105 @@ var app = angular.module('modooApp')
         
     };
     $scope.update();
-    $scope.currentEmotionsGraph = setVAgraphEmotions();
-    $scope.moodVAEstimationGraph = setVAgraphLegend();
-    $scope.colorChartGraph = setColorGraph();
     
 
-    function setVAgraphWithColors(colors)
+    function setGraphsProperties()
     {
+        /*
+        * Function set the property for every graph used in the view
+        */
+        $scope.currentEmotionsGraph = usersCurrentMoodBoxGraph();
+        $scope.moodVAEstimationGraph = moodVAestimationGraph();
+        $scope.colorChartGraph = MoodByColorGraph();
+        $scope.usersMoodGraph = VAmoodWithColorsGraph(getValuesAtKey($scope.usersMoodData));
+    }
+
+    function preparedata()
+    {
+        /*
+        * Function prepare data to be showed in the view
+        */
+        $scope.usersMoodData = usersMoodData($scope.filteredData);
+        $scope.moodVAEstimationData = moodVAEstimationData($scope.filteredData);
+        $scope.currentEmotionsData = getCurrentEmotionsData($scope.filteredData);
+        $scope.colorChartData = getColorData($scope.filteredData);
+    }
+
+    /*
+    * Functions that set the properties of the graphs
+    */
+
+    function VAmoodWithColorsGraph(colors)
+    {
+        /*
+        * Properties for the graph that shows users current mood and current mood in color
+        */
+
         return {
             chart: {
                 type: 'scatterChart',
                 height: 450,
-                color: d3.scale.category10().range(),
-                scatter: {
-                    onlyCircles: false
-                },
                 tooltip: {
                     contentGenerator: function(d) { 
-                        return '<p>valence: <strong>' + d.point.x + '</strong> arousal: <strong>' + 
-                                d.point.y + '</strong><br/>' +
-                                '<div class="square-box" style="background-color:'+d.point.color+';"></div>' +
-                                'barva: <strong>' + d.point.color + '</strong></p>';
+                        return '<p>valence: <strong>' + d.point.x + 
+                                '</strong> arousal: <strong>' + d.point.y +
+                                '</strong><br/><div class="square-box" style="background-color:'+d.point.color+
+                                ';"></div>barva: <strong>' + d.point.color + '</strong></p>';
                     }
                 },
-                // tooltip.contentGenerator(function (obj) { return 'a'}),
                 duration: 350,
                 xAxis: {
-                    axisLabel: 'Valence',
-                    tickFormat: function(d) {
-                        return d3.format('.02f')(d);
-                    }
+                    axisLabel: 'Valence'
+                },
+                yAxis: {
+                    axisLabel: 'Arousal'
                 },
                 xDomain: [-1, 1],
                 yDomain: [-1,1],
-                yAxis: {
-                    axisLabel: 'Arousal',
-                    tickFormat: function(d){
-                        return d3.format('.02f')(d);
-                    },
-                    axisLabelDistance: -5
-                },
                 color: colors,
                 showLegend: false,
-                useInteractiveGuideline: false
+                useInteractiveGuideline: true
             }
         };
     }
 
-    function setVAgraphLegend()
+    function moodVAestimationGraph()
     {
+        /*
+        * Properties for the graph that shows users estimation for 14 moods in VA space
+        */
+
         return {
             chart: {
                 type: 'scatterChart',
                 height: 450,
-                color: d3.scale.category10().range(),
-                scatter: {
-                    onlyCircles: false
-                },
                 tooltip: {
                     contentGenerator: function(d) { 
-                        return '<p>Valence: <strong>' + d.point.x + '</strong> Arousal: <strong>' + d.point.y + '</strong><br/>' +
-                                '<div class="square-box" style="background-color:'+d.point.color+';"></div>' +
-                                '<strong>' + d.series[0].key + '</strong></p>';
+                        return '<p>Valence: <strong>' + d.point.x + 
+                                '</strong> Arousal: <strong>' + d.point.y + 
+                                '</strong><br/><div class="square-box" style="background-color:'+d.point.color+
+                                ';"></div><strong>' + d.series[0].key + '</strong></p>';
                     }
                 },
                 duration: 350,
                 xAxis: {
                     axisLabel: 'Valence',
-                    tickFormat: function(d){
-                        return d3.format('.02f')(d);
-                    }
+                },
+                yAxis: {
+                    axisLabel: 'Arousal',
                 },
                 xDomain: [-1, 1],
                 yDomain: [-1,1],
-                yAxis: {
-                    axisLabel: 'Arousal',
-                    tickFormat: function(d){
-                        return d3.format('.02f')(d);
-                    },
-                    axisLabelDistance: -5
-                },
                 showLegend: true
             }
         };
     }
 
-    function setVAgraphEmotions()
+    function usersCurrentMoodBoxGraph()
     {
-        var colors = [];
-        var n = 17;
-        for(var i = 0; i < 5; i++)
-            colors.push(rgbToHex(0, 255 - parseInt(i * 255 / n) , 0));
-
-        for(var i = 5; i < 12; i++)
-            colors.push(rgbToHex(128 + parseInt(i * 128 / n), 128 + parseInt(i * 128 / n) , 0));
-
-        for(var i = 12; i < 17; i++)
-            colors.push(rgbToHex(parseInt(i * 255 / n), 0 , 0));
+        /*
+        * Properties for the graph that shows users current mood and current mood in color
+        */
 
         return {
             chart: {
@@ -179,7 +178,7 @@ var app = angular.module('modooApp')
                     bottom: 60,
                     left: 40
                 },
-                color: colors,
+                color: positiveNegativeColorSpecter(5, 7, 5),
                 x: function(d){return d.label;},
                 // y: function(d){return d.values.Q3;},
                 maxBoxWidth: 75,
@@ -192,39 +191,63 @@ var app = angular.module('modooApp')
         };
     }
 
-    function setColorGraph()
+    function MoodByColorGraph()
     {
+        /*
+        * Properties for the graph that shows user color estimations for moods
+        */
+
         return {
             chart: {
                 type: 'multiBarHorizontalChart',
+                stacked: true,
                 height: 450,
                 x: function(d){return d.label;},
                 y: function(d){return d.value;},
-                //yErr: function(d){ return [-Math.abs(d.value * Math.random() * 0.3), Math.abs(d.value * Math.random() * 0.3)] },
-                showControls: true,
                 showValues: true,
-                duration: 500,
-                xAxis: {
-                    showMaxMin: false,
-                },
+                duration: 350,
                 yAxis: {
-                    axisLabel: 'Število odgovorov',
-                    tickFormat: function(d){
-                        return d3.format(',.2f')(d);
-                    }
+                    axisLabel: 'Število odgovorov'
                 },
-                stacked: true,
                 showLegend: false,
                 showControls: false, 
-                margin:
-                {
-                    left: 90
-                }
+                margin: {left: 90}
             }
         };
     }
+
+    function positiveNegativeColorSpecter(positive, middle, negative)
+    {
+        /*
+        * function returns the colors for boxplot graph 
+        * with some positive green color, some negative and some in the middle
+        */
+        var colors = [];
+        var n = positive + middle + negative;
+        for(var i = 0; i < n; i++)
+        {
+            var color;
+            if (i < positive)
+                color = rgbToHex(0, 255 - parseInt(i * 255 / n) , 0);
+            else if (i < middle + positive)
+                color = rgbToHex(128 + parseInt(i * 128 / n), 128 + parseInt(i * 128 / n) , 0);
+            else 
+                color = rgbToHex(parseInt(i * 255 / n), 0 , 0);
+            colors.push(color);
+        }
+        return colors;    
+    }
+
+    /*
+    * Function for peparing data to show in the graphs
+    */
+
         
-    function getUsersMood(inputData) {
+    function usersMoodData(inputData) {
+        /*
+        * Function that prepare data with user current mood in VA space
+        */
+
         var data = [];
                    
         if(inputData) {
@@ -248,8 +271,12 @@ var app = angular.module('modooApp')
         return data;
     }
 
-    function getMoodVAEstimationData(inputData)
+    function moodVAEstimationData(inputData)
     {
+        /*
+        * Function that prepare data with estimations of moods
+        */
+
         var data = [];
         if(inputData) {          
             for (var i = 0; i < inputData.length; i++)
@@ -273,6 +300,10 @@ var app = angular.module('modooApp')
 
     function getCurrentEmotionsData(inputData)
     {
+        /*
+        * Function that prepare data about current mood in mood labels
+        */
+
         var data = [];
         if(inputData) { 
             // to define the order
@@ -310,14 +341,16 @@ var app = angular.module('modooApp')
 
                 data[i].label = data[i].key;
             }
-
-
         }
         return data;
     }
 
     function getColorData(inputData)
     {
+        /*
+        * Function that prepare data about mood in colors
+        */
+
         var data = []
         if(inputData) {
             var allLabels = []
@@ -367,6 +400,10 @@ var app = angular.module('modooApp')
         return data;
     }
 
+    /*
+    * Other support functions
+    */
+
     function getDictonaryIdxByKey(l, kvalue)
     {
         for(var i = 0; i < l.length; i++)
@@ -401,5 +438,5 @@ var app = angular.module('modooApp')
        return n % 1 === 0;
     }
 
-  });
+});
 

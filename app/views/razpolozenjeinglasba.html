@@ -44,6 +44,8 @@
           <li ng-class="{'active' : tab3, 'non-active': !tab3}" ng-click="tab3 = !tab3"><a href="">Izražena razpoloženja v skladbi</a></li>
           <li ng-class="{'active' : tab4, 'non-active': !tab4}" ng-click="tab4 = !tab4"><a href="">Razpoloženja, ki jih skladba vzbudi</a></li>
           <li ng-class="{'active' : tab5, 'non-active': !tab5}" ng-click="tab5 = !tab5"><a href="">Lastnosti</a></li>
+          <li ng-class="{'active' : tab6, 'non-active': !tab6}" ng-click="tab6 = !tab6"><a href="">Izražena razpoloženja in barve</a></li>
+          <li ng-class="{'active' : tab7, 'non-active': !tab7}" ng-click="tab7 = !tab7"><a href="">Vzbujena razpoloženja in barve</a></li>
         </ul>
         
 
@@ -69,21 +71,114 @@
                 <nvd3 options="viCustvaGraph" data="vzbujenaData" class="margin-padding-none"></nvd3>            
             </div>
 
-            <div class="col-md-12 margin-top-15" ng-if="tab5">
+            <div class="col-md-6 margin-top-30" ng-if="tab5">
                 <div class="row">
-                     <div class="col-xs-2"> <strong>Žanr: </strong> {{currentSongData.zanr}} </div>
-                     <div class="col-xs-2"> <strong>Ritem: </strong>{{currentSongData.ritem}} </div>
-                     <div class="col-xs-2"> <strong>Tempo: </strong>{{currentSongData.tempo}} </div>
-                     <div class="col-xs-2"> <strong>Melodničnost: </strong>{{currentSongData.melodicnost}} </div>
-                     <div class="col-xs-2"> <strong>Dinamika: </strong>{{currentSongData.dinamika}} </div>
-                     <div class="col-xs-2"> <strong>BPM: </strong>{{currentSongData.BPM}} </div>
-                     <div class="col-xs-2"> <strong>Mode: </strong>{{currentSongData.mode}} </div>
-                     <div class="col-xs-2"> <strong>Harmonična kompleksnost: </strong>{{currentSongData.harmonicna_kompleksnost}} </div>
-                     <div class="col-xs-2"> <strong>Konzonantnost: </strong>{{currentSongData.konzonantnost}} </div>
-                     <div class="col-xs-2"> <strong>Metrum: </strong>{{currentSongData.metrum}} </div>
+                  <div class="col-xs-2"> <strong>Žanr </strong>  </div>
+                  <div class="col-xs-10">
+                    <div class="progress">
+                      <div class="progress-bar progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                        <span>{{currentSongData.zanr}}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>                
+                <div class="row">
+                  <div class="col-xs-2"> <strong>Ritem </strong></div>
+                  <div class="col-xs-10">
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{currentSongData.ritem / 7 * 100}}" aria-valuemin="0" aria-valuemax="100" style="width: {{currentSongData.ritem / 7 * 100}}%">
+                        <span>{{currentSongData.ritem}}</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+                <div class="row">
+                  <div class="col-xs-2"> <strong>Tempo </strong> </div>
+                  <div class="col-xs-10">
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{currentSongData.tempo / 7 * 100}}" aria-valuemin="0" aria-valuemax="100" style="width: {{currentSongData.tempo / 7 * 100}}%">
+                        <span>{{currentSongData.tempo}}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-2"> <strong>Melodničnost </strong> </div>
+                  <div class="col-xs-10">
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{currentSongData.melodicnost / 7 * 100}}" aria-valuemin="0" aria-valuemax="100" style="width: {{currentSongData.melodicnost / 7 * 100}}%">
+                        <span>{{currentSongData.melodicnost}}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-2"> <strong>Dinamika </strong> </div>
+                  <div class="col-xs-10">
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{currentSongData.dinamika / 7 * 100}}" aria-valuemin="0" aria-valuemax="100" style="width: {{currentSongData.dinamika / 7 * 100}}%">
+                        <span>{{currentSongData.dinamika}}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-2"> <strong>BPM </strong> </div>
+                  <div class="col-xs-10">
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                        <span>{{currentSongData.BPM}}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-2"> <strong>Mode </strong></div>
+                  <div class="col-xs-10">
+                    <div class="progress">
+                      <div class="progress-bar {{isnumber(currentSongData.mode) ? 'progress-bar-success' : 'progress-bar-danger'}}" role="progressbar" aria-valuenow="{{isnumber(currentSongData.mode) ? (currentSongData.mode / 7 * 100) : 100}}" aria-valuemin="0" aria-valuemax="100" style="width: {{isnumber(currentSongData.mode) ? (currentSongData.mode / 7 * 100) : 100}}%">
+                        <span>{{currentSongData.mode}}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-2"> <strong>Harmonična kompleksnost </strong></div>
+                  <div class="col-xs-10">
+                    <div class="progress">
+                      <div class="progress-bar {{isnumber(currentSongData.harmonicna_kompleksnost) ? 'progress-bar-success' : 'progress-bar-danger'}}" role="progressbar" aria-valuenow="{{isnumber(currentSongData.harmonicna_kompleksnost) ? (currentSongData.harmonicna_kompleksnost / 7 * 100) : 100}}" aria-valuemin="0" aria-valuemax="100" style="width: {{isnumber(currentSongData.harmonicna_kompleksnost) ? (currentSongData.harmonicna_kompleksnost / 7 * 100) : 100}}%">
+                        <span>{{currentSongData.harmonicna_kompleksnost}}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-2"> <strong>Konzonantnost </strong> </div>
+                  <div class="col-xs-10">
+                    <div class="progress">
+                      <div class="progress-bar {{isnumber(currentSongData.konzonantnost) ? 'progress-bar-success' : 'progress-bar-danger'}}" role="progressbar" aria-valuenow="{{isnumber(currentSongData.konzonantnost) ? (currentSongData.konzonantnost / 7 * 100) : 100}}" aria-valuemin="0" aria-valuemax="100" style="width: {{isnumber(currentSongData.konzonantnost) ? (currentSongData.konzonantnost / 7 * 100) : 100}}%">
+                        <span>{{currentSongData.konzonantnost}}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-2"> <strong>Metrum </strong> </div>
+                  <div class="col-xs-10">
+                    <div class="progress">
+                      <div class="progress-bar progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                        <span>{{currentSongData.metrum}}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>                
             </div>
-            
+            <div class="col-md-6 margin-top-15" ng-if="tab6">
+                  <nvd3 options="expresedMoodVAwithColorsGraph" data="expresedMoodVAwithColorsData" class="margin-padding-none"></nvd3>
+            </div>
+            <div class="col-md-6 margin-top-15" ng-if="tab7">
+                <nvd3 options="inducedMoodVAwithColorsGraph" data="inducedMoodVAwithColorsData" class="margin-padding-none"></nvd3>
+            </div>       
         </div>
     </div>
 </div>
