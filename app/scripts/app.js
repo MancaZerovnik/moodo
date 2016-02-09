@@ -103,10 +103,7 @@ angular
       .otherwise({
         redirectTo: '/'
       });
-	 }).filter('capitalize', function() {
-    return function(input) {
-      return (!!input) ? input.charAt(0).toUpperCase() + input.substr(1).toLowerCase() : '';
-    }
+	 
       $translateProvider.useSanitizeValueStrategy('sanitize');
       $translateProvider.useStaticFilesLoader({
         prefix: '../../../languages/',
@@ -116,6 +113,11 @@ angular
       $translateProvider.preferredLanguage('slo');
       $translateProvider.useLocalStorage();
 
-    });
+   })
+  .filter('capitalize', function() {
+    return function(input) {
+      return (!!input) ? input.charAt(0).toUpperCase() + input.substr(1).toLowerCase() : '';
+    }
+  });
     
 
