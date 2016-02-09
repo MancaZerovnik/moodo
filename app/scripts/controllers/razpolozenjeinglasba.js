@@ -8,7 +8,7 @@
  * Controller of the modooApp
  */
 angular.module('modooApp')
-  .controller('RazpolozenjeInGlasbaCtrl', function ($scope, $http, $window, $sce, DataAll) {
+  .controller('RazpolozenjeInGlasbaCtrl', function ($scope, $http, $window, $sce, DataAll, SongsAll) {
     
     $scope.mainInfo = null;
     $scope.filter = {
@@ -55,14 +55,10 @@ angular.module('modooApp')
         return x.toString() === s;
     }
 
-
-    $http.get('../../assets/data/songs.json').success(function(data) {
-        $scope.songsData = data;
-        $scope.filter.song=(Object.keys(data)[0]).slice(0,3);
-        changePlayerSong($scope.filter.song);
-        $scope.update();
-    });
-
+    $scope.songsData = SongsAll.getData();
+    console.log($scope.songsData);
+    $scope.filter.song=(Object.keys($scope.songsData)[0]).slice(0,3);
+    changePlayerSong($scope.filter.song);
     
     $scope.update = function () {
         changePlayerSong($scope.filter.song);
@@ -92,7 +88,7 @@ angular.module('modooApp')
             $scope.$apply();
         }
     };
-
+    $scope.update();
     // call funciton to set properties of the graph
     setGraphsProperties();
 
