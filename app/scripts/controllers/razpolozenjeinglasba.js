@@ -8,7 +8,7 @@
  * Controller of the modooApp
  */
 angular.module('modooApp')
-  .controller('RazpolozenjeInGlasbaCtrl', function ($scope, $http, $window, $sce, DataAll) {
+  .controller('RazpolozenjeInGlasbaCtrl', function ($scope, $http, $window, $sce, DataAll, SongsAll) {
     
     $scope.mainInfo = null;
     $scope.filter = {
