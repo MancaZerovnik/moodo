@@ -17,7 +17,8 @@ angular
     'ngSanitize',
     'ngTouch',
     'ui-rangeSlider',
-    'nvd3'
+    'nvd3',
+    'pascalprecht.translate'
   ])
   .constant('_',
     window._
@@ -49,7 +50,12 @@ angular
       },
     };
   })
-  .config(function ($routeProvider) {
+  .controller('TranslateController', function($translate, $scope) {
+      $scope.changeLanguage = function (langKey) {
+        $translate.use(langKey);
+      };
+    })
+  .config(function ($routeProvider, $translateProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -93,8 +99,17 @@ angular
             // MyServiceData will also be injectable in your controller, if you don't want this you could create a new promise with the $q service
             return SongsAll.promise;
           }
-      }})
-      .otherwise({
-        redirectTo: '/'
+      }});
+
+      $translateProvider.useSanitizeValueStrategy('sanitize');
+      $translateProvider.useStaticFilesLoader({
+        prefix: '../../../languages/',
+        suffix: '.json'
       });
-  });
+      
+      $translateProvider.preferredLanguage('slo');
+      $translateProvider.useLocalStorage();
+
+    });
+    
+
