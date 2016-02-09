@@ -27,10 +27,10 @@ angular.module('modooApp')
         "threehour": true,
         "fourhour": true,
         "song": 0,
-        "moodValenceMin": -1,
-        "moodValenceMax": 1,
-        "moodArousalMin": -1, 
-        "moodArousalMax": 1
+        "moodValenceMin": -100,
+        "moodValenceMax": 100,
+        "moodArousalMin": -100, 
+        "moodArousalMax": 100
     };
 
     function changePlayerSong(id){
@@ -77,7 +77,11 @@ angular.module('modooApp')
             && (($scope.filter.onehour && num.poslusanje_glasbe == "1") ||
                 ($scope.filter.twohour && num.poslusanje_glasbe == "2") ||
                 ($scope.filter.threehour && num.poslusanje_glasbe == "3") ||
-                ($scope.filter.fourhour && num.poslusanje_glasbe == "4"))
+                ($scope.filter.fourhour && num.poslusanje_glasbe == "4")) 
+            && (($scope.filter.moodValenceMin / 100.0 <= parseFloat(num.razpolozenje_trenutno.x) && 
+                $scope.filter.moodValenceMax / 100.0 >= parseFloat(num.razpolozenje_trenutno.x)))
+            && (($scope.filter.moodArousalMin / 100.0 <= parseFloat(num.razpolozenje_trenutno.y) && 
+                $scope.filter.moodArousalMax / 100.0 >= parseFloat(num.razpolozenje_trenutno.y)))  
             );}), function(x) {return x.pesmi; })), function(x) { return x.pesem_id === $scope.filter.song; });
             
         //call function to perepare data to show in the graph
