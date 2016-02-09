@@ -26,7 +26,11 @@ angular.module('modooApp')
         "twohour": true,
         "threehour": true,
         "fourhour": true,
-        "song": 0
+        "song": 0,
+        "moodValenceMin": -1,
+        "moodValenceMax": 1,
+        "moodArousalMin": -1, 
+        "moodArousalMax": 1
     };
 
     function changePlayerSong(id){

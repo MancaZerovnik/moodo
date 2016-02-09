@@ -34,6 +34,13 @@
         <input type="checkbox" name="listening" value="3" ng-model="filter.threehour" ng-change="update()"> do 3h</input>
         <input type="checkbox" name="listening" value="4" ng-model="filter.fourhour" ng-change="update()"> več kot 3h  </input>
 
+        <!-- users current mood -->
+        <p class="margin-bottom-5 margin-top-15 bold">Trenutno razpoloženje:</p>
+        <p class="margin-bottom-5 margin-top-15">Valence: </p>
+        <div id="current_mood_valence" on-handle-up='update()' range-slider min="-1" max="1" model-min="filter.moodValenceMin" model-max="filter.moodValenceMax" class="margin-top-bottom-5"></div>
+        <p class="margin-bottom-5 margin-top-15">Arousal: </p>
+        <div id="current_mood_arousal" on-handle-up='update()' range-slider min="-1" max="1" model-min="filter.moodArousalMin" model-max="filter.moodArousalMax" class="margin-top-bottom-5"></div>
+
     </div>
     <div class="col-md-10" ng-init="tab0=true; tab1=false; tab2=false; tab3=false; tab4=false">
         
