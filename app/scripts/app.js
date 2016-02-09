@@ -99,8 +99,14 @@ angular
             // MyServiceData will also be injectable in your controller, if you don't want this you could create a new promise with the $q service
             return SongsAll.promise;
           }
-      }});
-
+      }})
+      .otherwise({
+        redirectTo: '/'
+      });
+	 }).filter('capitalize', function() {
+    return function(input) {
+      return (!!input) ? input.charAt(0).toUpperCase() + input.substr(1).toLowerCase() : '';
+    }
       $translateProvider.useSanitizeValueStrategy('sanitize');
       $translateProvider.useStaticFilesLoader({
         prefix: '../../../languages/',

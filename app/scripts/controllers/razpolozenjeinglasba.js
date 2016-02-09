@@ -26,8 +26,40 @@ angular.module('modooApp')
         "twohour": true,
         "threehour": true,
         "fourhour": true,
-        "song": 0
+        "song": 0,
+        "moodValenceMin": -100,
+        "moodValenceMax": 100,
+        "moodArousalMin": -100, 
+        "moodArousalMax": 100
     };
+
+    $scope.moodLabelsFilters = {
+        'srecno': false,
+        'zadovoljno': false,
+        'veselo': false,
+        'vedro': false, 
+        'aktivno': false,
+        'budno': false,
+        'sprosceno': false,
+        'mirno': false,
+        'dremavo': false,
+        'zaspano': false,
+        'utrujeno': false,
+        'neaktivno': false,
+        'nezadovoljno': false,
+        'razocarano': false,
+        'zalostno': false,
+        'nesrecno': false,
+        'jezno': false
+    };
+
+    // add keys to the filter
+    for (var key in $scope.moodLabelsFilters)
+    {
+        $scope.filter[key] = {};
+        $scope.filter[key]['min'] = 0;
+        $scope.filter[key]['max'] = 100;
+    }
 
     function changePlayerSong(id){
         $("audio").attr("src","../../assets/media/" + id + ".mp3");
@@ -73,7 +105,11 @@ angular.module('modooApp')
             && (($scope.filter.onehour && num.poslusanje_glasbe == "1") ||
                 ($scope.filter.twohour && num.poslusanje_glasbe == "2") ||
                 ($scope.filter.threehour && num.poslusanje_glasbe == "3") ||
-                ($scope.filter.fourhour && num.poslusanje_glasbe == "4"))
+                ($scope.filter.fourhour && num.poslusanje_glasbe == "4")) 
+            && (($scope.filter.moodValenceMin / 100.0 <= parseFloat(num.razpolozenje_trenutno.x) && 
+                $scope.filter.moodValenceMax / 100.0 >= parseFloat(num.razpolozenje_trenutno.x)))
+            && (($scope.filter.moodArousalMin / 100.0 <= parseFloat(num.razpolozenje_trenutno.y) && 
+                $scope.filter.moodArousalMax / 100.0 >= parseFloat(num.razpolozenje_trenutno.y)))  
             );}), function(x) {return x.pesmi; })), function(x) { return x.pesem_id === $scope.filter.song; });
             
         //call function to perepare data to show in the graph
