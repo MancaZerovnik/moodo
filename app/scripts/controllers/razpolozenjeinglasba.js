@@ -33,6 +33,34 @@ angular.module('modooApp')
         "moodArousalMax": 100
     };
 
+    $scope.moodLabelsFilters = {
+        'srecno': false,
+        'zadovoljno': false,
+        'veselo': false,
+        'vedro': false, 
+        'aktivno': false,
+        'budno': false,
+        'sprosceno': false,
+        'mirno': false,
+        'dremavo': false,
+        'zaspano': false,
+        'utrujeno': false,
+        'neaktivno': false,
+        'nezadovoljno': false,
+        'razocarano': false,
+        'zalostno': false,
+        'nesrecno': false,
+        'jezno': false
+    };
+
+    // add keys to the filter
+    for (var key in $scope.moodLabelsFilters)
+    {
+        $scope.filter[key] = {};
+        $scope.filter[key]['min'] = 0;
+        $scope.filter[key]['max'] = 100;
+    }
+
     function changePlayerSong(id){
         $("audio").attr("src","../../assets/media/" + id + ".mp3");
     }
