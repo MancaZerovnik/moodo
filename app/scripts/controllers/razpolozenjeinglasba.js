@@ -61,11 +61,54 @@ angular.module('modooApp')
         $scope.filter[key]['max'] = 100;
     }
 
+    /*
+    * load data
+    */
+    $scope.songsData = SongsAll.getData();
+    $scope.mainInfo = DataAll.getData();
+
+
+    /*
+    * definitions for the songs filter
+    */
+
+    $scope.songsFilterActivnes = {
+        zanr: false,
+        ritem: false, 
+        tempo: false, 
+        melodicnost: false, 
+        dinamika: false, 
+        BPM: false,
+        mode: false,
+        harmonicna_kompleksnost: false, 
+        konzonantnost: false, 
+        metrum: false
+    };
+
+    $scope.genres = getUniqueValuesListForAllSongs($scope.songsData, 'zanr');
+    $scope.metrums = getUniqueValuesListForAllSongs($scope.songsData, 'metrum');
+    var minMax = bpmMinMax($scope.songsData);
+    $scope.BPMmin = minMax[0];
+    $scope.BPMmax = minMax[1];
+
+    $scope.songsFilters = {
+        zanr: {},
+        ritem: {min: 1, max: 7}, 
+        tempo: {min: 1, max: 7}, 
+        melodicnost: {min: 1, max: 7}, 
+        dinamika: {min: 1, max: 7}, 
+        BPM: {min: $scope.BPMmin, max: $scope.BPMmax},
+        mode: {min: 1, max: 7},
+        harmonicna_kompleksnost: {min: 1, max: 7}, 
+        konzonantnost: {min: 1, max: 7}, 
+        metrum: {}
+    };
+
     function changePlayerSong(id){
         $("audio").attr("src","../../assets/media/" + id + ".mp3");
     }
     
-    $scope.mainInfo = DataAll.getData();
+    
     $scope.songs = _.uniq(_.sortBy(_.flatten(
                         _.map($scope.mainInfo, function(num){ 
                             return _.map(num.pesmi, function(x) {
@@ -83,10 +126,13 @@ angular.module('modooApp')
         return x.toString() === s;
     }
 
-    $scope.songsData = SongsAll.getData();
+    
     console.log($scope.songsData);
     $scope.filter.song=(Object.keys($scope.songsData)[0]).slice(0,3);
     changePlayerSong($scope.filter.song);
+
+    
+
     
     $scope.update = function () {
         changePlayerSong($scope.filter.song);
@@ -94,7 +140,7 @@ angular.module('modooApp')
             
             var condition = true;
 
-            if ("custva_trenutno" in num) // some recodr do not have that key
+            if ("custva_trenutno" in num) // some record do not have that key
                 for (var key in $scope.moodLabelsFilters)
                 {
                     condition = condition && 
@@ -350,6 +396,44 @@ angular.module('modooApp')
     * Support functions
     */ 
 
+    function bpmMinMax(dict)
+    {
+        /* 
+        * function finds max and min value for the property BPM
+        */
+
+        var max = 0;
+        var min = 1000;
+
+        var values = getUniqueValuesListForAllSongs(dict, 'BPM');
+
+        for (var i = 0; i < values.length; i++)
+            if (isNumeric(values[i]))
+            {
+
+                var number = parseInt(values[i]);
+                if (number < min)
+                    min = number;
+                if (number > max)
+                    max = number;
+            }
+        return [min, max];
+    }
+
+    function getUniqueValuesListForAllSongs(dict, key)
+    {
+        /*
+        * Function goes throught all songs and returns unique array of 
+        * all values under one key
+        */
+        var data = [];
+        for (var song in dict)
+            if (data.indexOf(dict[song][key]) == -1)
+                data.push(dict[song][key]);
+        return data;
+
+    }
+
     function getDictonaryIdxByField(dict, value, field)
     {
         for(var i = 0; i < dict.length; i++)
@@ -396,5 +480,9 @@ angular.module('modooApp')
         var g = parseInt(l[1] * 255);
         var b = parseInt(l[2] * 255);
         return rgbToHex(r, g, b);
+    }
+
+    function isNumeric(num){
+        return !isNaN(num)
     }
  });
