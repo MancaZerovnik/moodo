@@ -92,7 +92,18 @@ angular.module('modooApp')
         changePlayerSong($scope.filter.song);
         $scope.filteredData = _.filter(_.flatten(_.map(_.filter($scope.mainInfo, function(num){ 
             
-            return (($scope.filter.male && num.spol == "M" ||
+            var condition = true;
+
+            if ("custva_trenutno" in num) // some recodr do not have that key
+                for (var key in $scope.moodLabelsFilters)
+                {
+                    condition = condition && 
+                                (!$scope.moodLabelsFilters[key] ||  // or field doesnt appear on the page
+                                $scope.filter[key].min / 100.0 <= num.custva_trenutno[key] && // if field appeared check range
+                                $scope.filter[key].max / 100.0 >= num.custva_trenutno[key]); 
+                } 
+
+            return condition && (($scope.filter.male && num.spol == "M" ||
             $scope.filter.female && num.spol == "Z")
             && (($scope.filter.schoolmin <= parseInt(num.glasbena_sola) && 
                 $scope.filter.schoolmax >= parseInt(num.glasbena_sola)))
