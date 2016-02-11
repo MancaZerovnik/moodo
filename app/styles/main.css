@@ -300,6 +300,14 @@ body {
 audio
 {
   width: 100%;
+  margin: 3px auto;
+  display: table;
+}
+
+.content-center
+{
+  display: table;
+    margin: 0 auto;
 }
 
 .square-box 
