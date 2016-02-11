@@ -160,40 +160,7 @@ angular.module('modooApp')
         $scope.playersong.visualisation = $scope.selected_songs[0];
         $scope.changevisualisation();
 
-        $scope.filteredData = _.filter(_.flatten(_.map(_.filter($scope.mainInfo, function(num){ 
-            
-            var condition = true;
-
-            if ("custva_trenutno" in num) // some record do not have that key
-                for (var key in $scope.moodLabelsFilters)
-                {
-                    condition = condition && 
-                                (!$scope.moodLabelsFilters[key] ||  // or field doesnt appear on the page
-                                $scope.filter[key].min / 100.0 <= num.custva_trenutno[key] && // if field appeared check range
-                                $scope.filter[key].max / 100.0 >= num.custva_trenutno[key]); 
-                } 
-
-            return condition && (($scope.filter.male && num.spol == "M" ||
-            $scope.filter.female && num.spol == "Z")
-            && (($scope.filter.schoolmin <= parseInt(num.glasbena_sola) && 
-                $scope.filter.schoolmax >= parseInt(num.glasbena_sola)))
-            && (($scope.filter.agemin <= parseInt(num.starost) && 
-                $scope.filter.agemax >= parseInt(num.starost)))
-            && (($scope.filter.activeinmusicmin <= parseInt(num.igranje_instrumenta) && 
-                $scope.filter.activeinmusicmax >= parseInt(num.igranje_instrumenta))) 
-            && (($scope.filter.city && num.kraj_bivanja == "v mestu") || 
-                ($scope.filter.domestic && num.kraj_bivanja == "na podezelju"))
-            && (($scope.filter.onehour && num.poslusanje_glasbe == "1") ||
-                ($scope.filter.twohour && num.poslusanje_glasbe == "2") ||
-                ($scope.filter.threehour && num.poslusanje_glasbe == "3") ||
-                ($scope.filter.fourhour && num.poslusanje_glasbe == "4")) 
-            && (($scope.filter.moodValenceMin / 100.0 <= parseFloat(num.razpolozenje_trenutno.x) && 
-                $scope.filter.moodValenceMax / 100.0 >= parseFloat(num.razpolozenje_trenutno.x)))
-            && (($scope.filter.moodArousalMin / 100.0 <= parseFloat(num.razpolozenje_trenutno.y) && 
-                $scope.filter.moodArousalMax / 100.0 >= parseFloat(num.razpolozenje_trenutno.y)))  
-            );}), function(x) {return x.pesmi; })), 
-                    function(x) 
-                        { return _.contains($scope.selected_songs, x.pesem_id +'.mp3'); });
+        $scope.filteredData = filterAllData();
             
         //call function to perepare data to show in the graph
         prepareData();
@@ -203,9 +170,18 @@ angular.module('modooApp')
             $scope.$apply();
         }
     };
+
+    /*
+    * main functions call
+    */
+
     $scope.update();
     // call funciton to set properties of the graph
     setGraphsProperties();
+
+    /*
+    * main functions
+    */
 
     function setGraphsPropertiesOnEveryRefresh()
     {
@@ -308,6 +284,48 @@ angular.module('modooApp')
                         && $scope.songsFilters[filter].max >= parseFloat(value[filter]);
         else
             return false;
+    }
+
+    function filterAllData()
+    {
+    /*
+    * functon makes filtering of all data depending on song selection and users filters
+    */
+
+        return _.filter(_.flatten(_.map(_.filter($scope.mainInfo, function(num){ 
+            
+            var condition = true;
+
+            if ("custva_trenutno" in num) // some record do not have that key
+                for (var key in $scope.moodLabelsFilters)
+                {
+                    condition = condition && 
+                                (!$scope.moodLabelsFilters[key] ||  // or field doesnt appear on the page
+                                $scope.filter[key].min / 100.0 <= num.custva_trenutno[key] && // if field appeared check range
+                                $scope.filter[key].max / 100.0 >= num.custva_trenutno[key]); 
+                } 
+
+            return condition && (($scope.filter.male && num.spol == "M" ||
+            $scope.filter.female && num.spol == "Z")
+            && (($scope.filter.schoolmin <= parseInt(num.glasbena_sola) && 
+                $scope.filter.schoolmax >= parseInt(num.glasbena_sola)))
+            && (($scope.filter.agemin <= parseInt(num.starost) && 
+                $scope.filter.agemax >= parseInt(num.starost)))
+            && (($scope.filter.activeinmusicmin <= parseInt(num.igranje_instrumenta) && 
+                $scope.filter.activeinmusicmax >= parseInt(num.igranje_instrumenta))) 
+            && (($scope.filter.city && num.kraj_bivanja == "v mestu") || 
+                ($scope.filter.domestic && num.kraj_bivanja == "na podezelju"))
+            && (($scope.filter.onehour && num.poslusanje_glasbe == "1") ||
+                ($scope.filter.twohour && num.poslusanje_glasbe == "2") ||
+                ($scope.filter.threehour && num.poslusanje_glasbe == "3") ||
+                ($scope.filter.fourhour && num.poslusanje_glasbe == "4")) 
+            && (($scope.filter.moodValenceMin / 100.0 <= parseFloat(num.razpolozenje_trenutno.x) && 
+                $scope.filter.moodValenceMax / 100.0 >= parseFloat(num.razpolozenje_trenutno.x)))
+            && (($scope.filter.moodArousalMin / 100.0 <= parseFloat(num.razpolozenje_trenutno.y) && 
+                $scope.filter.moodArousalMax / 100.0 >= parseFloat(num.razpolozenje_trenutno.y)))  
+            );}), function(x) {return x.pesmi; })), 
+                    function(x) 
+                        { return _.contains($scope.selected_songs, x.pesem_id +'.mp3'); });
     }
 
     /*
