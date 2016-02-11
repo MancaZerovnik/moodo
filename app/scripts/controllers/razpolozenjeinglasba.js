@@ -10,16 +10,25 @@
 angular.module('modooApp')
   .controller('RazpolozenjeInGlasbaCtrl', function ($scope, $http, $window, $sce, DataAll, SongsAll) {
     
-    // init tab mode
-    $scope.song_tab = 1;
+    /*
+    * load data
+    */
+    $scope.songsData = SongsAll.getData();
+    $scope.mainInfo = DataAll.getData();    
 
+    /*
+    * scope variables initialization
+    */
+
+    // tab for song selection (1 - song id, 2 - properties)
+    $scope.song_tab = 1;
+    // filters for one song seletion in views where cant be shown all songs
     $scope.playersong = {
-        song: '101.mp3',
+        song: '101.mp3', // it is just fist song but data apply to selection before view loaded
         properties: '101.mp3',
         visualisation: '101.mp3'
     };
-
-    $scope.mainInfo = null;
+    // main questionary data
     $scope.filter = {
         "male": true, 
         "female": true,
@@ -41,7 +50,7 @@ angular.module('modooApp')
         "moodArousalMin": -100, 
         "moodArousalMax": 100
     };
-
+    // mood filter activated by users (true - filter is active)
     $scope.moodLabelsFilters = {
         'srecno': false,
         'zadovoljno': false,
@@ -61,26 +70,9 @@ angular.module('modooApp')
         'nesrecno': false,
         'jezno': false
     };
-
     // add keys to the filter
-    for (var key in $scope.moodLabelsFilters)
-    {
-        $scope.filter[key] = {};
-        $scope.filter[key]['min'] = 0;
-        $scope.filter[key]['max'] = 100;
-    }
-
-    /*
-    * load data
-    */
-    $scope.songsData = SongsAll.getData();
-    $scope.mainInfo = DataAll.getData();
-
-
-    /*
-    * definitions for the songs filter
-    */
-
+    addCurrentMoodsToFilter()
+    // filters activnes for songs selection 
     $scope.songsFilterActivnes = {
         zanr: false,
         ritem: false, 
@@ -93,13 +85,13 @@ angular.module('modooApp')
         konzonantnost: false, 
         metrum: false
     };
-
+    // data used to init the ranges of filters
     $scope.genres = getUniqueValuesListForAllSongs($scope.songsData, 'zanr');
     $scope.metrums = getUniqueValuesListForAllSongs($scope.songsData, 'metrum');
     var minMax = bpmMinMax($scope.songsData);
     $scope.BPMmin = minMax[0];
     $scope.BPMmax = minMax[1];
-
+    // filters used to filter songs
     $scope.songsFilters = {
         zanr: {},
         ritem: {min: 1, max: 7}, 
@@ -111,22 +103,8 @@ angular.module('modooApp')
         harmonicna_kompleksnost: {min: 1, max: 7}, 
         konzonantnost: {min: 1, max: 7}, 
         metrum: {}
-    };
-
-    $scope.changeplayersong = function (){
-        $("audio").attr("src","../../assets/media/" + $scope.playersong.song);
+    };  
         
-    };
-
-    $scope.changeproperties = function (){
-        $scope.currentSongData = $scope.songsData[$scope.playersong.properties];
-    };
-
-    $scope.changevisualisation= function (){
-        $scope.amplitudeData = [{key: 'gr1', values: enumerateforchart($scope.songsData[$scope.playersong.visualisation].sinusoide)}];
-    };
-    
-    
     $scope.songs = _.uniq(_.sortBy(_.flatten(
                         _.map($scope.mainInfo, function(num){ 
                             return _.map(num.pesmi, function(x) {
@@ -136,51 +114,49 @@ angular.module('modooApp')
                             }
                         )
                    ), function(x) { return x; }), true);
-    $scope.filter.song = $scope.songs[0];
+    
+    $scope.filter.song = $scope.songs[0]; // i think that do not have sense because overided with next one
+    $scope.filter.song=(Object.keys($scope.songsData)[0]).slice(0,3);
 
-    // function is used in wiew
+    /* 
+    * scope functions
+    */
+
+    // function for checking for numbers
     $scope.isnumber = function(s) {
         var x = +s; // made cast obvious for demonstration
         return x.toString() === s;
     }
-
-    
-    console.log('here');
-    $scope.filter.song=(Object.keys($scope.songsData)[0]).slice(0,3);
-    
-    
+    // function to change the player song depending on song selection
+    $scope.changeplayersong = function (){
+        $("audio").attr("src","../../assets/media/" + $scope.playersong.song);       
+    };
+    // function to change the properties shown in the view depending on the song selection
+    $scope.changeproperties = function (){
+        $scope.currentSongData = $scope.songsData[$scope.playersong.properties];
+    };
+    // function to change the sunosoide depending on the song selections 
+    $scope.changevisualisation= function (){
+        $scope.amplitudeData = [{key: 'gr1', values: enumerateforchart($scope.songsData[$scope.playersong.visualisation].sinusoide)}];
+    };    
     $scope.update = function () {
-        
+        /*
+        * this function is called everytime the data on the site have to be updated
+        */
+
+        // filter songs for which data have to be snown
         if($scope.song_tab === 2) // only when selection by song properties
-            $scope.selected_songs = _.keys(_.pick($scope.songsData, function(value, key, object) {
-                                var select = true;
-                                for(var filterkey in $scope.songsFilterActivnes)
-                                    if($scope.songsFilterActivnes[filterkey]) // if filter active
-                                    {
-                                        // for zanr and metrum
-                                        if(_.contains(['zanr', 'metrum'], filterkey))
-                                        {
-                                            // get all selected fields, those which have value true
-                                            var selected_values = _.keys(_.pick($scope.songsFilters[filterkey], 
-                                                function(value, filterkey, object){return value}));
-                                            select = select && _.contains(selected_values, value[filterkey]);
-                                        }
-                                        else
-                                            if (isNumeric(value[filterkey]))
-                                                select = select && $scope.songsFilters[filterkey].min <= parseFloat(value[filterkey])
-                                                            && $scope.songsFilters[filterkey].max >= parseFloat(value[filterkey]);
-                                            else
-                                                select = false;
-                                    }
-                                return select;
-                            }));
+            $scope.selected_songs = filterSongs();
         else // when we peek only one song
             $scope.selected_songs = [$scope.filter.song + '.mp3'];
 
+        // init song in player on fist song of the list
         $scope.playersong.song = $scope.selected_songs[0];
         $scope.changeplayersong();
+        // init properties for the first song in the list
         $scope.playersong.properties = $scope.selected_songs[0];
         $scope.changeproperties();
+        // init sinusoide for the first song in the list
         $scope.playersong.visualisation = $scope.selected_songs[0];
         $scope.changevisualisation();
 
@@ -267,6 +243,72 @@ angular.module('modooApp')
         // data to show musicological estimation data
         
     } 
+
+    /*
+    * variables init functions 
+    */
+
+    function addCurrentMoodsToFilter()
+    {
+        /*
+        * fuction adds filter properties for current mood filter in filter
+        */ 
+        for (var key in $scope.moodLabelsFilters)
+        {
+            $scope.filter[key] = {};
+            $scope.filter[key]['min'] = 0;
+            $scope.filter[key]['max'] = 100;
+        }
+    } 
+
+    /*
+    * function used to filter the data
+    */
+    function filterSongs()
+    {
+        /* 
+        * function select songs for which data have to be show and 
+        * returns the list of the songs
+        */
+        return _.keys(_.pick($scope.songsData, function(value, key, object) {
+                                var select = true;
+                                for(var filterkey in $scope.songsFilterActivnes) // iterate throught all filters
+                                    if($scope.songsFilterActivnes[filterkey]) // if filter active
+                                    {
+                                        // for zanr and metrum
+                                        if(_.contains(['zanr', 'metrum'], filterkey))
+                                            select = select && filterZanrMetrum(filterkey, value);
+                                        else // other filters
+                                            select = select && otherSongsFilters(filterkey, value);
+                                    }
+                                return select;
+                            }));
+    }  
+
+    function filterZanrMetrum(filter, value)
+    {
+        /*
+        * function make partly filtering for one song de pending on properties
+        * zanr or metrum
+        */
+        // get all selected fields, those which have value true
+        var selected_values = _.keys(_.pick($scope.songsFilters[filter], 
+                                                function(value, filter, object){return value}));
+        return _.contains(selected_values, value[filter]);
+    }  
+
+    function otherSongsFilters(filter, value)
+    {
+        /*
+        * function make partly filtering for one song de pending on properties
+        * all other filters
+        */
+        if (isNumeric(value[filter]))
+            return $scope.songsFilters[filter].min <= parseFloat(value[filter])
+                        && $scope.songsFilters[filter].max >= parseFloat(value[filter]);
+        else
+            return false;
+    }
 
     /*
     * Functions used to set graphs properties
