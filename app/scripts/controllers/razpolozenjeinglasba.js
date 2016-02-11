@@ -10,6 +10,9 @@
 angular.module('modooApp')
   .controller('RazpolozenjeInGlasbaCtrl', function ($scope, $http, $window, $sce, DataAll, SongsAll) {
     
+    // init tab mode
+    $scope.song_tab = 1;
+
     $scope.mainInfo = null;
     $scope.filter = {
         "male": true, 
@@ -132,10 +135,33 @@ angular.module('modooApp')
     changePlayerSong($scope.filter.song);
 
     
-
-    
     $scope.update = function () {
         changePlayerSong($scope.filter.song);
+
+        var selected_songs = _.keys(_.pick($scope.songsData, function(value, key, object) {
+                                var select = true;
+                                for(var filterkey in $scope.songsFilterActivnes)
+                                    if($scope.songsFilterActivnes[filterkey]) // if filter active
+                                    {
+                                        // for zanr and metrum
+                                        if(_.contains(['zanr', 'metrum'], filterkey))
+                                        {
+                                            // get all selected fields, those which have value true
+                                            var selected_values = _.keys(_.pick($scope.songsFilters[filterkey], 
+                                                function(value, filterkey, object){return value}));
+                                            select = select && _.contains(selected_values, value[filterkey]);
+                                        }
+                                        else
+                                            if (isNumeric(value[filterkey]))
+                                                select = select && $scope.songsFilters[filterkey].min <= parseFloat(value[filterkey])
+                                                            && $scope.songsFilters[filterkey].max >= parseFloat(value[filterkey]);
+                                            else
+                                                select = false;
+                                    }
+                                return select;
+                            }));
+
+
         $scope.filteredData = _.filter(_.flatten(_.map(_.filter($scope.mainInfo, function(num){ 
             
             var condition = true;
@@ -167,7 +193,10 @@ angular.module('modooApp')
                 $scope.filter.moodValenceMax / 100.0 >= parseFloat(num.razpolozenje_trenutno.x)))
             && (($scope.filter.moodArousalMin / 100.0 <= parseFloat(num.razpolozenje_trenutno.y) && 
                 $scope.filter.moodArousalMax / 100.0 >= parseFloat(num.razpolozenje_trenutno.y)))  
-            );}), function(x) {return x.pesmi; })), function(x) { return x.pesem_id === $scope.filter.song; });
+            );}), function(x) {return x.pesmi; })), 
+                    function(x) 
+                        { return $scope.song_tab === 1 && x.pesem_id === $scope.filter.song ||
+                                $scope.song_tab === 2 && _.contains(selected_songs, x.pesem_id +'.mp3'); });
             
         //call function to perepare data to show in the graph
         prepareData();
