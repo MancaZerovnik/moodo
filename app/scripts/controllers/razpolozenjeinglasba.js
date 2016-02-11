@@ -13,6 +13,8 @@ angular.module('modooApp')
     // init tab mode
     $scope.song_tab = 1;
 
+    $scope.playersong = {song: '101.mp3'};
+
     $scope.mainInfo = null;
     $scope.filter = {
         "male": true, 
@@ -107,8 +109,9 @@ angular.module('modooApp')
         metrum: {}
     };
 
-    function changePlayerSong(id){
-        $("audio").attr("src","../../assets/media/" + id + ".mp3");
+    $scope.changeplayersong = function (){
+        $("audio").attr("src","../../assets/media/" + $scope.playersong.song);
+        console.log($scope.playersong);
     }
     
     
@@ -130,15 +133,14 @@ angular.module('modooApp')
     }
 
     
-    console.log($scope.songsData);
+    console.log('here');
     $scope.filter.song=(Object.keys($scope.songsData)[0]).slice(0,3);
-    changePlayerSong($scope.filter.song);
-
+    
     
     $scope.update = function () {
-        changePlayerSong($scope.filter.song);
-
-        var selected_songs = _.keys(_.pick($scope.songsData, function(value, key, object) {
+        
+        if($scope.song_tab === 2) // only when selection by song properties
+            $scope.selected_songs = _.keys(_.pick($scope.songsData, function(value, key, object) {
                                 var select = true;
                                 for(var filterkey in $scope.songsFilterActivnes)
                                     if($scope.songsFilterActivnes[filterkey]) // if filter active
@@ -160,7 +162,11 @@ angular.module('modooApp')
                                     }
                                 return select;
                             }));
+        else // when we peek only one song
+            $scope.selected_songs = [$scope.filter.song + '.mp3'];
 
+        $scope.playersong.song = $scope.selected_songs[0];
+        $scope.changeplayersong();
 
         $scope.filteredData = _.filter(_.flatten(_.map(_.filter($scope.mainInfo, function(num){ 
             
@@ -195,8 +201,7 @@ angular.module('modooApp')
                 $scope.filter.moodArousalMax / 100.0 >= parseFloat(num.razpolozenje_trenutno.y)))  
             );}), function(x) {return x.pesmi; })), 
                     function(x) 
-                        { return $scope.song_tab === 1 && x.pesem_id === $scope.filter.song ||
-                                $scope.song_tab === 2 && _.contains(selected_songs, x.pesem_id +'.mp3'); });
+                        { return _.contains($scope.selected_songs, x.pesem_id +'.mp3'); });
             
         //call function to perepare data to show in the graph
         prepareData();

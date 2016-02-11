@@ -147,9 +147,21 @@
 
         <div class="row" >
             <div class="col-md-12 margin-top-15" ng-if="tab0">
-                <audio controls >
-                    <source src="" type="audio/mpeg">
-                </audio>          
+              <div class="well well-sm">
+                <div class="row">
+                  <div class="col-xs-3">
+                      <select ng-init="changeplayersong()" ng-model="playersong.song" ng-change="changeplayersong()" class="form-control">
+                        <option ng-repeat="song in selected_songs" value="{{song}}">{{song}} </option>
+                      </select>
+                    </div>
+                    <div class="col-xs-9">
+                      <audio controls >
+                        <source src="" type="audio/mpeg">
+                      </audio> 
+                    </div>
+                  </div>              
+                </div><!-- /well -->
+                         
             </div>
             <div class="col-md-12 margin-top-15" ng-if="tab1">
                 <nvd3 options="ampLineGraph" data="amplitudeData" class="margin-padding-none"></nvd3>
