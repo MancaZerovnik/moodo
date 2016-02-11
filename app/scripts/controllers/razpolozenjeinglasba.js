@@ -13,7 +13,11 @@ angular.module('modooApp')
     // init tab mode
     $scope.song_tab = 1;
 
-    $scope.playersong = {song: '101.mp3'};
+    $scope.playersong = {
+        song: '101.mp3',
+        properties: '101.mp3',
+        visualisation: '101.mp3'
+    };
 
     $scope.mainInfo = null;
     $scope.filter = {
@@ -111,8 +115,16 @@ angular.module('modooApp')
 
     $scope.changeplayersong = function (){
         $("audio").attr("src","../../assets/media/" + $scope.playersong.song);
-        console.log($scope.playersong);
-    }
+        
+    };
+
+    $scope.changeproperties = function (){
+        $scope.currentSongData = $scope.songsData[$scope.playersong.properties];
+    };
+
+    $scope.changevisualisation= function (){
+        $scope.amplitudeData = [{key: 'gr1', values: enumerateforchart($scope.songsData[$scope.playersong.visualisation].sinusoide)}];
+    };
     
     
     $scope.songs = _.uniq(_.sortBy(_.flatten(
@@ -167,6 +179,10 @@ angular.module('modooApp')
 
         $scope.playersong.song = $scope.selected_songs[0];
         $scope.changeplayersong();
+        $scope.playersong.properties = $scope.selected_songs[0];
+        $scope.changeproperties();
+        $scope.playersong.visualisation = $scope.selected_songs[0];
+        $scope.changevisualisation();
 
         $scope.filteredData = _.filter(_.flatten(_.map(_.filter($scope.mainInfo, function(num){ 
             
@@ -244,13 +260,12 @@ angular.module('modooApp')
         */
         $scope.vzbujenaData = musicMoodVAData($scope.filteredData, 'vzbujena_custva');
         $scope.izrazenaData = musicMoodVAData($scope.filteredData, 'izrazena_custva');
-        $scope.amplitudeData = [{key: 'gr1', values: enumerateforchart($scope.songsData[$scope.filter.song + '.mp3'].sinusoide)}];
         $scope.colorData = getColorData($scope.filteredData);
         $scope.inducedMoodVAwithColorsData = musicMoodVAandColorData($scope.filteredData, 'vzbujena_custva');
         $scope.expresedMoodVAwithColorsData = musicMoodVAandColorData($scope.filteredData, 'izrazena_custva');
 
         // data to show musicological estimation data
-        $scope.currentSongData = $scope.songsData[$scope.filter.song + '.mp3'];
+        
     } 
 
     /*

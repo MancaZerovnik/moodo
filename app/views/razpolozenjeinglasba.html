@@ -149,21 +149,38 @@
             <div class="col-md-12 margin-top-15" ng-if="tab0">
               <div class="well well-sm">
                 <div class="row">
-                  <div class="col-xs-3">
-                      <select ng-init="changeplayersong()" ng-model="playersong.song" ng-change="changeplayersong()" class="form-control">
-                        <option ng-repeat="song in selected_songs" value="{{song}}">{{song}} </option>
-                      </select>
+                  <div class="col-xs-5">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <p class="margin-top-5 text-center">Izbira pesmi:</p>
+                      </div>
+                      <div class="col-md-8">
+                        <select ng-init="changeplayersong()" ng-model="playersong.song" ng-change="changeplayersong()" class="form-control">
+                          <option ng-repeat="song in selected_songs" value="{{song}}">{{song}} </option>
+                        </select>
+                      </div>
                     </div>
-                    <div class="col-xs-9">
-                      <audio controls >
-                        <source src="" type="audio/mpeg">
-                      </audio> 
-                    </div>
-                  </div>              
-                </div><!-- /well -->
+                  </div>
+                  <div class="col-xs-7">
+                    <audio controls >
+                      <source src="" type="audio/mpeg">
+                    </audio> 
+                  </div>
+                </div>              
+              </div><!-- /well -->
                          
             </div>
             <div class="col-md-12 margin-top-15" ng-if="tab1">
+                <div class="row padding-bottom-20">
+                  <div class="col-md-2">
+                    <p class="margin-top-5 text-center">Izbira pesmi</p>
+                  </div>
+                  <div class="col-md-2">
+                    <select ng-init="changevisualisation()" ng-model="playersong.visualisation" ng-change="changevisualisation()" class="form-control">
+                      <option ng-repeat="song in selected_songs" value="{{song}}">{{song}} </option>
+                    </select>
+                  </div>
+                </div>
                 <nvd3 options="ampLineGraph" data="amplitudeData" class="margin-padding-none"></nvd3>
             </div>
             <div class="col-md-12 text-center margin-padding-none" ng-if="tab2">
@@ -180,6 +197,16 @@
             </div>
 
             <div class="col-md-6 margin-top-30" ng-if="tab5">
+                <div class="row padding-bottom-20">
+                  <div class="col-md-2">
+                    <p class="margin-top-5 text-center">Izbira pesmi</p>
+                  </div>
+                  <div class="col-md-10">
+                    <select ng-init="changeproperties()" ng-model="playersong.properties" ng-change="changeproperties()" class="form-control">
+                      <option ng-repeat="song in selected_songs" value="{{song}}">{{song}} </option>
+                    </select>
+                  </div>
+                </div>
                 <div class="row">
                   <div class="col-xs-2"> <strong>Žanr </strong>  </div>
                   <div class="col-xs-10">
