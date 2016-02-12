@@ -8,15 +8,27 @@
  * Controller of the modooApp
  */
 angular.module('modooApp')
-  .controller('SplosnoCtrl', function ($scope, $http, DataAll) {
-        //console.log('Promise is now resolved: '+DataAll.doStuff())
-        //$http.get('../../assets/data/data.json').success(function(data) {
-            $scope.mainInfo = DataAll.getData();  
+  .controller('SplosnoCtrl', function ($scope, $http, $q, DataAll) {
+
+        $q.all([
+            DataAll
+        ]).then(function(data){
+            $scope.mainInfo = data[0];
+            init();
+        });
+
+
+        
+   
+        //});
+
+        function init()
+        {
             var genderNUM = _.countBy($scope.mainInfo, function(x) {
-            return x.spol == 'M' ? 'm': 'z';
+                return x.spol == 'M' ? 'm': 'z';
             });  
             var livingNUM = _.countBy($scope.mainInfo, function(x) {
-            return x.kraj_bivanja == 'v mestu' ? 'mesto': 'podezelje';
+                return x.kraj_bivanja == 'v mestu' ? 'mesto': 'podezelje';
             });  
             var ageNUM = _.countBy($scope.mainInfo, function(x) {
                 return String(x.starost).charAt(0);
@@ -24,10 +36,9 @@ angular.module('modooApp')
             var genreNUM = _.countBy(_.flatten(_.map($scope.mainInfo, function(x) {
                 return x.zvrst;
             })), function(x) { return x; });
-            console.log(genreNUM);
+
             update(genderNUM, livingNUM, ageNUM, genreNUM);
-   
-        //});
+        }
         
         function update(genderNUM, livingNUM, ageNUM, genreNUM){
             $scope.optionsGender = {
@@ -100,8 +111,7 @@ angular.module('modooApp')
             }
 
             for (var property in ageNUM) {
-                console.log(property);
-                console.log(ageNUM[property]);
+               
                 $scope.dataAge[0].values.push({
                     key: property + "0 do " + property + "9",
                     y: ageNUM[property]

@@ -19,7 +19,6 @@ angular.module('modooApp')
     ]).then(function(data){
       $scope.mainInfo = data[0];
       $scope.songsData = data[1];
-      console.log($scope.mainInfo)
       init();
     });
     // $scope.mainInfo = DataAll.getData();
@@ -189,8 +188,7 @@ angular.module('modooApp')
             metrum: {}
         };  
         
-        console.log($scope.songsData);
-        console.log($scope.mainInfo);
+
         $scope.songs = _.uniq(_.sortBy(_.flatten(
                             _.map($scope.mainInfo, function(num){ 
                                 return _.map(num.pesmi, function(x) {
@@ -200,7 +198,6 @@ angular.module('modooApp')
                                 }
                             )
                        ), function(x) { return x; }), true);
-        console.log($scope.songs);
         
         $scope.filter.song = $scope.songs[0]; // i think that do not have sense because overided with next one
         $scope.filter.song=(Object.keys($scope.songsData)[0]).slice(0,3);

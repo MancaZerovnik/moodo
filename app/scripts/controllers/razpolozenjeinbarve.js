@@ -8,30 +8,16 @@
  * Controller of the modooApp
  */
 var app = angular.module('modooApp')
-  .controller('RazpolozenjeInBarveCtrl', function ($scope, $http, $window, DataAll) {
-    console.log(DataAll);
-    $scope.mainInfo = null;
-    $scope.filter = {
-        "male": true, 
-        "female": false,
-        "agemin": 5,
-        "agemax": 100,
-        "city": true,
-        "domestic": false,
-        "schoolmin": 0,
-        "schoolmax": 20,
-        "activeinmusicmin": 0,
-        "activeinmusicmax": 20,
-        "onehour": true,
-        "twohour": false,
-        "threehour": false,
-        "fourhour": false
-    };
+  .controller('RazpolozenjeInBarveCtrl', function ($scope, $http, $window, $q, DataAll) {
 
-    //$http.get('../../assets/data/data.json').success(function(data) {
-        $scope.mainInfo = DataAll.getData(); 
-                
-    //});
+    
+    $q.all([
+      DataAll
+    ]).then(function(data){
+      $scope.mainInfo = data[0];
+      init();
+    });
+
 
     $scope.update = function () {
 
@@ -67,8 +53,31 @@ var app = angular.module('modooApp')
 
         
     };
-    $scope.update();
     
+    
+    /*
+    * main functions
+    */
+    function init()
+    {
+        $scope.filter = {
+            "male": true, 
+            "female": false,
+            "agemin": 5,
+            "agemax": 100,
+            "city": true,
+            "domestic": false,
+            "schoolmin": 0,
+            "schoolmax": 20,
+            "activeinmusicmin": 0,
+            "activeinmusicmax": 20,
+            "onehour": true,
+            "twohour": false,
+            "threehour": false,
+            "fourhour": false
+    };
+        $scope.update();
+    }
 
     function setGraphsProperties()
     {
