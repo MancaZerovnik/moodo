@@ -27,6 +27,7 @@ angular
     var deferred = $q.defer();
     $http.get('../../assets/data/data.json').success(function (data) {
        deferred.resolve(data);
+       console.log('a');
     });
 
     return deferred.promise;
