@@ -1,13 +1,88 @@
-<div class="row margin-top-40 padding-left-10 padding-rigth-10">    
-    <div class="col-md-2 border-solid border-radius-10 padding-bottom-20 border-width-1">
-        
+<div class="row margin-top-40 padding-left-10 padding-rigth-10" ng-show="mainInfo == null">
+  <h1>Loading </h1>
+</div>
 
+<div class="row margin-top-40 padding-left-10 padding-rigth-10" ng-show="mainInfo != null">    
+    <div class="col-md-2 ">
+      <div class="row">
+        <div class="col-xs-12 padding-bottom-20 margin-bottom-20" >       
+          <ul class="nav nav-tabs">
+            <li role="presentation" ng-class="{'active' : song_tab == 1, '': !song_tab == 1}" ng-click="song_tab = 1; update()"><a href="">Id skladbe</a></li>
+            <li role="presentation" ng-class="{'active' : song_tab == 2, '': !song_tab == 2}" ng-click="song_tab = 2; update()"><a href="">Lastnosti skladbe</a></li>
+          </ul>
 
-        <p class="margin-bottom-5 margin-top-15 bold"> Skladba: </p>
-        <select name="singleSelect" ng-model="filter.song" ng-change="update()" class="form-control">   
-            <option ng-repeat="song in songs" value="{{song}}" >{{song}}</option>       
-        </select>
+          <div ng-if="song_tab == 1">
+            <p class="margin-bottom-5 margin-top-15 bold"> Skladba: </p>
+            <select name="singleSelect" ng-model="filter.song" ng-change="update()" class="form-control">   
+                <option ng-repeat="song in songs" value="{{song}}" >{{song}}</option>       
+            </select>
+          </div>
+          <div ng-if="song_tab ==2">
+            <div class="dropdown margin-top-30">
+              <button class="btn btn-default dropdown-toggle" type="button" id="songsPropDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Razpoložneja
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="songsPropDropdown">
+                  <li ng-repeat="(key,val) in songsFilterActivnes" ng-click="songsFilterActivnes[key] = !songsFilterActivnes[key]; update()" ng-class="{'disabled' : songsFilterActivnes[key], '': !songsFilterActivnes[key]}"><a href="">{{key}}</a></li>
+              </ul>
+            </div>
+            <div ng-if="songsFilterActivnes.zanr">
+                <p class="margin-bottom-5 margin-top-15 bold"> Žanr: </p>
+                <div ng-repeat="genre in genres"> 
+                  <label>
+                    <input type="checkbox" ng-model="songsFilters.zanr[genre]" ng-change="update()" /> 
+                      {{genre}}
+                  </label><br/>
+                </div>
+            </div>            
+            <div ng-if="songsFilterActivnes.ritem">
+              <p class="margin-bottom-5 margin-top-15 bold"> Ritem [{{songsFilters.ritem.min}} - {{songsFilters.ritem.max}}]: </p>
+              <div on-handle-up='update()' range-slider min="1" max="7" model-min="songsFilters.ritem.min" model-max="songsFilters.ritem.max" class="margin-top-bottom-5"></div>
+            </div>
+            <div ng-if="songsFilterActivnes.tempo">
+              <p class="margin-bottom-5 margin-top-15 bold"> Tempo [{{songsFilters.tempo.min}} - {{songsFilters.tempo.max}}]: </p>
+              <div on-handle-up='update()' range-slider min="1" max="7" model-min="songsFilters.tempo.min" model-max="songsFilters.tempo.max" class="margin-top-bottom-5"></div>
+            </div>
+            <div ng-if="songsFilterActivnes.melodicnost">
+              <p class="margin-bottom-5 margin-top-15 bold"> Melodničnost [{{songsFilters.melodicnost.min}} - {{songsFilters.melodicnost.max}}]: </p>
+              <div on-handle-up='update()' range-slider min="1" max="7" model-min="songsFilters.melodicnost.min" model-max="songsFilters.melodicnost.max" class="margin-top-bottom-5"></div>
+            </div>
+            <div ng-if="songsFilterActivnes.dinamika">
+              <p class="margin-bottom-5 margin-top-15 bold"> Dinamika [{{songsFilters.dinamika.min}} - {{songsFilters.dinamika.max}}]: </p>
+              <div on-handle-up='update()' range-slider min="1" max="7" model-min="songsFilters.dinamika.min" model-max="songsFilters.dinamika.max" class="margin-top-bottom-5"></div>
+            </div>
+            <div ng-if="songsFilterActivnes.BPM">
+              <p class="margin-bottom-5 margin-top-15 bold"> BPM [{{songsFilters.BPM.min}} - {{songsFilters.BPM.max}}]: </p>
+              <div on-handle-up='update()' range-slider min="BPMmin" max="BPMmax" model-min="songsFilters.BPM.min" model-max="songsFilters.BPM.max" class="margin-top-bottom-5"></div>
+            </div>
+            <div ng-if="songsFilterActivnes.mode">
+              <p class="margin-bottom-5 margin-top-15 bold"> Mode [{{songsFilters.mode.min}} - {{songsFilters.mode.max}}]: </p>
+              <div on-handle-up='update()' range-slider min="1" max="7" model-min="songsFilters.mode.min" model-max="songsFilters.mode.max" class="margin-top-bottom-5"></div>
+            </div>
+            <div ng-if="songsFilterActivnes.harmonicna_kompleksnost">
+              <p class="margin-bottom-5 margin-top-15 bold"> Harmonična kompleksnost [{{songsFilters.harmonicna_kompleksnost.min}} - {{songsFilters.harmonicna_kompleksnost.max}}]: </p>
+              <div on-handle-up='update()' range-slider min="1" max="7" model-min="songsFilters.harmonicna_kompleksnost.min" model-max="songsFilters.harmonicna_kompleksnost.max" class="margin-top-bottom-5"></div>
+            </div>
+            <div ng-if="songsFilterActivnes.konzonantnost">
+              <p class="margin-bottom-5 margin-top-15 bold"> Konzonantnost [{{songsFilters.konzonantnost.min}} - {{songsFilters.konzonantnost.max}}]: </p>
+              <div on-handle-up='update()' range-slider min="1" max="7" model-min="songsFilters.konzonantnost.min" model-max="songsFilters.konzonantnost.max" class="margin-top-bottom-5"></div>
+            </div>
+            <div ng-if="songsFilterActivnes.metrum">
+              <p class="margin-bottom-5 margin-top-15 bold"> Metrum: </p>
+              <div ng-repeat="met in metrums"> 
+                  <label>
+                    <input type="checkbox" ng-model="songsFilters.metrum[met]" ng-change="update()" /> 
+                      {{met}}
+                  </label><br/>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
+      <div class="row">
+        <div class="col-xs-12 border-solid border-radius-10 padding-bottom-20 border-width-1">
         <p class="margin-bottom-5 margin-top-15 bold"> Spol: </p>
         <input type="checkbox" ng-model="filter.male" ng-change="update()" /> Moški
         <input type="checkbox" ng-model="filter.female"  ng-change="update()" /> Ženski<br/>
@@ -53,10 +128,11 @@
 
 
         <div ng-repeat="(key,val) in moodLabelsFilters" ng-if="val">
-          <p class="margin-bottom-5 margin-top-15">{{key | capitalize}} </p>
+          <p class="margin-bottom-5 margin-top-15">{{key | capitalize}} [{{filter[key].min / 100}} - {{filter[key].max / 100}}] </p>
           <div id="{{key}}" on-handle-up='update()' range-slider min="0" max="100" model-min="filter[key].min" model-max="filter[key].max" class="margin-top-bottom-5"></div>
         </div>
-        
+      </div>
+      </div>
 
     </div>
     <div class="col-md-10" ng-init="tab0=true; tab1=false; tab2=false; tab3=false; tab4=false">
@@ -75,11 +151,40 @@
 
         <div class="row" >
             <div class="col-md-12 margin-top-15" ng-if="tab0">
-                <audio controls >
-                    <source src="" type="audio/mpeg">
-                </audio>          
+              <div class="well well-sm">
+                <div class="row">
+                  <div class="col-xs-5" ng-if="song_tab ==2">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <p class="margin-top-5 text-center">Izbira pesmi:</p>
+                      </div>
+                      <div class="col-md-8">
+                        <select ng-init="changeplayersong()" ng-model="playersong.song" ng-change="changeplayersong()" class="form-control">
+                          <option ng-repeat="song in selected_songs" value="{{song}}">{{song}} </option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-7 content-center">
+                    <audio controls ng-src="{{songPath}}">
+                      <source ng-src="{{songPath}}" type="audio/mpeg">
+                    </audio> 
+                  </div>
+                </div>              
+              </div><!-- /well -->
+                         
             </div>
             <div class="col-md-12 margin-top-15" ng-if="tab1">
+                <div class="row padding-bottom-20" ng-if="song_tab ==2">
+                  <div class="col-md-2">
+                    <p class="margin-top-5 text-center">Izbira pesmi</p>
+                  </div>
+                  <div class="col-md-2">
+                    <select ng-init="changevisualisation()" ng-model="playersong.visualisation" ng-change="changevisualisation()" class="form-control">
+                      <option ng-repeat="song in selected_songs" value="{{song}}">{{song}} </option>
+                    </select>
+                  </div>
+                </div>
                 <nvd3 options="ampLineGraph" data="amplitudeData" class="margin-padding-none"></nvd3>
             </div>
             <div class="col-md-12 text-center margin-padding-none" ng-if="tab2">
@@ -96,6 +201,16 @@
             </div>
 
             <div class="col-md-6 margin-top-30" ng-if="tab5">
+                <div class="row padding-bottom-20" ng-if="song_tab ==2">
+                  <div class="col-md-2">
+                    <p class="margin-top-5 text-center">Izbira pesmi</p>
+                  </div>
+                  <div class="col-md-10">
+                    <select ng-init="changeproperties()" ng-model="playersong.properties" ng-change="changeproperties()" class="form-control">
+                      <option ng-repeat="song in selected_songs" value="{{song}}">{{song}} </option>
+                    </select>
+                  </div>
+                </div>
                 <div class="row">
                   <div class="col-xs-2"> <strong>Žanr </strong>  </div>
                   <div class="col-xs-10">

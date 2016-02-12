@@ -8,7 +8,7 @@
  * Controller of the modooApp
  */
 angular.module('modooApp')
-  .controller('MainCtrl', function ($scope, $timeout) {
+  .controller('MainCtrl', function ($scope, $timeout, $q, DataAll) { // dataAll is here to start loadin data in background
     var timer;
     $scope.image = 1;
     var sliderFunc = function() {
@@ -23,4 +23,5 @@ angular.module('modooApp')
     $scope.$on('$destroy', function() {
       $timeout.cancel(timer); // when the scope is getting destroyed, cancel the timer
     });
+
   });

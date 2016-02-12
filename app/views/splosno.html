@@ -1,4 +1,8 @@
-<div class="row vertical-align" ng-init="tab=1">
+<div class="row margin-top-40 padding-left-10 padding-rigth-10" ng-show="mainInfo == null">
+  <h1>Loading </h1>
+</div>
+
+<div class="row vertical-align" ng-init="tab=1" ng-if="mainInfo != null">
     <div class="col-md-2 text-center margin-top-big">
         <ul class="nav nav-pills nav-stacked">
           <li ng-class="{'active' : tab === 1}" ng-click="tab = 1"><a href="">Spol</a></li>

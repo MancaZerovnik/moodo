@@ -124,6 +124,11 @@ body {
   margin-top: 80px;
 }
 
+.margin-top-5
+{
+  margin-top: 5px;
+}
+
 .padding-top-40
 {
   padding-top: 40px;
@@ -267,6 +272,7 @@ body {
   max-width: 300px;
 }
 
+
 .on-img-title
 {
     position:absolute;
@@ -294,6 +300,14 @@ body {
 audio
 {
   width: 100%;
+  margin: 3px auto;
+  display: table;
+}
+
+.content-center
+{
+  display: table;
+    margin: 0 auto;
 }
 
 .square-box 
@@ -351,4 +365,9 @@ a, a:hover
 {
   margin: 0px;
   padding: 0px;
+}
+
+.dropdown-menu {
+  min-width:auto;
+  width:100%;
 }
