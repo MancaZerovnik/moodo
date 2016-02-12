@@ -38,7 +38,9 @@ angular.module('modooApp')
     }
     // function to change the player song depending on song selection
     $scope.changeplayersong = function (){
-        $("audio").attr("src","../../assets/media/" + $scope.playersong.song);       
+        $scope.songPath = "../../assets/media/" + $scope.playersong.song;
+        // $("audio").attr("src","../../assets/media/" + $scope.playersong.song); 
+        //         console.log($scope.playersong.song);      
     };
     // function to change the properties shown in the view depending on the song selection
     $scope.changeproperties = function (){
@@ -62,6 +64,7 @@ angular.module('modooApp')
         // init song in player on fist song of the list
         $scope.playersong.song = $scope.selected_songs[0];
         $scope.changeplayersong();
+
         // init properties for the first song in the list
         $scope.playersong.properties = $scope.selected_songs[0];
         $scope.changeproperties();

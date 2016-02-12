@@ -27,16 +27,9 @@ angular
     var deferred = $q.defer();
     $http.get('../../assets/data/data.json').success(function (data) {
        deferred.resolve(data);
-       console.log('a');
     });
 
     return deferred.promise;
-    // {
-    //   promise:promise,
-    //   getData: function () {
-    //       return myData;
-    //   },
-    // };
   })
   .service('SongsAll', function($http, $q) {
 
@@ -46,12 +39,6 @@ angular
     });
 
     return deferred.promise;
-    // {
-    //   promise:promise,
-    //   getData: function () {
-    //       return mySongs;
-    //   },
-    // };
   })
   .controller('TranslateController', function($translate, $scope) {
       $scope.changeLanguage = function (langKey) {
