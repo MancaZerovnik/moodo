@@ -1,3 +1,8 @@
 {
-"SPLOSNI": "General data"
+"SPLOSNI": "General data",
+"SPLOSNITEKST": "Basic data about people involved in research. We have analysed gender, age, place of residence, favourite music genre and music listening time per day.",
+"RAZPOLOZENJEINBARVE": "Mood and colours",
+"RAZPOLOZENJEINBARVETEKST": "Connections between moods and colours which can be filtered by different properties.",
+"GLASBAINRAZPOLOZENJE": "Visualization of music and mood in music",
+"GLASBAINRAZPOLOZENJETEKST": "People's rating of colour and mood in music - mood which music arouse and mood perceived in music."
 }

@@ -1,3 +1,8 @@
 {
-"SPLOSNI": "Splošni podatki"
+"SPLOSNI": "Splošni podatki",
+"SPLOSNITEKST": "Prikaz osnovnih statističnih podatkov o udeležencih vljučenih v raziskavo. Analizirali smo spol, starost, kraj bivanja, najljubše žanre in količino poslušanja glasbe. ",
+"RAZPOLOZENJEINBARVE": "Razpolozenje in barve",
+"RAZPOLOZENJEINBARVETEKST": "Prikaz osnovnih statističnih podatkov o udeležencih vljučenih v raziskavo. Analizirali smo spol, starost, kraj bivanja, najljubše žanre in količino poslušanja glasbe.",
+"GLASBAINRAZPOLOZENJE": "Vizualizacija glasbe in razpoloženja v glasbi",
+"GLASBAINRAZPOLOZENJETEKST": " Prikaz uporabnikove ocene razpoloženja v glasbi. Prikazano je razpoloženje, ki ga glasba vzbudi in razpoloženje, ki ga je moč zaznati v glasbi ter razpoloženje v barvi."
 }

@@ -43,11 +43,11 @@
               </div>              
               <div class="collapse navbar-collapse" id="js-navbar-collapse" ng-controller="TranslateController">
                 <ul class="nav navbar-nav pull-right">
-                  <li><a ng-href="#/splosno" class="color-white">Splošni podatki</a></li>
-                  <li><a ng-href="#/razpolozenjeinbarve" class="color-white">Razpoloženje in barve</a></li>
-                  <li><a ng-href="#/razplozenjeinglasba" class="color-white">Vizualizacija glasbe in razpoloženja</a></li>
-                  <li><button ng-click="changeLanguage('slo')" translate="slo"></button></li>
-                  <li><button ng-click="changeLanguage('en')" translate="en"></button></li>
+                  <li><a ng-href="#/splosno" class="color-white">{{ "SPLOSNI" | translate }}</a></li>
+                  <li><a ng-href="#/razpolozenjeinbarve" class="color-white">{{ "RAZPOLOZENJEINBARVE" | translate }}</a></li>
+                  <li><a ng-href="#/razplozenjeinglasba" class="color-white">{{ "GLASBAINRAZPOLOZENJE" | translate }}</a></li>
+                  <li><button ng-click="changeLanguage('slo')" translate="slo" class="btn btn-link"></button></li>
+                  <li><button ng-click="changeLanguage('en')" translate="en" class="btn btn-link"></button></li>
                 </ul>
               </div>             
             </div>

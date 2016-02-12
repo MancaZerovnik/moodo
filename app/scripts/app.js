@@ -104,7 +104,7 @@ angular
         redirectTo: '/'
       });
 	 
-      $translateProvider.useSanitizeValueStrategy('sanitize');
+      //$translateProvider.useSanitizeValueStrategy('sanitize');
       $translateProvider.useStaticFilesLoader({
         prefix: '../../../languages/',
         suffix: '.json'
