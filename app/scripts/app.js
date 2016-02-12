@@ -23,32 +23,34 @@ angular
   .constant('_',
     window._
   )
-  .service('DataAll', function($http) {
-    var myData = null;
-    var promise = $http.get('../../assets/data/data.json').success(function (data) {
-       myData = data;
+  .service('DataAll', function($http, $q) {
+    var deferred = $q.defer();
+    $http.get('../../assets/data/data.json').success(function (data) {
+       deferred.resolve(data);
     });
 
-    return {
-      promise:promise,
-      getData: function () {
-          return myData;
-      },
-    };
+    return deferred.promise;
+    // {
+    //   promise:promise,
+    //   getData: function () {
+    //       return myData;
+    //   },
+    // };
   })
-  .service('SongsAll', function($http) {
+  .service('SongsAll', function($http, $q) {
 
-    var mySongs = null;
+    var deferred = $q.defer();
     var promise = $http.get('../../assets/data/songs.json').success(function (data) {
-       mySongs = data;
+       deferred.resolve(data);
     });
 
-    return {
-      promise:promise,
-      getData: function () {
-          return mySongs;
-      },
-    };
+    return deferred.promise;
+    // {
+    //   promise:promise,
+    //   getData: function () {
+    //       return mySongs;
+    //   },
+    // };
   })
   .controller('TranslateController', function($translate, $scope) {
       $scope.changeLanguage = function (langKey) {

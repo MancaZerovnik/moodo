@@ -8,115 +8,25 @@
  * Controller of the modooApp
  */
 angular.module('modooApp')
-  .controller('RazpolozenjeInGlasbaCtrl', function ($scope, $http, $window, $sce, DataAll, SongsAll) {
+  .controller('RazpolozenjeInGlasbaCtrl', function ($scope, $http, $window, $sce, $q, DataAll, SongsAll) {
     
     /*
     * load data
     */
-    $scope.songsData = SongsAll.getData();
-    $scope.mainInfo = DataAll.getData();    
+    $q.all([
+      DataAll,
+      SongsAll
+    ]).then(function(data){
+      $scope.mainInfo = data[0];
+      $scope.songsData = data[1];
+      console.log($scope.mainInfo)
+      init();
+    });
+    // $scope.mainInfo = DataAll.getData();
+    // $scope.songsData = SongsAll.getData();
 
-    /*
-    * scope variables initialization
-    */
 
-    // tab for song selection (1 - song id, 2 - properties)
-    $scope.song_tab = 1;
-    // filters for one song seletion in views where cant be shown all songs
-    $scope.playersong = {
-        song: '101.mp3', // it is just fist song but data apply to selection before view loaded
-        properties: '101.mp3',
-        visualisation: '101.mp3'
-    };
-    // main questionary data
-    $scope.filter = {
-        "male": true, 
-        "female": true,
-        "agemin": 5,
-        "agemax": 100,
-        "city": true,
-        "domestic": true,
-        "schoolmin": 0,
-        "schoolmax": 20,
-        "activeinmusicmin": 0,
-        "activeinmusicmax": 20,
-        "onehour": true,
-        "twohour": true,
-        "threehour": true,
-        "fourhour": true,
-        "song": 0,
-        "moodValenceMin": -100,
-        "moodValenceMax": 100,
-        "moodArousalMin": -100, 
-        "moodArousalMax": 100
-    };
-    // mood filter activated by users (true - filter is active)
-    $scope.moodLabelsFilters = {
-        'srecno': false,
-        'zadovoljno': false,
-        'veselo': false,
-        'vedro': false, 
-        'aktivno': false,
-        'budno': false,
-        'sprosceno': false,
-        'mirno': false,
-        'dremavo': false,
-        'zaspano': false,
-        'utrujeno': false,
-        'neaktivno': false,
-        'nezadovoljno': false,
-        'razocarano': false,
-        'zalostno': false,
-        'nesrecno': false,
-        'jezno': false
-    };
-    // add keys to the filter
-    addCurrentMoodsToFilter()
-    // filters activnes for songs selection 
-    $scope.songsFilterActivnes = {
-        zanr: false,
-        ritem: false, 
-        tempo: false, 
-        melodicnost: false, 
-        dinamika: false, 
-        BPM: false,
-        mode: false,
-        harmonicna_kompleksnost: false, 
-        konzonantnost: false, 
-        metrum: false
-    };
-    // data used to init the ranges of filters
-    $scope.genres = getUniqueValuesListForAllSongs($scope.songsData, 'zanr');
-    $scope.metrums = getUniqueValuesListForAllSongs($scope.songsData, 'metrum');
-    var minMax = bpmMinMax($scope.songsData);
-    $scope.BPMmin = minMax[0];
-    $scope.BPMmax = minMax[1];
-    // filters used to filter songs
-    $scope.songsFilters = {
-        zanr: {},
-        ritem: {min: 1, max: 7}, 
-        tempo: {min: 1, max: 7}, 
-        melodicnost: {min: 1, max: 7}, 
-        dinamika: {min: 1, max: 7}, 
-        BPM: {min: $scope.BPMmin, max: $scope.BPMmax},
-        mode: {min: 1, max: 7},
-        harmonicna_kompleksnost: {min: 1, max: 7}, 
-        konzonantnost: {min: 1, max: 7}, 
-        metrum: {}
-    };  
-        
-    $scope.songs = _.uniq(_.sortBy(_.flatten(
-                        _.map($scope.mainInfo, function(num){ 
-                            return _.map(num.pesmi, function(x) {
-                                                        return x.pesem_id;
-                                                    }
-                                    );
-                            }
-                        )
-                   ), function(x) { return x; }), true);
     
-    $scope.filter.song = $scope.songs[0]; // i think that do not have sense because overided with next one
-    $scope.filter.song=(Object.keys($scope.songsData)[0]).slice(0,3);
 
     /* 
     * scope functions
@@ -175,13 +85,128 @@ angular.module('modooApp')
     * main functions call
     */
 
-    $scope.update();
+    
     // call funciton to set properties of the graph
     setGraphsProperties();
 
     /*
     * main functions
     */
+
+    function init()
+    {
+        /*
+        * this funtion is made to init all values 
+        * function is called after data are loaded to the page
+        */
+
+        /*
+    * scope variables initialization
+    */
+
+        // tab for song selection (1 - song id, 2 - properties)
+        $scope.song_tab = 1;
+        // filters for one song seletion in views where cant be shown all songs
+        $scope.playersong = {
+            song: '101.mp3', // it is just fist song but data apply to selection before view loaded
+            properties: '101.mp3',
+            visualisation: '101.mp3'
+        };
+        // main questionary data
+        $scope.filter = {
+            "male": true, 
+            "female": true,
+            "agemin": 5,
+            "agemax": 100,
+            "city": true,
+            "domestic": true,
+            "schoolmin": 0,
+            "schoolmax": 20,
+            "activeinmusicmin": 0,
+            "activeinmusicmax": 20,
+            "onehour": true,
+            "twohour": true,
+            "threehour": true,
+            "fourhour": true,
+            "song": 0,
+            "moodValenceMin": -100,
+            "moodValenceMax": 100,
+            "moodArousalMin": -100, 
+            "moodArousalMax": 100
+        };
+        // mood filter activated by users (true - filter is active)
+        $scope.moodLabelsFilters = {
+            'srecno': false,
+            'zadovoljno': false,
+            'veselo': false,
+            'vedro': false, 
+            'aktivno': false,
+            'budno': false,
+            'sprosceno': false,
+            'mirno': false,
+            'dremavo': false,
+            'zaspano': false,
+            'utrujeno': false,
+            'neaktivno': false,
+            'nezadovoljno': false,
+            'razocarano': false,
+            'zalostno': false,
+            'nesrecno': false,
+            'jezno': false
+        };
+        // add keys to the filter
+        addCurrentMoodsToFilter()
+        // filters activnes for songs selection 
+        $scope.songsFilterActivnes = {
+            zanr: false,
+            ritem: false, 
+            tempo: false, 
+            melodicnost: false, 
+            dinamika: false, 
+            BPM: false,
+            mode: false,
+            harmonicna_kompleksnost: false, 
+            konzonantnost: false, 
+            metrum: false
+        };
+        // data used to init the ranges of filters
+        $scope.genres = getUniqueValuesListForAllSongs($scope.songsData, 'zanr');
+        $scope.metrums = getUniqueValuesListForAllSongs($scope.songsData, 'metrum');
+        var minMax = bpmMinMax($scope.songsData);
+        $scope.BPMmin = minMax[0];
+        $scope.BPMmax = minMax[1];
+        // filters used to filter songs
+        $scope.songsFilters = {
+            zanr: {},
+            ritem: {min: 1, max: 7}, 
+            tempo: {min: 1, max: 7}, 
+            melodicnost: {min: 1, max: 7}, 
+            dinamika: {min: 1, max: 7}, 
+            BPM: {min: $scope.BPMmin, max: $scope.BPMmax},
+            mode: {min: 1, max: 7},
+            harmonicna_kompleksnost: {min: 1, max: 7}, 
+            konzonantnost: {min: 1, max: 7}, 
+            metrum: {}
+        };  
+        
+        console.log($scope.songsData);
+        console.log($scope.mainInfo);
+        $scope.songs = _.uniq(_.sortBy(_.flatten(
+                            _.map($scope.mainInfo, function(num){ 
+                                return _.map(num.pesmi, function(x) {
+                                                            return x.pesem_id;
+                                                        }
+                                        );
+                                }
+                            )
+                       ), function(x) { return x; }), true);
+        console.log($scope.songs);
+        
+        $scope.filter.song = $scope.songs[0]; // i think that do not have sense because overided with next one
+        $scope.filter.song=(Object.keys($scope.songsData)[0]).slice(0,3);
+
+        $scope.update();
+    }
 
     function setGraphsPropertiesOnEveryRefresh()
     {
