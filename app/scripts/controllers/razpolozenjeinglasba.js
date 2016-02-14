@@ -60,7 +60,7 @@ angular.module('modooApp')
 
         // filter songs for which data have to be snown
         if($scope.song_tab === 2) // only when selection by song properties
-            $scope.selected_songs = filterSongs();
+            $scope.selected_songs = filterSongs().sort();
         else // when we peek only one song
             $scope.selected_songs = [$scope.filter.song + '.mp3'];
 
