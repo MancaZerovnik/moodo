@@ -48,7 +48,10 @@ angular.module('modooApp')
     };
     // function to change the sunosoide depending on the song selections 
     $scope.changevisualisation= function (){
-        $scope.amplitudeData = [{key: 'gr1', values: enumerateforchart($scope.songsData[$scope.playersong.visualisation].sinusoide)}];
+        if($scope.playersong.visualisation == null)
+            $scope.amplitudeData = [{key: 'gr1', values: []}];
+        else 
+            $scope.amplitudeData = [{key: 'gr1', values: enumerateforchart($scope.songsData[$scope.playersong.visualisation].sinusoide)}];
     };    
     $scope.update = function () {
         /*
