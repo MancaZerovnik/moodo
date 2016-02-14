@@ -128,7 +128,10 @@
 
 
         <div ng-repeat="(key,val) in moodLabelsFilters" ng-if="val">
-          <p class="margin-bottom-5 margin-top-15">{{key | capitalize}} [{{filter[key].min / 100}} - {{filter[key].max / 100}}] </p>
+        <div>
+          <p class="margin-bottom-5 margin-top-15">{{key | capitalize}} [{{filter[key].min / 100}} - {{filter[key].max / 100}}] <button type="button" class="close margin-right-5" data-dismiss="alert" aria-label="Close" ng-click="moodLabelsFilters[key] = false"><span aria-hidden="true">&times;</span></button> </p>
+          
+        </div>
           <div id="{{key}}" on-handle-up='update()' range-slider min="0" max="100" model-min="filter[key].min" model-max="filter[key].max" class="margin-top-bottom-5"></div>
         </div>
       </div>
