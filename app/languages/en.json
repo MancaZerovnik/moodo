@@ -22,5 +22,18 @@
 "NAD3": "more than 3h",
 "TRENUTNOVA": "Current mood in VA space and in colours",
 "PRISOTNOSTRAZ": "Presence of mood",
-"POSTAVITEVRAZ": "Mood placement in VA space"
+"POSTAVITEVRAZ": "Mood placement in VA space",
+"KRAJBIVANJA1" : "Place of residence",
+"GLZVRST" : "Music genre",
+"TRENUTNO" : "Current mood",
+"VALENCA" : "Valence",
+"AROUSAL" : "Arousal", 
+"RAZPOLOŽENJA" : "Moods",
+"PREDVAJALNIK" : "Player", 
+"VIZUALIZACIJA" : "Visualization", 
+"BARVE": "Colours",
+"IZRAZENA": "Expressed moods",
+"VZBUJENA" : "Excited moods", 
+"LASTNOSTI" : "Properties", 
+"BARVEE" : "- colours"
 }

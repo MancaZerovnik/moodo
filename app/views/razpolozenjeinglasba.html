@@ -109,41 +109,41 @@
       <div class="row">
         <div class="col-xs-12 border-solid border-radius-10 padding-bottom-20 border-width-1">
         <p class="margin-bottom-5 margin-top-15 bold"> Spol: </p>
-        <input type="checkbox" ng-model="filter.male" ng-change="update()" /> Moški
-        <input type="checkbox" ng-model="filter.female"  ng-change="update()" /> Ženski<br/>
+        <input type="checkbox" ng-model="filter.male" ng-change="update()" /> {{ "M" | translate }}
+        <input type="checkbox" ng-model="filter.female"  ng-change="update()" /> {{ "Z" | translate }}<br/>
 
-        <p class="margin-bottom-5 margin-top-15 bold"> Starost [{{filter.agemin}} - {{filter.agemax}}] let: </p>
+        <p class="margin-bottom-5 margin-top-15 bold"> {{ "STAROST" | translate }} [{{filter.agemin}} - {{filter.agemax}}] let: </p>
         <div on-handle-up='update()' range-slider id="age" min="0" max="100" model-min="filter.agemin" model-max="filter.agemax" class="margin-top-bottom-5"></div>
 
-        <p class="margin-bottom-5 margin-top-15 bold"> Kraj bivanja: </p>
-        <input type="checkbox" name="linigPlace" ng-model="filter.city" ng-change="update()"> Mesto
-        <input type="checkbox" name="linigPlace" ng-model="filter.domestic" ng-change="update()"> Podezelje
+        <p class="margin-bottom-5 margin-top-15 bold"> {{ "KRAJBIVANJA" | translate }} </p>
+        <input type="checkbox" name="linigPlace" ng-model="filter.city" ng-change="update()"> {{ "MESTO" | translate }}
+        <input type="checkbox" name="linigPlace" ng-model="filter.domestic" ng-change="update()"> {{ "PODEZELJE" | translate }}
 
-        <p class="margin-bottom-5 margin-top-15 bold"> Glasbena šola [{{filter.schoolmin}} - {{filter.schoolmax}}] let:  </p>
+        <p class="margin-bottom-5 margin-top-15 bold"> {{ "GLASBENA" | translate }}[{{filter.schoolmin}} - {{filter.schoolmax}}] {{ "LET" | translate }}  </p>
         <div id="music_school" on-handle-up='update()' range-slider min="0" max="20" model-min="filter.schoolmin" model-max="filter.schoolmax" class="margin-top-bottom-5"></div>
 
 
-        <p class="margin-bottom-5 margin-top-15 bold"> Ukvarjanje z gl. [{{filter.activeinmusicmin}} - {{filter.activeinmusicmax}}] let: </p>
+        <p class="margin-bottom-5 margin-top-15 bold"> {{ "UKVARJANJE" | translate }} [{{filter.activeinmusicmin}} - {{filter.activeinmusicmax}}] let: </p>
         <div id="involvement_in_music" on-handle-up='update()' range-slider min="0" max="20" model-min="filter.activeinmusicmin" model-max="filter.activeinmusicmax" class="margin-top-bottom-5"></div>
 
 
-        <p class="margin-bottom-5 margin-top-15 bold"> Poslušanje glasbe:</p>
-        <input type="checkbox" name="listening" value="1" ng-model="filter.onehour" ng-change="update()"> do 1h </input>
-        <input type="checkbox" name="listening" value="2" ng-model="filter.twohour" ng-change="update()"> do 2h </input> </br>
-        <input type="checkbox" name="listening" value="3" ng-model="filter.threehour" ng-change="update()"> do 3h</input>
-        <input type="checkbox" name="listening" value="4" ng-model="filter.fourhour" ng-change="update()"> več kot 3h  </input>
+        <p class="margin-bottom-5 margin-top-15 bold"> {{ "POSLUSANJE" | translate }}</p>
+        <input type="checkbox" name="listening" value="1" ng-model="filter.onehour" ng-change="update()"> {{ "DO1" | translate }} </input>
+        <input type="checkbox" name="listening" value="2" ng-model="filter.twohour" ng-change="update()"> {{ "DO2" | translate }} </input> </br>
+        <input type="checkbox" name="listening" value="3" ng-model="filter.threehour" ng-change="update()"> {{ "DO3" | translate }}</input>
+        <input type="checkbox" name="listening" value="4" ng-model="filter.fourhour" ng-change="update()"> {{ "NAD3" | translate }}  </input>
 
         <!-- users current mood -->
-        <p class="margin-top-15 bold">Trenutno razpoloženje:</p>
-        <p class="margin-bottom-5 margin-top-15">Valence [{{filter.moodValenceMin / 100}} - {{filter.moodValenceMax / 100}}]: </p>
+        <p class="margin-top-15 bold">{{ "TRENUTNO" | translate }}:</p>
+        <p class="margin-bottom-5 margin-top-15">{{ "VALENCA" | translate }} [{{filter.moodValenceMin / 100}} - {{filter.moodValenceMax / 100}}]: </p>
         <div id="current_mood_valence" on-handle-up='update()' range-slider min="-100" max="100" model-min="filter.moodValenceMin" model-max="filter.moodValenceMax" class="margin-top-bottom-5"></div>
-        <p class="margin-bottom-5 margin-top-15">Arousal [{{filter.moodArousalMin / 100}} - {{filter.moodArousalMax / 100}}]: </p>
+        <p class="margin-bottom-5 margin-top-15">{{ "AROUSAL" | translate }} [{{filter.moodArousalMin / 100}} - {{filter.moodArousalMax / 100}}]: </p>
         <div id="current_mood_arousal" on-handle-up='update()' range-slider min="-100" max="100" model-min="filter.moodArousalMin" model-max="filter.moodArousalMax" class="margin-top-bottom-5"></div>
 
         <!-- users current mood by tags -->
         <div class="dropdown margin-top-30">
           <button class="btn btn-default dropdown-toggle" type="button" id="moodTagsDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-            Razpoložneja
+            {{ "RAZPOLOŽENJA" | translate }}
             <span class="caret"></span>
           </button>
           <ul class="dropdown-menu" aria-labelledby="moodTagsDropdown">
@@ -166,14 +166,14 @@
     <div class="col-md-10" ng-init="tab0=true; tab1=false; tab2=false; tab3=false; tab4=false">
         
         <ul class="nav nav-pills">
-        <li ng-class="{'active' : tab0, 'non-active': !tab0}" ng-click="tab0 = !tab0"><a href="">Predvajalnik</a></li>
-          <li ng-class="{'active' : tab1, 'non-active': !tab1}" ng-click="tab1 = !tab1"><a href="">Vizualizacija</a></li>
-          <li ng-class="{'active' : tab2, 'non-active': !tab2}" ng-click="tab2 = !tab2" ><a href="">Barve </a></li>
-          <li ng-class="{'active' : tab3, 'non-active': !tab3}" ng-click="tab3 = !tab3"><a href="">Izražena razpoloženja</a></li>
-          <li ng-class="{'active' : tab4, 'non-active': !tab4}" ng-click="tab4 = !tab4"><a href="">Vzbujena razpoloženja</a></li>
-          <li ng-class="{'active' : tab5, 'non-active': !tab5}" ng-click="tab5 = !tab5"><a href="">Lastnosti</a></li>
-          <li ng-class="{'active' : tab6, 'non-active': !tab6}" ng-click="tab6 = !tab6"><a href="">Izražena razpoloženja - barve</a></li>
-          <li ng-class="{'active' : tab7, 'non-active': !tab7}" ng-click="tab7 = !tab7"><a href="">Vzbujena razpoloženja - barve</a></li>
+        <li ng-class="{'active' : tab0, 'non-active': !tab0}" ng-click="tab0 = !tab0"><a href="">{{ "PREDVAJALNIK" | translate }}</a></li>
+          <li ng-class="{'active' : tab1, 'non-active': !tab1}" ng-click="tab1 = !tab1"><a href="">{{ "VIZUALIZACIJA" | translate }}</a></li>
+          <li ng-class="{'active' : tab2, 'non-active': !tab2}" ng-click="tab2 = !tab2" ><a href="">{{ "BARVE" | translate }} </a></li>
+          <li ng-class="{'active' : tab3, 'non-active': !tab3}" ng-click="tab3 = !tab3"><a href="">{{ "IZRAZENA" | translate }}</a></li>
+          <li ng-class="{'active' : tab4, 'non-active': !tab4}" ng-click="tab4 = !tab4"><a href="">{{ "VZBUJENA" | translate }}</a></li>
+          <li ng-class="{'active' : tab5, 'non-active': !tab5}" ng-click="tab5 = !tab5"><a href="">{{ "LASTNOSTI" | translate }}</a></li>
+          <li ng-class="{'active' : tab6, 'non-active': !tab6}" ng-click="tab6 = !tab6"><a href="">{{ "IZRAZENA" | translate }} {{ "BARVEE" | translate }}</a></li>
+          <li ng-class="{'active' : tab7, 'non-active': !tab7}" ng-click="tab7 = !tab7"><a href="">{{ "VZBUJENA" | translate }}{{ "BARVEE" | translate }}</a></li>
         </ul>
         
 

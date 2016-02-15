@@ -22,6 +22,18 @@
 "NAD3": "več kot 3h",
 "TRENUTNOVA": "Trenutno razpoloženje v VA prostoru in barvah",
 "PRISOTNOSTRAZ": "Prisotnost posameznega razpoloženja",
-"POSTAVITEVRAZ": "Postavitev razpoloženj v VA prostor"
-
+"POSTAVITEVRAZ": "Postavitev razpoloženj v VA prostor",
+"KRAJBIVANJA1" : "Kraj bivanja",
+"GLZVRST" : "Glasbena zvrst",
+"TRENUTNO" : "Trenutno razpoloženje",
+"VALENCA" : "Valenca",
+"AROUSAL" : "Arousal", 
+"RAZPOLOŽENJA" : "Razpoloženja",
+"PREDVAJALNIK" : "Predvajalnik", 
+"VIZUALIZACIJA" : "Vizualizacija", 
+"BARVE": "Barve",
+"IZRAZENA": "Izražena razpoloženja",
+"VZBUJENA" : "Vzbujena razploženja", 
+"LASTNOSTI" : "Lastnosti", 
+"BARVEE" : "- barve"
 }

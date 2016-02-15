@@ -10,9 +10,9 @@
 "Z": "Ženski",
 "STAROST": "Starost",
 "KRAJBIVANJA" : "Kraj bivanja:",
-"MESTO" : "Mesto:",
+"MESTO" : "Mesto",
 "GLASBENA" : "Glasbena šola",
-"PODEZELJE" : "Podeželje:",
+"PODEZELJE" : "Podeželje",
 "LET" : "let: ",
 "UKVARJANJE" : "Ukvarjanje z glasbo",
 "POSLUSANJE": "Poslušanje glasbe: ",
@@ -22,6 +22,19 @@
 "NAD3": "več kot 3h",
 "TRENUTNOVA": "Trenutno razpoloženje v VA prostoru in barvah",
 "PRISOTNOSTRAZ": "Prisotnost posameznega razpoloženja",
-"POSTAVITEVRAZ": "Postavitev razpoloženj v VA prostor"
+"POSTAVITEVRAZ": "Postavitev razpoloženj v VA prostor",
+"KRAJBIVANJA1" : "Kraj bivanja",
+"GLZVRST" : "Glasbena zvrst",
+"TRENUTNO" : "Trenutno razpoloženje",
+"VALENCA" : "Valenca",
+"AROUSAL" : "Arousal", 
+"RAZPOLOŽENJA" : "Razpoloženja",
+"PREDVAJALNIK" : "Predvajalnik", 
+"VIZUALIZACIJA" : "Vizualizacija", 
+"BARVE": "Barve",
+"IZRAZENA": "Expressed moods",
+"VZBUJENA" : "Excited moods", 
+"LASTNOSTI" : "Properties", 
+"BARVEE" : "- colours"
 
 }
