@@ -1,8 +1,27 @@
 {
 "SPLOSNI": "Splošni podatki",
 "SPLOSNITEKST": "Prikaz osnovnih statističnih podatkov o udeležencih vljučenih v raziskavo. Analizirali smo spol, starost, kraj bivanja, najljubše žanre in količino poslušanja glasbe. ",
-"RAZPOLOZENJEINBARVE": "Razpolozenje in barve",
+"RAZPOLOZENJEINBARVE": "Razpoloženje in barve",
 "RAZPOLOZENJEINBARVETEKST": "Prikaz osnovnih statističnih podatkov o udeležencih vljučenih v raziskavo. Analizirali smo spol, starost, kraj bivanja, najljubše žanre in količino poslušanja glasbe.",
 "GLASBAINRAZPOLOZENJE": "Vizualizacija glasbe in razpoloženja v glasbi",
-"GLASBAINRAZPOLOZENJETEKST": " Prikaz uporabnikove ocene razpoloženja v glasbi. Prikazano je razpoloženje, ki ga glasba vzbudi in razpoloženje, ki ga je moč zaznati v glasbi ter razpoloženje v barvi."
+"GLASBAINRAZPOLOZENJETEKST": " Prikaz uporabnikove ocene razpoloženja v glasbi. Prikazano je razpoloženje, ki ga glasba vzbudi in razpoloženje, ki ga je moč zaznati v glasbi ter razpoloženje v barvi.",
+"SPOL": "Spol",
+"M": "Moški", 
+"Z": "Ženski",
+"STAROST": "Starost",
+"KRAJBIVANJA" : "Kraj bivanja:",
+"MESTO" : "Mesto:",
+"GLASBENA" : "Glasbena šola",
+"PODEZELJE" : "Podeželje:",
+"LET" : "let: ",
+"UKVARJANJE" : "Ukvarjanje z glasbo",
+"POSLUSANJE": "Poslušanje glasbe: ",
+"DO1": "do 1h",
+"DO2": "do 2h",
+"DO3": "do 3h",
+"NAD3": "več kot 3h",
+"TRENUTNOVA": "Trenutno razpoloženje v VA prostoru in barvah",
+"PRISOTNOSTRAZ": "Prisotnost posameznega razpoloženja",
+"POSTAVITEVRAZ": "Postavitev razpoloženj v VA prostor"
+
 }
