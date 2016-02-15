@@ -21,7 +21,7 @@ When deploying first time install sshpass:
 
 Run script for deploy:
 
-`./deploy.sh *username* *password*
+`./deploy.sh *username* *password*`
 
 ### Deploy on any other server
 
