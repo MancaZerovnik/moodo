@@ -1,5 +1,10 @@
-<div class="row margin-top-40 padding-left-10 padding-rigth-10" ng-show="mainInfo == null">
-  <h1>Loading </h1>
+<div class="row margin-top-40 padding-left-10 padding-rigth-10 loading-bar" ng-show="mainInfo == null">
+    <div class="progress">
+      <div class="progress-bar progress-bar-striped active progress-bar-success" role="progressbar"
+      aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+        Loading ...
+      </div>
+    </div>
 </div>
 
 <div class="row margin-top-40 padding-left-10 padding-rigth-10" ng-show="mainInfo != null">    
@@ -28,7 +33,9 @@
               </ul>
             </div>
             <div ng-if="songsFilterActivnes.zanr">
-                <p class="margin-bottom-5 margin-top-15 bold"> Žanr: </p>
+                <p class="margin-bottom-5 margin-top-15 bold"> Žanr: 
+                  <button type="button" class="close margin-right-5" data-dismiss="alert" aria-label="Close" ng-click="songsFilterActivnes.zanr = false"><span aria-hidden="true">&times;</span></button>
+                </p>
                 <div ng-repeat="genre in genres"> 
                   <label>
                     <input type="checkbox" ng-model="songsFilters.zanr[genre]" ng-change="update()" /> 
@@ -37,39 +44,57 @@
                 </div>
             </div>            
             <div ng-if="songsFilterActivnes.ritem">
-              <p class="margin-bottom-5 margin-top-15 bold"> Ritem [{{songsFilters.ritem.min}} - {{songsFilters.ritem.max}}]: </p>
+              <p class="margin-bottom-5 margin-top-15 bold"> Ritem [{{songsFilters.ritem.min}} - {{songsFilters.ritem.max}}]: 
+              <button type="button" class="close margin-right-5" data-dismiss="alert" aria-label="Close" ng-click="songsFilterActivnes.ritem = false"><span aria-hidden="true">&times;</span></button>
+              </p>
               <div on-handle-up='update()' range-slider min="1" max="7" model-min="songsFilters.ritem.min" model-max="songsFilters.ritem.max" class="margin-top-bottom-5"></div>
             </div>
             <div ng-if="songsFilterActivnes.tempo">
-              <p class="margin-bottom-5 margin-top-15 bold"> Tempo [{{songsFilters.tempo.min}} - {{songsFilters.tempo.max}}]: </p>
+              <p class="margin-bottom-5 margin-top-15 bold"> Tempo [{{songsFilters.tempo.min}} - {{songsFilters.tempo.max}}]: 
+              <button type="button" class="close margin-right-5" data-dismiss="alert" aria-label="Close" ng-click="songsFilterActivnes.tempo = false"><span aria-hidden="true">&times;</span></button>
+              </p>
               <div on-handle-up='update()' range-slider min="1" max="7" model-min="songsFilters.tempo.min" model-max="songsFilters.tempo.max" class="margin-top-bottom-5"></div>
             </div>
             <div ng-if="songsFilterActivnes.melodicnost">
-              <p class="margin-bottom-5 margin-top-15 bold"> Melodničnost [{{songsFilters.melodicnost.min}} - {{songsFilters.melodicnost.max}}]: </p>
+              <p class="margin-bottom-5 margin-top-15 bold"> Melodničnost [{{songsFilters.melodicnost.min}} - {{songsFilters.melodicnost.max}}]: 
+              <button type="button" class="close margin-right-5" data-dismiss="alert" aria-label="Close" ng-click="songsFilterActivnes.melodicnost = false"><span aria-hidden="true">&times;</span></button>
+              </p>
               <div on-handle-up='update()' range-slider min="1" max="7" model-min="songsFilters.melodicnost.min" model-max="songsFilters.melodicnost.max" class="margin-top-bottom-5"></div>
             </div>
             <div ng-if="songsFilterActivnes.dinamika">
-              <p class="margin-bottom-5 margin-top-15 bold"> Dinamika [{{songsFilters.dinamika.min}} - {{songsFilters.dinamika.max}}]: </p>
+              <p class="margin-bottom-5 margin-top-15 bold"> Dinamika [{{songsFilters.dinamika.min}} - {{songsFilters.dinamika.max}}]: 
+              <button type="button" class="close margin-right-5" data-dismiss="alert" aria-label="Close" ng-click="songsFilterActivnes.dinamika = false"><span aria-hidden="true">&times;</span></button>
+              </p>
               <div on-handle-up='update()' range-slider min="1" max="7" model-min="songsFilters.dinamika.min" model-max="songsFilters.dinamika.max" class="margin-top-bottom-5"></div>
             </div>
             <div ng-if="songsFilterActivnes.BPM">
-              <p class="margin-bottom-5 margin-top-15 bold"> BPM [{{songsFilters.BPM.min}} - {{songsFilters.BPM.max}}]: </p>
+              <p class="margin-bottom-5 margin-top-15 bold"> BPM [{{songsFilters.BPM.min}} - {{songsFilters.BPM.max}}]: 
+              <button type="button" class="close margin-right-5" data-dismiss="alert" aria-label="Close" ng-click="songsFilterActivnes.BPM = false"><span aria-hidden="true">&times;</span></button> 
+              </p>
               <div on-handle-up='update()' range-slider min="BPMmin" max="BPMmax" model-min="songsFilters.BPM.min" model-max="songsFilters.BPM.max" class="margin-top-bottom-5"></div>
             </div>
             <div ng-if="songsFilterActivnes.mode">
-              <p class="margin-bottom-5 margin-top-15 bold"> Mode [{{songsFilters.mode.min}} - {{songsFilters.mode.max}}]: </p>
+              <p class="margin-bottom-5 margin-top-15 bold"> Mode [{{songsFilters.mode.min}} - {{songsFilters.mode.max}}]: 
+              <button type="button" class="close margin-right-5" data-dismiss="alert" aria-label="Close" ng-click="songsFilterActivnes.mode = false"><span aria-hidden="true">&times;</span></button> 
+              </p>
               <div on-handle-up='update()' range-slider min="1" max="7" model-min="songsFilters.mode.min" model-max="songsFilters.mode.max" class="margin-top-bottom-5"></div>
             </div>
             <div ng-if="songsFilterActivnes.harmonicna_kompleksnost">
-              <p class="margin-bottom-5 margin-top-15 bold"> Harmonična kompleksnost [{{songsFilters.harmonicna_kompleksnost.min}} - {{songsFilters.harmonicna_kompleksnost.max}}]: </p>
+              <p class="margin-bottom-5 margin-top-15 bold"> Harmonična kompleksnost [{{songsFilters.harmonicna_kompleksnost.min}} - {{songsFilters.harmonicna_kompleksnost.max}}]: 
+              <button type="button" class="close margin-right-5" data-dismiss="alert" aria-label="Close" ng-click="songsFilterActivnes.harmonicna_kompleksnost = false"><span aria-hidden="true">&times;</span></button>
+              </p>
               <div on-handle-up='update()' range-slider min="1" max="7" model-min="songsFilters.harmonicna_kompleksnost.min" model-max="songsFilters.harmonicna_kompleksnost.max" class="margin-top-bottom-5"></div>
             </div>
             <div ng-if="songsFilterActivnes.konzonantnost">
-              <p class="margin-bottom-5 margin-top-15 bold"> Konzonantnost [{{songsFilters.konzonantnost.min}} - {{songsFilters.konzonantnost.max}}]: </p>
+              <p class="margin-bottom-5 margin-top-15 bold"> Konzonantnost [{{songsFilters.konzonantnost.min}} - {{songsFilters.konzonantnost.max}}]: 
+              <button type="button" class="close margin-right-5" data-dismiss="alert" aria-label="Close" ng-click="songsFilterActivnes.konzonantnost = false"><span aria-hidden="true">&times;</span></button> 
+              </p>
               <div on-handle-up='update()' range-slider min="1" max="7" model-min="songsFilters.konzonantnost.min" model-max="songsFilters.konzonantnost.max" class="margin-top-bottom-5"></div>
             </div>
             <div ng-if="songsFilterActivnes.metrum">
-              <p class="margin-bottom-5 margin-top-15 bold"> Metrum: </p>
+              <p class="margin-bottom-5 margin-top-15 bold"> Metrum: 
+              <button type="button" class="close margin-right-5" data-dismiss="alert" aria-label="Close" ng-click="songsFilterActivnes.metrum = false"><span aria-hidden="true">&times;</span></button>
+              </p>
               <div ng-repeat="met in metrums"> 
                   <label>
                     <input type="checkbox" ng-model="songsFilters.metrum[met]" ng-change="update()" /> 
@@ -128,7 +153,10 @@
 
 
         <div ng-repeat="(key,val) in moodLabelsFilters" ng-if="val">
-          <p class="margin-bottom-5 margin-top-15">{{key | capitalize}} [{{filter[key].min / 100}} - {{filter[key].max / 100}}] </p>
+        <div>
+          <p class="margin-bottom-5 margin-top-15">{{key | capitalize}} [{{filter[key].min / 100}} - {{filter[key].max / 100}}] <button type="button" class="close margin-right-5" data-dismiss="alert" aria-label="Close" ng-click="moodLabelsFilters[key] = false"><span aria-hidden="true">&times;</span></button> </p>
+          
+        </div>
           <div id="{{key}}" on-handle-up='update()' range-slider min="0" max="100" model-min="filter[key].min" model-max="filter[key].max" class="margin-top-bottom-5"></div>
         </div>
       </div>
@@ -166,9 +194,10 @@
                     </div>
                   </div>
                   <div class="col-xs-7 content-center">
-                    <audio controls ng-src="{{songPath}}">
+                    <audio controls ng-src="{{songPath}}" ng-if="playersong.song != null"><!-- if any songs selected -->
                       <source ng-src="{{songPath}}" type="audio/mpeg">
                     </audio> 
+                    <p ng-if="playersong.song == null"> Nothing to play </p>
                   </div>
                 </div>              
               </div><!-- /well -->
@@ -201,6 +230,7 @@
             </div>
 
             <div class="col-md-6 margin-top-30" ng-if="tab5">
+              <div ng-if="playersong.properties != null">
                 <div class="row padding-bottom-20" ng-if="song_tab ==2">
                   <div class="col-md-2">
                     <p class="margin-top-5 text-center">Izbira pesmi</p>
@@ -310,8 +340,13 @@
                       </div>
                     </div>
                   </div>
-                </div>                
+                </div>
+              </div>
+              <div ng-if="playersong.song == null">
+              <h2> No data available</h2>
+              </div>           
             </div>
+
             <div class="col-md-6 margin-top-15" ng-if="tab6">
                   <nvd3 options="expresedMoodVAwithColorsGraph" data="expresedMoodVAwithColorsData" class="margin-padding-none"></nvd3>
             </div>

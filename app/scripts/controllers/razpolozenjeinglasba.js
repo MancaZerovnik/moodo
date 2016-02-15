@@ -48,7 +48,10 @@ angular.module('modooApp')
     };
     // function to change the sunosoide depending on the song selections 
     $scope.changevisualisation= function (){
-        $scope.amplitudeData = [{key: 'gr1', values: enumerateforchart($scope.songsData[$scope.playersong.visualisation].sinusoide)}];
+        if($scope.playersong.visualisation == null)
+            $scope.amplitudeData = [{key: 'gr1', values: []}];
+        else 
+            $scope.amplitudeData = [{key: 'gr1', values: enumerateforchart($scope.songsData[$scope.playersong.visualisation].sinusoide)}];
     };    
     $scope.update = function () {
         /*
@@ -57,7 +60,7 @@ angular.module('modooApp')
 
         // filter songs for which data have to be snown
         if($scope.song_tab === 2) // only when selection by song properties
-            $scope.selected_songs = filterSongs();
+            $scope.selected_songs = filterSongs().sort();
         else // when we peek only one song
             $scope.selected_songs = [$scope.filter.song + '.mp3'];
 
