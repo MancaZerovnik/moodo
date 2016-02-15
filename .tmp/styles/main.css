@@ -375,8 +375,9 @@ a, a:hover
 
 .loading-bar {
   position: absolute;
+  width: 40%;
   top: 50%;
-  left: 50%;
+  left: 30%;
   margin: -50px 0px 0px -50px;
 }
 
