@@ -12,12 +12,12 @@
       <div class="row">
         <div class="col-xs-12 padding-bottom-20 margin-bottom-20" >       
           <ul class="nav nav-tabs">
-            <li role="presentation" ng-class="{'active' : song_tab == 1, '': !song_tab == 1}" ng-click="song_tab = 1; update()"><a href="">Id skladbe</a></li>
-            <li role="presentation" ng-class="{'active' : song_tab == 2, '': !song_tab == 2}" ng-click="song_tab = 2; update()"><a href="">Lastnosti skladbe</a></li>
+            <li role="presentation" ng-class="{'active' : song_tab == 1, '': !song_tab == 1}" ng-click="song_tab = 1; update()"><a href="">{{ "IDSKLADBE" | translate }}</a></li>
+            <li role="presentation" ng-class="{'active' : song_tab == 2, '': !song_tab == 2}" ng-click="song_tab = 2; update()"><a href="">{{ "LASTNOSTISKL" | translate }}</a></li>
           </ul>
 
           <div ng-if="song_tab == 1">
-            <p class="margin-bottom-5 margin-top-15 bold"> Skladba: </p>
+            <p class="margin-bottom-5 margin-top-15 bold"> {{ "SKLADBA" | translate }}: </p>
             <select name="singleSelect" ng-model="filter.song" ng-change="update()" class="form-control">   
                 <option ng-repeat="song in songs" value="{{song}}" >{{song}}</option>       
             </select>
@@ -25,7 +25,7 @@
           <div ng-if="song_tab ==2">
             <div class="dropdown margin-top-30">
               <button class="btn btn-default dropdown-toggle" type="button" id="songsPropDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                Razpoložneja
+                {{ "RAZPOLOŽENJA" | translate }}
                 <span class="caret"></span>
               </button>
               <ul class="dropdown-menu" aria-labelledby="songsPropDropdown">
@@ -33,7 +33,7 @@
               </ul>
             </div>
             <div ng-if="songsFilterActivnes.zanr">
-                <p class="margin-bottom-5 margin-top-15 bold"> Žanr: 
+                <p class="margin-bottom-5 margin-top-15 bold"> {{ "ZANR" | translate }}: 
                   <button type="button" class="close margin-right-5" data-dismiss="alert" aria-label="Close" ng-click="songsFilterActivnes.zanr = false"><span aria-hidden="true">&times;</span></button>
                 </p>
                 <div ng-repeat="genre in genres"> 
@@ -44,7 +44,7 @@
                 </div>
             </div>            
             <div ng-if="songsFilterActivnes.ritem">
-              <p class="margin-bottom-5 margin-top-15 bold"> Ritem [{{songsFilters.ritem.min}} - {{songsFilters.ritem.max}}]: 
+              <p class="margin-bottom-5 margin-top-15 bold"> {{ "RITEM" | translate }} [{{songsFilters.ritem.min}} - {{songsFilters.ritem.max}}]: 
               <button type="button" class="close margin-right-5" data-dismiss="alert" aria-label="Close" ng-click="songsFilterActivnes.ritem = false"><span aria-hidden="true">&times;</span></button>
               </p>
               <div on-handle-up='update()' range-slider min="1" max="7" model-min="songsFilters.ritem.min" model-max="songsFilters.ritem.max" class="margin-top-bottom-5"></div>
@@ -56,13 +56,13 @@
               <div on-handle-up='update()' range-slider min="1" max="7" model-min="songsFilters.tempo.min" model-max="songsFilters.tempo.max" class="margin-top-bottom-5"></div>
             </div>
             <div ng-if="songsFilterActivnes.melodicnost">
-              <p class="margin-bottom-5 margin-top-15 bold"> Melodničnost [{{songsFilters.melodicnost.min}} - {{songsFilters.melodicnost.max}}]: 
+              <p class="margin-bottom-5 margin-top-15 bold"> {{ "MELODICNOST" | translate }} [{{songsFilters.melodicnost.min}} - {{songsFilters.melodicnost.max}}]: 
               <button type="button" class="close margin-right-5" data-dismiss="alert" aria-label="Close" ng-click="songsFilterActivnes.melodicnost = false"><span aria-hidden="true">&times;</span></button>
               </p>
               <div on-handle-up='update()' range-slider min="1" max="7" model-min="songsFilters.melodicnost.min" model-max="songsFilters.melodicnost.max" class="margin-top-bottom-5"></div>
             </div>
             <div ng-if="songsFilterActivnes.dinamika">
-              <p class="margin-bottom-5 margin-top-15 bold"> Dinamika [{{songsFilters.dinamika.min}} - {{songsFilters.dinamika.max}}]: 
+              <p class="margin-bottom-5 margin-top-15 bold"> {{ "DINAMIKA" | translate }} [{{songsFilters.dinamika.min}} - {{songsFilters.dinamika.max}}]: 
               <button type="button" class="close margin-right-5" data-dismiss="alert" aria-label="Close" ng-click="songsFilterActivnes.dinamika = false"><span aria-hidden="true">&times;</span></button>
               </p>
               <div on-handle-up='update()' range-slider min="1" max="7" model-min="songsFilters.dinamika.min" model-max="songsFilters.dinamika.max" class="margin-top-bottom-5"></div>
@@ -74,25 +74,25 @@
               <div on-handle-up='update()' range-slider min="BPMmin" max="BPMmax" model-min="songsFilters.BPM.min" model-max="songsFilters.BPM.max" class="margin-top-bottom-5"></div>
             </div>
             <div ng-if="songsFilterActivnes.mode">
-              <p class="margin-bottom-5 margin-top-15 bold"> Mode [{{songsFilters.mode.min}} - {{songsFilters.mode.max}}]: 
+              <p class="margin-bottom-5 margin-top-15 bold"> {{ "MODE" | translate }} [{{songsFilters.mode.min}} - {{songsFilters.mode.max}}]: 
               <button type="button" class="close margin-right-5" data-dismiss="alert" aria-label="Close" ng-click="songsFilterActivnes.mode = false"><span aria-hidden="true">&times;</span></button> 
               </p>
               <div on-handle-up='update()' range-slider min="1" max="7" model-min="songsFilters.mode.min" model-max="songsFilters.mode.max" class="margin-top-bottom-5"></div>
             </div>
             <div ng-if="songsFilterActivnes.harmonicna_kompleksnost">
-              <p class="margin-bottom-5 margin-top-15 bold"> Harmonična kompleksnost [{{songsFilters.harmonicna_kompleksnost.min}} - {{songsFilters.harmonicna_kompleksnost.max}}]: 
+              <p class="margin-bottom-5 margin-top-15 bold"> {{ "HARMKOMPLEKSNOST" | translate }} [{{songsFilters.harmonicna_kompleksnost.min}} - {{songsFilters.harmonicna_kompleksnost.max}}]: 
               <button type="button" class="close margin-right-5" data-dismiss="alert" aria-label="Close" ng-click="songsFilterActivnes.harmonicna_kompleksnost = false"><span aria-hidden="true">&times;</span></button>
               </p>
               <div on-handle-up='update()' range-slider min="1" max="7" model-min="songsFilters.harmonicna_kompleksnost.min" model-max="songsFilters.harmonicna_kompleksnost.max" class="margin-top-bottom-5"></div>
             </div>
             <div ng-if="songsFilterActivnes.konzonantnost">
-              <p class="margin-bottom-5 margin-top-15 bold"> Konzonantnost [{{songsFilters.konzonantnost.min}} - {{songsFilters.konzonantnost.max}}]: 
+              <p class="margin-bottom-5 margin-top-15 bold"> {{ "KONZONANTNOST" | translate }} [{{songsFilters.konzonantnost.min}} - {{songsFilters.konzonantnost.max}}]: 
               <button type="button" class="close margin-right-5" data-dismiss="alert" aria-label="Close" ng-click="songsFilterActivnes.konzonantnost = false"><span aria-hidden="true">&times;</span></button> 
               </p>
               <div on-handle-up='update()' range-slider min="1" max="7" model-min="songsFilters.konzonantnost.min" model-max="songsFilters.konzonantnost.max" class="margin-top-bottom-5"></div>
             </div>
             <div ng-if="songsFilterActivnes.metrum">
-              <p class="margin-bottom-5 margin-top-15 bold"> Metrum: 
+              <p class="margin-bottom-5 margin-top-15 bold"> {{ "METRUM" | translate }}: 
               <button type="button" class="close margin-right-5" data-dismiss="alert" aria-label="Close" ng-click="songsFilterActivnes.metrum = false"><span aria-hidden="true">&times;</span></button>
               </p>
               <div ng-repeat="met in metrums"> 
@@ -108,7 +108,7 @@
 
       <div class="row">
         <div class="col-xs-12 border-solid border-radius-10 padding-bottom-20 border-width-1">
-        <p class="margin-bottom-5 margin-top-15 bold"> Spol: </p>
+        <p class="margin-bottom-5 margin-top-15 bold"> {{ "SPOL" | translate }} </p>
         <input type="checkbox" ng-model="filter.male" ng-change="update()" /> {{ "M" | translate }}
         <input type="checkbox" ng-model="filter.female"  ng-change="update()" /> {{ "Z" | translate }}<br/>
 

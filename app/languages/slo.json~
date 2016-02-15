@@ -32,9 +32,19 @@
 "PREDVAJALNIK" : "Predvajalnik", 
 "VIZUALIZACIJA" : "Vizualizacija", 
 "BARVE": "Barve",
-"IZRAZENA": "Expressed moods",
-"VZBUJENA" : "Excited moods", 
-"LASTNOSTI" : "Properties", 
-"BARVEE" : "- colours"
-
+"IZRAZENA": "Izražena razpoloženja",
+"VZBUJENA" : "Vzbujena razploženja", 
+"LASTNOSTI" : "Lastnosti", 
+"BARVEE" : "- barve",
+"IDSKLADBE": "Id skladbe",
+"LASTNOSTISKL": "Lastnosti skladbe",
+"SKLADBA": "Skladba",
+"ZANR": "Žanr",
+"RITEM": "Ritem",
+"MELODICNOST" : "Melodičnost",
+"DINAMIKA": "Dinamika",
+"MODE": "Mode",
+"HARMKOPLEKSNOST": "Harmonična kompleksnost",
+"KONZONANTNOST": "Konzonantnost",
+"METRUM": "Metrum" 
 }

@@ -32,8 +32,19 @@
 "PREDVAJALNIK" : "Player", 
 "VIZUALIZACIJA" : "Visualization", 
 "BARVE": "Colours",
-"IZRAZENA": "Izražena razpoloženja",
-"VZBUJENA" : "Vzbujena razploženja", 
-"LASTNOSTI" : "Lastnosti", 
-"BARVEE" : "- barve"
+"IZRAZENA": "Expressed moods",
+"VZBUJENA" : "Excited moods", 
+"LASTNOSTI" : "Properties", 
+"BARVEE" : "- colours",
+"IDSKLADBE": "Song ID",
+"LASTNOSTISKL": "Song properties",
+"SKLADBA": "Song",
+"ZANR": "Genre",
+"RITEM": "Rhythm",
+"MELODICNOST" : "Melodic",
+"DINAMIKA": "Dynamics",
+"MODE": "Mode",
+"HARMKOPLEKSNOST": "Harmonic complexity",
+"KONZONANTNOST": "Konzonantnost",
+"METRUM": "Metrum" 
 }
