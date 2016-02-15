@@ -35,5 +35,16 @@
 "IZRAZENA": "Izražena razpoloženja",
 "VZBUJENA" : "Vzbujena razploženja", 
 "LASTNOSTI" : "Lastnosti", 
-"BARVEE" : "- barve"
+"BARVEE" : "- barve",
+"IDSKLADBE": "Id skladbe",
+"LASTNOSTISKL": "Lastnosti skladbe",
+"SKLADBA": "Skladba",
+"ZANR": "Žanr",
+"RITEM": "Ritem",
+"MELODICNOST" : "Melodičnost",
+"DINAMIKA": "Dinamika",
+"MODE": "Mode",
+"HARMKOPLEKSNOST": "Harmonična kompleksnost",
+"KONZONANTNOST": "Konzonantnost",
+"METRUM": "Metrum" 
 }
