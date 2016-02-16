@@ -44,7 +44,16 @@
 "MELODICNOST" : "Melodic",
 "DINAMIKA": "Dynamics",
 "MODE": "Mode",
-"HARMKOPLEKSNOST": "Harmonic complexity",
+"HARMKOMPLEKSNOST": "Harmonic complexity",
 "KONZONANTNOST": "Konzonantnost",
-"METRUM": "Metrum" 
+"METRUM": "Metrum",
+"IZBIRAPESMI": "Choose song",
+"NIIZBIRE": "Nothing to play.",
+"NODATA": "No data avaliable",
+"NALAGANJE": "Loading",
+"DO": "to",
+"STAROSTVL": "Age in years",
+"STELJUDI": "Number of people",
+"STLJUDIZVRST": "Number of people who listen to this genre",
+"STODGOVOROV": "Number of answers"
 }

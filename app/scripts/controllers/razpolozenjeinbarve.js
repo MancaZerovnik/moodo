@@ -8,7 +8,7 @@
  * Controller of the modooApp
  */
 var app = angular.module('modooApp')
-  .controller('RazpolozenjeInBarveCtrl', function ($scope, $http, $window, $q, DataAll) {
+  .controller('RazpolozenjeInBarveCtrl', function ($scope, $http, $window, $q, DataAll, $rootScope, $translate) {
 
     
     $q.all([
@@ -18,6 +18,11 @@ var app = angular.module('modooApp')
       init();
     });
 
+    $scope.steviloOdgovorov = $translate.instant('STODGOVOROV');
+    $rootScope.$on('$translateChangeSuccess', function () {
+        $scope.steviloOdgovorov = $translate.instant('STODGOVOROV');
+        init();
+    });
 
     $scope.update = function () {
 
@@ -216,7 +221,7 @@ var app = angular.module('modooApp')
                 showValues: true,
                 duration: 350,
                 yAxis: {
-                    axisLabel: 'Število odgovorov'
+                    axisLabel: $scope.steviloOdgovorov
                 },
                 showLegend: false,
                 showControls: false, 

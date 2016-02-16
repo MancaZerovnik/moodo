@@ -8,7 +8,7 @@
  * Controller of the modooApp
  */
 angular.module('modooApp')
-  .controller('SplosnoCtrl', function ($scope, $http, $q, DataAll) {
+  .controller('SplosnoCtrl', function ($scope, $http, $q, DataAll, $rootScope, $translate) {
 
         $q.all([
             DataAll
@@ -16,11 +16,26 @@ angular.module('modooApp')
             $scope.mainInfo = data[0];
             init();
         });
-
-
         
-   
-        //});
+        $scope.zenske = $translate.instant('Z');
+        $scope.moski = $translate.instant('M');
+        $scope.doo = $translate.instant('DO');
+        $scope.starost = $translate.instant('STAROSTVL');
+        $scope.stljudi = $translate.instant('STELJUDI');
+        $scope.mesto = $translate.instant('MESTO');
+        $scope.podezelje = $translate.instant('PODEZELJE');
+        $scope.stljudizvrst = $translate.instant('STLJUDIZVRST');
+        $rootScope.$on('$translateChangeSuccess', function () {
+            $scope.zenske = $translate.instant('Z');
+            $scope.moski = $translate.instant('M');
+            $scope.doo = $translate.instant('DO');
+            $scope.starost = $translate.instant('STAROSTVL');
+            $scope.stljudi = $translate.instant('STELJUDI');
+            $scope.mesto = $translate.instant('MESTO');
+            $scope.podezelje = $translate.instant('PODEZELJE');
+            $scope.stljudizvrst = $translate.instant('STLJUDIZVRST');
+            init();
+        });
 
         function init()
         {
@@ -52,11 +67,11 @@ angular.module('modooApp')
             };
             $scope.dataGender = [
                 {
-                    key: "Ženske",
+                    key: $scope.zenske,
                     y: genderNUM.z
                 },
                 {
-                    key: "Moški",
+                    key: $scope.moski,
                     y: genderNUM.m
                 }
             ];
@@ -72,11 +87,11 @@ angular.module('modooApp')
             };
             $scope.dataPlace = [
                 {
-                    key: "Podeželje",
+                    key: $scope.podezelje,
                     y: livingNUM.podezelje
                 },
                 {
-                    key: "Mesto",
+                    key: $scope.mesto,
                     y: livingNUM.mesto
                 }
             ];
@@ -95,10 +110,10 @@ angular.module('modooApp')
                     },
                     duration: 500,
                     xAxis: {
-                        axisLabel: 'Starost v letih'
+                        axisLabel: $scope.starost
                     },
                     yAxis: {
-                        axisLabel: 'Število ljudi',
+                        axisLabel: $scope.stljudi
                     }
                 }
             };
@@ -113,7 +128,7 @@ angular.module('modooApp')
             for (var property in ageNUM) {
                
                 $scope.dataAge[0].values.push({
-                    key: property + "0 do " + property + "9",
+                    key: property + "0 " + $scope.doo + " " + property + "9",
                     y: ageNUM[property]
                });
             }
@@ -134,7 +149,7 @@ angular.module('modooApp')
                         rotateLabels: 30
                     },
                     yAxis: {
-                        axisLabel: 'Število ljudi, ki posluša to zvrst',
+                        axisLabel: $scope.stljudizvrst
                     }
                 }
             };

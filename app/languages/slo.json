@@ -44,7 +44,16 @@
 "MELODICNOST" : "Melodičnost",
 "DINAMIKA": "Dinamika",
 "MODE": "Mode",
-"HARMKOPLEKSNOST": "Harmonična kompleksnost",
+"HARMKOMPLEKSNOST": "Harmonična kompleksnost",
 "KONZONANTNOST": "Konzonantnost",
-"METRUM": "Metrum" 
+"METRUM": "Metrum",
+"IZBIRAPESMI": "Izbira pesmi",
+"NIIZBIRE": "Nič ni izbrano.",
+"NODATA": "Ni razpoložljivih podatkov",
+"NALAGANJE": "Nalaganje",
+"DO": "do",
+"STAROSTVL": "Starost v letih",
+"STELJUDI": "Število ljudi",
+"STLJUDIZVRST": "Število ljudi, ki posluša to zvrst",
+"STODGOVOROV": "Število odgovorov"
 }
