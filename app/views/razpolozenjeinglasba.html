@@ -12,8 +12,8 @@
       <div class="row">
         <div class="col-xs-12 padding-bottom-20 margin-bottom-20" >       
           <ul class="nav nav-tabs">
-            <li role="presentation" ng-class="{'active' : song_tab == 1, '': !song_tab == 1}" ng-click="song_tab = 1; update()"><a href="">{{ "IDSKLADBE" | translate }}</a></li>
-            <li role="presentation" ng-class="{'active' : song_tab == 2, '': !song_tab == 2}" ng-click="song_tab = 2; update()"><a href="">{{ "LASTNOSTISKL" | translate }}</a></li>
+            <li role="presentation" ng-class="{'active' : song_tab == 1, '': !song_tab == 1}" ng-click="song_tab = 1; update()"><a href="">{{ "ENAPESEM" | translate }}</a></li>
+            <li role="presentation" ng-class="{'active' : song_tab == 2, '': !song_tab == 2}" ng-click="song_tab = 2; update()"><a href="">{{ "VECPESMI" | translate }}</a></li>
           </ul>
 
           <div ng-if="song_tab == 1">
@@ -108,7 +108,7 @@
 
       <div class="row">
         <div class="col-xs-12 border-solid border-radius-10 padding-bottom-20 border-width-1">
-        <p class="margin-bottom-5 margin-top-15 bold"> {{ "SPOL" | translate }} </p>
+        <p class="margin-bottom-5 margin-top-15 bold"> {{ "SPOL" | translate }}: </p>
         <input type="checkbox" ng-model="filter.male" ng-change="update()" /> {{ "M" | translate }}
         <input type="checkbox" ng-model="filter.female"  ng-change="update()" /> {{ "Z" | translate }}<br/>
 
@@ -119,7 +119,7 @@
         <input type="checkbox" name="linigPlace" ng-model="filter.city" ng-change="update()"> {{ "MESTO" | translate }}
         <input type="checkbox" name="linigPlace" ng-model="filter.domestic" ng-change="update()"> {{ "PODEZELJE" | translate }}
 
-        <p class="margin-bottom-5 margin-top-15 bold"> {{ "GLASBENA" | translate }}[{{filter.schoolmin}} - {{filter.schoolmax}}] {{ "LET" | translate }}  </p>
+        <p class="margin-bottom-5 margin-top-15 bold"> {{ "GLASBENA" | translate }} [{{filter.schoolmin}} - {{filter.schoolmax}}] {{ "LET" | translate }}  </p>
         <div id="music_school" on-handle-up='update()' range-slider min="0" max="20" model-min="filter.schoolmin" model-max="filter.schoolmax" class="margin-top-bottom-5"></div>
 
 
@@ -154,7 +154,7 @@
 
         <div ng-repeat="(key,val) in moodLabelsFilters" ng-if="val">
         <div>
-          <p class="margin-bottom-5 margin-top-15">{{key | translate | capitalize}} [{{filter[key].min / 100}} - {{filter[key].max / 100}}] <button type="button" class="close margin-right-5" data-dismiss="alert" aria-label="Close" ng-click="moodLabelsFilters[key] = false"><span aria-hidden="true">&times;</span></button> </p>
+          <p class="margin-bottom-5 margin-top-15">{{key | translate | capitalize}} [{{filter[key].min / 100}} - {{filter[key].max / 100}}]: <button type="button" class="close margin-right-5" data-dismiss="alert" aria-label="Close" ng-click="moodLabelsFilters[key] = false"><span aria-hidden="true">&times;</span></button> </p>
           
         </div>
           <div id="{{key}}" on-handle-up='update()' range-slider min="0" max="100" model-min="filter[key].min" model-max="filter[key].max" class="margin-top-bottom-5"></div>
@@ -173,7 +173,7 @@
           <li ng-class="{'active' : tab4, 'non-active': !tab4}" ng-click="tab4 = !tab4"><a href="">{{ "VZBUJENA" | translate }}</a></li>
           <li ng-class="{'active' : tab5, 'non-active': !tab5}" ng-click="tab5 = !tab5"><a href="">{{ "LASTNOSTI" | translate }}</a></li>
           <li ng-class="{'active' : tab6, 'non-active': !tab6}" ng-click="tab6 = !tab6"><a href="">{{ "IZRAZENA" | translate }} {{ "BARVEE" | translate }}</a></li>
-          <li ng-class="{'active' : tab7, 'non-active': !tab7}" ng-click="tab7 = !tab7"><a href="">{{ "VZBUJENA" | translate }}{{ "BARVEE" | translate }}</a></li>
+          <li ng-class="{'active' : tab7, 'non-active': !tab7}" ng-click="tab7 = !tab7"><a href="">{{ "VZBUJENA" | translate }} {{ "BARVEE" | translate }}</a></li>
         </ul>
         
 
