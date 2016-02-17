@@ -309,6 +309,9 @@ var app = angular.module('modooApp')
                 }                
             }
         }
+        for(var i = 0; i < data.length; i++) {
+                data[i].key = $translate.instant(data[i].key);
+        }
         return data;
     }
 
@@ -353,7 +356,7 @@ var app = angular.module('modooApp')
                     whisker_high: numbers[numbers.length - 1]
                 };
 
-                data[i].label = data[i].key;
+                data[i].label = $translate.instant(data[i].key);
             }
         }
         return data;
@@ -408,9 +411,14 @@ var app = angular.module('modooApp')
               return 0;
             }
 
-            for(var i = 0; i < data.length; i++)
+            for(var i = 0; i < data.length; i++) {
                 data[i].values.sort(compare);
+                for(var j = 0; j < data[i].values.length; j++) {
+                    data[i].values[j].label = $translate.instant(data[i].values[j].label);
+                }
+            }
         }
+        
         return data;
     }
 

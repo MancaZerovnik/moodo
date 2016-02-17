@@ -25,15 +25,15 @@
           <div ng-if="song_tab ==2">
             <div class="dropdown margin-top-30">
               <button class="btn btn-default dropdown-toggle" type="button" id="songsPropDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                {{ "RAZPOLOŽENJA" | translate }}
+                {{ "LASTNOSTISKL" | translate }}
                 <span class="caret"></span>
               </button>
               <ul class="dropdown-menu" aria-labelledby="songsPropDropdown">
-                  <li ng-repeat="(key,val) in songsFilterActivnes" ng-click="songsFilterActivnes[key] = !songsFilterActivnes[key]; update()" ng-class="{'disabled' : songsFilterActivnes[key], '': !songsFilterActivnes[key]}"><a href="">{{key}}</a></li>
+                  <li ng-repeat="(key,val) in songsFilterActivnes" ng-click="songsFilterActivnes[key] = !songsFilterActivnes[key]; update()" ng-class="{'disabled' : songsFilterActivnes[key], '': !songsFilterActivnes[key]}"><a href="">{{key | translate}}</a></li>
               </ul>
             </div>
             <div ng-if="songsFilterActivnes.zanr">
-                <p class="margin-bottom-5 margin-top-15 bold"> {{ "ZANR" | translate }}: 
+                <p class="margin-bottom-5 margin-top-15 bold"> {{ "zanr" | translate }}: 
                   <button type="button" class="close margin-right-5" data-dismiss="alert" aria-label="Close" ng-click="songsFilterActivnes.zanr = false"><span aria-hidden="true">&times;</span></button>
                 </p>
                 <div ng-repeat="genre in genres"> 
@@ -44,7 +44,7 @@
                 </div>
             </div>            
             <div ng-if="songsFilterActivnes.ritem">
-              <p class="margin-bottom-5 margin-top-15 bold"> {{ "RITEM" | translate }} [{{songsFilters.ritem.min}} - {{songsFilters.ritem.max}}]: 
+              <p class="margin-bottom-5 margin-top-15 bold"> {{ "ritem" | translate }} [{{songsFilters.ritem.min}} - {{songsFilters.ritem.max}}]: 
               <button type="button" class="close margin-right-5" data-dismiss="alert" aria-label="Close" ng-click="songsFilterActivnes.ritem = false"><span aria-hidden="true">&times;</span></button>
               </p>
               <div on-handle-up='update()' range-slider min="1" max="7" model-min="songsFilters.ritem.min" model-max="songsFilters.ritem.max" class="margin-top-bottom-5"></div>
@@ -56,13 +56,13 @@
               <div on-handle-up='update()' range-slider min="1" max="7" model-min="songsFilters.tempo.min" model-max="songsFilters.tempo.max" class="margin-top-bottom-5"></div>
             </div>
             <div ng-if="songsFilterActivnes.melodicnost">
-              <p class="margin-bottom-5 margin-top-15 bold"> {{ "MELODICNOST" | translate }} [{{songsFilters.melodicnost.min}} - {{songsFilters.melodicnost.max}}]: 
+              <p class="margin-bottom-5 margin-top-15 bold"> {{ "melodicnost" | translate }} [{{songsFilters.melodicnost.min}} - {{songsFilters.melodicnost.max}}]: 
               <button type="button" class="close margin-right-5" data-dismiss="alert" aria-label="Close" ng-click="songsFilterActivnes.melodicnost = false"><span aria-hidden="true">&times;</span></button>
               </p>
               <div on-handle-up='update()' range-slider min="1" max="7" model-min="songsFilters.melodicnost.min" model-max="songsFilters.melodicnost.max" class="margin-top-bottom-5"></div>
             </div>
             <div ng-if="songsFilterActivnes.dinamika">
-              <p class="margin-bottom-5 margin-top-15 bold"> {{ "DINAMIKA" | translate }} [{{songsFilters.dinamika.min}} - {{songsFilters.dinamika.max}}]: 
+              <p class="margin-bottom-5 margin-top-15 bold"> {{ "dinamika" | translate }} [{{songsFilters.dinamika.min}} - {{songsFilters.dinamika.max}}]: 
               <button type="button" class="close margin-right-5" data-dismiss="alert" aria-label="Close" ng-click="songsFilterActivnes.dinamika = false"><span aria-hidden="true">&times;</span></button>
               </p>
               <div on-handle-up='update()' range-slider min="1" max="7" model-min="songsFilters.dinamika.min" model-max="songsFilters.dinamika.max" class="margin-top-bottom-5"></div>
@@ -74,25 +74,25 @@
               <div on-handle-up='update()' range-slider min="BPMmin" max="BPMmax" model-min="songsFilters.BPM.min" model-max="songsFilters.BPM.max" class="margin-top-bottom-5"></div>
             </div>
             <div ng-if="songsFilterActivnes.mode">
-              <p class="margin-bottom-5 margin-top-15 bold"> {{ "MODE" | translate }} [{{songsFilters.mode.min}} - {{songsFilters.mode.max}}]: 
+              <p class="margin-bottom-5 margin-top-15 bold"> {{ "mode" | translate }} [{{songsFilters.mode.min}} - {{songsFilters.mode.max}}]: 
               <button type="button" class="close margin-right-5" data-dismiss="alert" aria-label="Close" ng-click="songsFilterActivnes.mode = false"><span aria-hidden="true">&times;</span></button> 
               </p>
               <div on-handle-up='update()' range-slider min="1" max="7" model-min="songsFilters.mode.min" model-max="songsFilters.mode.max" class="margin-top-bottom-5"></div>
             </div>
             <div ng-if="songsFilterActivnes.harmonicna_kompleksnost">
-              <p class="margin-bottom-5 margin-top-15 bold"> {{ "HARMKOMPLEKSNOST" | translate }} [{{songsFilters.harmonicna_kompleksnost.min}} - {{songsFilters.harmonicna_kompleksnost.max}}]: 
+              <p class="margin-bottom-5 margin-top-15 bold"> {{ "harmonicna_kompleksnost" | translate }} [{{songsFilters.harmonicna_kompleksnost.min}} - {{songsFilters.harmonicna_kompleksnost.max}}]: 
               <button type="button" class="close margin-right-5" data-dismiss="alert" aria-label="Close" ng-click="songsFilterActivnes.harmonicna_kompleksnost = false"><span aria-hidden="true">&times;</span></button>
               </p>
               <div on-handle-up='update()' range-slider min="1" max="7" model-min="songsFilters.harmonicna_kompleksnost.min" model-max="songsFilters.harmonicna_kompleksnost.max" class="margin-top-bottom-5"></div>
             </div>
             <div ng-if="songsFilterActivnes.konzonantnost">
-              <p class="margin-bottom-5 margin-top-15 bold"> {{ "KONZONANTNOST" | translate }} [{{songsFilters.konzonantnost.min}} - {{songsFilters.konzonantnost.max}}]: 
+              <p class="margin-bottom-5 margin-top-15 bold"> {{ "konzonantnost" | translate }} [{{songsFilters.konzonantnost.min}} - {{songsFilters.konzonantnost.max}}]: 
               <button type="button" class="close margin-right-5" data-dismiss="alert" aria-label="Close" ng-click="songsFilterActivnes.konzonantnost = false"><span aria-hidden="true">&times;</span></button> 
               </p>
               <div on-handle-up='update()' range-slider min="1" max="7" model-min="songsFilters.konzonantnost.min" model-max="songsFilters.konzonantnost.max" class="margin-top-bottom-5"></div>
             </div>
             <div ng-if="songsFilterActivnes.metrum">
-              <p class="margin-bottom-5 margin-top-15 bold"> {{ "METRUM" | translate }}: 
+              <p class="margin-bottom-5 margin-top-15 bold"> {{ "metrum" | translate }}: 
               <button type="button" class="close margin-right-5" data-dismiss="alert" aria-label="Close" ng-click="songsFilterActivnes.metrum = false"><span aria-hidden="true">&times;</span></button>
               </p>
               <div ng-repeat="met in metrums"> 
@@ -147,14 +147,14 @@
             <span class="caret"></span>
           </button>
           <ul class="dropdown-menu" aria-labelledby="moodTagsDropdown">
-              <li ng-repeat="(key,val) in moodLabelsFilters" ng-click="moodLabelsFilters[key] = !moodLabelsFilters[key]" ng-class="{'disabled' : moodLabelsFilters[key], '': !moodLabelsFilters[key]}"><a href="">{{key | capitalize}}</a></li>
+              <li ng-repeat="(key,val) in moodLabelsFilters" ng-click="moodLabelsFilters[key] = !moodLabelsFilters[key]" ng-class="{'disabled' : moodLabelsFilters[key], '': !moodLabelsFilters[key]}"><a href="">{{key | translate | capitalize}}</a></li>
             </ul>
           </div>
 
 
         <div ng-repeat="(key,val) in moodLabelsFilters" ng-if="val">
         <div>
-          <p class="margin-bottom-5 margin-top-15">{{key | capitalize}} [{{filter[key].min / 100}} - {{filter[key].max / 100}}] <button type="button" class="close margin-right-5" data-dismiss="alert" aria-label="Close" ng-click="moodLabelsFilters[key] = false"><span aria-hidden="true">&times;</span></button> </p>
+          <p class="margin-bottom-5 margin-top-15">{{key | translate | capitalize}} [{{filter[key].min / 100}} - {{filter[key].max / 100}}] <button type="button" class="close margin-right-5" data-dismiss="alert" aria-label="Close" ng-click="moodLabelsFilters[key] = false"><span aria-hidden="true">&times;</span></button> </p>
           
         </div>
           <div id="{{key}}" on-handle-up='update()' range-slider min="0" max="100" model-min="filter[key].min" model-max="filter[key].max" class="margin-top-bottom-5"></div>
@@ -242,7 +242,7 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-xs-2"> <strong>{{ "ZANR" | translate }} </strong>  </div>
+                  <div class="col-xs-2"> <strong>{{ "zanr" | translate }} </strong>  </div>
                   <div class="col-xs-10">
                     <div class="progress">
                       <div class="progress-bar progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
@@ -252,7 +252,7 @@
                   </div>
                 </div>                
                 <div class="row">
-                  <div class="col-xs-2"> <strong>{{ "RITEM" | translate }} </strong></div>
+                  <div class="col-xs-2"> <strong>{{ "ritem" | translate }} </strong></div>
                   <div class="col-xs-10">
                     <div class="progress">
                       <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{currentSongData.ritem / 7 * 100}}" aria-valuemin="0" aria-valuemax="100" style="width: {{currentSongData.ritem / 7 * 100}}%">
@@ -272,7 +272,7 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-xs-2"> <strong>{{ "MELODICNOST" | translate }} </strong> </div>
+                  <div class="col-xs-2"> <strong>{{ "melodicnost" | translate }} </strong> </div>
                   <div class="col-xs-10">
                     <div class="progress">
                       <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{currentSongData.melodicnost / 7 * 100}}" aria-valuemin="0" aria-valuemax="100" style="width: {{currentSongData.melodicnost / 7 * 100}}%">
@@ -282,7 +282,7 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-xs-2"> <strong>{{ "DINAMIKA" | translate }} </strong> </div>
+                  <div class="col-xs-2"> <strong>{{ "dinamika" | translate }} </strong> </div>
                   <div class="col-xs-10">
                     <div class="progress">
                       <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{currentSongData.dinamika / 7 * 100}}" aria-valuemin="0" aria-valuemax="100" style="width: {{currentSongData.dinamika / 7 * 100}}%">
@@ -302,7 +302,7 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-xs-2"> <strong>Mode </strong></div>
+                  <div class="col-xs-2"> <strong>{{ "mode" | translate }}  </strong></div>
                   <div class="col-xs-10">
                     <div class="progress">
                       <div class="progress-bar {{isnumber(currentSongData.mode) ? 'progress-bar-success' : 'progress-bar-danger'}}" role="progressbar" aria-valuenow="{{isnumber(currentSongData.mode) ? (currentSongData.mode / 7 * 100) : 100}}" aria-valuemin="0" aria-valuemax="100" style="width: {{isnumber(currentSongData.mode) ? (currentSongData.mode / 7 * 100) : 100}}%">
@@ -312,7 +312,7 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-xs-2"> <strong>{{ "HARMKOMPLEKSNOST" | translate }} </strong></div>
+                  <div class="col-xs-2"> <strong>{{ "harmonicna_kompleksnost" | translate }} </strong></div>
                   <div class="col-xs-10">
                     <div class="progress">
                       <div class="progress-bar {{isnumber(currentSongData.harmonicna_kompleksnost) ? 'progress-bar-success' : 'progress-bar-danger'}}" role="progressbar" aria-valuenow="{{isnumber(currentSongData.harmonicna_kompleksnost) ? (currentSongData.harmonicna_kompleksnost / 7 * 100) : 100}}" aria-valuemin="0" aria-valuemax="100" style="width: {{isnumber(currentSongData.harmonicna_kompleksnost) ? (currentSongData.harmonicna_kompleksnost / 7 * 100) : 100}}%">
@@ -322,7 +322,7 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-xs-2"> <strong>{{ "KONZONANTNOST" | translate }} </strong> </div>
+                  <div class="col-xs-2"> <strong>{{ "konzonantnost" | translate }} </strong> </div>
                   <div class="col-xs-10">
                     <div class="progress">
                       <div class="progress-bar {{isnumber(currentSongData.konzonantnost) ? 'progress-bar-success' : 'progress-bar-danger'}}" role="progressbar" aria-valuenow="{{isnumber(currentSongData.konzonantnost) ? (currentSongData.konzonantnost / 7 * 100) : 100}}" aria-valuemin="0" aria-valuemax="100" style="width: {{isnumber(currentSongData.konzonantnost) ? (currentSongData.konzonantnost / 7 * 100) : 100}}%">
@@ -332,7 +332,7 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-xs-2"> <strong>{{ "METRUM" | translate }} </strong> </div>
+                  <div class="col-xs-2"> <strong>{{ "metrum" | translate }} </strong> </div>
                   <div class="col-xs-10">
                     <div class="progress">
                       <div class="progress-bar progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">

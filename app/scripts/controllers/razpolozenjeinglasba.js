@@ -8,7 +8,7 @@
  * Controller of the modooApp
  */
 angular.module('modooApp')
-  .controller('RazpolozenjeInGlasbaCtrl', function ($scope, $http, $window, $sce, $q, DataAll, SongsAll) {
+  .controller('RazpolozenjeInGlasbaCtrl', function ($scope, $http, $window, $sce, $q, DataAll, SongsAll, $rootScope, $translate) {
     
     /*
     * load data
@@ -23,8 +23,12 @@ angular.module('modooApp')
     });
     // $scope.mainInfo = DataAll.getData();
     // $scope.songsData = SongsAll.getData();
-
-
+    $scope.stOdgovorov = $translate.instant('STODGOVOROV');
+    $rootScope.$on('$translateChangeSuccess', function () {
+        $scope.stOdgovorov = $translate.instant('STODGOVOROV');
+        setGraphsProperties();
+        init();
+    });
     
 
     /* 
@@ -421,7 +425,7 @@ angular.module('modooApp')
                 y: function(d){return d.value;},
                 duration: 500,
                 yAxis: {
-                    axisLabel: 'Number of answers'
+                    axisLabel: $scope.stOdgovorov
                 },
                 stacked: true,
                 showLegend: false,
@@ -468,7 +472,7 @@ angular.module('modooApp')
         }
        // add number of answers to legend for each mood
         for (var i = 0; i < data.length; i++) {
-            data[i].key = data[i].key + " [" + data[i].values.length + "]";
+            data[i].key = $translate.instant(data[i].key) + " [" + data[i].values.length + "]";
         }
         return data;
     }
