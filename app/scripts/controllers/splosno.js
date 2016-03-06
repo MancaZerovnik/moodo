@@ -62,7 +62,9 @@ angular.module('modooApp')
                     height: 500,
                     x: function(d){return d.key;},
                     y: function(d){return d.y;},
-                    labelSunbeamLayout: true
+                    labelSunbeamLayout: true,
+                    showLegend: false,
+                    valueFormat: (d3.format(',.0f'))
                 }
             };
             $scope.dataGender = [
@@ -82,8 +84,10 @@ angular.module('modooApp')
                     height: 500,
                     x: function(d){return d.key;},
                     y: function(d){return d.y;},
-                    labelSunbeamLayout: true
-                }
+                    labelSunbeamLayout: true,
+                    showLegend: false,
+                    valueFormat: (d3.format(',.0f'))                               
+               }
             };
             $scope.dataPlace = [
                 {
@@ -105,15 +109,18 @@ angular.module('modooApp')
                     x: function(d){return d.key;},
                     y: function(d){return d.y;},
                     showValues: true,
-                    valueFormat: function(d){
-                        return d3.format(',.0f')(d);
-                    },
+                    valueFormat: (d3.format(',.0f')),
                     duration: 500,
                     xAxis: {
                         axisLabel: $scope.starost
                     },
                     yAxis: {
-                        axisLabel: $scope.stljudi
+                        axisLabel: $scope.stljudi,
+                        tickFormat: d3.format(',.0f')
+                    },
+                    margin:
+                    {
+                        left: 80 // because roof of Š cutted off
                     }
                 }
             };
@@ -146,10 +153,11 @@ angular.module('modooApp')
                     },
                     duration: 500,
                     xAxis: {
-                        rotateLabels: 30
+                        rotateLabels: -30
                     },
                     yAxis: {
-                        axisLabel: $scope.stljudizvrst
+                        axisLabel: $scope.stljudizvrst,
+                        tickFormat: d3.format(',.0f')
                     }
                 }
             };
@@ -161,10 +169,11 @@ angular.module('modooApp')
             }
 
             for (var property in genreNUM) {
-                $scope.dataGenre[0].values.push({
-                    key: property,
-                    y: genreNUM[property]
-               });
+                if(property !== "") // there are some empty entries because all users didn't select all 3 genres
+                    $scope.dataGenre[0].values.push({
+                        key: property,
+                        y: genreNUM[property]
+                   });
             }
             
             
