@@ -67,20 +67,29 @@ var app = angular.module('modooApp')
     {
         $scope.filter = {
             "male": true, 
-            "female": false,
-            "agemin": 5,
-            "agemax": 100,
+            "female": true,
+            "agemin": _.min(_.pluck($scope.mainInfo, 'starost')), 
+            "agemax": _.max(_.pluck($scope.mainInfo, 'starost')),
             "city": true,
             "domestic": false,
-            "schoolmin": 0,
-            "schoolmax": 20,
-            "activeinmusicmin": 0,
-            "activeinmusicmax": 20,
+            "schoolmin": _.min(_.pluck($scope.mainInfo, 'glasbena_sola')),
+            "schoolmax": _.max(_.pluck($scope.mainInfo, 'glasbena_sola')),
+            "activeinmusicmin": _.min(_.pluck($scope.mainInfo, 'igranje_instrumenta')),
+            "activeinmusicmax": _.max(_.pluck($scope.mainInfo, 'igranje_instrumenta')),
             "onehour": true,
             "twohour": false,
             "threehour": false,
             "fourhour": false
-    };
+        };
+
+        $scope.filterLimits = {
+            "agemin": _.min(_.pluck($scope.mainInfo, 'starost')), 
+            "agemax": _.max(_.pluck($scope.mainInfo, 'starost')),
+            "schoolmin": _.min(_.pluck($scope.mainInfo, 'glasbena_sola')),
+            "schoolmax": _.max(_.pluck($scope.mainInfo, 'glasbena_sola')),
+            "activeinmusicmin": _.min(_.pluck($scope.mainInfo, 'igranje_instrumenta')),
+            "activeinmusicmax": _.max(_.pluck($scope.mainInfo, 'igranje_instrumenta')),
+        };
         $scope.update();
     }
 
