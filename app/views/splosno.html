@@ -15,16 +15,16 @@
           <li ng-class="{'active' : tab === 4}" ng-click="tab = 4"><a href="">{{ "GLZVRST" | translate }}</a></li>
         </ul>
     </div>
-    <div class="col-md-8 text-center" ng-if= "tab === 1">
+    <div class="col-md-8 text-center margin-top-40" ng-if= "tab === 1">
         <nvd3 options="optionsGender" data="dataGender"></nvd3>
     </div>
-    <div class="col-md-8 text-center" ng-if= "tab === 2">
+    <div class="col-md-8 text-center margin-top-40" ng-if= "tab === 2">
         <nvd3 options="optionsAge" data="dataAge"></nvd3>
     </div>
-    <div class="col-md-8 text-center" ng-if= "tab === 3">
+    <div class="col-md-8 text-center margin-top-40" ng-if= "tab === 3">
         <nvd3 options="optionsPlace" data="dataPlace"></nvd3>
     </div>
-    <div class="col-md-10 text-center" ng-if= "tab === 4">
+    <div class="col-md-10 text-center margin-top-40" ng-if= "tab === 4">
         <nvd3 options="optionsGenre" data="dataGenre"></nvd3>
     </div>
     
