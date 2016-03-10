@@ -205,12 +205,6 @@ var app = angular.module('modooApp')
             chart: {
                 type: 'boxPlotChart',
                 height: 450,
-                margin : {
-                    top: 20,
-                    right: 20,
-                    bottom: 60,
-                    left: 40
-                },
                 color: positiveNegativeColorSpecter(5, 7, 5),
                 x: function(d){return d.label;},
                 // y: function(d){return d.values.Q3;},

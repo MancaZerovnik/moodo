@@ -217,19 +217,20 @@
                 <nvd3 options="ampLineGraph" data="amplitudeData" class="margin-padding-none"></nvd3>
             </div>
             <div class="col-md-12 text-center margin-padding-none" ng-if="tab2">
-                <!--<h3 class="margin-bottom-40">Barva ki najbolje predstavlja glasbo</h3> -->
+                <h4 class="margin-top-40">{{ "BARVE" | translate }}</h4>
                 <nvd3 options="coloGraph" data="colorData" class="margin-padding-none"></nvd3>            
             </div>
             <div class="col-md-6 text-center margin-top-15" ng-if="tab3">
-                <!--<h3 class="margin-bottom-40">Izražena razpoloženja v glasbi</h3> -->
+                <h4 class="margin-top-40">{{ "IZRAZENA" | translate }}</h4>
                 <nvd3 options="viCustvaGraph" data="izrazenaData" class="margin-padding-none"></nvd3>
             </div>
             <div class="col-md-6 text-center margin-top-15" ng-if="tab4">
-                <!--<h3 class="margin-bottom-40">Razpolozenja, ki jih glasba vzbudi</h3> -->
+                <h4 class="margin-top-40">{{ "VZBUJENA" | translate }}</h4>
                 <nvd3 options="viCustvaGraph" data="vzbujenaData" class="margin-padding-none"></nvd3>            
             </div>
 
-            <div class="col-md-6 margin-top-30" ng-if="tab5">
+            <div class="col-md-6 margin-top-15 text-center" ng-if="tab5">
+              <h4 class="margin-top-40 margin-bottom-40">{{ "LASTNOSTI" | translate }}</h4>
               <div ng-if="playersong.properties != null">
                 <div class="row padding-bottom-20" ng-if="song_tab ==2">
                   <div class="col-md-2">
@@ -347,10 +348,12 @@
               </div>           
             </div>
 
-            <div class="col-md-6 margin-top-15" ng-if="tab6">
+            <div class="col-md-6 margin-top-15 text-center" ng-if="tab6">
+                  <h4 class="margin-top-40">{{ "IZRAZENA" | translate }} {{ "BARVEE" | translate }}</h4>
                   <nvd3 options="expresedMoodVAwithColorsGraph" data="expresedMoodVAwithColorsData" class="margin-padding-none"></nvd3>
             </div>
-            <div class="col-md-6 margin-top-15" ng-if="tab7">
+            <div class="col-md-6 margin-top-15 text-center" ng-if="tab7">
+                <h4 class="margin-top-40">{{ "VZBUJENA" | translate }} {{ "BARVEE" | translate }}</h4>
                 <nvd3 options="inducedMoodVAwithColorsGraph" data="inducedMoodVAwithColorsData" class="margin-padding-none"></nvd3>
             </div>       
         </div>

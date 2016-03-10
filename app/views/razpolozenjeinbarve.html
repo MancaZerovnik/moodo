@@ -48,19 +48,19 @@
 
         <div class="row">
             <div class="col-md-6 text-center graph-div" ng-if="tab1">
-                <!--<h3 class="margin-bottom-40">Trenutno razpoloženje v VA prostoru in barvah</h3> -->
+                <h4 class="margin-top-40">{{ "TRENUTNOVA" | translate }}</h4>
                 <nvd3 options="usersMoodGraph" data="usersMoodData"></nvd3>
             </div>
             <div class="col-md-6 text-center graph-div"  ng-if="tab2">
-                <!--<h3 class="margin-bottom-40">Prisotnost posamezenga razpoloženja</h3> -->
+                <h4 class="margin-top-40">{{ "PRISOTNOSTRAZ" | translate }}</h4>
                 <nvd3 options="currentEmotionsGraph" data="currentEmotionsData"></nvd3>            
             </div>
             <div class="col-md-6 text-center graph-div" ng-if="tab3">
-                <!--<h3 class="margin-bottom-40">Postavitev razpoloženj v VA prostor</h3> -->
+                <h4 class="margin-top-40">{{ "POSTAVITEVRAZ" | translate }}</h4>
                 <nvd3 options="moodVAEstimationGraph" data="moodVAEstimationData"></nvd3>
             </div> 
             <div class="col-md-6 text-center graph-div" ng-if="tab4">
-               <!-- <h3 class="margin-bottom-40">Razpoloženje in barve</h3> -->
+               <h4 class="margin-top-40">{{ "RAZPOLOZENJEINBARVE" | translate }}</h4>
                 <nvd3 options="colorChartGraph" data="colorChartData"></nvd3>
             </div>      
         </div>   
