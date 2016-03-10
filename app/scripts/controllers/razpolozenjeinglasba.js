@@ -233,7 +233,6 @@ angular.module('modooApp')
         * Function is called everytime data are refreshed 
         * and set new properties for the graphs
         */
-        $scope.inducedMoodVAwithColorsGraph = VAmoodGraphs(getValuesAtKey($scope.inducedMoodVAwithColorsData));
         $scope.expresedMoodVAwithColorsGraph = VAmoodGraphs(getValuesAtKey($scope.expresedMoodVAwithColorsData));
     }
 
@@ -267,7 +266,6 @@ angular.module('modooApp')
         $scope.vzbujenaData = musicMoodVAData($scope.filteredData, 'vzbujena_custva');
         $scope.izrazenaData = musicMoodVAData($scope.filteredData, 'izrazena_custva');
         $scope.colorData = getColorData($scope.filteredData);
-        $scope.inducedMoodVAwithColorsData = musicMoodVAandColorData($scope.filteredData, 'vzbujena_custva');
         $scope.expresedMoodVAwithColorsData = musicMoodVAandColorData($scope.filteredData, 'izrazena_custva');
 
         // data to show musicological estimation data
