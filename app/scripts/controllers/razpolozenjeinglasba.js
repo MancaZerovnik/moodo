@@ -23,9 +23,9 @@ angular.module('modooApp')
     });
     // $scope.mainInfo = DataAll.getData();
     // $scope.songsData = SongsAll.getData();
-    $scope.stOdgovorov = $translate.instant('STODGOVOROV');
+    translations()
     $rootScope.$on('$translateChangeSuccess', function () {
-        $scope.stOdgovorov = $translate.instant('STODGOVOROV');
+        translations()
         setGraphsProperties();
         init();
     });
@@ -121,18 +121,29 @@ angular.module('modooApp')
             properties: '101.mp3',
             visualisation: '101.mp3'
         };
+        
+        // this are limits to the filters 
+        $scope.filterLimits = {
+            "agemin": _.min(_.pluck($scope.mainInfo, 'starost')), 
+            "agemax": _.max(_.pluck($scope.mainInfo, 'starost')),
+            "schoolmin": _.min(_.pluck($scope.mainInfo, 'glasbena_sola')),
+            "schoolmax": _.max(_.pluck($scope.mainInfo, 'glasbena_sola')),
+            "activeinmusicmin": _.min(_.pluck($scope.mainInfo, 'igranje_instrumenta')),
+            "activeinmusicmax": _.max(_.pluck($scope.mainInfo, 'igranje_instrumenta')),
+        };
+
         // main questionary data
         $scope.filter = {
             "male": true, 
             "female": true,
-            "agemin": 5,
-            "agemax": 100,
+            "agemin": $scope.filterLimits.agemin,
+            "agemax": $scope.filterLimits.agemax,
             "city": true,
             "domestic": true,
-            "schoolmin": 0,
-            "schoolmax": 20,
-            "activeinmusicmin": 0,
-            "activeinmusicmax": 20,
+            "schoolmin": $scope.filterLimits.schoolmin,
+            "schoolmax": $scope.filterLimits.schoolmax,
+            "activeinmusicmin": $scope.filterLimits.activeinmusicmin,
+            "activeinmusicmax": $scope.filterLimits.activeinmusicmax,
             "onehour": true,
             "twohour": true,
             "threehour": true,
@@ -143,6 +154,7 @@ angular.module('modooApp')
             "moodArousalMin": -100, 
             "moodArousalMax": 100
         };
+
         // mood filter activated by users (true - filter is active)
         $scope.moodLabelsFilters = {
             'srecno': false,
@@ -223,6 +235,16 @@ angular.module('modooApp')
         */
         $scope.inducedMoodVAwithColorsGraph = VAmoodGraphs(getValuesAtKey($scope.inducedMoodVAwithColorsData));
         $scope.expresedMoodVAwithColorsGraph = VAmoodGraphs(getValuesAtKey($scope.expresedMoodVAwithColorsData));
+    }
+
+    function translations()
+    {
+        /*
+        * this function take translations for its language everytime it is called
+        */
+        $scope.steviloOdgovorov = $translate.instant('STODGOVOROV');
+        $scope.valenceTranslation = $translate.instant('VALENCA');
+        $scope.arousalTranslation = $translate.instant('AROUSAL');
     }
 
     function setGraphsProperties()
@@ -384,8 +406,8 @@ angular.module('modooApp')
                     }
                 },
                 duration: 350,
-                xAxis: {axisLabel: 'Valence'},
-                yAxis: {axisLabel: 'Arousal'},
+                xAxis: {axisLabel: $scope.valenceTranslation},
+                yAxis: {axisLabel: $scope.arousalTranslation},
                 xDomain: [-1, 1],
                 yDomain: [-1,1],
                 showLegend: true

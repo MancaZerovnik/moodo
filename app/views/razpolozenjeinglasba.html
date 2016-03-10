@@ -109,22 +109,22 @@
       <div class="row">
         <div class="col-xs-12 border-solid border-radius-5 filter-border padding-bottom-20 border-width-1 list-inline">
         <p class="margin-bottom-5 margin-top-15 bold"> {{ "SPOL" | translate }}: </p>
-        <input type="checkbox" ng-model="filter.male" ng-change="update()" /> {{ "M" | translate }}
+        <input type="checkbox" ng-model="filter.male" ng-change="update()" /> {{ "M" | translate }}<br/>
         <input type="checkbox" ng-model="filter.female"  ng-change="update()" /> {{ "Z" | translate }}<br/>
 
         <p class="margin-bottom-5 margin-top-15 bold"> {{ "STAROST" | translate }} [{{filter.agemin}} - {{filter.agemax}}] {{ "LET" | translate }} </p>
-        <div on-handle-up='update()' range-slider id="age" min="0" max="100" model-min="filter.agemin" model-max="filter.agemax" class="margin-top-bottom-5"></div>
+        <div on-handle-up='update()' range-slider id="age" min="15" max="64" model-min="filter.agemin" model-max="filter.agemax" class="margin-top-bottom-5"></div>
 
         <p class="margin-bottom-5 margin-top-15 bold"> {{ "KRAJBIVANJA" | translate }} </p>
-        <input type="checkbox" name="linigPlace" ng-model="filter.city" ng-change="update()"> {{ "MESTO" | translate }}
+        <input type="checkbox" name="linigPlace" ng-model="filter.city" ng-change="update()"> {{ "MESTO" | translate }}<br/>
         <input type="checkbox" name="linigPlace" ng-model="filter.domestic" ng-change="update()"> {{ "PODEZELJE" | translate }}
 
         <p class="margin-bottom-5 margin-top-15 bold"> {{ "GLASBENA" | translate }} [{{filter.schoolmin}} - {{filter.schoolmax}}] {{ "LET" | translate }}  </p>
-        <div id="music_school" on-handle-up='update()' range-slider min="0" max="20" model-min="filter.schoolmin" model-max="filter.schoolmax" class="margin-top-bottom-5"></div>
+        <div id="music_school" on-handle-up='update()' range-slider min="filterLimits.schoolmin" max="filterLimits.schoolmax" model-min="filter.schoolmin" model-max="filter.schoolmax" class="margin-top-bottom-5"></div>
 
 
         <p class="margin-bottom-5 margin-top-15 bold"> {{ "UKVARJANJE" | translate }} [{{filter.activeinmusicmin}} - {{filter.activeinmusicmax}}] {{ "LET" | translate }} </p>
-        <div id="involvement_in_music" on-handle-up='update()' range-slider min="0" max="20" model-min="filter.activeinmusicmin" model-max="filter.activeinmusicmax" class="margin-top-bottom-5"></div>
+        <div id="involvement_in_music" on-handle-up='update()' range-slider min="filterLimits.activeinmusicmin" max="filterLimits.activeinmusicmax" model-min="filter.activeinmusicmin" model-max="filter.activeinmusicmax" class="margin-top-bottom-5"></div>
 
 
         <p class="margin-bottom-5 margin-top-15 bold"> {{ "POSLUSANJE" | translate }}</p>

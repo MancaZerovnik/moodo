@@ -18,9 +18,9 @@ var app = angular.module('modooApp')
       init();
     });
 
-    $scope.steviloOdgovorov = $translate.instant('STODGOVOROV');
+    translations();
     $rootScope.$on('$translateChangeSuccess', function () {
-        $scope.steviloOdgovorov = $translate.instant('STODGOVOROV');
+        translations();
         init();
     });
 
@@ -93,6 +93,16 @@ var app = angular.module('modooApp')
         $scope.update();
     }
 
+    function translations()
+    {
+        /*
+        * this function take translations for its language everytime it is called
+        */
+        $scope.steviloOdgovorov = $translate.instant('STODGOVOROV');
+        $scope.valenceTranslation = $translate.instant('VALENCA');
+        $scope.arousalTranslation = $translate.instant('AROUSAL');
+    }
+
     function setGraphsProperties()
     {
         /*
@@ -139,10 +149,10 @@ var app = angular.module('modooApp')
                 },
                 duration: 350,
                 xAxis: {
-                    axisLabel: 'Valence'
+                    axisLabel: $scope.valenceTranslation
                 },
                 yAxis: {
-                    axisLabel: 'Arousal'
+                    axisLabel: $scope.arousalTranslation
                 },
                 xDomain: [-1, 1],
                 yDomain: [-1,1],
@@ -173,10 +183,10 @@ var app = angular.module('modooApp')
                 },
                 duration: 350,
                 xAxis: {
-                    axisLabel: 'Valence',
+                    axisLabel: $scope.valenceTranslation,
                 },
                 yAxis: {
-                    axisLabel: 'Arousal',
+                    axisLabel: $scope.arousalTranslation,
                 },
                 xDomain: [-1, 1],
                 yDomain: [-1,1],
