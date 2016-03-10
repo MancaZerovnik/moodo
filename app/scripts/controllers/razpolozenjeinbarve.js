@@ -60,11 +60,7 @@ var app = angular.module('modooApp')
 
         if(!$scope.$$phase) {
           $scope.$apply();
-        }
-        console.log($scope.mainInfo.length)
-        console.log($scope.filteredData.length)
-
-        
+        }      
     };
     
 
@@ -73,23 +69,6 @@ var app = angular.module('modooApp')
     */
     function init()
     {
-        $scope.filter = {
-            "male": true, 
-            "female": true,
-            "agemin": _.min(_.pluck($scope.mainInfo, 'starost')), 
-            "agemax": _.max(_.pluck($scope.mainInfo, 'starost')),
-            "city": true,
-            "domestic": false,
-            "schoolmin": _.min(_.pluck($scope.mainInfo, 'glasbena_sola')),
-            "schoolmax": _.max(_.pluck($scope.mainInfo, 'glasbena_sola')),
-            "activeinmusicmin": _.min(_.pluck($scope.mainInfo, 'igranje_instrumenta')),
-            "activeinmusicmax": _.max(_.pluck($scope.mainInfo, 'igranje_instrumenta')),
-            "onehour": true,
-            "twohour": false,
-            "threehour": false,
-            "fourhour": false
-        };
-
         $scope.filterLimits = {
             "agemin": _.min(_.pluck($scope.mainInfo, 'starost')), 
             "agemax": _.max(_.pluck($scope.mainInfo, 'starost')),
@@ -97,6 +76,23 @@ var app = angular.module('modooApp')
             "schoolmax": _.max(_.pluck($scope.mainInfo, 'glasbena_sola')),
             "activeinmusicmin": _.min(_.pluck($scope.mainInfo, 'igranje_instrumenta')),
             "activeinmusicmax": _.max(_.pluck($scope.mainInfo, 'igranje_instrumenta')),
+        };
+
+        $scope.filter = {
+            "male": true, 
+            "female": true,
+            "agemin": $scope.filterLimits.agemin, 
+            "agemax": $scope.filterLimits.agemax,
+            "city": true,
+            "domestic": false,
+            "schoolmin": $scope.filterLimits.schoolmin,
+            "schoolmax": $scope.filterLimits.schoolmax,
+            "activeinmusicmin": $scope.filterLimits.activeinmusicmin,
+            "activeinmusicmax": $scope.filterLimits.activeinmusicmax,
+            "onehour": true,
+            "twohour": false,
+            "threehour": false,
+            "fourhour": false
         };
         $scope.update();
     }
