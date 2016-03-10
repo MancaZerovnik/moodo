@@ -27,6 +27,11 @@ var app = angular.module('modooApp')
     $scope.update = function () {
 
         $scope.filteredData = _.filter($scope.mainInfo, function(num){ 
+            // if(!(($scope.filter.male && num.spol == "M" ||
+            // $scope.filter.female && num.spol == "Z")
+            // && (($scope.filter.schoolmin <= parseInt(num.glasbena_sola) && 
+            //     $scope.filter.schoolmax >= parseInt(num.glasbena_sola)))))
+            //     console.log(num);
             
             return (($scope.filter.male && num.spol == "M" ||
             $scope.filter.female && num.spol == "Z")
@@ -42,6 +47,7 @@ var app = angular.module('modooApp')
                 ($scope.filter.twohour && num.poslusanje_glasbe == "2") ||
                 ($scope.filter.threehour && num.poslusanje_glasbe == "3") ||
                 ($scope.filter.fourhour && num.poslusanje_glasbe == "4"))
+
             );
             
         });
@@ -55,11 +61,13 @@ var app = angular.module('modooApp')
         if(!$scope.$$phase) {
           $scope.$apply();
         }
+        console.log($scope.mainInfo.length)
+        console.log($scope.filteredData.length)
 
         
     };
     
-    
+
     /*
     * main functions
     */

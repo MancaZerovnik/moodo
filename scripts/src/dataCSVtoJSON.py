@@ -58,6 +58,8 @@ for i in range(1, len(data)):
         # for gender
         if data[0][j] == 'spol':
             row_dict[data[0][j]] = 'M' if data[i][j] == '1' else 'Z'
+        elif data[0][j] == 'starost' or data[0][j] == 'glasbena_sola' or data[0][j] == 'igranje_instrumenta':
+            row_dict[data[0][j]] = int(data[i][j])
         # medicine and drugs
         elif data[0][j] == 'droge' or data[0][j] == 'zdravila':
             row_dict[data[0][j]] = 'DA' if data[i][j] == '1' else 'NE'
