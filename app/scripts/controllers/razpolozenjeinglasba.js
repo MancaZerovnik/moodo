@@ -191,7 +191,9 @@ angular.module('modooApp')
             metrum: false
         };
         // data used to init the ranges of filters
-        $scope.genres = getUniqueValuesListForAllSongs($scope.songsData, 'zanr');
+        $scope.genres = ['Classical', 'Opera', 'Country', 'Folk', 'Latin', 'Dance/Disco', 'Electronic',
+                       'R&B/Soul', 'Hip Hop/Rap', 'Reggae', 'Pop', 'Rock', 'Alternative', 'Metal',
+                       'Blues', 'Jazz', 'Vocal', 'Easy Listening', 'New Age','Punk'];
         $scope.metrums = getUniqueValuesListForAllSongs($scope.songsData, 'metrum');
         var minMax = bpmMinMax($scope.songsData);
         $scope.BPMmin = minMax[0];
@@ -322,7 +324,8 @@ angular.module('modooApp')
         // get all selected fields, those which have value true
         var selected_values = _.keys(_.pick($scope.songsFilters[filter], 
                                                 function(value, filter, object){return value}));
-        return _.contains(selected_values, value[filter]);
+        return _.reduce(selected_values, function(memo, val)
+            { return memo || value[filter].toLowerCase().indexOf(val.toLowerCase()) > -1; }, false);
     }  
 
     function otherSongsFilters(filter, value)
