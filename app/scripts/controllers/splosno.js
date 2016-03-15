@@ -112,7 +112,7 @@ angular.module('modooApp')
                 {
                     key: $scope.mesto,
                     y: livingNUM.mesto,
-                    percent: ((100/(livingNUM.mesto + livingNUM.podezelje))*livingNUM.mesto).toFixed(0)
+                    percent: ((100/(livingNUM.mesto + livingNUM.podezelje))*livingNUM.mesto).toFixed(1)
                 }
             ];
 
