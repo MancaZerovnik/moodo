@@ -54,15 +54,26 @@ angular.module('modooApp')
 
             update(genderNUM, livingNUM, ageNUM, genreNUM);
         }
-        
+        var insertLinebreaks = function (d) {
+            var el = d3.select(this);
+            var words = d.split(' ');
+            el.text('');
+
+            for (var i = 0; i < words.length; i++) {
+                var tspan = el.append('tspan').text(words[i]);
+                if (i > 0)
+                    tspan.attr('x', 0).attr('dy', '15');
+            }
+        };
         function update(genderNUM, livingNUM, ageNUM, genreNUM){
             $scope.optionsGender = {
                 chart: {
                     type: 'pieChart',
-                    height: 500,
-                    x: function(d){return d.key;},
+                    height: 540,
+                    x: function(d){return d.key + " " + d.percent + "%";},
                     y: function(d){return d.y;},
                     labelSunbeamLayout: true,
+                    //labelType: "percent",
                     showLegend: false,
                     valueFormat: (d3.format(',.0f'))
                 }
@@ -70,21 +81,24 @@ angular.module('modooApp')
             $scope.dataGender = [
                 {
                     key: $scope.zenske,
-                    y: genderNUM.z
+                    y: genderNUM.z,
+                    percent: ((100/(genderNUM.z + genderNUM.m))*genderNUM.z).toFixed(0)
                 },
                 {
                     key: $scope.moski,
-                    y: genderNUM.m
+                    y: genderNUM.m,
+                    percent: ((100/(genderNUM.z + genderNUM.m))*genderNUM.m).toFixed(0)
                 }
             ];
 
             $scope.optionsPlace = {
                 chart: {
                     type: 'pieChart',
-                    height: 500,
-                    x: function(d){return d.key;},
+                    height: 540,
+                    x: function(d){return d.key + " " + d.percent + "%";},
                     y: function(d){return d.y;},
                     labelSunbeamLayout: true,
+                    wrapLabels: true,
                     showLegend: false,
                     valueFormat: (d3.format(',.0f'))                               
                }
@@ -92,11 +106,13 @@ angular.module('modooApp')
             $scope.dataPlace = [
                 {
                     key: $scope.podezelje,
-                    y: livingNUM.podezelje
+                    y: livingNUM.podezelje,
+                    percent: ((100/(livingNUM.mesto + livingNUM.podezelje))*livingNUM.podezelje).toFixed(0)
                 },
                 {
                     key: $scope.mesto,
-                    y: livingNUM.mesto
+                    y: livingNUM.mesto,
+                    percent: ((100/(livingNUM.mesto + livingNUM.podezelje))*livingNUM.mesto).toFixed(0)
                 }
             ];
 
