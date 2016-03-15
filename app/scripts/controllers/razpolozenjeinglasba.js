@@ -30,7 +30,6 @@ angular.module('modooApp')
         init();
     });
     
-
     /* 
     * scope functions
     */
