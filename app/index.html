@@ -69,7 +69,8 @@
         <div class="container-fluid">
           <div class="row">
             <div class="col-xs-12 text-center" ng-controller="TranslateController">
-                   <p>  &copy; Copyright | Laboratorij za računalniško grafiko in multimedije | manca.zerovnik@lgm.fri.uni-lj.si, primoz.godec@lgm.fri.uni-lj.si | <img src="../assets/images/sloflag.png" alt="Description" ng-click="changeLanguage('slo')" translate="slo" width="30" weight="30"/>   <img src="../assets/images/enflag.png" alt="Description" ng-click="changeLanguage('en')" translate="en" width="30" weight="30" />  </p> 
+                   <p><a ng-href="#/about" class="color-gray">{{ "About" | translate }}</a>
+                     &copy; Copyright | Laboratorij za računalniško grafiko in multimedije | manca.zerovnik@lgm.fri.uni-lj.si, primoz.godec@lgm.fri.uni-lj.si | <img src="../assets/images/sloflag.png" alt="Description" ng-click="changeLanguage('slo')" translate="slo" width="30" weight="30"/>   <img src="../assets/images/enflag.png" alt="Description" ng-click="changeLanguage('en')" translate="en" width="30" weight="30" />  </p> 
             </div>
           </div>
         </div>
@@ -119,6 +120,7 @@
         <script src="scripts/controllers/splosno.js"></script>
         <script src="scripts/controllers/razpolozenjeinbarve.js"></script>
         <script src="scripts/controllers/razpolozenjeinglasba.js"></script>
+        <script src="scripts/controllers/about.js"></script>
         <!-- endbuild -->
         
 </body>

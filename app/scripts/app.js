@@ -90,6 +90,10 @@ angular
             return SongsAll.promise;
           }
       }})
+      .when('/about', {
+        templateUrl: 'views/about.html',
+        controller: 'AboutCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

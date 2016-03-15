@@ -215,6 +215,11 @@ body {
   background-color: #cccccc;
 }
 
+.color-gray
+{
+  color: #777;
+}
+
 .padding-0 {
     padding: 0;
 }
