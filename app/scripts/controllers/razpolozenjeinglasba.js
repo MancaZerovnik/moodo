@@ -235,7 +235,7 @@ angular.module('modooApp')
         * Function is called everytime data are refreshed 
         * and set new properties for the graphs
         */
-        $scope.expresedMoodVAwithColorsGraph = VAmoodGraphs(getValuesAtKey($scope.expresedMoodVAwithColorsData));
+        $scope.expresedMoodVAwithColorsGraph = VAmoodGraphs(getValuesAtKey($scope.expresedMoodVAwithColorsData, 'key'));
     }
 
     function translations()
@@ -411,7 +411,10 @@ angular.module('modooApp')
                 yAxis: {axisLabel: $scope.arousalTranslation},
                 xDomain: [-1, 1],
                 yDomain: [-1,1],
-                showLegend: true
+                showLegend: true,
+                legend: {
+                    key: function(d) {return color === null ? d.key : "";}
+                }
             }
         };
     }
@@ -481,12 +484,12 @@ angular.module('modooApp')
             {                
                 for (var j = 0; j < inputData[i][data_key].length; j++)
                 {
-                    if (getDictonaryIdxByKey(data, inputData[i][data_key][j]['ime']) === null
+                    if (getDictonaryIdxByKey(data, inputData[i][data_key][j]['ime'], 'key') === null
                         && 'x' in inputData[i][data_key][j])
                         data.push({key: inputData[i][data_key][j]['ime'], values:[]});
                     
                         if ('x' in inputData[i][data_key][j])
-                            data[getDictonaryIdxByKey(data, inputData[i][data_key][j]['ime'])]['values'].push({
+                            data[getDictonaryIdxByKey(data, inputData[i][data_key][j]['ime'], 'key')]['values'].push({
                                 x: inputData[i][data_key][j]['x'],
                                 y: inputData[i][data_key][j]['y']
                             });
@@ -515,12 +518,12 @@ angular.module('modooApp')
                 var color = listToHashRGB(inputData[i]['barva']);
                 for (var j = 0; j < inputData[i][data_key].length; j++)
                 {
-                    if (getDictonaryIdxByKey(data, color) === null
+                    if (getDictonaryIdxByKey(data, color, 'key') === null
                         && 'x' in inputData[i][data_key][j])
                         data.push({key: color, values:[]});
                     
                         if ('x' in inputData[i][data_key][j])
-                            data[getDictonaryIdxByKey(data, color)]['values'].push({
+                            data[getDictonaryIdxByKey(data, color, 'key')]['values'].push({
                                 x: inputData[i][data_key][j]['x'],
                                 y: inputData[i][data_key][j]['y']
                             });
@@ -616,10 +619,10 @@ angular.module('modooApp')
         return pair_list;
     }
 
-    function getDictonaryIdxByKey(l, kvalue)
+    function getDictonaryIdxByKey(l, kvalue, key)
     {
         for(var i = 0; i < l.length; i++)
-            if(l[i].key === kvalue)
+            if(l[i][key] === kvalue)
                 return i;
 
         return null;
@@ -629,11 +632,11 @@ angular.module('modooApp')
         return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
     }
 
-    function getValuesAtKey(l)
+    function getValuesAtKey(l, k)
     {
         var data = [];
         for(var i = 0; i < l.length; i++)
-            data.push(l[i].key)
+            data.push(l[i][k])
 
         return data;
     }
