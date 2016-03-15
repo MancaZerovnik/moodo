@@ -8,34 +8,39 @@
 </div>
 
 <div class="row margin-top-40 padding-left-10 padding-rigth-10" ng-if="mainInfo != null">
-    <div class="col-md-2 border-solid border-radius-10 padding-bottom-10 border-width-1">
-        <!--<h3 class="margin-bottom-40">Filtri</h3> -->
+    <div class="col-md-2">
+        <div class="row">
+            <div class="col-md-12 border-solid border-radius-10 padding-bottom-10 border-width-1">
+                <!--<h3 class="margin-bottom-40">Filtri</h3> -->
 
-        <p class="margin-bottom-5 margin-top-15 bold"> {{ "SPOL" | translate }}: </p>
-        <input type="checkbox" ng-model="filter.male" ng-change="update()" /> {{ "M" | translate }}<br/>
-        <input type="checkbox" ng-model="filter.female"  ng-change="update()" /> {{ "Z" | translate }}<br/>
+                <p class="margin-bottom-5 margin-top-15 bold"> {{ "SPOL" | translate }}: </p>
+                <input type="checkbox" ng-model="filter.male" ng-change="update()" /> {{ "M" | translate }}<br/>
+                <input type="checkbox" ng-model="filter.female"  ng-change="update()" /> {{ "Z" | translate }}<br/>
 
-        <p class="margin-bottom-5 margin-top-15 bold"> {{ "STAROST" | translate }} [{{filter.agemin}} - {{filter.agemax}}] let: </p>
-        <div on-handle-up='update()' range-slider id="age" min="filterLimits.agemin" max="filterLimits.agemax" model-min="filter.agemin" model-max="filter.agemax" class="margin-top-bottom-5"></div>
+                <p class="margin-bottom-5 margin-top-15 bold"> {{ "STAROST" | translate }} [{{filter.agemin}} - {{filter.agemax}}] let: </p>
+                <div on-handle-up='update()' range-slider id="age" min="filterLimits.agemin" max="filterLimits.agemax" model-min="filter.agemin" model-max="filter.agemax" class="margin-top-bottom-5"></div>
 
-        <p class="margin-bottom-5 margin-top-15 bold"> {{ "KRAJBIVANJA" | translate }} </p>
-        <input type="checkbox" name="linigPlace" ng-model="filter.city" ng-change="update()"> {{ "MESTO" | translate }}<br/>
-        <input type="checkbox" name="linigPlace" ng-model="filter.domestic" ng-change="update()"> {{ "PODEZELJE" | translate }}<br/>
+                <p class="margin-bottom-5 margin-top-15 bold"> {{ "KRAJBIVANJA" | translate }} </p>
+                <input type="checkbox" name="linigPlace" ng-model="filter.city" ng-change="update()"> {{ "MESTO" | translate }}<br/>
+                <input type="checkbox" name="linigPlace" ng-model="filter.domestic" ng-change="update()"> {{ "PODEZELJE" | translate }}<br/>
 
-        <p class="margin-bottom-5 margin-top-15 bold">  {{ "GLASBENA" | translate }} [{{filter.schoolmin}} - {{filter.schoolmax}}] {{ "LET" | translate }}  </p>
-        <div id="music_school" on-handle-up='update()' range-slider min="filterLimits.schoolmin" max="filterLimits.schoolmax" model-min="filter.schoolmin" model-max="filter.schoolmax" class="margin-top-bottom-5"></div>
-
-
-        <p class="margin-bottom-5 margin-top-15 bold"> {{ "UKVARJANJE" | translate }} [{{filter.activeinmusicmin}} - {{filter.activeinmusicmax}}] {{ "LET" | translate }} </p>
-        <div id="involvement_in_music" on-handle-up='update()' range-slider min="filterLimits.activeinmusicmin" max="filterLimits.activeinmusicmax" model-min="filter.activeinmusicmin" model-max="filter.activeinmusicmax" class="margin-top-bottom-5"></div>
+                <p class="margin-bottom-5 margin-top-15 bold">  {{ "GLASBENA" | translate }} [{{filter.schoolmin}} - {{filter.schoolmax}}] {{ "LET" | translate }}  </p>
+                <div id="music_school" on-handle-up='update()' range-slider min="filterLimits.schoolmin" max="filterLimits.schoolmax" model-min="filter.schoolmin" model-max="filter.schoolmax" class="margin-top-bottom-5"></div>
 
 
-        <p class="margin-bottom-5 margin-top-15 bold"> {{ "POSLUSANJE" | translate }} </p>
-        <input type="checkbox" name="listening" value="1" ng-model="filter.onehour" ng-change="update()" /> {{ "DO1" | translate }}<br/>
-        <input type="checkbox" name="listening" value="2" ng-model="filter.twohour" ng-change="update()"/> {{ "DO2" | translate }}<br/>
-        <input type="checkbox" name="listening" value="3" ng-model="filter.threehour" ng-change="update()"/> {{ "DO3" | translate }}<br/>
-        <input type="checkbox" name="listening" value="4" ng-model="filter.fourhour" ng-change="update()"/> {{ "NAD3" | translate }}
+                <p class="margin-bottom-5 margin-top-15 bold"> {{ "UKVARJANJE" | translate }} [{{filter.activeinmusicmin}} - {{filter.activeinmusicmax}}] {{ "LET" | translate }} </p>
+                <div id="involvement_in_music" on-handle-up='update()' range-slider min="filterLimits.activeinmusicmin" max="filterLimits.activeinmusicmax" model-min="filter.activeinmusicmin" model-max="filter.activeinmusicmax" class="margin-top-bottom-5"></div>
 
+
+                <p class="margin-bottom-5 margin-top-15 bold"> {{ "POSLUSANJE" | translate }} </p>
+                <input type="checkbox" name="listening" value="1" ng-model="filter.onehour" ng-change="update()" /> {{ "DO1" | translate }}<br/>
+                <input type="checkbox" name="listening" value="2" ng-model="filter.twohour" ng-change="update()"/> {{ "DO2" | translate }}<br/>
+                <input type="checkbox" name="listening" value="3" ng-model="filter.threehour" ng-change="update()"/> {{ "DO3" | translate }}<br/>
+                <input type="checkbox" name="listening" value="4" ng-model="filter.fourhour" ng-change="update()"/> {{ "NAD3" | translate }}
+
+            </div>
+        </div>
+        <br/>
     </div>
     <div class="col-md-10" ng-init="tab1=true; tab2=false; tab3=false; tab4=false">
        
