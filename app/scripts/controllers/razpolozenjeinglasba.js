@@ -449,13 +449,11 @@ angular.module('modooApp')
                 x: function(d){return d.label;},
                 y: function(d){return d.value;},
                 duration: 500,
-                yAxis: {
-                    axisLabel: $scope.stOdgovorov
-                },
                 stacked: true,
                 showLegend: false,
                 showControls: false,
                 showXAxis: false,
+                showYAxis: false,
                 tooltip: {
                     contentGenerator: function(d) { 
                         return '<p><div class="square-box" style="background-color:'+d.color+
