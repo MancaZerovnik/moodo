@@ -26,6 +26,8 @@ def read_CSV_file(path):
 
 if __name__ == "__main__":
 
+    numsamples = 1000
+
     for file in os.listdir("../data/mp3s"):
         if file.endswith(".mp3"):
             fname = '../data/mp3s/' + file
@@ -35,10 +37,12 @@ if __name__ == "__main__":
 
             data = wav.read("temp.wav")
 
-            print file
+            print(file)
             a = data[1][:,0].tolist() if data[1][1].size == 2 else data[1].tolist()
             result[file] = {}
-            result[file]['sinusoide'] = a[0::len(a)/1000]
+            step = len(a) / numsamples
+            result[file]['sinusoide'] = [[min(a[i * step : (i+1) * step]), max(a[i * step : (i+1) * step])]
+                for i in range(0, numsamples)]
 
     song_data = read_CSV_file('../data/template_pesmi_muzikologi.csv')
     for i in range(2, len(song_data)):
@@ -50,4 +54,4 @@ if __name__ == "__main__":
 
     import json
     with open('songs.json', 'w') as fp:
-        json.dump(result, fp, indent=4)
+        json.dump(result, fp)

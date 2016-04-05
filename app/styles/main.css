@@ -9,6 +9,11 @@ body {
   padding: 0;
 }
 
+.gray-link
+{
+  color: #777 !important;
+}
+
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
@@ -428,3 +433,7 @@ body {
 
 }
 
+.photo
+{
+  width: 100%;
+}

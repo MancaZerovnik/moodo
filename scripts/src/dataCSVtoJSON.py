@@ -77,7 +77,7 @@ for i in range(1, len(data)):
             if data[0][j] == 'razpolozenje_trenutnox': 
                 row_dict['razpolozenje_trenutno']['x'] = float(data[i][j])
             if data[0][j] == 'razpolozenje_trenutnoy': 
-                row_dict['razpolozenje_trenutno']['y'] = float(data[i][j])
+                row_dict['razpolozenje_trenutno']['y'] = -float(data[i][j])
         # color mood
         elif data[0][j] == 'razpolozenje_barva_cir':
             row_dict['razpolozenje_barva'] = colorsys.hsv_to_rgb(*color_to_HSV(int(data[i][j]), int(data[i][j+1])))

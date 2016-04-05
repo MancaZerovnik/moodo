@@ -209,6 +209,7 @@
                   </div>
                   <div class="col-md-2">
                     <select ng-init="changevisualisation()" ng-model="playersong.visualisation" ng-change="changevisualisation()" class="form-control">
+                    
                       <option ng-repeat="song in selected_songs" value="{{song}}">{{song | limitTo:3}} </option>
                     </select>
                   </div>

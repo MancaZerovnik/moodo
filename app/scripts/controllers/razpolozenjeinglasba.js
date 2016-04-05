@@ -54,7 +54,7 @@ angular.module('modooApp')
         if($scope.playersong.visualisation == null)
             $scope.amplitudeData = [{key: 'gr1', values: []}];
         else 
-            $scope.amplitudeData = [{key: 'gr1', values: enumerateforchart($scope.songsData[$scope.playersong.visualisation].sinusoide)}];
+            $scope.amplitudeData = enumerateforchart($scope.songsData[$scope.playersong.visualisation].sinusoide);
     };    
     $scope.update = function () {
         /*
@@ -613,7 +613,12 @@ angular.module('modooApp')
         var pair_list = [];
         for(var i = 0; i < data.length; i++)
         {
-            pair_list.push({x: i, y: data[i]});
+            pair_list.push({key: i,
+                            values: [{x: i, 
+                                      y: data[i][0]},
+                                      {x: i, 
+                                      y: data[i][1]}],
+                            color: "#5f97ee"});
         }
         return pair_list;
     }
