@@ -159,6 +159,6 @@ for i in range(1, len(data)):
 
 import json
 with open('data.json', 'w') as fp:
-    json.dump(data_transformed, fp, indent=4)
+    json.dump(data_transformed, fp)
 
 
