@@ -42,7 +42,7 @@
         </div>
         <br/>
     </div>
-    <div class="col-md-10" ng-init="tab1=true; tab2=false; tab3=false; tab4=false">
+    <div class="col-md-10" ng-init="tab1=true; tab2=true; tab3=false; tab4=false">
        
         <ul class="nav nav-pills">
           <li ng-class="{'active' : tab1, 'non-active': !tab1}" ng-click="tab1 = !tab1"><a href="">{{ "TRENUTNOVA" | translate }}</a></li>
@@ -53,19 +53,29 @@
 
         <div class="row">
             <div class="col-md-6 text-center graph-div" ng-if="tab1">
-                <h4 class="margin-top-40">{{ "TRENUTNOVA" | translate }}</h4>                
+                <h4 class="margin-top-40">{{ "TRENUTNOVA" | translate }}<a class="btn btn-xs btn-link" data-toggle="collapse" data-target="#vacolormood">{{"more" | translate}}</a> </h4>
+                <p class="collapse" id="vacolormood"> {{"vacolormooddescription" | translate}}</p>            
                 <nvd3 options="usersMoodGraph" data="usersMoodData"></nvd3>
             </div>
             <div class="col-md-6 text-center graph-div"  ng-if="tab2">
-                <h4 class="margin-top-40">{{ "PRISOTNOSTRAZ" | translate }}</h4>
+                <h4 class="margin-top-40">{{ "PRISOTNOSTRAZ" | translate }}
+                    <a class="btn btn-xs btn-link" data-toggle="collapse" data-target="#boxplotdescription">{{"more" | translate}}</a>
+                </h4>
+                <p class="collapse" id="boxplotdescription"> {{"boxplotdescription" | translate}}</p>  
                 <nvd3 options="currentEmotionsGraph" data="currentEmotionsData"></nvd3>            
             </div>
             <div class="col-md-6 text-center graph-div" ng-if="tab3">
-                <h4 class="margin-top-40">{{ "POSTAVITEVRAZ" | translate }}</h4>
+                <h4 class="margin-top-40">{{ "POSTAVITEVRAZ" | translate }}
+                    <a class="btn btn-xs btn-link" data-toggle="collapse" data-target="#emotionsinvadescription">{{"more" | translate}}</a>
+                </h4>
+                <p class="collapse" id="emotionsinvadescription"> {{"emotionsinvadescription" | translate}}</p>  
                 <nvd3 options="moodVAEstimationGraph" data="moodVAEstimationData"></nvd3>
             </div> 
             <div class="col-md-6 text-center graph-div" ng-if="tab4">
-               <h4 class="margin-top-40">{{ "RAZPOLOZENJEINBARVE" | translate }}</h4>
+                <h4 class="margin-top-40">{{ "RAZPOLOZENJEINBARVE" | translate }}
+                    <a class="btn btn-xs btn-link" data-toggle="collapse" data-target="#emotionscolordescription">{{"more" | translate}}</a>
+                </h4>
+                <p class="collapse" id="emotionscolordescription"> {{"emotionscolordescription" | translate}}</p>  
                 <nvd3 options="colorChartGraph" data="colorChartData"></nvd3>
             </div>      
         </div>   

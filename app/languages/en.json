@@ -127,5 +127,11 @@
 "manca": "A hard-working and active student at the Faculty of Computer and Information Science. Her work is mainly focused on the field of music information retrieval. She is participanting in this research as a developer of Moodo data visualization.",
 "primoz": "A persistent and very hard-working student at the Faculty of Computer and Information Science. He is participanting in this research as a part of his diploma. An expert for technical issues in the research and carrying out the ideas of other team members.",
 "matic": "An assistant professor at the Faculty of Computer and Information Science as well as the head of the Laboratory for Computer Graphics and Multimedia. His research interests are in the field of computer music, especially music information retrieval. Research topics include audio melody and rhythm extraction, segmentation and organization and searching in music collections. Other members of research team are convinced he is also a magician, since he manages to coordinate 11 classes, research projects and a family. ",
-"grega": "Is a researcher interested in computational semantics, music cognition and other fun(ny) things. He also fully supports group's Friday beer meetings!"
+"grega": "Is a researcher interested in computational semantics, music cognition and other fun(ny) things. He also fully supports group's Friday beer meetings!",
+"more": "more",
+"vacolormooddescription": "Each dot describes a current mood that user marked in the Valence-Arousal space. A color of the dot represents color user seleceted that describes his current mood.",
+"boxplotdescription": "Box plots shows a distribution of a presence of a currnet mood for selected users' group. Each user had to estimates the presence of each mood group.",
+"emotionsinvadescription": "Chart shows how emotions were placed in the VA space by users. Each user had to place all the emotions in the VA space",
+"emotionscolordescription": "Chart shows how user describes emotions with color. Each user had to select one color for each emotion."
+
 }

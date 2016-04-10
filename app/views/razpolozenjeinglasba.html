@@ -129,7 +129,7 @@
 
         <p class="margin-bottom-5 margin-top-15 bold"> {{ "POSLUSANJE" | translate }}</p>
         <input type="checkbox" name="listening" value="1" ng-model="filter.onehour" ng-change="update()"> {{ "DO1" | translate }} </input><br/>
-        <input type="checkbox" name="listening" value="2" ng-model="filter.twohour" ng-change="update()"> {{ "DO2" | translate }} </input> </br>
+        <input type="checkbox" name="listening" value="2" ng-model="filter.twohour" ng-change="update()"> {{ "DO2" | translate }} </input> <br/>
         <input type="checkbox" name="listening" value="3" ng-model="filter.threehour" ng-change="update()"> {{ "DO3" | translate }}</input><br/>
         <input type="checkbox" name="listening" value="4" ng-model="filter.fourhour" ng-change="update()"> {{ "NAD3" | translate }}  </input>
 
@@ -199,8 +199,7 @@
                     <p ng-if="playersong.song == null"> {{ "NIIZBIRE" | translate }} </p>
                   </div>
                 </div>              
-              </div><!-- /well -->
-                         
+              </div><!-- /well -->                         
             </div>
             <div class="col-md-12 margin-top-15" ng-if="tab1">
                 <div class="row padding-bottom-20" ng-if="song_tab ==2">

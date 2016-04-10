@@ -127,5 +127,11 @@
 "manca": "Zelo delavna in aktivna študentka Fakultete za računalništvo in informatiko, ki večinoma deluje na področju pridobivanja infromacij iz glasbe. S svojimi izkušnjami in znanjem je sodelovala pri izgradnji aplikacije za prikaz podatkov.",
 "primoz": "Vztrajen in zelo delaven študent Fakultete za računalništvo in informatiko je del podatkov raziskave o čustvih in glasbi uporabil za pisanje svoje diplomske naloge. S svojim znanjem in delom skrbi predvsem za tehnične vidike raziskave in izvede vse še tako »zanimive« ideje preostalih članov ekipe. ",
 "matic": "Kot docent na Fakulteti za računalništvo in informatiko ter član Laboratorija za računalniško grafiko in multimedije se ukvarja s področjem računalniške glasbe in problemi kot je npr. iskanje melodije in ritma v skladbah, segmentacija in organizacija skladb, iskanje po glasbenih zbirkah,… Člani ekipe smo prepričani, da je v resnici čarovnik, saj mu nekako uspeva usklajevati predavanja  za 11 predmetov, številne raziskovalne projekte in družino. ",
-"grega": "S svojim filozofskim razmišljanjem in strokovnim poznavanjem glasbe širi naša obzorja in premika raziskovalno področje v meddisciplinarne vode. V svojem raziskovalnem delu se posveča predvsem kogniciji, kognitivnim procesom in modelom."
+"grega": "S svojim filozofskim razmišljanjem in strokovnim poznavanjem glasbe širi naša obzorja in premika raziskovalno področje v meddisciplinarne vode. V svojem raziskovalnem delu se posveča predvsem kogniciji, kognitivnim procesom in modelom.",
+"more": "več",
+"vacolormooddescription": "Graf prikazuje trenutno razpoloženje aknetirancev v VA prostoru. ",
+"boxplotdescription": "Graf prikazuje prisotnost prosameznega razpoloženja pri ankentirancih v času izpolnjevanja ankete. Vsak uporabnik je moral oceninit prisotnost vskaega od razpoloženj.",
+"emotionsinvadescription": "Graf prikazuje kako uporabniki različna rapoloženja razvrstijo v VA prostor. Vsak ankentiranec je moral razvrstiti vsa rapoloženja.",
+"emotionscolordescription": "Graf prikazuje s kakšno barvo so ankentiranci ocenili razpoloženja. Vsak je moral oceniti vsa razpoloženja."
+
 }
