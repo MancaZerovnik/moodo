@@ -553,6 +553,7 @@ angular.module('modooApp')
                 data[group_idx].values[0].value = data[group_idx].values[0].value +1;
             }
         }
+        console.log(data);
         return _.sortBy(data, function(d){
             var rgb = hexToRgb(d.key);
             var hsv = rgb2hsv(rgb.r, rgb.g, rgb. b)
