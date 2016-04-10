@@ -216,15 +216,24 @@
                 <nvd3 options="ampLineGraph" data="amplitudeData" class="margin-padding-none"></nvd3>
             </div>
             <div class="col-md-12 text-center margin-padding-none" ng-if="tab2">
-                <h4 class="margin-top-40">{{ "BARVE" | translate }}</h4>
+                <h4 class="margin-top-40">{{ "BARVE" | translate }}
+                  <a class="btn btn-xs btn-link" data-toggle="collapse" data-target="#musiccolorsdescription">{{"more" | translate}}</a>
+                </h4>
+                <p class="collapse" id="musiccolorsdescription"> {{"musiccolorsdescription" | translate}}</p>
                 <nvd3 options="coloGraph" data="colorData" class="margin-padding-none"></nvd3>            
             </div>
             <div class="col-md-6 text-center margin-top-15" ng-if="tab3">
-                <h4 class="margin-top-40">{{ "IZRAZENA" | translate }}</h4>
+                <h4 class="margin-top-40">{{ "IZRAZENA" | translate }}
+                  <a class="btn btn-xs btn-link" data-toggle="collapse" data-target="#perceivedemdescription">{{"more" | translate}}</a>
+                </h4>
+                <p class="collapse" id="perceivedemdescription"> {{"perceivedemdescription" | translate}}</p>
                 <nvd3 options="viCustvaGraph" data="izrazenaData" class="margin-padding-none"></nvd3>
             </div>
             <div class="col-md-6 text-center margin-top-15" ng-if="tab4">
-                <h4 class="margin-top-40">{{ "VZBUJENA" | translate }}</h4>
+                <h4 class="margin-top-40">{{ "VZBUJENA" | translate }}
+                  <a class="btn btn-xs btn-link" data-toggle="collapse" data-target="#inducedemdescription">{{"more" | translate}}</a>
+                </h4>
+                <p class="collapse" id="inducedemdescription"> {{"inducedemdescription" | translate}}</p>
                 <nvd3 options="viCustvaGraph" data="vzbujenaData" class="margin-padding-none"></nvd3>            
             </div>
 
@@ -348,7 +357,10 @@
             </div>
 
             <div class="col-md-6 margin-top-15 text-center" ng-if="tab6">
-                  <h4 class="margin-top-40">{{ "IZRAZENA" | translate }} {{ "BARVEE" | translate }}</h4>
+                  <h4 class="margin-top-40">{{ "IZRAZENA" | translate }} {{ "BARVEE" | translate }}
+                    <a class="btn btn-xs btn-link" data-toggle="collapse" data-target="#perceivedcolordescription">{{"more" | translate}}</a>
+                  </h4>
+                  <p class="collapse" id="perceivedcolordescription"> {{"perceivedcolordescription" | translate}}</p>
                   <nvd3 options="expresedMoodVAwithColorsGraph" data="expresedMoodVAwithColorsData" class="margin-padding-none"></nvd3>
             </div>    
         </div>

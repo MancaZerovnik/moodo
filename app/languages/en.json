@@ -132,6 +132,9 @@
 "vacolormooddescription": "Each dot describes a current mood that user marked in the Valence-Arousal space. A color of the dot represents color user seleceted that describes his current mood.",
 "boxplotdescription": "Box plots shows a distribution of a presence of a currnet mood for selected users' group. Each user had to estimates the presence of each mood group.",
 "emotionsinvadescription": "Chart shows how emotions were placed in the VA space by users. Each user had to place all the emotions in the VA space",
-"emotionscolordescription": "Chart shows how user describes emotions with color. Each user had to select one color for each emotion."
-
+"emotionscolordescription": "Chart shows how user describes emotions with color. Each user had to select one color for each emotion.",
+"musiccolorsdescription": "Colors which users selected for selected song. The width of the stripe denotes number of users that selected a particular color.",
+"perceivedemdescription": "The chart shows what emotions was maked as perceived in selected songs. Each user selected all emotions for which it thinks that are perceived in the song and placed them into the VA space.",
+"inducedemdescription": "The chart shows what emotions was maked as induced in selected songs. Each user selected all emotions for which it thinks that are induced in the song and placed them into the VA space.",
+"perceivedcolordescription": "The chart shows perceived emotions marked in VA space without labels and connects this emotions with colors selected for a selected song. Each user selected all emotions for which it thinks that are perceived in the song and placed them into the VA space. We riched this data with colors what users selected in the separate task."
 }
