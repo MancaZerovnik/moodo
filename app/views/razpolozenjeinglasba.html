@@ -1,4 +1,4 @@
-<div class="row margin-top-40 padding-left-10 padding-rigth-10 loading-bar" ng-show="mainInfo == null">
+<div class="row margin-top-40 padding-left-10 padding-rigth-10 loading-bar" ng-show="mainInfo == null || songsData == null">
     <div class="progress">
       <div class="progress-bar progress-bar-striped active progress-bar-success" role="progressbar"
       aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%">
@@ -7,7 +7,7 @@
     </div>
 </div>
 
-<div class="row margin-top-40 padding-left-10 padding-rigth-10" ng-show="mainInfo != null">    
+<div class="row margin-top-40 padding-left-10 padding-rigth-10" ng-show="mainInfo != null && songsData != null">    
     <div class="col-md-2 ">
       <div class="row">
         <div class="col-xs-12 padding-bottom-20 margin-bottom-20" >       
@@ -169,10 +169,10 @@
         <li ng-class="{'active' : tab0, 'non-active': !tab0}" ng-click="tab0 = !tab0"><a href="">{{ "PREDVAJALNIK" | translate }}</a></li>
           <li ng-class="{'active' : tab1, 'non-active': !tab1}" ng-click="tab1 = !tab1"><a href="">{{ "VIZUALIZACIJA" | translate }}</a></li>
           <li ng-class="{'active' : tab2, 'non-active': !tab2}" ng-click="tab2 = !tab2" ><a href="">{{ "BARVE" | translate }} </a></li>
+          <li ng-class="{'active' : tab6, 'non-active': !tab6}" ng-click="tab6 = !tab6"><a href="">{{ "IZRAZENA" | translate }} {{ "BARVEE" | translate }}</a></li>
           <li ng-class="{'active' : tab3, 'non-active': !tab3}" ng-click="tab3 = !tab3"><a href="">{{ "IZRAZENA" | translate }}</a></li>
           <li ng-class="{'active' : tab4, 'non-active': !tab4}" ng-click="tab4 = !tab4"><a href="">{{ "VZBUJENA" | translate }}</a></li>
           <li ng-class="{'active' : tab5, 'non-active': !tab5}" ng-click="tab5 = !tab5"><a href="">{{ "LASTNOSTI" | translate }}</a></li>
-          <li ng-class="{'active' : tab6, 'non-active': !tab6}" ng-click="tab6 = !tab6"><a href="">{{ "IZRAZENA" | translate }} {{ "BARVEE" | translate }}</a></li>
         </ul>
         
 
@@ -215,12 +215,19 @@
                 </div>
                 <nvd3 options="ampLineGraph" data="amplitudeData" class="margin-padding-none"></nvd3>
             </div>
-            <div class="col-md-12 text-center margin-padding-none" ng-if="tab2">
+            <div class="col-md-6 text-center margin-padding-none" ng-if="tab2">
                 <h4 class="margin-top-40">{{ "BARVE" | translate }}
                   <a class="btn btn-xs btn-link" data-toggle="collapse" data-target="#musiccolorsdescription">{{"more" | translate}}</a>
                 </h4>
                 <p class="collapse" id="musiccolorsdescription"> {{"musiccolorsdescription" | translate}}</p>
                 <nvd3 options="coloGraph" data="colorData" class="margin-padding-none"></nvd3>            
+            </div>
+            <div class="col-md-6 margin-top-15 text-center" ng-if="tab6">
+                  <h4 class="margin-top-40">{{ "IZRAZENA" | translate }} {{ "BARVEE" | translate }}
+                    <a class="btn btn-xs btn-link" data-toggle="collapse" data-target="#perceivedcolordescription">{{"more" | translate}}</a>
+                  </h4>
+                  <p class="collapse" id="perceivedcolordescription"> {{"perceivedcolordescription" | translate}}</p>
+                  <nvd3 options="expresedMoodVAwithColorsGraph" data="expresedMoodVAwithColorsData" class="margin-padding-none"></nvd3>
             </div>
             <div class="col-md-6 text-center margin-top-15" ng-if="tab3">
                 <h4 class="margin-top-40">{{ "IZRAZENA" | translate }}
@@ -354,14 +361,6 @@
               <div ng-if="playersong.song == null">
               <h2> {{ "NODATA" | translate }}</h2>
               </div>           
-            </div>
-
-            <div class="col-md-6 margin-top-15 text-center" ng-if="tab6">
-                  <h4 class="margin-top-40">{{ "IZRAZENA" | translate }} {{ "BARVEE" | translate }}
-                    <a class="btn btn-xs btn-link" data-toggle="collapse" data-target="#perceivedcolordescription">{{"more" | translate}}</a>
-                  </h4>
-                  <p class="collapse" id="perceivedcolordescription"> {{"perceivedcolordescription" | translate}}</p>
-                  <nvd3 options="expresedMoodVAwithColorsGraph" data="expresedMoodVAwithColorsData" class="margin-padding-none"></nvd3>
             </div>    
         </div>
     </div>

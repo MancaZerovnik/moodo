@@ -21,8 +21,7 @@ angular.module('modooApp')
       $scope.songsData = data[1];
       init();
     });
-    // $scope.mainInfo = DataAll.getData();
-    // $scope.songsData = SongsAll.getData();
+
     translations()
     $rootScope.$on('$translateChangeSuccess', function () {
         translations()
