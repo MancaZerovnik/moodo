@@ -42,12 +42,21 @@
                     <span class="icon-bar"></span>
                 </button>
                 </div>              
-                <div class="collapse navbar-collapse" id="js-navbar-collapse">
+                <div class="collapse navbar-collapse" id="js-navbar-collapse" ng-controller="TranslateController">
                   <ul class="nav navbar-nav pull-right">
                     <li><a ng-href="#/splosno" class="color-white"><i class="fa fa-users"></i> &nbsp;&nbsp;{{ "SPLOSNI" | translate }}</a></li>
                     <li><a ng-href="#/razpolozenjeinbarve" class="color-white"><i class="fa fa-bar-chart"></i>&nbsp;&nbsp;{{ "RAZPOLOZENJEINBARVENASLOV" | translate }}</a></li>
                     <li><a ng-href="#/razplozenjeinglasba" class="color-white"><i class="fa fa-headphones"></i>&nbsp;&nbsp;{{ "GLASBAINRAZPOLOZENJE" | translate }}</a></li>
+                    <li><a ng-href="#/about" class="color-white"><i class="fa fa-info" aria-hidden="true"></i>&nbsp;&nbsp;{{ "About" | translate }}</a></li>
+                    <li class="dropdown">
+                      <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-flag" aria-hidden="true"></i>&nbsp;&nbsp;{{ "language" | translate }}<span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                        <li><a href=""><img src="../assets/images/sloflag.png" alt="Description" ng-click="changeLanguage('slo')" translate="slo" width="30" weight="30"/></a></li>
+                        <li><a href=""><img src="../assets/images/enflag.png" alt="Description" ng-click="changeLanguage('en')" translate="en" width="30" weight="30" /></a></li>
+                      </ul>
+                    </li>
                   </ul>
+                  
                 </div>             
               </div>
             </div>
@@ -64,13 +73,14 @@
         </div> -->
       </div>
     
-
       <div class="margin20 footer">
         <div class="container-fluid">
           <div class="row">
             <div class="col-xs-12 text-center" ng-controller="TranslateController">
                    <p><a ng-href="#/about" class="color-gray">{{ "About" | translate }}</a>
-                     &copy; Copyright | Laboratorij za računalniško grafiko in multimedije | manca.zerovnik@lgm.fri.uni-lj.si, primoz.godec@lgm.fri.uni-lj.si | <img src="../assets/images/sloflag.png" alt="Description" ng-click="changeLanguage('slo')" translate="slo" width="30" weight="30"/>   <img src="../assets/images/enflag.png" alt="Description" ng-click="changeLanguage('en')" translate="en" width="30" weight="30" />  </p> 
+                     &copy; Copyright | Laboratorij za računalniško grafiko in multimedije | manca.zerovnik@lgm.fri.uni-lj.si, primoz.godec@lgm.fri.uni-lj.si | 
+                     <img src="../assets/images/sloflag.png" alt="Description" ng-click="changeLanguage('slo')" translate="slo" width="30" weight="30"/>   <img src="../assets/images/enflag.png" alt="Description" ng-click="changeLanguage('en')" translate="en" width="30" weight="30" /> 
+                     </p> 
             </div>
           </div>
         </div>
