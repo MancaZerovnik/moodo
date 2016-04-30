@@ -22,7 +22,7 @@ def read_CSV_file(path):
     ----------
     list - list with csv values
     '''
-    with open(path, 'rb') as f:
+    with open(path, 'r') as f:
         reader = csv.reader(f)
         values = list(reader)
     return values
@@ -134,6 +134,15 @@ for i in range(1, len(data)):
             for l in range(65, len(data[k])):
                 if data[0][l] == 'song':
                     song_dict['pesem_id'] = data[k][l]
+                    # pesem name
+                    if int(song_dict['pesem_id']) < 400: # 100 - 400 film
+                        song_dict['pesem_name'] = "movie" + str("%03d" %(int(song_dict['pesem_id']) - 100))
+                    elif int(song_dict['pesem_id']) < 500: # etno 400 - 500
+                        song_dict['pesem_name'] = "etno" + str("%03d" %(int(song_dict['pesem_id']) - 400))
+                    elif int(song_dict['pesem_id']) < 600: # 500 - 600 jamendo
+                        song_dict['pesem_name'] = "popular" + str("%03d" %(int(song_dict['pesem_id']) - 500))
+                    else: # 600 - 700 icmc
+                        song_dict['pesem_name'] = "electroacoustic" + str("%03d" %(int(song_dict['pesem_id']) - 600))
                 if data[0][l].startswith('pesem_custvo'):
                     if float(data[k][l]) > 1:
                         continue

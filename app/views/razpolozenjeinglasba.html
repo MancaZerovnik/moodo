@@ -263,7 +263,7 @@
                                 </div>
                                 <div class="col-md-8">
                                     <select ng-init="changeplayersong()" ng-model="playersong.song" ng-change="changeplayersong()" class="form-control">
-                                        <option ng-repeat="song in selected_songs" value="{{song}}">{{song | limitTo:3}}</option>
+                                        <option ng-repeat="song in selected_songs" value="{{song}}">{{songsData[song].song_name}}</option>
                                     </select>
                                 </div>
                             </div>
@@ -286,7 +286,7 @@
                     <div class="col-md-2">
                         <select ng-init="changevisualisation()" ng-model="playersong.visualisation" ng-change="changevisualisation()" class="form-control">
 
-                            <option ng-repeat="song in selected_songs" value="{{song}}">{{song | limitTo:3}}</option>
+                            <option ng-repeat="song in selected_songs" value="{{song}}">{{songsData[song].song_name}}</option>
                         </select>
                     </div>
                 </div>
@@ -334,7 +334,7 @@
                         </div>
                         <div class="col-md-10">
                             <select ng-init="changeproperties()" ng-model="playersong.properties" ng-change="changeproperties()" class="form-control">
-                                <option ng-repeat="song in selected_songs" value="{{song}}">{{song | limitTo:3}}</option>
+                                <option ng-repeat="song in selected_songs" value="{{song}}">{{songsData[song].song_name}}</option>
                             </select>
                         </div>
                     </div>

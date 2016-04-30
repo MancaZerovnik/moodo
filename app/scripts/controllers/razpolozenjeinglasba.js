@@ -67,7 +67,12 @@ angular.module('modooApp')
         if($scope.song_tab === 2) // only when selection by song properties
             $scope.selected_songs = filterSongs().sort();
         else // when we peek only one song
-            $scope.selected_songs = [$scope.filter.song + '.mp3'];
+            $scope.selected_songs = _.keys(_.pick($scope.songsData, function(value, key, object) {
+                                                    return value['song_name'] == $scope.filter.song;
+                                                }));
+
+        console.log($scope.selected_songs);
+        console.log($scope.filter.song);
 
         // init song in player on fist song of the list
         $scope.playersong.song = $scope.selected_songs[0];
@@ -159,7 +164,7 @@ angular.module('modooApp')
             "twohour": true,
             "threehour": true,
             "fourhour": true,
-            "song": 0,
+            "song": "electroacoustic001",
             "moodValenceMin": -100,
             "moodValenceMax": 100,
             "moodArousalMin": -100, 
@@ -227,7 +232,7 @@ angular.module('modooApp')
         $scope.songs = _.uniq(_.sortBy(_.flatten(
                             _.map($scope.mainInfo, function(num){ 
                                 return _.map(num.pesmi, function(x) {
-                                                            return x.pesem_id;
+                                                            return x.pesem_name;
                                                         }
                                         );
                                 }
@@ -235,7 +240,7 @@ angular.module('modooApp')
                        ), function(x) { return x; }), true);
         
         $scope.filter.song = $scope.songs[0]; // i think that do not have sense because overided with next one
-        $scope.filter.song=(Object.keys($scope.songsData)[0]).slice(0,3);
+        $scope.filter.song= _.values($scope.songsData)[0].song_name;
 
         $scope.update();
     }
