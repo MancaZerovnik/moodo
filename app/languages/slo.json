@@ -96,6 +96,7 @@
 "undefined, mostly ternar": "nedoločeno, večinoma ternar",
 "mostly 3/4": "večinoma 3/4",
 "undefined/asymmetrical ": "nedoločeno/asimetrično",
+"language": "Jezik",
 "uneven app. 78": "neenakomeren, približno 78",
 "uneven app. 65": "neenakomeren, približno 65",
 "uneven app. 81": "neenakomeren, približno 81",
@@ -129,13 +130,13 @@
 "matic": "Kot docent na Fakulteti za računalništvo in informatiko ter član Laboratorija za računalniško grafiko in multimedije se ukvarja s področjem računalniške glasbe in problemi kot je npr. iskanje melodije in ritma v skladbah, segmentacija in organizacija skladb, iskanje po glasbenih zbirkah,… Člani ekipe smo prepričani, da je v resnici čarovnik, saj mu nekako uspeva usklajevati predavanja  za 11 predmetov, številne raziskovalne projekte in družino. ",
 "grega": "S svojim filozofskim razmišljanjem in strokovnim poznavanjem glasbe širi naša obzorja in premika raziskovalno področje v meddisciplinarne vode. V svojem raziskovalnem delu se posveča predvsem kogniciji, kognitivnim procesom in modelom.",
 "more": "več",
-"vacolormooddescription": "Graf prikazuje trenutno razpoloženje aknetirancev v VA prostoru. ",
-"boxplotdescription": "Graf prikazuje prisotnost prosameznega razpoloženja pri ankentirancih v času izpolnjevanja ankete. Vsak uporabnik je moral oceninit prisotnost vskaega od razpoloženj.",
-"emotionsinvadescription": "Graf prikazuje kako uporabniki različna rapoloženja razvrstijo v VA prostor. Vsak ankentiranec je moral razvrstiti vsa rapoloženja.",
-"emotionscolordescription": "Graf prikazuje s kakšno barvo so ankentiranci ocenili razpoloženja. Vsak je moral oceniti vsa razpoloženja.",
+"vacolormooddescription": "Graf prikazuje trenutno razpoloženje aknetirancev v VA prostoru. Barva pike predstavlja barvo trenutnega razpoloženja uporabnika.",
+"boxplotdescription": "Graf prikazuje prisotnost prosameznega razpoloženja pri ankentirancih v času izpolnjevanja ankete. Vsak uporabnik je moral oceninit prisotnost vskaega od razpoloženj na lestvici od 0 do 1.",
+"emotionsinvadescription": "Graf prikazuje kako uporabniki različna rapoloženja razvrstijo v VA prostor. Vsak ankentiranec je razvrstitil vsa rapoloženja. Barve v grafu označujejo določeno razpoloženje.",
+"emotionscolordescription": "Graf prikazuje s kakšno barvo so ankentiranci ocenili razpoloženja. Vsak je moral oceniti vsa razpoloženja. Širina posameznega dela traku predstavlja delež ankentirancev, ki je izbrala določeno barvo.",
 "musiccolorsdescription": "Graf prikazuje barve, ki so jih anketiranci izbrali za pesem. Širina posameznega dela traku predstavlja delež ankentirancev, ki je izbrala določeno barvo.",
-"perceivedemdescription": "Graf prikazuje čustva, ki jih anketiranci zaznajo v glasbi. Vsak od anketirancev je iz ponujenega nabora čustev izbral želeno število čustev. Te je tudi uvrstil v VA prostor.",
-"inducedemdescription": "Graf prikazuje čustva, ki jih glasba vzbudi. Vsak od anketirancev je iz ponujenega nabora čustev izbral želeno število čustev. Te je tudi uvrstil v VA prostor.",
-"perceivedcolordescription": "Graf prikzuje položaje vzbujenih razpoloženj v glasbi v VA prosotru. Razpoloženjem smo dodali še barve, ki so jih isti uporabniki izbrali za določeno razpoloženje. "
+"perceivedemdescription": "Graf prikazuje čustva, ki jih anketiranci zaznajo v glasbi. Vsak od anketirancev je iz ponujenega nabora čustev izbral željeno število čustev. Te je tudi uvrstil v VA prostor. Barve označujejo posamezno čustvo.",
+"inducedemdescription": "Graf prikazuje čustva, ki jih glasba vzbudi. Vsak od anketirancev je iz ponujenega nabora čustev izbral želeno število čustev. Te je tudi uvrstil v VA prostor. Barve označujejo posamezno čustvo.",
+"perceivedcolordescription": "Graf prikzuje položaje vzbujenih razpoloženj v glasbi v VA prosotru. Razpoloženjem smo dodali še barve, ki so jih isti uporabniki izbrali za določeno razpoloženje. Barva pike označuje barvo, ki so jo uporabniki izbrali. "
 
 }

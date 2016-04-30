@@ -96,6 +96,7 @@
 "undefined, mostly ternar": "undefined, mostly ternar",
 "mostly 3/4": "mostly 3/4",
 "undefined/asymmetrical ": "undefined/asymmetrical ",
+"language": "Language",
 "uneven app. 78": "uneven app. 78",
 "uneven app. 65": "uneven app. 65",
 "uneven app. 81": "uneven app. 81",
@@ -129,12 +130,12 @@
 "matic": "An assistant professor at the Faculty of Computer and Information Science as well as the head of the Laboratory for Computer Graphics and Multimedia. His research interests are in the field of computer music, especially music information retrieval. Research topics include audio melody and rhythm extraction, segmentation and organization and searching in music collections. Other members of research team are convinced he is also a magician, since he manages to coordinate 11 classes, research projects and a family. ",
 "grega": "Is a researcher interested in computational semantics, music cognition and other fun(ny) things. He also fully supports group's Friday beer meetings!",
 "more": "more",
-"vacolormooddescription": "Each dot describes a current mood that user marked in the Valence-Arousal space. A color of the dot represents color user seleceted that describes his current mood.",
-"boxplotdescription": "Box plots shows a distribution of a presence of a currnet mood for selected users' group. Each user had to estimates the presence of each mood group.",
-"emotionsinvadescription": "Chart shows how emotions were placed in the VA space by users. Each user had to place all the emotions in the VA space",
-"emotionscolordescription": "Chart shows how user describes emotions with color. Each user had to select one color for each emotion.",
+"vacolormooddescription": "Each dot describes a current mood that user marked in the Valence-Arousal space. A color of the dot represents color which user seleceted that describes his current mood.",
+"boxplotdescription": "Box plots shows a distribution of a presence of a currnet mood for selected users' group. Each user had to estimate the presence of each mood group in scale from 0 to 1.",
+"emotionsinvadescription": "Chart shows how emotions were placed in the VA space by users. Each user had to place all the emotions in the VA space. Colors describes emotions.",
+"emotionscolordescription": "Chart shows how user describes emotions with color. Each user had to select one color per emotion. The width of the stripe denotes number of users that selected a particular color.",
 "musiccolorsdescription": "Colors which users selected for selected song. The width of the stripe denotes number of users that selected a particular color.",
-"perceivedemdescription": "The chart shows what emotions was maked as perceived in selected songs. Each user selected all emotions for which it thinks that are perceived in the song and placed them into the VA space.",
-"inducedemdescription": "The chart shows what emotions was maked as induced in selected songs. Each user selected all emotions for which it thinks that are induced in the song and placed them into the VA space.",
-"perceivedcolordescription": "The chart shows perceived emotions marked in VA space without labels and connects this emotions with colors selected for a selected song. Each user selected all emotions for which it thinks that are perceived in the song and placed them into the VA space. We riched this data with colors what users selected in the separate task."
+"perceivedemdescription": "The chart shows what emotions was maked as perceived in selected songs. Each user selected all emotions for which it thinks that are perceived in the song and placed them into the VA space. Colors denots the emotion lables.",
+"inducedemdescription": "The chart shows what emotions was maked as induced in selected songs. Each user selected all emotions for which it thinks that are induced in the song and placed them into the VA space. Colors denots the emotion lables.",
+"perceivedcolordescription": "The chart shows perceived emotions marked in VA space without labels and connects this emotions with colors selected for a song. Each user selected all emotions for which it thinks that are perceived in the song and placed them into the VA space. We riched this data with colors what users selected in the separate task."
 }
