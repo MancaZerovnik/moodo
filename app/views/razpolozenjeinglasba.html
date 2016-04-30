@@ -6,6 +6,7 @@
 </div>
 
 <div class="row margin-top-40 padding-left-10 padding-rigth-10" ng-show="mainInfo != null && songsData != null">
+
     <div class="col-md-2 ">
         <div class="row">
             <div class="col-xs-12 padding-bottom-20 margin-bottom-20" >
@@ -184,8 +185,7 @@
                 {{ "DO3" | translate }}>
                 <br/>
                 <input type="checkbox" name="listening" value="4" ng-model="filter.fourhour" ng-change="update()">
-                {{ "NAD3" | translate } >
-                users current mood
+                {{ "NAD3" | translate }} 
                 <p class="margin-top-15 bold">{{ "TRENUTNO" | translate }}:</p>
                 <p class="margin-bottom-5 margin-top-15">
                     {{ "VALENCA" | translate }} [{{filter.moodValenceMin / 100}} - {{filter.moodValenceMax / 100}}]:
@@ -226,7 +226,7 @@
         <br/>
     </div>
 
-    <div class="col-md-10" ng-init="tab0=true; tab1=true; tab2=true; tab3=false; tab4=false">
+    <div class="col-md-10" ng-init="tab0=true; tab1=false; tab2=true; tab3=true; tab4=true; tab6=true">
 
         <ul class="nav nav-pills">
             <li ng-class="{'active' : tab0, 'non-active': !tab0}" ng-click="tab0 = !tab0">
@@ -290,7 +290,7 @@
                         </select>
                     </div>
                 </div>
-                <nvd3 options="ampLineGraph" data="amplitudeData" class="margin-padding-none"></nvd3>
+                <nvd3 options="ampLineGraph" data="amplitudeData" api="api" class="margin-padding-none" ></nvd3>
             </div>
             <div class="col-md-6 text-center margin-padding-none" ng-if="tab2">
                 <h4 class="margin-top-40">
@@ -314,7 +314,7 @@
                     <a class="btn btn-xs btn-link" data-toggle="collapse" data-target="#perceivedemdescription">{{"more" | translate}}</a>
                 </h4>
                 <p class="collapse" id="perceivedemdescription">{{"perceivedemdescription" | translate}}</p>
-                <nvd3 options="viCustvaGraph" data="izrazenaData" class="margin-padding-none"></nvd3>
+                <nvd3 options="viCustvaGraph" data="izrazenaData" class="margin-padding-none" config="{refreshDataOnly: true}"></nvd3>
             </div>
             <div class="col-md-6 text-center margin-top-15" ng-if="tab4">
                 <h4 class="margin-top-40">
@@ -322,7 +322,7 @@
                     <a class="btn btn-xs btn-link" data-toggle="collapse" data-target="#inducedemdescription">{{"more" | translate}}</a>
                 </h4>
                 <p class="collapse" id="inducedemdescription">{{"inducedemdescription" | translate}}</p>
-                <nvd3 options="viCustvaGraph" data="vzbujenaData" class="margin-padding-none"></nvd3>
+                <nvd3 options="viCustvaGraph" data="vzbujenaData" class="margin-padding-none" config="{refreshDataOnly: true}"></nvd3>
             </div>
 
             <div class="col-md-6 margin-top-15 text-center" ng-if="tab5">

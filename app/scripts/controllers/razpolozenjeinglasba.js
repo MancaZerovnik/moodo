@@ -54,11 +54,14 @@ angular.module('modooApp')
             $scope.amplitudeData = [{key: 'gr1', values: []}];
         else 
             $scope.amplitudeData = enumerateforchart($scope.songsData[$scope.playersong.visualisation].sinusoide);
-    };    
+    };  
+
+
     $scope.update = function () {
         /*
         * this function is called everytime the data on the site have to be updated
         */
+
 
         // filter songs for which data have to be snown
         if($scope.song_tab === 2) // only when selection by song properties
@@ -86,6 +89,16 @@ angular.module('modooApp')
         if(!$scope.$$phase) {
             $scope.$apply();
         }
+
+        // solved problem with small graphs
+        setTimeout(function(){
+                prepareData();
+                if(!$scope.$$phase) {
+                    $scope.$apply();
+            }
+        },0);
+
+
     };
 
     /*
@@ -523,6 +536,7 @@ angular.module('modooApp')
                                 x: inputData[i][data_key][j]['x'],
                                 y: inputData[i][data_key][j]['y']
                             });
+
                 }                
             }
         }
@@ -544,6 +558,8 @@ angular.module('modooApp')
                 var g = parseInt(inputData[i].barva[1] * 255);
                 var b = parseInt(inputData[i].barva[2] * 255);
                 var hex = rgbToHex(r, g, b);
+                if (hex.length < 7) // ther are some non-valid data
+                    continue;
 
                 if(getDictonaryIdxByField(data, hex, "key") === null)
                     data.push({key: hex, values:[{label: "gr1", value: 0}], color: hex});
@@ -553,6 +569,7 @@ angular.module('modooApp')
             }
         }
         return _.sortBy(data, function(d){
+            // console.log(d);
             var rgb = hexToRgb(d.key);
             var hsv = rgb2hsv(rgb.r, rgb.g, rgb. b)
             return 100*hsv.h + 10*hsv.s + hsv.v;
@@ -612,14 +629,13 @@ angular.module('modooApp')
     function enumerateforchart(data)
     {
         var pair_list = [];
-        for(var i = 0; i < data.length; i++)
-        {
-            pair_list.push({key: i,
-                            values: [{x: i, 
-                                      y: data[i][0]},
-                                      {x: i, 
-                                      y: data[i][1]}],
+        pair_list.push({key: "a",
+                            values: [],
                             color: "#5f97ee"});
+        for(var i = 0; i < data.length; i=i+1.3)
+        {
+            pair_list[0].values.push({x: i,y: data[parseInt(i)][0]});
+            pair_list[0].values.push({x: i,y: data[parseInt(i)][1]});
         }
         return pair_list;
     }
