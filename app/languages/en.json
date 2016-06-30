@@ -137,5 +137,6 @@
 "perceivedemdescription": "Perceived musical emotions for the selected song, from a predefined emotion set. Users were asked to select one or more emotions expressed in the song, and rate it/them according to VA. Note: the colors in this figure are not selected by the user and are used here solely for the graphics!",
 "inducedemdescription": "Induced musical emotions for the selected song, from a predefined emotion set. Users were asked to select one or more emotions evoked by the song (– how a song makes you feel), and rate it/them according to VA. Note: the colors in this figure are not selected by the user and are used here solely for the graphics!",
 "perceivedcolordescription": "Perceived musical emotions and user-annotated colors for the selected song. The figure represents a fusion of data based on the users’ perceived emotion ratings and colors for the song.",
-"Download": "Download"
+"Download": "Download",
+"language": "Languate"
 }

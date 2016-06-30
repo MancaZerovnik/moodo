@@ -137,5 +137,6 @@
 "perceivedemdescription": "Čustva, ki so jih anketiranci zaznali v glasbi. Anketiranci so iz nabora čustev lahko izbrali poljubno število čustev in jih uvrstili VA prostor. Barve grafa niso podane s strani anketiranca!",
 "inducedemdescription": "Čustva, ki jih glasba vzbudi. Anketiranci so iz nabora čustev lahko izbrali poljubno število čustev in jih uvrstili VA prostor. Barve grafa niso podane s strani anketiranca!",
 "perceivedcolordescription": "Zaznana čustva in barve v glasbi.",
-"Download": "Prenos"
+"Download": "Prenos",
+"language": "Jezik"
 }
