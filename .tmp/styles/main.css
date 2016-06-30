@@ -433,3 +433,9 @@ body {
 {
   width: 100%;
 }
+
+/* nvd3 graphs fill */
+.nv-group
+{
+  fill-opacity: 1 !important;
+}

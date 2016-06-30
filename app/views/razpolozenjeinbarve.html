@@ -17,7 +17,7 @@
                 <input type="checkbox" ng-model="filter.male" ng-change="update()" /> {{ "M" | translate }}<br/>
                 <input type="checkbox" ng-model="filter.female"  ng-change="update()" /> {{ "Z" | translate }}<br/>
 
-                <p class="margin-bottom-5 margin-top-15 bold"> {{ "STAROST" | translate }} [{{filter.agemin}} - {{filter.agemax}}] let: </p>
+                <p class="margin-bottom-5 margin-top-15 bold"> {{ "STAROST" | translate }} [{{filter.agemin}} - {{filter.agemax}}] {{ "LET" | translate }} </p>
                 <div on-handle-up='update()' range-slider id="age" min="filterLimits.agemin" max="filterLimits.agemax" model-min="filter.agemin" model-max="filter.agemax" class="margin-top-bottom-5"></div>
 
                 <p class="margin-bottom-5 margin-top-15 bold"> {{ "KRAJBIVANJA" | translate }} </p>

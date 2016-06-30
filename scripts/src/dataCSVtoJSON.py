@@ -46,9 +46,9 @@ def color_to_HSV(color_cir, color_ang):
     return (h, s, v)
 
 data = read_CSV_file('../data/original_data_relabeled.csv')
-data_transformed = []
+data_transformed = []   
 curr_idx = -1
-
+print('a')
 for i in range(1, len(data)):
     if data[i][0] == curr_idx:
         continue
@@ -81,6 +81,10 @@ for i in range(1, len(data)):
         # color mood
         elif data[0][j] == 'razpolozenje_barva_cir':
             row_dict['razpolozenje_barva'] = colorsys.hsv_to_rgb(*color_to_HSV(int(data[i][j]), int(data[i][j+1])))
+            print(data[i][j], data[i][j+1])
+            print(color_to_HSV(int(data[i][j]), int(data[i][j+1])))
+            print(colorsys.hsv_to_rgb(*color_to_HSV(int(data[i][j]), int(data[i][j+1]))))
+            print(row_dict['razpolozenje_barva'])
         elif data[0][j] == 'razpolozenje_barva_ang':
             continue
         # emotions position by user
