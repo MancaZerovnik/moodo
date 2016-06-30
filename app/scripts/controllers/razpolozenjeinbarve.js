@@ -127,6 +127,7 @@ var app = angular.module('modooApp')
         $scope.moodVAEstimationData = moodVAEstimationData($scope.filteredData);
         $scope.currentEmotionsData = getCurrentEmotionsData($scope.filteredData);
         $scope.colorChartData = getColorData($scope.filteredData);
+        console.log("ja");
     }
 
     /*
@@ -397,20 +398,22 @@ var app = angular.module('modooApp')
                     var b = parseInt(inputData[i].custva[j].barva[2] * 255);
                     var hex = rgbToHex(r, g, b);
                     var custvo_name = inputData[i].custva[j].ime
+                    if(hex.length > 6)
+                    {                    
+                        // add label to all labels list
+                        if (allLabels.indexOf(custvo_name)==-1) allLabels.push(custvo_name);
 
-                    // add label to all labels list
-                    if (allLabels.indexOf(custvo_name)==-1) allLabels.push(custvo_name);
+                        if(getDictonaryIdxByField(data, hex, "key") === null)
+                            data.push({key: hex, values:[], color: hex});
 
-                    if(getDictonaryIdxByField(data, hex, "key") === null)
-                        data.push({key: hex, values:[], color: hex});
-
-                    var color_group_idx = getDictonaryIdxByField(data, hex, "key");
-                    if(getDictonaryIdxByField(data[color_group_idx].values, custvo_name, "label") === null)
-                        data[color_group_idx].values.push({label: custvo_name, value: 1});
-                    else
-                    {
-                        var label_idx = getDictonaryIdxByField(data[color_group_idx].values, custvo_name, "label");
-                        data[color_group_idx].values[label_idx].value = data[color_group_idx].values[label_idx].value +1;
+                        var color_group_idx = getDictonaryIdxByField(data, hex, "key");
+                        if(getDictonaryIdxByField(data[color_group_idx].values, custvo_name, "label") === null)
+                            data[color_group_idx].values.push({label: custvo_name, value: 1});
+                        else
+                        {
+                            var label_idx = getDictonaryIdxByField(data[color_group_idx].values, custvo_name, "label");
+                            data[color_group_idx].values[label_idx].value = data[color_group_idx].values[label_idx].value +1;
+                        }
                     }
                 }
             }
@@ -435,12 +438,13 @@ var app = angular.module('modooApp')
                 }
             }
         }
-        
+          
         return _.sortBy(data, function(d){
             var rgb = hexToRgb(d.key);
             var hsv = rgb2hsv(rgb.r, rgb.g, rgb. b)
             return 100*hsv.h + 10*hsv.s + hsv.v;
-        });;
+        });
+
     }
 
     /*
