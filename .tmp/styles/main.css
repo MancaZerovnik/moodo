@@ -435,7 +435,7 @@ body {
 }
 
 /* nvd3 graphs fill */
-.nv-group
+.no-transparent .nv-group
 {
   fill-opacity: 1 !important;
 }
