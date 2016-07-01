@@ -485,3 +485,12 @@ body {
       display:block !important;
   }
 }
+
+.btn-download, .btn-download:hover 
+{
+  height: 50px;
+  padding-top: 0;
+  background-color: #337ab7;
+  border-color: #337ab7;
+  color: white !important;
+}
